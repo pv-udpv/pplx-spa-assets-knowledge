@@ -1,0 +1,60 @@
+{
+  "servers": [
+    {
+      "name": "production",
+      "url": "https://api.perplexity.ai",
+      "apiKeyEnv": "API_KEY"
+    }
+  ],
+  "tools": [
+    {
+      "name": "search",
+      "description": "Search for information on a topic",
+      "endpoint": "/api/search",
+      "method": "POST",
+      "parameters": [
+        {
+          "name": "query",
+          "in": "body",
+          "required": true,
+          "description": "Search query string",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    {
+      "name": "createThread",
+      "description": "Create a new conversation thread",
+      "endpoint": "/api/threads",
+      "method": "POST",
+      "parameters": [
+        {
+          "name": "title",
+          "in": "body",
+          "required": false,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    {
+      "name": "getThread",
+      "description": "Get a conversation thread by ID",
+      "endpoint": "/api/threads/{threadId}",
+      "method": "GET",
+      "parameters": [
+        {
+          "name": "threadId",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ]
+    }
+  ]
+}
