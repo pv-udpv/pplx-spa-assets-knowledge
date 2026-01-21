@@ -72,7 +72,7 @@ export class AutoMCPGenerator {
         typecheck: 'tsc --noEmit',
       },
       dependencies: {
-        '@modelcontextprotocol/sdk': '^0.7.0',
+        '@modelcontextprotocol/sdk': '^1.25.2',
       },
       devDependencies: {
         '@types/node': '^22.10.5',
