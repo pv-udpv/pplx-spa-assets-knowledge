@@ -14,6 +14,7 @@ import {
   FunctionDeclaration,
   MethodDeclaration,
   PropertyDeclaration,
+  ts,
 } from 'ts-morph';
 import type {
   ExtractedType,
@@ -37,8 +38,8 @@ export class TypeScriptASTParser {
       tsConfigFilePath?: string;
     } = {
       compilerOptions: {
-        target: 9,
-        module: 99,
+        target: ts.ScriptTarget.ES2022,
+        module: ts.ModuleKind.ESNext,
         skipLibCheck: true,
         esModuleInterop: true,
       },
@@ -295,27 +296,32 @@ export class TypeScriptASTParser {
     // Pattern detection for API calls
     const patterns = [
       { regex: /fetch\s*\(\s*['"]([^'"]+)['"]\s*,\s*{\s*method\s*:\s*['"]([A-Za-z]+)['"]/i, type: 'fetch' },
-      { regex: /axios\.([a-z]+)\s*\(\s*['"]([^'"]+)['"]/, type: 'axios' },
+      { regex: /axios\.([a-z]+)\s*\(\s*['"]([^'"]+)['"]/i, type: 'axios' },
     ];
 
     for (const pattern of patterns) {
       const match = pattern.regex.exec(text);
       if (match) {
-        let path: string;
+        let path: string | undefined;
         let method: string;
 
         if (pattern.type === 'fetch') {
           // fetch(url, { method: 'GET' })
-          path = match[1] || '';
+          path = match[1];
           method = match[2] || 'GET';
         } else if (pattern.type === 'axios') {
           // axios.get(url)
           method = match[1] || 'GET';
-          path = match[2] || '';
+          path = match[2];
         } else {
           // Fallback: assume [path, method]
-          path = match[1] || '';
+          path = match[1];
           method = match[2] || 'GET';
+        }
+
+        // Skip if path is empty or invalid
+        if (!path || path.trim() === '') {
+          continue;
         }
 
         const description = this.getJSDocComment(fn);
@@ -334,7 +340,10 @@ export class TypeScriptASTParser {
     if (Node.isJSDocable(node)) {
       const jsDocs = node.getJsDocs();
       if (jsDocs.length > 0) {
-        return jsDocs.map(doc => doc.getComment()).filter(Boolean).join(' ');
+        const comments = jsDocs
+          .map(doc => doc.getComment())
+          .filter((comment): comment is string => typeof comment === 'string');
+        return comments.length > 0 ? comments.join(' ') : undefined;
       }
     }
     return undefined;
