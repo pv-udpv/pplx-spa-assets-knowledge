@@ -26,6 +26,12 @@ import type {
 
 export class TypeScriptASTParser {
   private project: Project;
+  
+  // Static regex patterns for API endpoint detection
+  private static readonly API_PATTERNS = [
+    { regex: /fetch\s*\(\s*['"]([^'"]+)['"]\s*,\s*{\s*method\s*:\s*['"]([A-Za-z]+)['"]/i, type: 'fetch' },
+    { regex: /axios\.([a-z]+)\s*\(\s*['"]([^'"]+)['"]/i, type: 'axios' },
+  ] as const;
 
   constructor(tsconfigPath?: string) {
     const projectOptions: {
@@ -191,23 +197,25 @@ export class TypeScriptASTParser {
   }
 
   private extractProperty(prop: PropertyDeclaration): TypeProperty {
+    const jsDocComment = this.getJSDocComment(prop);
     return {
       name: prop.getName(),
       type: prop.getType().getText(),
       optional: prop.hasQuestionToken() || false,
       readonly: prop.isReadonly(),
-      ...(this.getJSDocComment(prop) && { description: this.getJSDocComment(prop)! }),
+      ...(jsDocComment && { description: jsDocComment }),
     };
   }
 
   private extractPropertySignature(prop: Node): TypeProperty {
     if (Node.isPropertySignature(prop)) {
+      const jsDocComment = this.getJSDocComment(prop);
       return {
         name: prop.getName(),
         type: prop.getType().getText(),
         optional: prop.hasQuestionToken() || false,
         readonly: prop.isReadonly(),
-        ...(this.getJSDocComment(prop) && { description: this.getJSDocComment(prop)! }),
+        ...(jsDocComment && { description: jsDocComment }),
       };
     }
     throw new Error(`Expected PropertySignature but got ${prop.getKindName()}`);
@@ -293,13 +301,8 @@ export class TypeScriptASTParser {
   ): APIEndpoint | null {
     const text = fn.getText();
 
-    // Pattern detection for API calls
-    const patterns = [
-      { regex: /fetch\s*\(\s*['"]([^'"]+)['"]\s*,\s*{\s*method\s*:\s*['"]([A-Za-z]+)['"]/i, type: 'fetch' },
-      { regex: /axios\.([a-z]+)\s*\(\s*['"]([^'"]+)['"]/i, type: 'axios' },
-    ];
-
-    for (const pattern of patterns) {
+    // Use static regex patterns for API endpoint detection
+    for (const pattern of TypeScriptASTParser.API_PATTERNS) {
       const match = pattern.regex.exec(text);
       if (match) {
         let path: string | undefined;
