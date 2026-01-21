@@ -72,13 +72,18 @@ export class AsyncAPIGenerator {
     for (const endpoint of endpoints) {
       const channelName = this.sanitizeChannelName(endpoint.path);
       
-      channels[channelName] = {
+      const channel: AsyncAPIChannel = {
         address: endpoint.path,
         messages: {
           message: { $ref: `#/components/messages/${channelName}Message` },
         },
-        description: endpoint.description,
       };
+      
+      if (endpoint.description) {
+        channel.description = endpoint.description;
+      }
+      
+      channels[channelName] = channel;
 
       operations[`${channelName}Send`] = {
         action: 'send',

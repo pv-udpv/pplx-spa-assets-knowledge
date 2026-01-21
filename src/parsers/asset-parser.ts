@@ -97,7 +97,7 @@ export class AssetParser {
   /**
    * Extract TypeScript types and interfaces
    */
-  private extractTypes(chunks: AssetChunk[]): ExtractedType[] {
+  private extractTypes(_chunks: AssetChunk[]): ExtractedType[] {
     const types: ExtractedType[] = [];
     // TODO: Implement TypeScript AST parsing
     // Use @typescript/vfs or ts-morph for accurate extraction
@@ -107,7 +107,7 @@ export class AssetParser {
   /**
    * Extract API endpoints from code
    */
-  private extractAPIEndpoints(chunks: AssetChunk[]): APIEndpoint[] {
+  private extractAPIEndpoints(_chunks: AssetChunk[]): APIEndpoint[] {
     const endpoints: APIEndpoint[] = [];
     // TODO: Detect fetch calls, axios requests, WebSocket connections
     // Pattern matching for common API patterns

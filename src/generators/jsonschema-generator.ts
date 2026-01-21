@@ -46,10 +46,15 @@ export class JSONSchemaGenerator {
 
     if (type.properties) {
       for (const prop of type.properties) {
-        properties[prop.name] = {
+        const property: JSONSchemaProperty = {
           type: this.mapTypeToJSONSchema(prop.type),
-          description: prop.description,
         };
+        
+        if (prop.description) {
+          property.description = prop.description;
+        }
+        
+        properties[prop.name] = property;
 
         if (!prop.optional) {
           required.push(prop.name);
@@ -57,14 +62,19 @@ export class JSONSchemaGenerator {
       }
     }
 
-    return {
+    const schema: JSONSchemaObject = {
       $schema: 'https://json-schema.org/draft/2020-12/schema',
       $id: `https://perplexity.ai/schemas/${type.name}.json`,
       title: type.name,
       type: 'object',
       properties,
-      required: required.length > 0 ? required : undefined,
     };
+    
+    if (required.length > 0) {
+      schema.required = required;
+    }
+
+    return schema;
   }
 
   private mapTypeToJSONSchema(tsType: string): string {

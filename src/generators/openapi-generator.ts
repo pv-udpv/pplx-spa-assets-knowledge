@@ -33,7 +33,7 @@ export class OpenAPIGenerator {
 
       const method = endpoint.method.toLowerCase() as Lowercase<typeof endpoint.method>;
       if (method !== 'ws') {
-        paths[endpoint.path]![method] = this.buildOperation(endpoint);
+        paths[endpoint.path]![method] = this.buildOperation(endpoint) as any;
       }
     }
 
@@ -44,11 +44,16 @@ export class OpenAPIGenerator {
         version: this.config.version,
         description: this.config.description,
       },
-      servers: this.config.servers?.map(s => ({
-        url: s.url,
-        description: s.description,
-        variables: s.variables,
-      })) || [],
+      servers: this.config.servers?.map(s => {
+        const server: OpenAPIV3_1.ServerObject = {
+          url: s.url,
+          description: s.description,
+        };
+        if (s.variables && Object.keys(s.variables).length > 0) {
+          server.variables = s.variables as any;
+        }
+        return server;
+      }) || [],
       paths,
       components: {
         schemas: {},
