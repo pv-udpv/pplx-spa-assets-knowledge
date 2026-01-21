@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Perplexity AI Capture",
+  "version": "1.0.0",
+  "description": "Capture WebSocket messages, SSE events, and network data from Perplexity AI",
+  "permissions": [
+    "webRequest",
+    "storage",
+    "tabs",
+    "webNavigation",
+    "debugger"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["inject.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
