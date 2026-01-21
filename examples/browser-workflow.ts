@@ -3,7 +3,8 @@
  * Example: Complete browser automation workflow for Perplexity AI
  */
 
-import { runBrowserSession, capturePresets } from '../src/browser/browser-automation.js';
+import { runBrowserSession } from '../src/browser/browser-automation.js';
+import { capturePresets } from '../src/browser/capture-config.js';
 
 async function main() {
   console.log('🚀 Perplexity AI Browser Automation Workflow');
@@ -11,7 +12,7 @@ async function main() {
 
   // Use API reversing preset optimized for API discovery
   const config = {
-    ...(capturePresets?.apiReversing ?? {}),
+    ...capturePresets.apiReversing,
     output: {
       dir: './workflow-captures',
       format: 'json' as const,
