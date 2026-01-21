@@ -32,7 +32,7 @@
   "license": "MIT",
   "dependencies": {
     "@apidevtools/json-schema-ref-parser": "^11.7.2",
-    "@asyncapi/parser": "^3.5.1",
+    "@asyncapi/parser": "^3.4.0",
     "@modelcontextprotocol/sdk": "^0.7.0",
     "commander": "^12.1.0",
     "openapi-types": "^12.1.3",
