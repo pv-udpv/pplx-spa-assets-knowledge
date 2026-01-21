@@ -260,7 +260,7 @@ export class TypeScriptASTParser {
 
     // Pattern detection for API calls
     const patterns = [
-      { regex: /fetch\s*\(\s*['"]([^'"]+)['"]\s*,\s*{\s*method\s*:\s*['"]([A-Z]+)['"]/i, type: 'fetch' },
+      { regex: /fetch\s*\(\s*['"]([^'"]+)['"]\s*,\s*{\s*method\s*:\s*['"]([A-Za-z]+)['"]/i, type: 'fetch' },
       { regex: /axios\.([a-z]+)\s*\(\s*['"]([^'"]+)['"]/i, type: 'axios' },
     ];
 
