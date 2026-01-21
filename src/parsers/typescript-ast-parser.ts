@@ -14,29 +14,48 @@ import {
   FunctionDeclaration,
   MethodDeclaration,
   PropertyDeclaration,
+  ts,
 } from 'ts-morph';
 import type {
   ExtractedType,
   TypeProperty,
   TypeMethod,
-  MethodParameter,
   APIEndpoint,
   Symbol as ASTSymbol,
 } from '../types/index.js';
 
 export class TypeScriptASTParser {
   private project: Project;
+  
+  // Static regex patterns for API endpoint detection
+  private static readonly API_PATTERNS = [
+    { regex: /fetch\s*\(\s*['"]([^'"]+)['"]\s*,\s*{\s*method\s*:\s*['"]([A-Za-z]+)['"]/i, type: 'fetch' },
+    { regex: /axios\.([a-z]+)\s*\(\s*['"]([^'"]+)['"]/i, type: 'axios' },
+  ] as const;
 
   constructor(tsconfigPath?: string) {
-    this.project = new Project({
+    const projectOptions: {
       compilerOptions: {
-        target: 'ES2022',
-        module: 'ESNext',
+        target: number;
+        module: number;
+        skipLibCheck: boolean;
+        esModuleInterop: boolean;
+      };
+      tsConfigFilePath?: string;
+    } = {
+      compilerOptions: {
+        target: ts.ScriptTarget.ES2022,
+        module: ts.ModuleKind.ESNext,
         skipLibCheck: true,
         esModuleInterop: true,
       },
-      tsConfigFilePath: tsconfigPath,
-    });
+    };
+    
+    if (tsconfigPath) {
+      projectOptions.tsConfigFilePath = tsconfigPath;
+    }
+    
+    this.project = new Project(projectOptions);
   }
 
   /**
@@ -120,7 +139,7 @@ export class TypeScriptASTParser {
     return {
       name: iface.getName(),
       kind: 'interface',
-      properties: iface.getProperties().map(prop => this.extractProperty(prop)),
+      properties: iface.getProperties().map(prop => this.extractPropertySignature(prop)),
       extends: iface.getExtends().map(ext => ext.getText()),
     };
   }
@@ -178,24 +197,42 @@ export class TypeScriptASTParser {
   }
 
   private extractProperty(prop: PropertyDeclaration): TypeProperty {
+    const jsDocComment = this.getJSDocComment(prop);
     return {
       name: prop.getName(),
       type: prop.getType().getText(),
-      optional: prop.isOptional(),
+      optional: prop.hasQuestionToken() || false,
       readonly: prop.isReadonly(),
-      description: this.getJSDocComment(prop),
+      ...(jsDocComment && { description: jsDocComment }),
     };
+  }
+
+  private extractPropertySignature(prop: Node): TypeProperty {
+    if (Node.isPropertySignature(prop)) {
+      const jsDocComment = this.getJSDocComment(prop);
+      return {
+        name: prop.getName(),
+        type: prop.getType().getText(),
+        optional: prop.hasQuestionToken() || false,
+        readonly: prop.isReadonly(),
+        ...(jsDocComment && { description: jsDocComment }),
+      };
+    }
+    throw new Error(`Expected PropertySignature but got ${prop.getKindName()}`);
   }
 
   private extractMethod(method: MethodDeclaration): TypeMethod {
     return {
       name: method.getName(),
-      parameters: method.getParameters().map(param => ({
-        name: param.getName(),
-        type: param.getType().getText(),
-        optional: param.isOptional(),
-        defaultValue: param.getInitializer()?.getText(),
-      })),
+      parameters: method.getParameters().map(param => {
+        const defaultValue = param.getInitializer()?.getText();
+        return {
+          name: param.getName(),
+          type: param.getType().getText(),
+          optional: param.isOptional(),
+          ...(defaultValue && { defaultValue }),
+        };
+      }),
       returnType: method.getReturnType().getText(),
       async: method.isAsync(),
     };
@@ -210,11 +247,16 @@ export class TypeScriptASTParser {
       const declaration = declarations[0];
 
       if (declaration && Node.isPropertySignature(declaration)) {
+        const valueDeclaration = prop.getValueDeclaration();
+        const isReadonly = valueDeclaration && Node.isPropertySignature(valueDeclaration) 
+          ? valueDeclaration.isReadonly() 
+          : false;
+        
         properties.push({
           name: prop.getName(),
           type: prop.getTypeAtLocation(declaration).getText(),
           optional: prop.isOptional(),
-          readonly: prop.isReadonly(),
+          readonly: isReadonly,
         });
       }
     }
@@ -239,10 +281,12 @@ export class TypeScriptASTParser {
     const sourceFile = node.getSourceFile();
     const { line, column } = sourceFile.getLineAndColumnAtPos(node.getStart());
 
+    const hasExport = Node.isExportable(node) ? node.hasExportKeyword() : false;
+    
     return {
       name,
       kind,
-      exported: Node.hasExportKeyword(node),
+      exported: hasExport,
       location: {
         line,
         column,
@@ -253,41 +297,41 @@ export class TypeScriptASTParser {
 
   private extractEndpointFromFunction(
     fn: FunctionDeclaration,
-    filePath: string
+    _filePath: string
   ): APIEndpoint | null {
     const text = fn.getText();
-    const name = fn.getName();
 
-    // Pattern detection for API calls
-    const patterns = [
-      { regex: /fetch\s*\(\s*['"]([^'"]+)['"]\s*,\s*{\s*method\s*:\s*['"]([A-Za-z]+)['"]/i, type: 'fetch' },
-      { regex: /axios\.([a-z]+)\s*\(\s*['"]([^'"]+)['"]/i, type: 'axios' },
-    ];
-
-    for (const pattern of patterns) {
+    // Use static regex patterns for API endpoint detection
+    for (const pattern of TypeScriptASTParser.API_PATTERNS) {
       const match = pattern.regex.exec(text);
       if (match) {
-        let path: string;
-        let method: string | undefined;
+        let path: string | undefined;
+        let method: string;
 
         if (pattern.type === 'fetch') {
           // fetch(url, { method: 'GET' })
           path = match[1];
-          method = match[2];
+          method = match[2] || 'GET';
         } else if (pattern.type === 'axios') {
           // axios.get(url)
-          method = match[1];
+          method = match[1] || 'GET';
           path = match[2];
         } else {
           // Fallback: assume [path, method]
           path = match[1];
-          method = match[2];
+          method = match[2] || 'GET';
         }
 
+        // Skip if path is empty or invalid
+        if (!path || path.trim() === '') {
+          continue;
+        }
+
+        const description = this.getJSDocComment(fn);
         return {
           path,
-          method: (method || 'GET').toUpperCase() as APIEndpoint['method'],
-          description: this.getJSDocComment(fn) || `API call in ${name}`,
+          method: method.toUpperCase() as APIEndpoint['method'],
+          ...(description && { description }),
         };
       }
     }
@@ -296,9 +340,14 @@ export class TypeScriptASTParser {
   }
 
   private getJSDocComment(node: Node): string | undefined {
-    const jsDocs = Node.hasJSDoc(node) ? node.getJSDocTags() : [];
-    if (jsDocs.length > 0) {
-      return jsDocs.map(doc => doc.getText()).join(' ');
+    if (Node.isJSDocable(node)) {
+      const jsDocs = node.getJsDocs();
+      if (jsDocs.length > 0) {
+        const comments = jsDocs
+          .map(doc => doc.getComment())
+          .filter((comment): comment is string => typeof comment === 'string');
+        return comments.length > 0 ? comments.join(' ') : undefined;
+      }
     }
     return undefined;
   }

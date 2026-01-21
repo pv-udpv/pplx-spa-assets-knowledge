@@ -173,10 +173,11 @@ export class AssetFetcher {
   private downloadUrl(url: string): Promise<Buffer> {
     return new Promise((resolve, reject) => {
       const chunks: Buffer[] = [];
+      let timeoutHandle: NodeJS.Timeout | null = null;
 
       const request = https.get(url, response => {
         if (response.statusCode === 301 || response.statusCode === 302) {
-          clearTimeout(timeout);
+          if (timeoutHandle) clearTimeout(timeoutHandle);
           if (this.options.followRedirects && response.headers.location) {
             this.downloadUrl(response.headers.location).then(resolve).catch(reject);
             return;
@@ -184,28 +185,28 @@ export class AssetFetcher {
         }
 
         if (response.statusCode !== 200) {
-          clearTimeout(timeout);
+          if (timeoutHandle) clearTimeout(timeoutHandle);
           reject(new Error(`HTTP ${response.statusCode}`));
           return;
         }
 
         response.on('data', chunk => chunks.push(chunk));
         response.on('end', () => {
-          clearTimeout(timeout);
+          if (timeoutHandle) clearTimeout(timeoutHandle);
           resolve(Buffer.concat(chunks));
         });
         response.on('error', error => {
-          clearTimeout(timeout);
+          if (timeoutHandle) clearTimeout(timeoutHandle);
           reject(error);
         });
       });
 
-      const timeout = setTimeout(() => {
+      timeoutHandle = setTimeout(() => {
         request.destroy(new Error('Download timeout'));
       }, this.options.timeout);
 
       request.on('error', error => {
-        clearTimeout(timeout);
+        if (timeoutHandle) clearTimeout(timeoutHandle);
         reject(error);
       });
     });
