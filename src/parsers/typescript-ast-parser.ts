@@ -4,9 +4,7 @@
 
 import {
   Project,
-  SyntaxKind,
   Type,
-  TypeFormatFlags,
   Node,
   SourceFile,
   InterfaceDeclaration,
