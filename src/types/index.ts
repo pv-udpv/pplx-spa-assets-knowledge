@@ -107,3 +107,68 @@ export interface ServerVariable {
   enum?: string[];
   description?: string;
 }
+
+/**
+ * Browser capture types
+ */
+
+export interface CaptureConfig {
+  timeout: number;
+  headless: boolean;
+  capture: {
+    har: boolean;
+    network: boolean;
+    websocket: boolean;
+    sse: boolean;
+    callstack: boolean;
+    storage: boolean;
+    cookies: boolean;
+    console: boolean;
+    domSnapshot: boolean;
+    performance: boolean;
+  };
+  chrome: {
+    port: number;
+    host: string;
+    executable?: string;
+  };
+  extension: {
+    enabled: boolean;
+    path: string;
+    autoLoad: boolean;
+  };
+  output: {
+    dir: string;
+    format: 'json' | 'jsonl' | 'har';
+    compress: boolean;
+  };
+}
+
+export interface CaptureData {
+  timestamp: string;
+  url: string;
+  har: {
+    log: {
+      version: string;
+      creator: { name: string; version: string };
+      entries: Record<string, unknown>[];
+    };
+  };
+  websocketMessages: Array<{ type: string; data: unknown; timestamp: number }>;
+  eventStreamEvents: Array<{ event: string; data: unknown; timestamp: number }>;
+  localStorage: Record<string, string>;
+  sessionStorage: Record<string, string>;
+  cookies: Array<{ name: string; value: string; domain: string; path: string; secure: boolean; httpOnly: boolean }>;
+  callstacks: Array<Array<{ functionName: string; scriptId: string; url: string; lineNumber: number; columnNumber: number }>>;
+  console: Array<{ type: string; timestamp: string; arguments: unknown[] }>;
+  networkTimings: Record<string, number>;
+}
+
+export interface BrowserSession {
+  id: string;
+  config: CaptureConfig;
+  startTime: Date;
+  endTime?: Date;
+  captures: CaptureData[];
+  tasks: Array<{ name: string; duration: number; success: boolean; error?: string }>;
+}
