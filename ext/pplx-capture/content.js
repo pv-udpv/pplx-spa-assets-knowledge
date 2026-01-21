@@ -14,35 +14,44 @@ script.onload = function () {
 window.addEventListener('message', (event) => {
   if (event.source !== window) return;
 
-  if (event.data.type === 'WEBSOCKET_MESSAGE_CAPTURED') {
-    chrome.runtime.sendMessage({
-      type: 'WEBSOCKET_MESSAGE',
-      direction: event.data.direction,
-      data: event.data.data,
-    });
+  const data = event.data;
+
+  // Validate basic message structure
+  if (!data || typeof data !== 'object') {
+    return;
   }
 
-  if (event.data.type === 'SSE_EVENT_CAPTURED') {
+  const type = data.type;
+  if (type !== 'WEBSOCKET_MESSAGE_CAPTURED' && type !== 'SSE_EVENT_CAPTURED') {
+    return;
+  }
+
+  if (type === 'WEBSOCKET_MESSAGE_CAPTURED') {
+    // Validate expected fields for websocket messages
+    if (typeof data.direction !== 'string') {
+      return;
+    }
+
+    chrome.runtime.sendMessage({
+      type: 'WEBSOCKET_MESSAGE',
+      direction: data.direction,
+      data: data.data,
+    });
+  } else if (type === 'SSE_EVENT_CAPTURED') {
+    // Validate expected fields for SSE events
+    if (typeof data.event !== 'string') {
+      return;
+    }
+
     chrome.runtime.sendMessage({
       type: 'SSE_EVENT',
-      event: event.data.event,
-      data: event.data.data,
+      event: data.event,
+      data: data.data,
     });
   }
 });
 
-// Expose API for page to trigger captures
-window.pplxCapture = {
-  getCapturedData: async () => {
-    return new Promise((resolve) => {
-      chrome.runtime.sendMessage({ type: 'GET_CAPTURED_DATA' }, resolve);
-    });
-  },
-  clearData: async () => {
-    return new Promise((resolve) => {
-      chrome.runtime.sendMessage({ type: 'CLEAR_CAPTURED_DATA' }, resolve);
-    });
-  },
-};
+// Note: pplxCapture API is intentionally not exposed on window
+// to avoid unauthenticated access from arbitrary page scripts.
 
 console.log('🔴 Perplexity AI Capture extension loaded');

@@ -4,19 +4,10 @@
  */
 
 import { Command } from 'commander';
-import { readFile, writeFile, mkdir } from 'node:fs/promises';
-import { dirname, resolve } from 'node:path';
-import { parse as parseYaml } from 'yaml';
+import { readFile } from 'node:fs/promises';
 import { AssetFetcher } from './fetchers/asset-fetcher.js';
-import { TypeScriptASTParser } from './parsers/typescript-ast-parser.js';
-import { OpenAPIGenerator } from './generators/openapi-generator.js';
-import { AsyncAPIGenerator } from './generators/asyncapi-generator.js';
-import { JSONSchemaGenerator } from './generators/jsonschema-generator.js';
-import { AutoMCPGenerator, type MCPServerConfig } from './generators/automcp-generator.js';
-import { KnowledgeBaseBuilder } from './knowledge/kb-builder.js';
 import { runBrowserSession } from './browser/browser-automation.js';
 import { capturePresets } from './browser/capture-config.js';
-import type { OpenAPIV3_1 } from 'openapi-types';
 
 const program = new Command();
 
@@ -34,7 +25,7 @@ program
   .option('-p, --preset <preset>', 'Capture preset: minimal, apiReversing, full, development', 'apiReversing')
   .option('-u, --url <url>', 'URL to navigate to', 'https://www.perplexity.ai')
   .option('-c, --chrome-port <port>', 'Chrome DevTools Protocol port', '9222')
-  .option('--headless', 'Run in headless mode', true)
+  .option('--no-headless', 'Disable headless mode (run with GUI)')
   .option('-o, --output <dir>', 'Output directory for captures', './captures')
   .action(async (options) => {
     console.log('🌐 Browser Automation Pipeline');
@@ -44,7 +35,7 @@ program
       let config = capturePresets[options.preset as keyof typeof capturePresets] || capturePresets.apiReversing;
       config.chrome.port = parseInt(options.chromePort);
       config.output.dir = options.output;
-      config.headless = options.headless !== 'false';
+      config.headless = options.headless;
 
       await runBrowserSession(config, async (browser) => {
         const cdp = browser.getCDPClient();
@@ -138,76 +129,3 @@ program
 // ... (rest of CLI commands from previous version)
 
 program.parse();
-
-function generateAutomcpConfig(
-  openApiSpec: OpenAPIV3_1.Document,
-  apiKeyEnvVar: string,
-  baseUrlEnvVar: string
-): Record<string, unknown> {
-  const tools = [];
-  const baseUrl = process.env[baseUrlEnvVar] || openApiSpec.servers?.[0]?.url || 'https://api.example.com';
-
-  for (const [path, pathItem] of Object.entries(openApiSpec.paths || {})) {
-    if (!pathItem) continue;
-
-    for (const [method, operation] of Object.entries(pathItem)) {
-      if (method === 'parameters' || method === 'servers') continue;
-
-      const op = operation as OpenAPIV3_1.OperationObject;
-      if (!op.operationId) continue;
-
-      const tool = {
-        name: op.operationId,
-        description: op.description || op.summary || `${method.toUpperCase()} ${path}`,
-        endpoint: path,
-        method: method.toUpperCase(),
-        parameters: extractParametersForAutomcp(op),
-      };
-
-      tools.push(tool);
-    }
-  }
-
-  return {
-    servers: [
-      {
-        name: 'production',
-        url: baseUrl,
-        apiKeyEnv: apiKeyEnvVar,
-      },
-    ],
-    tools,
-  };
-}
-
-function extractParametersForAutomcp(
-  operation: OpenAPIV3_1.OperationObject
-): Record<string, unknown>[] {
-  const params: Record<string, unknown>[] = [];
-
-  for (const param of operation.parameters || []) {
-    if ('name' in param && 'schema' in param) {
-      params.push({
-        name: param.name,
-        in: param.in,
-        required: param.required || false,
-        description: param.description,
-        schema: param.schema,
-      });
-    }
-  }
-
-  if (operation.requestBody && 'content' in operation.requestBody) {
-    const content = operation.requestBody.content['application/json'];
-    if (content && 'schema' in content) {
-      params.push({
-        name: 'body',
-        in: 'body',
-        required: operation.requestBody.required || false,
-        schema: content.schema,
-      });
-    }
-  }
-
-  return params;
-}

@@ -9,6 +9,33 @@ window.WebSocket = class CaptureWebSocket extends OriginalWebSocket {
   constructor(url, protocols) {
     super(url, protocols);
     this.url = url;
+
+    // Store original addEventListener to use in the instance
+    const originalAddEventListener = super.addEventListener;
+    const wsUrl = url; // Capture URL in closure
+
+    // Override addEventListener on this instance
+    this.addEventListener = function (event, handler, options) {
+      if (event === 'message') {
+        const wrappedHandler = function (e) {
+          window.postMessage(
+            {
+              type: 'WEBSOCKET_MESSAGE_CAPTURED',
+              direction: 'receive',
+              data: {
+                url: wsUrl,
+                message: e.data,
+                timestamp: Date.now(),
+              },
+            },
+            '*'
+          );
+          return handler.call(this, e);
+        };
+        return originalAddEventListener.call(this, event, wrappedHandler, options);
+      }
+      return originalAddEventListener.call(this, event, handler, options);
+    }.bind(this);
   }
 
   send(data) {
@@ -28,36 +55,13 @@ window.WebSocket = class CaptureWebSocket extends OriginalWebSocket {
   }
 };
 
-// Override addEventListener to capture messages
-OriginalWebSocket.prototype.addEventListener = function (event, handler, options) {
-  if (event === 'message') {
-    const wrappedHandler = function (e) {
-      window.postMessage(
-        {
-          type: 'WEBSOCKET_MESSAGE_CAPTURED',
-          direction: 'receive',
-          data: {
-            url: this.url,
-            message: e.data,
-            timestamp: Date.now(),
-          },
-        },
-        '*'
-      );
-      return handler.call(this, e);
-    };
-    return OriginalWebSocket.prototype.addEventListener.call(this, event, wrappedHandler, options);
-  }
-  return OriginalWebSocket.prototype.addEventListener.call(this, event, handler, options);
-};
-
 // Capture EventSource (Server-Sent Events)
 const OriginalEventSource = window.EventSource;
 
 window.EventSource = class CaptureEventSource extends OriginalEventSource {
   constructor(url, eventSourceInitDict) {
     super(url, eventSourceInitDict);
-    this.url = url;
+    const sseUrl = url; // Capture URL in closure
 
     const originalAddEventListener = this.addEventListener.bind(this);
     this.addEventListener = function (event, handler, options) {
@@ -68,7 +72,7 @@ window.EventSource = class CaptureEventSource extends OriginalEventSource {
               type: 'SSE_EVENT_CAPTURED',
               event: event,
               data: {
-                url: this.url,
+                url: sseUrl,
                 eventType: event,
                 data: e.data,
                 timestamp: Date.now(),
