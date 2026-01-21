@@ -69,10 +69,10 @@ export class AutoMCPGenerator {
       scripts: {
         build: 'tsc',
         dev: 'tsc --watch',
-        type: 'tsc --noEmit',
+        typecheck: 'tsc --noEmit',
       },
       dependencies: {
-        '@modelcontextprotocol/sdk': '^0.7.0',
+        '@modelcontextprotocol/sdk': '^1.25.2',
       },
       devDependencies: {
         '@types/node': '^22.10.5',
@@ -166,7 +166,7 @@ await server.connect(transport);
 
 export async function callApi<T = unknown>(
   path: string,
-  method: string = 'GET',
+  method: string,
   body?: unknown
 ): Promise<T> {
   const baseUrl = process.env.API_BASE_URL || '${(openApiSpec.servers?.[0]?.url) || 'http://localhost:3000'}';
@@ -240,7 +240,7 @@ export async function ${t.handlerName}(args: ${t.typeName}): Promise<{ content: 
       if (schema && typeof schema === 'object' && 'properties' in schema) {
         typesCode += `export interface ${name} {\n`;
         const props = schema.properties as Record<string, unknown>;
-        for (const [propName, propSchema] of Object.entries(props)) {
+        for (const propName of Object.keys(props)) {
           const required = Array.isArray(schema.required) && schema.required.includes(propName);
           typesCode += `  ${propName}${required ? '' : '?'}: unknown; // TODO: Extract type\n`;
         }

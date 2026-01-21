@@ -3,10 +3,9 @@
  */
 
 import https from 'node:https';
-import { createWriteStream, promises as fs } from 'node:fs';
+import { promises as fs } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { dirname } from 'node:path';
-import { URL } from 'node:url';
 
 export interface FetchProgress {
   url: string;
@@ -174,34 +173,41 @@ export class AssetFetcher {
   private downloadUrl(url: string): Promise<Buffer> {
     return new Promise((resolve, reject) => {
       const chunks: Buffer[] = [];
-      const timeout = setTimeout(
-        () => reject(new Error('Download timeout')),
-        this.options.timeout
-      );
 
-      https
-        .get(url, { timeout: this.options.timeout }, response => {
-          if (response.statusCode === 301 || response.statusCode === 302) {
-            clearTimeout(timeout);
-            if (this.options.followRedirects && response.headers.location) {
-              this.downloadUrl(response.headers.location).then(resolve).catch(reject);
-              return;
-            }
-          }
-
-          if (response.statusCode !== 200) {
-            reject(new Error(`HTTP ${response.statusCode}`));
+      const request = https.get(url, response => {
+        if (response.statusCode === 301 || response.statusCode === 302) {
+          clearTimeout(timeout);
+          if (this.options.followRedirects && response.headers.location) {
+            this.downloadUrl(response.headers.location).then(resolve).catch(reject);
             return;
           }
+        }
 
-          response.on('data', chunk => chunks.push(chunk));
-          response.on('end', () => {
-            clearTimeout(timeout);
-            resolve(Buffer.concat(chunks));
-          });
-          response.on('error', reject);
-        })
-        .on('error', reject);
+        if (response.statusCode !== 200) {
+          clearTimeout(timeout);
+          reject(new Error(`HTTP ${response.statusCode}`));
+          return;
+        }
+
+        response.on('data', chunk => chunks.push(chunk));
+        response.on('end', () => {
+          clearTimeout(timeout);
+          resolve(Buffer.concat(chunks));
+        });
+        response.on('error', error => {
+          clearTimeout(timeout);
+          reject(error);
+        });
+      });
+
+      const timeout = setTimeout(() => {
+        request.destroy(new Error('Download timeout'));
+      }, this.options.timeout);
+
+      request.on('error', error => {
+        clearTimeout(timeout);
+        reject(error);
+      });
     });
   }
 

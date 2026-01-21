@@ -165,38 +165,55 @@ program
       const specs = ['openapi', 'asyncapi', 'jsonschema'];
       const typesToGenerate = options.type === 'all' ? specs : [options.type];
 
+      // Validate spec types
+      const validTypes = ['openapi', 'asyncapi', 'jsonschema', 'all'];
+      if (!validTypes.includes(options.type)) {
+        console.error(`❌ Invalid spec type: ${options.type}`);
+        console.error(`   Valid types: ${validTypes.join(', ')}`);
+        process.exit(1);
+      }
+
       for (const specType of typesToGenerate) {
         switch (specType) {
           case 'openapi': {
             console.log('  Generating OpenAPI v3.1...');
+            const openapiDir = `${options.output}/openapi`;
+            await mkdir(openapiDir, { recursive: true });
             const openapiGen = new OpenAPIGenerator(specConfig);
             await openapiGen.generate(
               parsed.endpoints || [],
-              `${options.output}/openapi/api-v1.yaml`
+              `${openapiDir}/api-v1.yaml`
             );
             console.log('    ✓ OpenAPI generated');
             break;
           }
           case 'asyncapi': {
             console.log('  Generating AsyncAPI v3.0...');
+            const asyncapiDir = `${options.output}/asyncapi`;
+            await mkdir(asyncapiDir, { recursive: true });
             const asyncapiGen = new AsyncAPIGenerator(specConfig);
             await asyncapiGen.generate(
               parsed.endpoints || [],
-              `${options.output}/asyncapi/events.yaml`
+              `${asyncapiDir}/events.yaml`
             );
             console.log('    ✓ AsyncAPI generated');
             break;
           }
           case 'jsonschema': {
             console.log('  Generating JSON Schemas...');
+            const jsonschemaDir = `${options.output}/jsonschema`;
+            await mkdir(jsonschemaDir, { recursive: true });
             const jsonschemaGen = new JSONSchemaGenerator();
             await jsonschemaGen.generate(
               parsed.types || [],
-              `${options.output}/jsonschema/models`
+              `${jsonschemaDir}/models`
             );
             console.log('    ✓ JSON Schemas generated');
             break;
           }
+          default:
+            console.error(`❌ Unknown spec type: ${specType}`);
+            process.exit(1);
         }
       }
 

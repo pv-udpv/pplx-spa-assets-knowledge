@@ -4,9 +4,7 @@
 
 import {
   Project,
-  SyntaxKind,
   Type,
-  TypeFormatFlags,
   Node,
   SourceFile,
   InterfaceDeclaration,
@@ -29,7 +27,7 @@ import type {
 export class TypeScriptASTParser {
   private project: Project;
 
-  constructor() {
+  constructor(tsconfigPath?: string) {
     this.project = new Project({
       compilerOptions: {
         target: 'ES2022',
@@ -37,7 +35,7 @@ export class TypeScriptASTParser {
         skipLibCheck: true,
         esModuleInterop: true,
       },
-      tsConfigFilePath: 'tsconfig.json',
+      tsConfigFilePath: tsconfigPath,
     });
   }
 
@@ -50,42 +48,7 @@ export class TypeScriptASTParser {
     endpoints: APIEndpoint[];
   } {
     const sourceFile = this.project.addSourceFileAtPath(filePath);
-    const types: ExtractedType[] = [];
-    const symbols: ASTSymbol[] = [];
-    const endpoints: APIEndpoint[] = [];
-
-    // Extract interfaces
-    for (const iface of sourceFile.getInterfaces()) {
-      types.push(this.extractInterface(iface));
-      symbols.push(this.extractSymbol(iface));
-    }
-
-    // Extract type aliases
-    for (const alias of sourceFile.getTypeAliases()) {
-      types.push(this.extractTypeAlias(alias));
-      symbols.push(this.extractSymbol(alias));
-    }
-
-    // Extract classes
-    for (const cls of sourceFile.getClasses()) {
-      types.push(this.extractClass(cls));
-      symbols.push(this.extractSymbol(cls));
-    }
-
-    // Extract enums
-    for (const enm of sourceFile.getEnums()) {
-      types.push(this.extractEnum(enm));
-      symbols.push(this.extractSymbol(enm));
-    }
-
-    // Extract functions (potential API endpoints)
-    for (const fn of sourceFile.getFunctions()) {
-      symbols.push(this.extractSymbol(fn));
-      const endpoint = this.extractEndpointFromFunction(fn, filePath);
-      if (endpoint) endpoints.push(endpoint);
-    }
-
-    return { types, symbols, endpoints };
+    return this.extractFromSourceFile(sourceFile);
   }
 
   /**
@@ -163,8 +126,6 @@ export class TypeScriptASTParser {
   }
 
   private extractTypeAlias(alias: TypeAliasDeclaration): ExtractedType {
-    const typeText = alias.getTypeNode()?.getText() || alias.getType().getText();
-    
     return {
       name: alias.getName(),
       kind: 'type',
@@ -203,12 +164,16 @@ export class TypeScriptASTParser {
     return {
       name: enm.getName(),
       kind: 'enum',
-      properties: enm.getMembers().map(member => ({
-        name: member.getName(),
-        type: member.getValue()?.getText() || 'string',
-        optional: false,
-        readonly: false,
-      })),
+      properties: enm.getMembers().map(member => {
+        const value = member.getValue();
+        const valueType = value === undefined ? 'string' : typeof value;
+        return {
+          name: member.getName(),
+          type: valueType,
+          optional: false,
+          readonly: false,
+        };
+      }),
     };
   }
 
@@ -277,7 +242,7 @@ export class TypeScriptASTParser {
     return {
       name,
       kind,
-      exported: Node.hasExportKeyword(node) && Node.hasExportKeyword(node) ? true : false,
+      exported: Node.hasExportKeyword(node),
       location: {
         line,
         column,
@@ -295,14 +260,30 @@ export class TypeScriptASTParser {
 
     // Pattern detection for API calls
     const patterns = [
-      { regex: /fetch\s*\(\s*['"]([^'"]+)['"]\s*,\s*{\s*method\s*:\s*['"]([A-Z]+)['"]/g, type: 'fetch' },
-      { regex: /axios\.([a-z]+)\s*\(\s*['"]([^'"]+)['"]/g, type: 'axios' },
+      { regex: /fetch\s*\(\s*['"]([^'"]+)['"]\s*,\s*{\s*method\s*:\s*['"]([A-Za-z]+)['"]/i, type: 'fetch' },
+      { regex: /axios\.([a-z]+)\s*\(\s*['"]([^'"]+)['"]/i, type: 'axios' },
     ];
 
     for (const pattern of patterns) {
       const match = pattern.regex.exec(text);
       if (match) {
-        const [, path, method] = match;
+        let path: string;
+        let method: string | undefined;
+
+        if (pattern.type === 'fetch') {
+          // fetch(url, { method: 'GET' })
+          path = match[1];
+          method = match[2];
+        } else if (pattern.type === 'axios') {
+          // axios.get(url)
+          method = match[1];
+          path = match[2];
+        } else {
+          // Fallback: assume [path, method]
+          path = match[1];
+          method = match[2];
+        }
+
         return {
           path,
           method: (method || 'GET').toUpperCase() as APIEndpoint['method'],
