@@ -44,7 +44,8 @@ export const capturePresets = {
    * Minimal: Only HAR and network timings
    */
   minimal: {
-    ...defaultCaptureConfig,
+    timeout: 30000,
+    headless: true,
     capture: {
       har: true,
       network: true,
@@ -57,13 +58,28 @@ export const capturePresets = {
       domSnapshot: false,
       performance: false,
     },
+    chrome: {
+      port: 9222,
+      host: 'localhost',
+    },
+    extension: {
+      enabled: true,
+      path: './ext/pplx-capture',
+      autoLoad: true,
+    },
+    output: {
+      dir: './captures',
+      format: 'json' as const,
+      compress: false,
+    },
   } as CaptureConfig,
 
   /**
    * API Reverse Engineering: HAR, network, WebSocket, storage
    */
   apiReversing: {
-    ...defaultCaptureConfig,
+    timeout: 30000,
+    headless: true,
     capture: {
       har: true,
       network: true,
@@ -76,13 +92,28 @@ export const capturePresets = {
       domSnapshot: false,
       performance: true,
     },
+    chrome: {
+      port: 9222,
+      host: 'localhost',
+    },
+    extension: {
+      enabled: true,
+      path: './ext/pplx-capture',
+      autoLoad: true,
+    },
+    output: {
+      dir: './captures',
+      format: 'json' as const,
+      compress: false,
+    },
   } as CaptureConfig,
 
   /**
    * Full: Everything
    */
   full: {
-    ...defaultCaptureConfig,
+    timeout: 30000,
+    headless: true,
     capture: {
       har: true,
       network: true,
@@ -95,13 +126,27 @@ export const capturePresets = {
       domSnapshot: true,
       performance: true,
     },
+    chrome: {
+      port: 9222,
+      host: 'localhost',
+    },
+    extension: {
+      enabled: true,
+      path: './ext/pplx-capture',
+      autoLoad: true,
+    },
+    output: {
+      dir: './captures',
+      format: 'json' as const,
+      compress: false,
+    },
   } as CaptureConfig,
 
   /**
    * Development: For debugging and development
    */
   development: {
-    ...defaultCaptureConfig,
+    timeout: 30000,
     headless: false,
     capture: {
       har: true,
@@ -114,6 +159,20 @@ export const capturePresets = {
       console: true,
       domSnapshot: true,
       performance: true,
+    },
+    chrome: {
+      port: 9222,
+      host: 'localhost',
+    },
+    extension: {
+      enabled: true,
+      path: './ext/pplx-capture',
+      autoLoad: true,
+    },
+    output: {
+      dir: './captures',
+      format: 'json' as const,
+      compress: false,
     },
   } as CaptureConfig,
 };

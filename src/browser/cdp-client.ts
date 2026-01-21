@@ -5,7 +5,7 @@
 import CDP from 'chrome-remote-interface';
 import { promises as fs } from 'node:fs';
 import { join } from 'node:path';
-import type { CaptureConfig, CaptureSession, CaptureData } from '../types/index.js';
+import type { CaptureConfig, CaptureData } from '../types/index.js';
 
 export class CDPClient {
   private client: typeof CDP.Client | null = null;
@@ -90,21 +90,54 @@ export class CDPClient {
       console.log(`🌐 Navigating to ${url}...`);
 
       await new Promise<void>((resolve, reject) => {
-        const timeoutId = setTimeout(() => reject(new Error('Navigation timeout')), timeout);
+        const navigationTimeoutId = setTimeout(
+          () => reject(new Error('Navigation timeout')),
+          timeout
+        );
 
-        Page.frameNavigated(async () => {
-          if (waitUntil === 'load') {
-            await Page.loadEventFired();
-            clearTimeout(timeoutId);
+        if (waitUntil === 'load') {
+          // Resolve once the page load event has fired
+          Page.loadEventFired(() => {
+            clearTimeout(navigationTimeoutId);
             resolve();
-          }
-        });
+          });
+        } else {
+          // Resolve when the network has been idle
+          let inflightRequests = 0;
+          let idleTimer: NodeJS.Timeout | null = null;
+          const idleDelay = waitUntil === 'networkidle2' ? 500 : 0;
 
-        Network.requestWillBeSent(() => {
-          // Track network requests
-        });
+          Network.requestWillBeSent(() => {
+            inflightRequests += 1;
+            if (idleTimer) {
+              clearTimeout(idleTimer);
+              idleTimer = null;
+            }
+          });
 
-        Page.navigate({ url });
+          const onRequestDone = () => {
+            if (inflightRequests > 0) {
+              inflightRequests -= 1;
+            }
+            if (inflightRequests === 0) {
+              if (idleTimer) {
+                clearTimeout(idleTimer);
+              }
+              idleTimer = setTimeout(() => {
+                clearTimeout(navigationTimeoutId);
+                resolve();
+              }, idleDelay);
+            }
+          };
+
+          Network.loadingFinished(onRequestDone);
+          Network.loadingFailed(onRequestDone);
+        }
+
+        Page.navigate({ url }).catch((err: unknown) => {
+          clearTimeout(navigationTimeoutId);
+          reject(err instanceof Error ? err : new Error(String(err)));
+        });
       });
     } catch (error) {
       console.error('❌ Navigation failed:', error);
@@ -144,6 +177,32 @@ export class CDPClient {
   }
 
   /**
+   * Execute JavaScript code in the browser context
+   */
+  async executeJavaScript(expression: string): Promise<any> {
+    if (!this.client) throw new Error('CDP client not connected');
+
+    const { Runtime } = this.client as any;
+
+    try {
+      const result = await Runtime.evaluate({ 
+        expression, 
+        awaitPromise: true,
+        returnByValue: true 
+      });
+      
+      if (result.exceptionDetails) {
+        throw new Error(result.exceptionDetails.exception?.description || 'Script execution failed');
+      }
+
+      return result.result?.value;
+    } catch (error) {
+      console.error('❌ JavaScript execution failed:', error);
+      throw error;
+    }
+  }
+
+  /**
    * Capture current storage (localStorage, sessionStorage, cookies)
    */
   async captureStorage(): Promise<void> {
@@ -161,8 +220,8 @@ export class CDPClient {
           }, {}))
         `;
         const localStorageResult = await Runtime.evaluate({ expression: localStorageScript });
-        if (localStorageResult.value) {
-          this.captureData.localStorage = JSON.parse(localStorageResult.value);
+        if (localStorageResult.result?.value) {
+          this.captureData.localStorage = JSON.parse(localStorageResult.result.value);
         }
 
         // Get sessionStorage
@@ -173,8 +232,8 @@ export class CDPClient {
           }, {}))
         `;
         const sessionStorageResult = await Runtime.evaluate({ expression: sessionStorageScript });
-        if (sessionStorageResult.value) {
-          this.captureData.sessionStorage = JSON.parse(sessionStorageResult.value);
+        if (sessionStorageResult.result?.value) {
+          this.captureData.sessionStorage = JSON.parse(sessionStorageResult.result.value);
         }
       }
 
@@ -258,6 +317,7 @@ export class CDPClient {
   private setupNetworkCapture(Network: any): void {
     Network.requestWillBeSent(({ requestId, request, timestamp }: any) => {
       this.harEntries.push({
+        _requestId: requestId,  // Store requestId for matching
         startedDateTime: new Date(timestamp * 1000).toISOString(),
         time: 0,
         request: {
@@ -276,8 +336,8 @@ export class CDPClient {
       });
     });
 
-    Network.responseReceived(({ requestId, response, timestamp }: any) => {
-      const entry = this.harEntries.find((e: any) => e.request?.url === response.url);
+    Network.responseReceived(({ requestId, response }: any) => {
+      const entry = this.harEntries.find((e: any) => e._requestId === requestId);
       if (entry) {
         entry.response = {
           status: response.status,

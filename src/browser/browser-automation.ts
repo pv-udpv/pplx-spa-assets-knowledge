@@ -4,9 +4,8 @@
 
 import { spawn, SpawnOptionsWithoutStdio } from 'node:child_process';
 import { promises as fs } from 'node:fs';
-import { join } from 'node:path';
 import { CDPClient } from './cdp-client.js';
-import type { CaptureConfig, BrowserSession } from '../types/index.js';
+import type { CaptureConfig } from '../types/index.js';
 
 export class BrowserAutomation {
   private config: CaptureConfig;
@@ -49,8 +48,25 @@ export class BrowserAutomation {
 
       this.chromeProcess.on('error', reject);
 
-      // Wait for Chrome to be ready
-      setTimeout(() => resolve(this.chromeProcess!.pid!), 2000);
+      // Poll CDP endpoint until ready
+      const checkReady = async (retries = 30) => {
+        for (let i = 0; i < retries; i++) {
+          try {
+            const response = await fetch(`http://${this.config.chrome.host}:${this.config.chrome.port}/json/version`);
+            if (response.ok) {
+              console.log('✅ Chrome is ready');
+              resolve(this.chromeProcess!.pid!);
+              return;
+            }
+          } catch (error) {
+            // CDP not ready yet, continue polling
+          }
+          await new Promise(r => setTimeout(r, 100));
+        }
+        reject(new Error('Chrome startup timeout: CDP endpoint not available'));
+      };
+
+      checkReady().catch(reject);
     });
   }
 
