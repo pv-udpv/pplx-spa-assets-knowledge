@@ -210,7 +210,7 @@ export class TypeScriptASTParser {
         ...(this.getJSDocComment(prop) && { description: this.getJSDocComment(prop)! }),
       };
     }
-    throw new Error('Node is not a property signature');
+    throw new Error(`Expected PropertySignature but got ${prop.getKindName()}`);
   }
 
   private extractMethod(method: MethodDeclaration): TypeMethod {
