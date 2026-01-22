@@ -1,6 +1,10 @@
 import { PerplexityDevTool } from './platforms/mobile/ErudaPlugin';
 import { StickyButton } from './core/StickyButton';
 
+// Store instances for potential cleanup
+let pluginInstance: PerplexityDevTool | null = null;
+let stickyBtnInstance: StickyButton | null = null;
+
 // Platform detection
 const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(
   navigator.userAgent
@@ -33,16 +37,16 @@ function init() {
   });
 
   // Register our plugin
-  const plugin = new PerplexityDevTool();
-  eruda.add(plugin);
+  pluginInstance = new PerplexityDevTool();
+  eruda.add(pluginInstance);
 
   // Add sticky button (desktop + mobile)
-  const stickyBtn = new StickyButton({
+  stickyBtnInstance = new StickyButton({
     onClick: () => {
       eruda.show('Perplexity');
     },
   });
-  stickyBtn.init();
+  stickyBtnInstance.init();
 
   // Startup log
   console.log(
@@ -60,3 +64,15 @@ function init() {
     'color: #aaa; font-size: 11px'
   );
 }
+
+// Cleanup on page unload (best effort for userscript environment)
+window.addEventListener('beforeunload', () => {
+  if (pluginInstance) {
+    pluginInstance.destroy();
+    pluginInstance = null;
+  }
+  if (stickyBtnInstance) {
+    stickyBtnInstance.destroy();
+    stickyBtnInstance = null;
+  }
+});

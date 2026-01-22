@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "build": "tsc",
-    "dev": "tsc --watch",
+    "build": "vite build",
+    "dev": "vite",
+    "preview": "vite preview",
+    "serve": "vite build --watch",
     "parse": "node dist/cli.js parse",
     "generate": "node dist/cli.js generate",
     "kb:build": "node dist/cli.js kb",

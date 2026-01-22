@@ -17,6 +17,7 @@ export class PerplexityDevTool implements ErudaPlugin {
   private builder: OpenAPIBuilder;
   private interceptors: Interceptors;
   private schemaTab: SchemaTab | null = null;
+  private networkTab: NetworkTab | null = null;
 
   constructor() {
     // Initialize core modules
@@ -165,10 +166,10 @@ export class PerplexityDevTool implements ErudaPlugin {
     }
 
     // Network Monitor
-    const networkTab = new NetworkTab();
     const networkTabEl = $root.querySelector('#tab-network');
     if (networkTabEl instanceof HTMLElement) {
-      networkTab.mount(networkTabEl);
+      this.networkTab = new NetworkTab();
+      this.networkTab.mount(networkTabEl);
     }
 
     // Settings
@@ -267,5 +268,10 @@ export class PerplexityDevTool implements ErudaPlugin {
 
   destroy() {
     this.interceptors.stop();
+    
+    // Clean up NetworkTab interval
+    if (this.networkTab) {
+      this.networkTab.destroy();
+    }
   }
 }
