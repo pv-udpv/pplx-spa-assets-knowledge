@@ -152,19 +152,31 @@ export class PerplexityDevTool implements ErudaPlugin {
   private mountTabs($root: HTMLElement) {
     // API Explorer
     const apiTab = new APIExplorerTab(this.api, this.coverage);
-    apiTab.mount($root.querySelector('#tab-api')!);
+    const apiTabEl = $root.querySelector('#tab-api');
+    if (apiTabEl instanceof HTMLElement) {
+      apiTab.mount(apiTabEl);
+    }
 
     // Schema Inspector
-    this.schemaTab = new SchemaTab(this.builder);
-    this.schemaTab.mount($root.querySelector('#tab-schema')!);
+    const schemaTabEl = $root.querySelector('#tab-schema');
+    if (schemaTabEl instanceof HTMLElement) {
+      this.schemaTab = new SchemaTab(this.builder);
+      this.schemaTab.mount(schemaTabEl);
+    }
 
     // Network Monitor
     const networkTab = new NetworkTab();
-    networkTab.mount($root.querySelector('#tab-network')!);
+    const networkTabEl = $root.querySelector('#tab-network');
+    if (networkTabEl instanceof HTMLElement) {
+      networkTab.mount(networkTabEl);
+    }
 
     // Settings
     const settingsTab = new SettingsTab();
-    settingsTab.mount($root.querySelector('#tab-settings')!);
+    const settingsTabEl = $root.querySelector('#tab-settings');
+    if (settingsTabEl instanceof HTMLElement) {
+      settingsTab.mount(settingsTabEl);
+    }
   }
 
   private loadSchema() {
