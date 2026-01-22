@@ -1,337 +1,204 @@
-# Quick Start Guide
+# ⚡ Quick Start — 5 Minutes
 
-## Prerequisites
+## 🎯 What You Get
 
-- Node.js 20+
-- npm or yarn
-- Basic TypeScript knowledge
+- **404 REST endpoints** fully cataloged
+- **397 app modules** with gzip-compressed source code
+- **CLI tool** with 4 analysis commands
+- **Ready for Phase 2** expansion (schemas, graphs, flags)
 
-## Installation
+---
+
+## 🚀 Setup (2 min)
 
 ```bash
-git clone https://github.com/pv-udpv/pplx-spa-assets-knowledge
+# Clone repo
+git clone https://github.com/pv-udpv/pplx-spa-assets-knowledge.git
 cd pplx-spa-assets-knowledge
-npm install
-npm run build
+
+# Create virtual environment
+python3 -m venv .venv
+source .venv/bin/activate  # Windows: .venv\Scripts\activate
+
+# Install (only pyyaml needed)
+pip install pyyaml
+
+# Verify
+python spec_analyzer.py --help
 ```
 
-## Full Pipeline Example
+---
 
-### Step 1: Fetch SPA Assets
+## 🔍 Explore the Spec (1 min)
 
 ```bash
-# Create manifest with asset paths
-cat > manifest.txt << 'EOF'
-/_next/static/chunks/main.js
-/_next/static/chunks/webpack.js
-/_next/static/chunks/pages/_app.js
+# View main artifact
+ls -lh perplexity_spa_full_spec.json
+# Output: 1.9 MB (includes 397 gzipped modules)
+
+# Quick stats
+python3 << 'EOF'
+import json
+with open('perplexity_spa_full_spec.json') as f:
+    spec = json.load(f)
+
+print(f"Endpoints: {len(spec['endpoints']['rest'])}")
+print(f"Modules: {len(spec['source_codes_meta'])}")
+print(f"Categories: {len(spec['endpoints']['rest_by_category'])}")
 EOF
 
-# Fetch assets
-npm run fetch -- \
-  --source https://pplx-next-static-public.perplexity.ai \
-  --manifest manifest.txt \
-  --output ./assets-cache \
-  --concurrency 5 \
-  --timeout 30000
+# Output:
+# Endpoints: 404
+# Modules: 397
+# Categories: 53
 ```
 
-**Output Structure:**
-```
-./assets-cache/
-├── _next/static/chunks/main.js
-├── _next/static/chunks/webpack.js
-└── _next/static/chunks/pages/_app.js
-```
+---
 
-### Step 2: Parse TypeScript with AST
+## 🛠️ Try the CLI (2 min)
 
+### 1. Analyze Endpoint
 ```bash
-# Parse fetched assets
-npm run parse -- \
-  --input ./assets-cache \
-  --output ./parsed
+python spec_analyzer.py analyze-endpoint rest/finance/earnings
+
+# Shows:
+# - API calls observed in HAR
+# - Modules using this endpoint
+# - Call counts
 ```
 
-**Output:**
-```
-./parsed/
-└── parsed-result.json
-    ├── types: ExtractedType[]
-    │   ├── name
-    │   ├── kind (interface|type|class|enum)
-    │   ├── properties
-    │   └── methods
-    ├── symbols: Symbol[]
-    │   ├── name
-    │   ├── kind (function|class|interface|type|const|enum)
-    │   ├── exported
-    │   └── location {file, line, column}
-    └── endpoints: APIEndpoint[]
-        ├── path
-        ├── method (GET|POST|PUT|PATCH|DELETE|WS)
-        ├── requestType
-        └── responseType
-```
-
-### Step 3: Generate API Specifications
-
+### 2. Build Feature Map
 ```bash
-# Generate all specs (OpenAPI, AsyncAPI, JSON Schema)
-npm run generate -- \
-  --type all \
-  --input ./parsed \
-  --output ./specs \
-  --title "Perplexity AI API" \
-  --version 1.0.0 \
-  --base-url https://api.perplexity.ai
+python spec_analyzer.py feature-map --output features.json
+
+# Generates feature_map.json with:
+# - Features grouped by category
+# - Endpoints per feature
+# - Modules per feature
 ```
 
-**Output:**
-```
-./specs/
-├── openapi/
-│   └── api-v1.yaml           # OpenAPI v3.1 spec
-├── asyncapi/
-│   └── events.yaml           # AsyncAPI v3.0 spec (WebSocket)
-└── jsonschema/
-    └── models/
-        ├── Query.schema.json
-        ├── Response.schema.json
-        └── ...
-```
-
-### Step 4: Generate MCP Server
-
+### 3. Generate OpenAPI
 ```bash
-# Generate MCP server from OpenAPI spec
-npm run mcp:generate -- \
-  --spec ./specs/openapi/api-v1.yaml \
-  --output ./mcp/pplx-api \
-  --name pplx-api \
-  --version 0.1.0 \
-  --author pv-udpv
+python spec_analyzer.py openapi --output perplexity_api.json
+
+# Creates basic OpenAPI v3 spec
+# Use with: Swagger UI, Postman, ReDoc
 ```
 
-**Generated MCP Server Structure:**
-```
-./mcp/pplx-api/
-├── package.json              # MCP server dependencies
-├── README.md                 # Documentation
-├── .env.example              # Configuration template
-├── tsconfig.json
-└── src/
-    ├── index.ts              # MCP server + tool registration
-    ├── tools.ts              # Tool implementations with API calls
-    └── types.ts              # Generated TypeScript types
-```
-
-**Configure & Run MCP Server:**
+### 4. Compare Specs
 ```bash
-cd ./mcp/pplx-api
-npm install
-cp .env.example .env
+# (If you have two versions)
+python spec_analyzer.py diff old_spec.json new_spec.json --output changes.json
 
-# Edit .env with your API credentials
-echo "API_BASE_URL=https://api.perplexity.ai" >> .env
-echo "API_KEY=your-api-key-here" >> .env
-
-# Build and run
-npm run build
-node dist/index.js
+# Shows added/removed endpoints & modules
 ```
 
-### Step 5: Generate automcp Configuration (Optional)
+---
 
-```bash
-# Generate automcp config from OpenAPI spec
-node dist/cli.js automcp \
-  --spec ./specs/openapi/api-v1.yaml \
-  --output ./automcp.config.json \
-  --api-key-env API_KEY \
-  --base-url-env API_BASE_URL
+## 📚 Read the Docs
+
+| File | Read Time | Purpose |
+|------|-----------|----------|
+| **[README.md](./README.md)** | 5 min | Full overview |
+| **[SUMMARY.md](./SUMMARY.md)** | 3 min | Executive summary |
+| **[ROADMAP.md](./ROADMAP.md)** | 5 min | Phase 1-3 planning |
+| **[.copilot-instructions.md](./.copilot-instructions.md)** | 10 min | Implementation guide |
+
+---
+
+## 💻 Quick Python Examples
+
+### Load and Query Spec
+```python
+import json
+
+with open('perplexity_spa_full_spec.json') as f:
+    spec = json.load(f)
+
+# Get all finance endpoints
+finance = spec['endpoints']['rest_by_category']['finance']
+print(f"Finance endpoints: {len(finance)}")
+for ep in finance[:3]:
+    print(f"  - {ep}")
 ```
 
-**Generated Config:**
-```json
-{
-  "servers": [
-    {
-      "name": "production",
-      "url": "https://api.perplexity.ai",
-      "apiKeyEnv": "API_KEY"
-    }
-  ],
-  "tools": [
-    {
-      "name": "search",
-      "description": "Search for information",
-      "endpoint": "/api/search",
-      "method": "POST",
-      "parameters": [...]
-    }
-  ]
-}
+### Decompress Source Code
+```python
+import gzip
+import base64
+
+# Pick a module
+filename = list(spec['source_codes'].keys())[0]
+base64_data = spec['source_codes'][filename]
+
+# Decompress
+compressed = base64.b64decode(base64_data)
+source = gzip.decompress(compressed).decode('utf-8')
+
+print(f"Module: {filename}")
+print(f"Size: {len(source)} bytes")
+print(f"First 200 chars:\n{source[:200]}")
 ```
 
-**Use with automcp:**
-```bash
-export AUTOMCP_CONFIG=$(pwd)/automcp.config.json
-automcp run
+### Find API Calls
+```python
+# Get all observed API calls
+api_calls = spec['requests']['api_calls']
+
+# Filter by path pattern
+earnings_calls = [c for c in api_calls if 'earnings' in c['path']]
+print(f"Earnings API calls: {len(earnings_calls)}")
 ```
 
-### Step 6: Build Knowledge Base (Optional)
+---
 
-```bash
-npm run kb:build -- \
-  --input ./parsed \
-  --output ./kb
-```
+## 🎯 What's Next?
 
-**Output:**
-```
-./kb/
-├── knowledge-base.json
-└── entities/
-    ├── type_SearchQuery.json
-    ├── type_Response.json
-    ├── endpoint_GET_/api/search.json
-    └── ...
-```
+### Phase 2 Tasks (Pick One)
 
-## Integration with Claude / Cline
+1. **2A: Extract Schemas** (🔴 HIGH priority, 3-4h)  
+   Extract request/response schemas for all 404 endpoints
 
-### Option 1: Using Generated MCP Server
+2. **2D: Real-time APIs** (🟡 MEDIUM priority, 3-4h)  
+   Map SSE/WebSocket streaming endpoints
 
-Add to your `cline_mcp_config.json` or Claude settings:
+3. **2B: Component Graph** (🟡 MEDIUM priority, 4-5h)  
+   Build React component → hook → API dependency graph
 
-```json
-{
-  "mcpServers": {
-    "pplx-api": {
-      "command": "node",
-      "args": ["/path/to/mcp/pplx-api/dist/index.js"]
-    }
-  }
-}
-```
+4. **2C: Feature Flags** (🟢 LOW priority, 2-3h)  
+   Discover A/B tests and feature toggles
 
-### Option 2: Using automcp
+**See [ROADMAP.md](./ROADMAP.md) for details.**
 
-Add to your Claude config:
+---
 
-```bash
-export AUTOMCP_CONFIG=/path/to/automcp.config.json
-```
+## ❓ Common Questions
 
-Then automcp will automatically expose tools to Claude.
+### Q: Where is the source code?
+A: In `perplexity_spa_full_spec.json` under `source_codes` (gzip + base64 encoded). Use the decompress example above.
 
-## Typical Workflow
+### Q: Can I use this for my project?
+A: Yes! For research, documentation, SDK generation. Respect Perplexity's ToS.
 
-```bash
-#!/bin/bash
+### Q: How do I contribute?
+A: Pick a Phase 2 task from ROADMAP, implement, create PR with artifact + docs.
 
-# Full pipeline automation
-echo "🚀 Starting Perplexity AI SPA analysis pipeline..."
+### Q: Where are the schemas?
+A: Phase 2 task 2A will extract them. Current spec has raw HAR data.
 
-# 1. Fetch
-echo "📦 Fetching assets..."
-npm run fetch -- --concurrency 5
+---
 
-# 2. Parse
-echo "🔍 Parsing TypeScript..."
-npm run parse
+## 🔗 Quick Links
 
-# 3. Generate
-echo "📝 Generating specifications..."
-npm run generate -- --type all
+- **Main Artifact**: [perplexity_spa_full_spec.json](./perplexity_spa_full_spec.json) (1.9 MB)
+- **CLI Tool**: [spec_analyzer.py](./spec_analyzer.py)
+- **Full README**: [README.md](./README.md)
+- **Roadmap**: [ROADMAP.md](./ROADMAP.md)
+- **Pull Request**: [#8](https://github.com/pv-udpv/pplx-spa-assets-knowledge/pull/8)
+- **Original Issue**: [#7](https://github.com/pv-udpv/pplx-spa-assets-knowledge/issues/7)
 
-# 4. MCP
-echo "🔧 Building MCP server..."
-npm run mcp:generate
+---
 
-# 5. automcp
-echo "⚙️  Generating automcp config..."
-node dist/cli.js automcp
-
-# 6. KB
-echo "🧠 Building knowledge base..."
-npm run kb:build
-
-echo "✅ Pipeline complete!"
-echo ""
-echo "📍 Generated outputs:"
-echo "   - OpenAPI: ./specs/openapi/api-v1.yaml"
-echo "   - MCP Server: ./mcp/pplx-api/"
-echo "   - automcp Config: ./automcp.config.json"
-echo "   - Knowledge Base: ./kb/"
-```
-
-## Troubleshooting
-
-### Asset Fetch Failures
-
-```bash
-# Check network connectivity
-curl -I https://pplx-next-static-public.perplexity.ai/
-
-# Try with longer timeout
-npm run fetch -- --timeout 60000
-
-# Check specific asset
-echo "/_next/static/chunks/main.js" > single.txt
-npm run fetch -- --manifest single.txt --concurrency 1
-```
-
-### Parse Errors
-
-```bash
-# Check TypeScript compilation
-ls -lah ./assets-cache/
-
-# Verify file is valid JavaScript/TypeScript
-file ./assets-cache/_next/static/chunks/main.js
-
-# Try parsing single file
-node -e "const parser = require('./dist/parsers/typescript-ast-parser.js'); console.log(parser);"
-```
-
-### MCP Server Issues
-
-```bash
-cd ./mcp/pplx-api
-
-# Check build
-npm run build
-
-# Test MCP server
-node dist/index.js
-
-# Check env vars
-env | grep API
-```
-
-## Performance Tips
-
-1. **Concurrency**: Start with 3-5, increase if no errors
-2. **Timeout**: CDN sometimes slow, increase if timeouts occur
-3. **Caching**: Assets are cached, rerun from `--input ./parsed`
-4. **Memory**: For large bundles (>100MB), increase Node heap:
-   ```bash
-   NODE_OPTIONS="--max-old-space-size=4096" npm run parse
-   ```
-
-## Next Steps
-
-1. **Extend Pattern Detection**: Add new API call patterns in `TypeScriptASTParser`
-2. **Custom Tools**: Add post-processing in generators
-3. **GraphRAG**: Integrate for knowledge graphs
-4. **CI/CD**: Automate pipeline with GitHub Actions
-
-## Resources
-
-- [OpenAPI v3.1 Spec](https://spec.openapis.org/oas/v3.1.0)
-- [AsyncAPI v3.0 Spec](https://www.asyncapi.com/en/docs/specifications/v3.0.0)
-- [MCP Protocol](https://modelcontextprotocol.io/)
-- [ts-morph Docs](https://ts-morph.com/)
-- [Perplexity AI](https://www.perplexity.ai/)
+**Last Updated**: 22 January 2026  
+**Time to Get Started**: ~5 minutes  
+**Status**: Phase 1 Complete ✅
