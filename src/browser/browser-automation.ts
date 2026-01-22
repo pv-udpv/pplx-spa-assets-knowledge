@@ -2,11 +2,10 @@
  * Browser automation orchestrator
  */
 
-import { spawn, SpawnOptionsWithoutStdio } from 'node:child_process';
+import { spawn } from 'node:child_process';
 import { promises as fs } from 'node:fs';
-import { join } from 'node:path';
 import { CDPClient } from './cdp-client.js';
-import type { CaptureConfig, BrowserSession } from '../types/index.js';
+import type { CaptureConfig } from '../types/index.js';
 
 export class BrowserAutomation {
   private config: CaptureConfig;
@@ -45,7 +44,7 @@ export class BrowserAutomation {
 
       this.chromeProcess = spawn(executable, args, {
         stdio: 'ignore',
-      } as SpawnOptionsWithoutStdio);
+      });
 
       this.chromeProcess.on('error', reject);
 

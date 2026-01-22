@@ -22,7 +22,7 @@ export const defaultCaptureConfig: CaptureConfig = {
   chrome: {
     port: 9222,
     host: 'localhost',
-    executable: undefined, // Uses default Chrome/Chromium
+    // Uses default Chrome/Chromium - omit undefined to satisfy exactOptionalPropertyTypes
   },
   extension: {
     enabled: true,
