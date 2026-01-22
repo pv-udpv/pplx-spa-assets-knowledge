@@ -4,19 +4,16 @@
  */
 
 import { Command } from 'commander';
-import { readFile, writeFile, mkdir, readdir } from 'node:fs/promises';
-import { resolve, join, extname } from 'node:path';
-import { parse as parseYaml } from 'yaml';
+import { readFile } from 'node:fs/promises';
 import { AssetFetcher } from './fetchers/asset-fetcher.js';
-import { TypeScriptASTParser } from './parsers/typescript-ast-parser.js';
-import { OpenAPIGenerator } from './generators/openapi-generator.js';
-import { AsyncAPIGenerator } from './generators/asyncapi-generator.js';
-import { JSONSchemaGenerator } from './generators/jsonschema-generator.js';
-// import { AutoMCPGenerator, type MCPServerConfig } from './generators/automcp-generator.js';
-import { KnowledgeBaseBuilder } from './knowledge/kb-builder.js';
-// import { runBrowserSession } from './browser/browser-automation.js';
-// import { capturePresets } from './browser/capture-config.js';
-import type { OpenAPIV3_1 } from 'openapi-types';
+import { runBrowserSession } from './browser/browser-automation.js';
+import { capturePresets } from './browser/capture-config.js';
+
+// The following imports are reserved for future CLI commands that are not yet fully implemented:
+// - TypeScriptASTParser for parse command
+// - OpenAPIGenerator, AsyncAPIGenerator, JSONSchemaGenerator for generate command
+// - AutoMCPGenerator for MCP generation
+// - KnowledgeBaseBuilder for knowledge base construction
 
 const program = new Command();
 
@@ -222,93 +219,8 @@ program
 
 program.parse();
 
-/**
- * Helper function to collect files from a directory
- */
-async function collectFiles(
-  dirPath: string,
-  pattern: string,
-  recursive: boolean
-): Promise<string[]> {
-  const files: string[] = [];
-  
-  try {
-    const entries = await readdir(dirPath, { withFileTypes: true });
-    
-    for (const entry of entries) {
-      const fullPath = join(dirPath, entry.name);
-      
-      if (entry.isDirectory() && recursive) {
-        const subFiles = await collectFiles(fullPath, pattern, recursive);
-        files.push(...subFiles);
-      } else if (entry.isFile()) {
-        // Simple pattern matching for *.ts, *.js, etc.
-        const ext = extname(entry.name);
-        const matchesPattern = matchFilePattern(entry.name, pattern);
-        
-        if (matchesPattern) {
-          files.push(fullPath);
-        }
-      }
-    }
-  } catch (error) {
-    console.error(`Error reading directory ${dirPath}:`, error);
-  }
-  
-  return files;
-}
-
-/**
- * Simple glob pattern matcher
- * Note: For production use, consider using a library like 'minimatch' for full glob support
- */
-function matchFilePattern(filename: string, pattern: string): boolean {
-  // Match all files
-  if (pattern === '*') {
-    return true;
-  }
-  
-  // Handle patterns like *.{ts,js}
-  if (pattern.includes('{') && pattern.includes('}')) {
-    const basePattern = pattern.substring(0, pattern.indexOf('{'));
-    const extensionsStr = pattern.substring(
-      pattern.indexOf('{') + 1,
-      pattern.indexOf('}')
-    );
-    const extensions = extensionsStr.split(',');
-    
-    for (const ext of extensions) {
-      const fullPattern = basePattern + ext.trim();
-      if (matchSimplePattern(filename, fullPattern)) {
-        return true;
-      }
-    }
-    return false;
-  }
-  
-  return matchSimplePattern(filename, pattern);
-}
-
-/**
- * Match simple wildcard patterns (e.g., *.ts, test-*.js)
- * Only supports * wildcard, not full glob syntax
- */
-function matchSimplePattern(filename: string, pattern: string): boolean {
-  // Validate pattern to prevent ReDoS
-  if (pattern.length > 100 || (pattern.match(/\*/g) || []).length > 5) {
-    console.warn(`Pattern too complex or too long: ${pattern}`);
-    return false;
-  }
-  
-  // Escape special regex characters except *
-  const regexPattern = pattern
-    .replace(/[.+?^${}()|[\]\\]/g, '\\$&')
-    .replace(/\*/g, '.*');
-  
-  const regex = new RegExp(`^${regexPattern}$`);
-  return regex.test(filename);
-}
-
+// Reserved for future automcp command
+/*
 function generateAutomcpConfig(
   openApiSpec: OpenAPIV3_1.Document,
   apiKeyEnvVar: string,
@@ -381,3 +293,4 @@ function extractParametersForAutomcp(
 
   return params;
 }
+*/

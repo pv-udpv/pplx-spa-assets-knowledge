@@ -2,7 +2,7 @@
 node_modules/
 .pnp
 .pnp.js
-package-lock.json
+# package-lock.json - REMOVED: needed for GitHub Actions caching
 
 # Build outputs
 dist/
