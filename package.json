@@ -1,12 +1,7 @@
 {
   "name": "pplx-spa-assets-knowledge",
-  "version": "0.2.0",
-  "description": "Perplexity AI SPA static assets analyzer, knowledge base generator, and OpenAPI/AsyncAPI/JSON Schema specification builder",
+  "version": "1.0.0",
   "type": "module",
-  "main": "dist/index.js",
-  "bin": {
-    "pplx-assets": "dist/cli.js"
-  },
   "scripts": {
     "build": "tsc",
     "dev": "tsc --watch",
@@ -47,13 +42,9 @@
   },
   "devDependencies": {
     "@types/node": "^22.10.5",
-    "@typescript-eslint/eslint-plugin": "^8.20.0",
-    "@typescript-eslint/parser": "^8.20.0",
-    "eslint": "^9.18.0",
-    "prettier": "^3.4.2",
-    "typescript": "^5.7.3"
-  },
-  "engines": {
-    "node": ">=20.0.0"
+    "@types/tampermonkey": "^5.0.3",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.7",
+    "vite-plugin-monkey": "^7.1.8"
   }
 }
