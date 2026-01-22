@@ -274,9 +274,22 @@ program
     console.log(`   After: ${options.after}`);
 
     try {
-      // Load snapshots
-      const before = JSON.parse(await readFile(options.before, 'utf-8'));
-      const after = JSON.parse(await readFile(options.after, 'utf-8'));
+      // Load snapshots with validation
+      let before, after;
+      
+      try {
+        const beforeContent = await readFile(options.before, 'utf-8');
+        before = JSON.parse(beforeContent);
+      } catch (error) {
+        throw new Error(`Failed to parse before snapshot: ${error instanceof Error ? error.message : String(error)}`);
+      }
+
+      try {
+        const afterContent = await readFile(options.after, 'utf-8');
+        after = JSON.parse(afterContent);
+      } catch (error) {
+        throw new Error(`Failed to parse after snapshot: ${error instanceof Error ? error.message : String(error)}`);
+      }
 
       // Simple diff
       const diff = {

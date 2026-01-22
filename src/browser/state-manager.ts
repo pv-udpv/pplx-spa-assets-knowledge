@@ -260,9 +260,10 @@ export class SessionStateManager {
     for (const [key, value] of Object.entries(storage2)) {
       if (!(key in storage1)) {
         added[key] = value;
-      } else if (storage1[key] !== value) {
+      } else {
         const oldValue = storage1[key];
-        if (oldValue !== undefined) {
+        // Check if values are different and both are defined
+        if (oldValue !== undefined && oldValue !== value) {
           modified[key] = { old: oldValue, new: value };
         }
       }
@@ -271,9 +272,9 @@ export class SessionStateManager {
     // Find removed
     for (const key of Object.keys(storage1)) {
       if (!(key in storage2)) {
-        const oldValue = storage1[key];
-        if (oldValue !== undefined) {
-          removed[key] = oldValue;
+        const removedValue = storage1[key];
+        if (removedValue !== undefined) {
+          removed[key] = removedValue;
         }
       }
     }

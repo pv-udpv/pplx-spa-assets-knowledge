@@ -46,6 +46,7 @@ export class AntiBotAnalyzer {
    */
   async analyzeProtection(): Promise<AntiBotAnalysisResult> {
     console.log('🔍 Analyzing anti-bot protection...');
+    console.log('⚠️  Note: Analysis requires CDP Runtime.evaluate integration');
 
     const result: AntiBotAnalysisResult = {
       cloudflare: false,
@@ -72,35 +73,40 @@ export class AntiBotAnalyzer {
       details: {},
     };
 
-    // Detect Cloudflare
-    result.cloudflare = await this.detectCloudflare();
+    try {
+      // Detect Cloudflare
+      result.cloudflare = await this.detectCloudflare();
 
-    // Detect reCAPTCHA
-    result.recaptcha = await this.detectRecaptcha();
+      // Detect reCAPTCHA
+      result.recaptcha = await this.detectRecaptcha();
 
-    // Detect hCAPTCHA
-    result.hcaptcha = await this.detectHCaptcha();
+      // Detect hCAPTCHA
+      result.hcaptcha = await this.detectHCaptcha();
 
-    // Detect Canvas fingerprinting
-    result.canvas = await this.detectCanvasFingerprinting();
+      // Detect Canvas fingerprinting
+      result.canvas = await this.detectCanvasFingerprinting();
 
-    // Detect WebRTC fingerprinting
-    result.webrtc = await this.detectWebRTCFingerprinting();
+      // Detect WebRTC fingerprinting
+      result.webrtc = await this.detectWebRTCFingerprinting();
 
-    // Detect WebDriver
-    result.webdriver = await this.detectWebDriver();
+      // Detect WebDriver
+      result.webdriver = await this.detectWebDriver();
 
-    // Analyze fingerprinting techniques
-    result.fingerprinting = await this.detectFingerprintingTechniques();
+      // Analyze fingerprinting techniques
+      result.fingerprinting = await this.detectFingerprintingTechniques();
 
-    // Check exposed headers
-    result.exposedHeaders = await this.getExposedHeaders();
+      // Check exposed headers
+      result.exposedHeaders = await this.getExposedHeaders();
 
-    // Check timing APIs
-    result.timingAPIs = await this.checkTimingAPIs();
+      // Check timing APIs
+      result.timingAPIs = await this.checkTimingAPIs();
 
-    // Analyze scripts
-    result.suspiciousScripts = await this.analyzeSuspiciousScripts();
+      // Analyze scripts
+      result.suspiciousScripts = await this.analyzeSuspiciousScripts();
+    } catch (error) {
+      console.log(`⚠️  Analysis incomplete: ${error instanceof Error ? error.message : String(error)}`);
+      console.log('   This feature will be available when browser automation is fully integrated');
+    }
 
     // Print summary
     this.printSummary(result);
@@ -380,14 +386,12 @@ export class AntiBotAnalyzer {
    */
   private async evaluateScript<T = any>(_script: string): Promise<T> {
     // This would use CDP Runtime.evaluate
-    // For now, return placeholder values
-    console.log(`   Evaluating detection script...`);
+    // For now, throw not-implemented error as this is a placeholder
+    throw new Error('evaluateScript not implemented - requires CDP Runtime.evaluate integration');
     
     // In production, this would be:
-    // const result = await Runtime.evaluate({ expression: script });
-    // return result.value;
-    
-    return false as T;
+    // const result = await Runtime.evaluate({ expression: _script });
+    // return result.value as T;
   }
 
   /**
