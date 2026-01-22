@@ -86,7 +86,7 @@ export class CoverageTracker {
       };
     }
 
-    const entry = this.coverage[category]![key];
+    const entry = this.coverage[category]?.[key];
     if (entry) {
       entry.called = true;
       entry.callCount++;

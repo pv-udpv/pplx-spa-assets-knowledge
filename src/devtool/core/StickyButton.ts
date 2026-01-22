@@ -98,10 +98,12 @@ export class StickyButton {
     this.button.style.transition = 'none';
 
     const touch = 'touches' in e ? e.touches[0] : e;
+    if (!touch) return;
+    
     const rect = this.button.getBoundingClientRect();
 
-    this.offsetX = touch!.clientX - rect.left;
-    this.offsetY = touch!.clientY - rect.top;
+    this.offsetX = touch.clientX - rect.left;
+    this.offsetY = touch.clientY - rect.top;
   }
 
   private onDrag(e: MouseEvent | TouchEvent) {
@@ -111,8 +113,10 @@ export class StickyButton {
     this.wasDragging = true;
 
     const touch = 'touches' in e ? e.touches[0] : e;
-    const x = touch!.clientX - this.offsetX;
-    const y = touch!.clientY - this.offsetY;
+    if (!touch) return;
+    
+    const x = touch.clientX - this.offsetX;
+    const y = touch.clientY - this.offsetY;
 
     const maxX = window.innerWidth - this.button.offsetWidth;
     const maxY = window.innerHeight - this.button.offsetHeight;
