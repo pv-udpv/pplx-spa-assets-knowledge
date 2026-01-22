@@ -1,0 +1,46 @@
+import type { Eruda } from './types/eruda';
+import { PerplexityDevTool } from './platforms/mobile/ErudaPlugin';
+import { StickyButton } from './core/StickyButton';
+
+// Platform detection
+const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(
+  navigator.userAgent
+);
+
+// Init Eruda
+declare const eruda: Eruda;
+
+eruda.init({
+  useShadowDom: true,
+  autoScale: true,
+  defaults: {
+    displaySize: isMobile ? 40 : 50,
+    transparency: 0.95,
+  },
+  tool: ['console', 'elements', 'network', 'resources'],
+});
+
+// Register our plugin
+const plugin = new PerplexityDevTool();
+eruda.add(plugin);
+
+// Add sticky button (desktop only)
+if (!isMobile) {
+  const stickyBtn = new StickyButton({
+    onClick: () => {
+      eruda.show('Perplexity');
+    },
+  });
+  stickyBtn.init();
+}
+
+// Startup log
+console.log(
+  '%c⚡ Perplexity DevTool loaded!',
+  'color: #667eea; font-size: 16px; font-weight: bold'
+);
+
+console.log(
+  `%cPlatform: ${isMobile ? 'Mobile' : 'Desktop'} | Eruda: ${eruda ? 'Ready' : 'Failed'}`,
+  'color: #49cc90'
+);
