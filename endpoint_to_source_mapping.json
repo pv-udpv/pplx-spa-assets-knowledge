@@ -1,0 +1,3463 @@
+{
+  "metadata": {
+    "extraction_date": "2026-01-21",
+    "total_endpoints": 397,
+    "mapped_endpoints": 88,
+    "total_js_modules_scanned": 746,
+    "description": "Mapping of API endpoints to source JS modules"
+  },
+  "endpoints": {
+    "/rest/academic/check-edu-institution": {
+      "path": "/rest/academic/check-edu-institution",
+      "category": "academic",
+      "method": "GET",
+      "source_modules": [
+        {
+          "module": "academicKeys-VBytPExr.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/academicKeys-VBytPExr.js",
+          "occurrences": 1
+        }
+      ],
+      "module_count": 1
+    },
+    "/rest/academic/courses-by-school": {
+      "path": "/rest/academic/courses-by-school",
+      "category": "academic",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/api-org-management/organizations/{api_org_id}/file_repositories": {
+      "path": "/rest/api-org-management/organizations/{api_org_id}/file_repositories",
+      "category": "api-org-management",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/api-org-management/organizations/{api_org_id}/file_repositories/{repository_uuid}": {
+      "path": "/rest/api-org-management/organizations/{api_org_id}/file_repositories/{repository_uuid}",
+      "category": "api-org-management",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/api-org-management/organizations/{api_org_id}/file_repositories/{repository_uuid}/files": {
+      "path": "/rest/api-org-management/organizations/{api_org_id}/file_repositories/{repository_uuid}/files",
+      "category": "api-org-management",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/api-org-management/organizations/{api_org_id}/file_repositories/{repository_uuid}/files/{file_uuid}": {
+      "path": "/rest/api-org-management/organizations/{api_org_id}/file_repositories/{repository_uuid}/files/{file_uuid}",
+      "category": "api-org-management",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/api-org-management/organizations/{api_org_id}/file_repositories/{repository_uuid}/uploads": {
+      "path": "/rest/api-org-management/organizations/{api_org_id}/file_repositories/{repository_uuid}/uploads",
+      "category": "api-org-management",
+      "method": "POST",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/api-org-management/organizations/{api_org_id}/invites": {
+      "path": "/rest/api-org-management/organizations/{api_org_id}/invites",
+      "category": "api-org-management",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/api-org-management/organizations/{api_org_id}/users": {
+      "path": "/rest/api-org-management/organizations/{api_org_id}/users",
+      "category": "api-org-management",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/api-org-management/organizations/{api_org_id}/users/{user_id}": {
+      "path": "/rest/api-org-management/organizations/{api_org_id}/users/{user_id}",
+      "category": "api-org-management",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/article/emphasize_sources/{section_uuid}": {
+      "path": "/rest/article/emphasize_sources/{section_uuid}",
+      "category": "article",
+      "method": "GET",
+      "source_modules": [
+        {
+          "module": "threadMutations-DnjD4xOB.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/threadMutations-DnjD4xOB.js",
+          "occurrences": 1
+        }
+      ],
+      "module_count": 1
+    },
+    "/rest/article/list_ask_articles": {
+      "path": "/rest/article/list_ask_articles",
+      "category": "article",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/article/{article_uuid_or_slug}": {
+      "path": "/rest/article/{article_uuid_or_slug}",
+      "category": "article",
+      "method": "GET",
+      "source_modules": [
+        {
+          "module": "ArticleResultsProvider-C40it0gJ.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/ArticleResultsProvider-C40it0gJ.js",
+          "occurrences": 3
+        }
+      ],
+      "module_count": 1
+    },
+    "/rest/assets/signed-url/{asset_id}": {
+      "path": "/rest/assets/signed-url/{asset_id}",
+      "category": "assets",
+      "method": "PUT",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/attribution/comet/1mo-promo/mark-eligible": {
+      "path": "/rest/attribution/comet/1mo-promo/mark-eligible",
+      "category": "attribution",
+      "method": "PUT",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/attribution/comet/event/{event_name}": {
+      "path": "/rest/attribution/comet/event/{event_name}",
+      "category": "attribution",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/attribution/comet/session": {
+      "path": "/rest/attribution/comet/session",
+      "category": "attribution",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/attribution/dub/lead": {
+      "path": "/rest/attribution/dub/lead",
+      "category": "attribution",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/auth/get_special_profile": {
+      "path": "/rest/auth/get_special_profile",
+      "category": "auth",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/autosuggest/academic/list-autosuggest": {
+      "path": "/rest/autosuggest/academic/list-autosuggest",
+      "category": "autosuggest",
+      "method": "GET",
+      "source_modules": [
+        {
+          "module": "academic-DGs03j5g.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/academic-DGs03j5g.js",
+          "occurrences": 1
+        }
+      ],
+      "module_count": 1
+    },
+    "/rest/autosuggest/finance/list-autosuggest": {
+      "path": "/rest/autosuggest/finance/list-autosuggest",
+      "category": "autosuggest",
+      "method": "GET",
+      "source_modules": [
+        {
+          "module": "discover-DVVq_aIT.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/discover-DVVq_aIT.js",
+          "occurrences": 1
+        }
+      ],
+      "module_count": 1
+    },
+    "/rest/autosuggest/finance/tasks-autosuggest": {
+      "path": "/rest/autosuggest/finance/tasks-autosuggest",
+      "category": "autosuggest",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/autosuggest/list-autosuggest": {
+      "path": "/rest/autosuggest/list-autosuggest",
+      "category": "autosuggest",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/autosuggest/reformulate-query": {
+      "path": "/rest/autosuggest/reformulate-query",
+      "category": "autosuggest",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/autosuggest/shopping/list-autosuggest": {
+      "path": "/rest/autosuggest/shopping/list-autosuggest",
+      "category": "autosuggest",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/autosuggest/sports/list-autosuggest": {
+      "path": "/rest/autosuggest/sports/list-autosuggest",
+      "category": "autosuggest",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/autosuggest/track-query-clicked": {
+      "path": "/rest/autosuggest/track-query-clicked",
+      "category": "autosuggest",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/autosuggest/travel/list-autosuggest": {
+      "path": "/rest/autosuggest/travel/list-autosuggest",
+      "category": "autosuggest",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/billing/braintree/paypal/client-token": {
+      "path": "/rest/billing/braintree/paypal/client-token",
+      "category": "billing",
+      "method": "GET",
+      "source_modules": [
+        {
+          "module": "billingKeys-B5qpyMR7.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/billingKeys-B5qpyMR7.js",
+          "occurrences": 1
+        },
+        {
+          "module": "billingKeys-B5qpyMR7.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/billingKeys-B5qpyMR7.js",
+          "occurrences": 1
+        }
+      ],
+      "module_count": 2
+    },
+    "/rest/billing/braintree/subscription-details": {
+      "path": "/rest/billing/braintree/subscription-details",
+      "category": "billing",
+      "method": "GET",
+      "source_modules": [
+        {
+          "module": "billingKeys-B5qpyMR7.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/billingKeys-B5qpyMR7.js",
+          "occurrences": 1
+        },
+        {
+          "module": "billingKeys-B5qpyMR7.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/billingKeys-B5qpyMR7.js",
+          "occurrences": 1
+        }
+      ],
+      "module_count": 2
+    },
+    "/rest/billing/commerce/carts": {
+      "path": "/rest/billing/commerce/carts",
+      "category": "billing",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/billing/commerce/carts/{cart_id}/complete": {
+      "path": "/rest/billing/commerce/carts/{cart_id}/complete",
+      "category": "billing",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/billing/commerce/carts/{cart_id}/update": {
+      "path": "/rest/billing/commerce/carts/{cart_id}/update",
+      "category": "billing",
+      "method": "PUT",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/billing/create-government-subscription": {
+      "path": "/rest/billing/create-government-subscription",
+      "category": "billing",
+      "method": "POST",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/billing/get-customer-portal": {
+      "path": "/rest/billing/get-customer-portal",
+      "category": "billing",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/billing/personalization/status": {
+      "path": "/rest/billing/personalization/status",
+      "category": "billing",
+      "method": "GET",
+      "source_modules": [
+        {
+          "module": "PersonalSearchSettingsMain-XJg1THcE.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/PersonalSearchSettingsMain-XJg1THcE.js",
+          "occurrences": 1
+        },
+        {
+          "module": "billingKeys-B5qpyMR7.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/billingKeys-B5qpyMR7.js",
+          "occurrences": 1
+        },
+        {
+          "module": "billingKeys-B5qpyMR7.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/billingKeys-B5qpyMR7.js",
+          "occurrences": 1
+        }
+      ],
+      "module_count": 3
+    },
+    "/rest/billing/personalization/update": {
+      "path": "/rest/billing/personalization/update",
+      "category": "billing",
+      "method": "PUT",
+      "source_modules": [
+        {
+          "module": "PersonalSearchSettingsMain-XJg1THcE.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/PersonalSearchSettingsMain-XJg1THcE.js",
+          "occurrences": 1
+        }
+      ],
+      "module_count": 1
+    },
+    "/rest/browser/classify": {
+      "path": "/rest/browser/classify",
+      "category": "browser",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/browser/client_payload": {
+      "path": "/rest/browser/client_payload",
+      "category": "browser",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/browser/download": {
+      "path": "/rest/browser/download",
+      "category": "browser",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/browser/personalization/sidecar-recommended-queries": {
+      "path": "/rest/browser/personalization/sidecar-recommended-queries",
+      "category": "browser",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/browser/tool_failure": {
+      "path": "/rest/browser/tool_failure",
+      "category": "browser",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/browser/tool_result": {
+      "path": "/rest/browser/tool_result",
+      "category": "browser",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/collections/create_collection": {
+      "path": "/rest/collections/create_collection",
+      "category": "collections",
+      "method": "POST",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/collections/delete_collection/{collection_uuid}": {
+      "path": "/rest/collections/delete_collection/{collection_uuid}",
+      "category": "collections",
+      "method": "DELETE",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/collections/edit_collection/{collection_uuid}": {
+      "path": "/rest/collections/edit_collection/{collection_uuid}",
+      "category": "collections",
+      "method": "PUT",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/collections/focused_web_config/links": {
+      "path": "/rest/collections/focused_web_config/links",
+      "category": "collections",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/collections/get_canonical_collection_contexts": {
+      "path": "/rest/collections/get_canonical_collection_contexts",
+      "category": "collections",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/collections/get_collection": {
+      "path": "/rest/collections/get_collection",
+      "category": "collections",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/collections/get_collection_from_group_member": {
+      "path": "/rest/collections/get_collection_from_group_member",
+      "category": "collections",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/collections/get_group_member_from_collection": {
+      "path": "/rest/collections/get_group_member_from_collection",
+      "category": "collections",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/collections/invitations": {
+      "path": "/rest/collections/invitations",
+      "category": "collections",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/collections/invite_to_collection": {
+      "path": "/rest/collections/invite_to_collection",
+      "category": "collections",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/collections/list_bookmarks": {
+      "path": "/rest/collections/list_bookmarks",
+      "category": "collections",
+      "method": "PUT",
+      "source_modules": [
+        {
+          "module": "useBookmarksQuery-C1pC03-N.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useBookmarksQuery-C1pC03-N.js",
+          "occurrences": 2
+        }
+      ],
+      "module_count": 1
+    },
+    "/rest/collections/list_collection_articles": {
+      "path": "/rest/collections/list_collection_articles",
+      "category": "collections",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/collections/list_collection_threads": {
+      "path": "/rest/collections/list_collection_threads",
+      "category": "collections",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/collections/list_recent": {
+      "path": "/rest/collections/list_recent",
+      "category": "collections",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/collections/list_space_templates": {
+      "path": "/rest/collections/list_space_templates",
+      "category": "collections",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/collections/list_user_collections": {
+      "path": "/rest/collections/list_user_collections",
+      "category": "collections",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/collections/remove_collection_thread": {
+      "path": "/rest/collections/remove_collection_thread",
+      "category": "collections",
+      "method": "DELETE",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/collections/respond_to_invitation/{collection_uuid}": {
+      "path": "/rest/collections/respond_to_invitation/{collection_uuid}",
+      "category": "collections",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/collections/upsert_thread_collection": {
+      "path": "/rest/collections/upsert_thread_collection",
+      "category": "collections",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/collections/{collection_uuid}/access": {
+      "path": "/rest/collections/{collection_uuid}/access",
+      "category": "collections",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/collections/{collection_uuid}/remove_user": {
+      "path": "/rest/collections/{collection_uuid}/remove_user",
+      "category": "collections",
+      "method": "DELETE",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/connections/oauth_callback": {
+      "path": "/rest/connections/oauth_callback",
+      "category": "connections",
+      "method": "GET",
+      "source_modules": [
+        {
+          "module": "ConnectorAuthorizationPrompt-DZIPmV4r.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/ConnectorAuthorizationPrompt-DZIPmV4r.js",
+          "occurrences": 1
+        }
+      ],
+      "module_count": 1
+    },
+    "/rest/connections/oauth_callback_merge": {
+      "path": "/rest/connections/oauth_callback_merge",
+      "category": "connections",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/connections/{uuid}/delete": {
+      "path": "/rest/connections/{uuid}/delete",
+      "category": "connections",
+      "method": "DELETE",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/connections/{uuid}/update": {
+      "path": "/rest/connections/{uuid}/update",
+      "category": "connections",
+      "method": "PUT",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/connectors/attachments/upload": {
+      "path": "/rest/connectors/attachments/upload",
+      "category": "connectors",
+      "method": "POST",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/connectors/box/picker": {
+      "path": "/rest/connectors/box/picker",
+      "category": "connectors",
+      "method": "GET",
+      "source_modules": [
+        {
+          "module": "connectorMutations-CKrCO-ES.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/connectorMutations-CKrCO-ES.js",
+          "occurrences": 1
+        }
+      ],
+      "module_count": 1
+    },
+    "/rest/connectors/picker/log": {
+      "path": "/rest/connectors/picker/log",
+      "category": "connectors",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/connectors/save-file": {
+      "path": "/rest/connectors/save-file",
+      "category": "connectors",
+      "method": "POST",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/connectors/sharepoint/sites": {
+      "path": "/rest/connectors/sharepoint/sites",
+      "category": "connectors",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/connectors/wiley": {
+      "path": "/rest/connectors/wiley",
+      "category": "connectors",
+      "method": "GET",
+      "source_modules": [
+        {
+          "module": "CitationDomain-C4addsTp.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/CitationDomain-C4addsTp.js",
+          "occurrences": 1
+        }
+      ],
+      "module_count": 1
+    },
+    "/rest/connectors/{connector_id}/check-email-assistant-impact": {
+      "path": "/rest/connectors/{connector_id}/check-email-assistant-impact",
+      "category": "connectors",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/connectors/{connector_id}/disconnect": {
+      "path": "/rest/connectors/{connector_id}/disconnect",
+      "category": "connectors",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/debug/threads/thread_result": {
+      "path": "/rest/debug/threads/thread_result",
+      "category": "debug",
+      "method": "GET",
+      "source_modules": [
+        {
+          "module": "DebugDisplay-C6EiDsGZ.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/DebugDisplay-C6EiDsGZ.js",
+          "occurrences": 3
+        },
+        {
+          "module": "DebugDisplay-C6EiDsGZ.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/DebugDisplay-C6EiDsGZ.js",
+          "occurrences": 3
+        }
+      ],
+      "module_count": 2
+    },
+    "/rest/debug/threads/thread_result/{thread_result_uuid}": {
+      "path": "/rest/debug/threads/thread_result/{thread_result_uuid}",
+      "category": "debug",
+      "method": "GET",
+      "source_modules": [
+        {
+          "module": "DebugDisplay-C6EiDsGZ.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/DebugDisplay-C6EiDsGZ.js",
+          "occurrences": 2
+        },
+        {
+          "module": "DebugDisplay-C6EiDsGZ.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/DebugDisplay-C6EiDsGZ.js",
+          "occurrences": 2
+        }
+      ],
+      "module_count": 2
+    },
+    "/rest/deeper-research/download-asset": {
+      "path": "/rest/deeper-research/download-asset",
+      "category": "deeper-research",
+      "method": "PUT",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/deeper-research/export-all-assets": {
+      "path": "/rest/deeper-research/export-all-assets",
+      "category": "deeper-research",
+      "method": "PUT",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/discord/connect": {
+      "path": "/rest/discord/connect",
+      "category": "discord",
+      "method": "GET",
+      "source_modules": [
+        {
+          "module": "details-CmOFrp8i.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/details-CmOFrp8i.js",
+          "occurrences": 1
+        }
+      ],
+      "module_count": 1
+    },
+    "/rest/discord/status": {
+      "path": "/rest/discord/status",
+      "category": "discord",
+      "method": "GET",
+      "source_modules": [
+        {
+          "module": "details-CmOFrp8i.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/details-CmOFrp8i.js",
+          "occurrences": 2
+        }
+      ],
+      "module_count": 1
+    },
+    "/rest/discover/feed": {
+      "path": "/rest/discover/feed",
+      "category": "discover",
+      "method": "GET",
+      "source_modules": [
+        {
+          "module": "discover-DVVq_aIT.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/discover-DVVq_aIT.js",
+          "occurrences": 4
+        },
+        {
+          "module": "discoverKeys-C5x-fAjn.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/discoverKeys-C5x-fAjn.js",
+          "occurrences": 1
+        }
+      ],
+      "module_count": 2
+    },
+    "/rest/discover/feed-items/{context_uuid}/feedback/dislike": {
+      "path": "/rest/discover/feed-items/{context_uuid}/feedback/dislike",
+      "category": "discover",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/discover/feed-items/{context_uuid}/feedback/like": {
+      "path": "/rest/discover/feed-items/{context_uuid}/feedback/like",
+      "category": "discover",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/discover/topics": {
+      "path": "/rest/discover/topics",
+      "category": "discover",
+      "method": "GET",
+      "source_modules": [
+        {
+          "module": "discover-BDKVpCjn.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/discover-BDKVpCjn.js",
+          "occurrences": 1
+        },
+        {
+          "module": "discover-DVVq_aIT.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/discover-DVVq_aIT.js",
+          "occurrences": 1
+        },
+        {
+          "module": "discoverKeys-C5x-fAjn.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/discoverKeys-C5x-fAjn.js",
+          "occurrences": 1
+        }
+      ],
+      "module_count": 3
+    },
+    "/rest/email_assistant/calendars": {
+      "path": "/rest/email_assistant/calendars",
+      "category": "email_assistant",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/email_assistant/config": {
+      "path": "/rest/email_assistant/config",
+      "category": "email_assistant",
+      "method": "GET",
+      "source_modules": [
+        {
+          "module": "assistant-BCmSHdUA.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/assistant-BCmSHdUA.js",
+          "occurrences": 1
+        }
+      ],
+      "module_count": 1
+    },
+    "/rest/email_assistant/scope-status": {
+      "path": "/rest/email_assistant/scope-status",
+      "category": "email_assistant",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/email_assistant/trial/status": {
+      "path": "/rest/email_assistant/trial/status",
+      "category": "email_assistant",
+      "method": "GET",
+      "source_modules": [
+        {
+          "module": "assistant-BCmSHdUA.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/assistant-BCmSHdUA.js",
+          "occurrences": 2
+        }
+      ],
+      "module_count": 1
+    },
+    "/rest/enterprise/checkout-session": {
+      "path": "/rest/enterprise/checkout-session",
+      "category": "enterprise",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/enterprise/customer-portal": {
+      "path": "/rest/enterprise/customer-portal",
+      "category": "enterprise",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/enterprise/domain/{domain_uuid}/force-sso": {
+      "path": "/rest/enterprise/domain/{domain_uuid}/force-sso",
+      "category": "enterprise",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/enterprise/organization": {
+      "path": "/rest/enterprise/organization",
+      "category": "enterprise",
+      "method": "GET",
+      "source_modules": [
+        {
+          "module": "LoginModalInner-EUnpr2o0.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/LoginModalInner-EUnpr2o0.js",
+          "occurrences": 1
+        },
+        {
+          "module": "analytics-4zvpWfOe.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/analytics-4zvpWfOe.js",
+          "occurrences": 2
+        },
+        {
+          "module": "comet-telemetry-Bq-hzaKn.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/comet-telemetry-Bq-hzaKn.js",
+          "occurrences": 2
+        }
+      ],
+      "module_count": 3
+    },
+    "/rest/enterprise/organization/domains/{domain_uuid}/jit-provisioning": {
+      "path": "/rest/enterprise/organization/domains/{domain_uuid}/jit-provisioning",
+      "category": "enterprise",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/enterprise/organization/invite/{org_invite_uuid}": {
+      "path": "/rest/enterprise/organization/invite/{org_invite_uuid}",
+      "category": "enterprise",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/enterprise/organization/invite/{org_invite_uuid}/resend": {
+      "path": "/rest/enterprise/organization/invite/{org_invite_uuid}/resend",
+      "category": "enterprise",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/enterprise/organization/login/details": {
+      "path": "/rest/enterprise/organization/login/details",
+      "category": "enterprise",
+      "method": "GET",
+      "source_modules": [
+        {
+          "module": "LoginModalInner-EUnpr2o0.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/LoginModalInner-EUnpr2o0.js",
+          "occurrences": 1
+        }
+      ],
+      "module_count": 1
+    },
+    "/rest/enterprise/organization/premium-secure-billing-update": {
+      "path": "/rest/enterprise/organization/premium-secure-billing-update",
+      "category": "enterprise",
+      "method": "PUT",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/enterprise/organization/premium-secure-eligibility": {
+      "path": "/rest/enterprise/organization/premium-secure-eligibility",
+      "category": "enterprise",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/enterprise/organization/shareable-invite/regenerate": {
+      "path": "/rest/enterprise/organization/shareable-invite/regenerate",
+      "category": "enterprise",
+      "method": "POST",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/enterprise/organization/sso/enable": {
+      "path": "/rest/enterprise/organization/sso/enable",
+      "category": "enterprise",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/enterprise/organization/sso/refresh": {
+      "path": "/rest/enterprise/organization/sso/refresh",
+      "category": "enterprise",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/enterprise/organization/subscription-info": {
+      "path": "/rest/enterprise/organization/subscription-info",
+      "category": "enterprise",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/enterprise/organization/subscription/refresh": {
+      "path": "/rest/enterprise/organization/subscription/refresh",
+      "category": "enterprise",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/enterprise/organization/user/{org_user_uuid}": {
+      "path": "/rest/enterprise/organization/user/{org_user_uuid}",
+      "category": "enterprise",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/enterprise/organization/user/{org_user_uuid}/make-admin": {
+      "path": "/rest/enterprise/organization/user/{org_user_uuid}/make-admin",
+      "category": "enterprise",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/enterprise/organization/user/{org_user_uuid}/make-member": {
+      "path": "/rest/enterprise/organization/user/{org_user_uuid}/make-member",
+      "category": "enterprise",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/enterprise/organization/{org_uuid}": {
+      "path": "/rest/enterprise/organization/{org_uuid}",
+      "category": "enterprise",
+      "method": "GET",
+      "source_modules": [
+        {
+          "module": "analytics-4zvpWfOe.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/analytics-4zvpWfOe.js",
+          "occurrences": 1
+        },
+        {
+          "module": "comet-telemetry-Bq-hzaKn.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/comet-telemetry-Bq-hzaKn.js",
+          "occurrences": 1
+        }
+      ],
+      "module_count": 2
+    },
+    "/rest/enterprise/organization/{org_uuid}/comet-telemetry/embed-url": {
+      "path": "/rest/enterprise/organization/{org_uuid}/comet-telemetry/embed-url",
+      "category": "enterprise",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/enterprise/organization/{org_uuid}/insights/embed-url": {
+      "path": "/rest/enterprise/organization/{org_uuid}/insights/embed-url",
+      "category": "enterprise",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/enterprise/organization/{org_uuid}/invite": {
+      "path": "/rest/enterprise/organization/{org_uuid}/invite",
+      "category": "enterprise",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/enterprise/organization/{org_uuid}/invite-url": {
+      "path": "/rest/enterprise/organization/{org_uuid}/invite-url",
+      "category": "enterprise",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/enterprise/previous-subscription": {
+      "path": "/rest/enterprise/previous-subscription",
+      "category": "enterprise",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/enterprise/subscription": {
+      "path": "/rest/enterprise/subscription",
+      "category": "enterprise",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/enterprise/trial/invite": {
+      "path": "/rest/enterprise/trial/invite",
+      "category": "enterprise",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/enterprise/trial/update/{org_user_uuid}/{update_type}": {
+      "path": "/rest/enterprise/trial/update/{org_user_uuid}/{update_type}",
+      "category": "enterprise",
+      "method": "PUT",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/enterprise/user/organization": {
+      "path": "/rest/enterprise/user/organization",
+      "category": "enterprise",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/enterprise/user/organization/members": {
+      "path": "/rest/enterprise/user/organization/members",
+      "category": "enterprise",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/enterprise/user/organization/seat-info": {
+      "path": "/rest/enterprise/user/organization/seat-info",
+      "category": "enterprise",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/enterprise/user/organization/users": {
+      "path": "/rest/enterprise/user/organization/users",
+      "category": "enterprise",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/enterprise/user/pending-invitation": {
+      "path": "/rest/enterprise/user/pending-invitation",
+      "category": "enterprise",
+      "method": "GET",
+      "source_modules": [
+        {
+          "module": "AppBanner-DNgOukvj.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/AppBanner-DNgOukvj.js",
+          "occurrences": 1
+        },
+        {
+          "module": "AppBanner-DNgOukvj.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/AppBanner-DNgOukvj.js",
+          "occurrences": 1
+        }
+      ],
+      "module_count": 2
+    },
+    "/rest/entry/convert-to-report/{entry_uuid}": {
+      "path": "/rest/entry/convert-to-report/{entry_uuid}",
+      "category": "entry",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/entry/creation-events": {
+      "path": "/rest/entry/creation-events",
+      "category": "entry",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/entry/delete-ask-entry/{entry_uuid}": {
+      "path": "/rest/entry/delete-ask-entry/{entry_uuid}",
+      "category": "entry",
+      "method": "DELETE",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/entry/export": {
+      "path": "/rest/entry/export",
+      "category": "entry",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/entry/label-entry/{entry_uuid}": {
+      "path": "/rest/entry/label-entry/{entry_uuid}",
+      "category": "entry",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/entry/map/search-map-locations": {
+      "path": "/rest/entry/map/search-map-locations",
+      "category": "entry",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/entry/set-entry-selection/{entry_uuid}": {
+      "path": "/rest/entry/set-entry-selection/{entry_uuid}",
+      "category": "entry",
+      "method": "PUT",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/entry/should-show-feedback/{entry_uuid}": {
+      "path": "/rest/entry/should-show-feedback/{entry_uuid}",
+      "category": "entry",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/entry/{entry_uuid_or_slug}/citation-excerpts": {
+      "path": "/rest/entry/{entry_uuid_or_slug}/citation-excerpts",
+      "category": "entry",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/event/analytics": {
+      "path": "/rest/event/analytics",
+      "category": "event",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/experiments/attributes": {
+      "path": "/rest/experiments/attributes",
+      "category": "experiments",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/file-repository/delete-files": {
+      "path": "/rest/file-repository/delete-files",
+      "category": "file-repository",
+      "method": "DELETE",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/file-repository/download": {
+      "path": "/rest/file-repository/download",
+      "category": "file-repository",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/file-repository/download-attachment": {
+      "path": "/rest/file-repository/download-attachment",
+      "category": "file-repository",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/file-repository/enabled": {
+      "path": "/rest/file-repository/enabled",
+      "category": "file-repository",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/file-repository/get-file-upload-urls": {
+      "path": "/rest/file-repository/get-file-upload-urls",
+      "category": "file-repository",
+      "method": "POST",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/file-repository/list-files": {
+      "path": "/rest/file-repository/list-files",
+      "category": "file-repository",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/file-repository/list-files-infinite": {
+      "path": "/rest/file-repository/list-files-infinite",
+      "category": "file-repository",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/file-repository/move-attachment-to-persistent-file-path": {
+      "path": "/rest/file-repository/move-attachment-to-persistent-file-path",
+      "category": "file-repository",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/file-repository/patents": {
+      "path": "/rest/file-repository/patents",
+      "category": "file-repository",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/file-repository/seed-examples": {
+      "path": "/rest/file-repository/seed-examples",
+      "category": "file-repository",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/file-repository/uploads": {
+      "path": "/rest/file-repository/uploads",
+      "category": "file-repository",
+      "method": "POST",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/files/delete": {
+      "path": "/rest/files/delete",
+      "category": "files",
+      "method": "DELETE",
+      "source_modules": [
+        {
+          "module": "deleteConnectorFiles-BdOJR_F0.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/deleteConnectorFiles-BdOJR_F0.js",
+          "occurrences": 1
+        }
+      ],
+      "module_count": 1
+    },
+    "/rest/files/has-uploaded": {
+      "path": "/rest/files/has-uploaded",
+      "category": "files",
+      "method": "POST",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/files/list": {
+      "path": "/rest/files/list",
+      "category": "files",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/files/list-errors": {
+      "path": "/rest/files/list-errors",
+      "category": "files",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/files/list-infinite": {
+      "path": "/rest/files/list-infinite",
+      "category": "files",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/files/resync": {
+      "path": "/rest/files/resync",
+      "category": "files",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/finance/bulls-vs-bears-summary/{market_identifier}": {
+      "path": "/rest/finance/bulls-vs-bears-summary/{market_identifier}",
+      "category": "finance",
+      "method": "PUT",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/finance/currency-exchange": {
+      "path": "/rest/finance/currency-exchange",
+      "category": "finance",
+      "method": "GET",
+      "source_modules": [
+        {
+          "module": "EntityGroupProvider-DiMd94cM.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/EntityGroupProvider-DiMd94cM.js",
+          "occurrences": 1
+        }
+      ],
+      "module_count": 1
+    },
+    "/rest/finance/documents/download/{document_id}": {
+      "path": "/rest/finance/documents/download/{document_id}",
+      "category": "finance",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/finance/documents/{market_identifier}": {
+      "path": "/rest/finance/documents/{market_identifier}",
+      "category": "finance",
+      "method": "PUT",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/finance/earnings": {
+      "path": "/rest/finance/earnings",
+      "category": "finance",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/finance/earnings/schedule": {
+      "path": "/rest/finance/earnings/schedule",
+      "category": "finance",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/finance/earnings/{market_identifier}": {
+      "path": "/rest/finance/earnings/{market_identifier}",
+      "category": "finance",
+      "method": "PUT",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/finance/earnings/{market_identifier}/analysis/{event_id}": {
+      "path": "/rest/finance/earnings/{market_identifier}/analysis/{event_id}",
+      "category": "finance",
+      "method": "PUT",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/finance/earnings/{market_identifier}/documents/{event_id}": {
+      "path": "/rest/finance/earnings/{market_identifier}/documents/{event_id}",
+      "category": "finance",
+      "method": "PUT",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/finance/earnings/{market_identifier}/transcript/{event_id}": {
+      "path": "/rest/finance/earnings/{market_identifier}/transcript/{event_id}",
+      "category": "finance",
+      "method": "PUT",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/finance/equity-sectors": {
+      "path": "/rest/finance/equity-sectors",
+      "category": "finance",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/finance/financial-news/documents": {
+      "path": "/rest/finance/financial-news/documents",
+      "category": "finance",
+      "method": "GET",
+      "source_modules": [
+        {
+          "module": "getNewswireDocumentByDocumentId-ahusn6As.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/getNewswireDocumentByDocumentId-ahusn6As.js",
+          "occurrences": 1
+        }
+      ],
+      "module_count": 1
+    },
+    "/rest/finance/financial-news/documents/{document_id}": {
+      "path": "/rest/finance/financial-news/documents/{document_id}",
+      "category": "finance",
+      "method": "GET",
+      "source_modules": [
+        {
+          "module": "getNewswireDocumentByDocumentId-ahusn6As.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/getNewswireDocumentByDocumentId-ahusn6As.js",
+          "occurrences": 1
+        }
+      ],
+      "module_count": 1
+    },
+    "/rest/finance/financials/{market_identifier}": {
+      "path": "/rest/finance/financials/{market_identifier}",
+      "category": "finance",
+      "method": "PUT",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/finance/financials/{market_identifier}/analysis": {
+      "path": "/rest/finance/financials/{market_identifier}/analysis",
+      "category": "finance",
+      "method": "PUT",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/finance/fixed-income": {
+      "path": "/rest/finance/fixed-income",
+      "category": "finance",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/finance/general-news/{market_type}": {
+      "path": "/rest/finance/general-news/{market_type}",
+      "category": "finance",
+      "method": "PUT",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/finance/history/COIN50USD": {
+      "path": "/rest/finance/history/COIN50USD",
+      "category": "finance",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/finance/history/{market_identifier}/csv": {
+      "path": "/rest/finance/history/{market_identifier}/csv",
+      "category": "finance",
+      "method": "PUT",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/finance/holders/{market_identifier}/insiders": {
+      "path": "/rest/finance/holders/{market_identifier}/insiders",
+      "category": "finance",
+      "method": "PUT",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/finance/holders/{market_identifier}/insiders/roster": {
+      "path": "/rest/finance/holders/{market_identifier}/insiders/roster",
+      "category": "finance",
+      "method": "PUT",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/finance/holders/{market_identifier}/insiders/statistics": {
+      "path": "/rest/finance/holders/{market_identifier}/insiders/statistics",
+      "category": "finance",
+      "method": "PUT",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/finance/holders/{market_identifier}/institutional": {
+      "path": "/rest/finance/holders/{market_identifier}/institutional",
+      "category": "finance",
+      "method": "PUT",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/finance/holders/{market_identifier}/politicians/holdings": {
+      "path": "/rest/finance/holders/{market_identifier}/politicians/holdings",
+      "category": "finance",
+      "method": "PUT",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/finance/holdings/{market_identifier}": {
+      "path": "/rest/finance/holdings/{market_identifier}",
+      "category": "finance",
+      "method": "PUT",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/finance/leaderboard/crypto": {
+      "path": "/rest/finance/leaderboard/crypto",
+      "category": "finance",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/finance/market-movers": {
+      "path": "/rest/finance/market-movers",
+      "category": "finance",
+      "method": "PUT",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/finance/market-sentiment/{market_type}": {
+      "path": "/rest/finance/market-sentiment/{market_type}",
+      "category": "finance",
+      "method": "PUT",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/finance/market-status/{market_identifier}": {
+      "path": "/rest/finance/market-status/{market_identifier}",
+      "category": "finance",
+      "method": "PUT",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/finance/market-summary/{market_type}": {
+      "path": "/rest/finance/market-summary/{market_type}",
+      "category": "finance",
+      "method": "PUT",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/finance/news/{market_identifier}": {
+      "path": "/rest/finance/news/{market_identifier}",
+      "category": "finance",
+      "method": "PUT",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/finance/peers/{market_identifier}": {
+      "path": "/rest/finance/peers/{market_identifier}",
+      "category": "finance",
+      "method": "PUT",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/finance/politicians": {
+      "path": "/rest/finance/politicians",
+      "category": "finance",
+      "method": "GET",
+      "source_modules": [
+        {
+          "module": "getNewswireDocumentByDocumentId-ahusn6As.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/getNewswireDocumentByDocumentId-ahusn6As.js",
+          "occurrences": 2
+        }
+      ],
+      "module_count": 1
+    },
+    "/rest/finance/politicians/transactions": {
+      "path": "/rest/finance/politicians/transactions",
+      "category": "finance",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/finance/politicians/{politician_id}/holdings": {
+      "path": "/rest/finance/politicians/{politician_id}/holdings",
+      "category": "finance",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/finance/prediction-markets/quote/{event_id}": {
+      "path": "/rest/finance/prediction-markets/quote/{event_id}",
+      "category": "finance",
+      "method": "PUT",
+      "source_modules": [
+        {
+          "module": "getPredictionMarkets-BNJCeW65.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/getPredictionMarkets-BNJCeW65.js",
+          "occurrences": 1
+        }
+      ],
+      "module_count": 1
+    },
+    "/rest/finance/prediction-markets/search": {
+      "path": "/rest/finance/prediction-markets/search",
+      "category": "finance",
+      "method": "PUT",
+      "source_modules": [
+        {
+          "module": "getPredictionMarkets-BNJCeW65.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/getPredictionMarkets-BNJCeW65.js",
+          "occurrences": 1
+        }
+      ],
+      "module_count": 1
+    },
+    "/rest/finance/prediction-markets/tag/{tag}": {
+      "path": "/rest/finance/prediction-markets/tag/{tag}",
+      "category": "finance",
+      "method": "PUT",
+      "source_modules": [
+        {
+          "module": "getPredictionMarkets-BNJCeW65.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/getPredictionMarkets-BNJCeW65.js",
+          "occurrences": 1
+        }
+      ],
+      "module_count": 1
+    },
+    "/rest/finance/prediction-markets/{market_identifier}/trending-ticker": {
+      "path": "/rest/finance/prediction-markets/{market_identifier}/trending-ticker",
+      "category": "finance",
+      "method": "PUT",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/finance/profile/{market_identifier}": {
+      "path": "/rest/finance/profile/{market_identifier}",
+      "category": "finance",
+      "method": "PUT",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/finance/profile/{market_identifier}/description": {
+      "path": "/rest/finance/profile/{market_identifier}/description",
+      "category": "finance",
+      "method": "PUT",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/finance/publisher-news/{market_identifier}": {
+      "path": "/rest/finance/publisher-news/{market_identifier}",
+      "category": "finance",
+      "method": "PUT",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/finance/quote/{market_identifier}": {
+      "path": "/rest/finance/quote/{market_identifier}",
+      "category": "finance",
+      "method": "PUT",
+      "source_modules": [
+        {
+          "module": "usePriceAlertQuery-F5d60D4d.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/usePriceAlertQuery-F5d60D4d.js",
+          "occurrences": 1
+        }
+      ],
+      "module_count": 1
+    },
+    "/rest/finance/screener": {
+      "path": "/rest/finance/screener",
+      "category": "finance",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/finance/settings": {
+      "path": "/rest/finance/settings",
+      "category": "finance",
+      "method": "PUT",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/finance/significant-movement-summary/{market_identifier}": {
+      "path": "/rest/finance/significant-movement-summary/{market_identifier}",
+      "category": "finance",
+      "method": "PUT",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/finance/timeline/v2/{market_identifier}": {
+      "path": "/rest/finance/timeline/v2/{market_identifier}",
+      "category": "finance",
+      "method": "PUT",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/finance/timeline/{market_identifier}/entries": {
+      "path": "/rest/finance/timeline/{market_identifier}/entries",
+      "category": "finance",
+      "method": "PUT",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/finance/timeline/{market_identifier}/most-recent": {
+      "path": "/rest/finance/timeline/{market_identifier}/most-recent",
+      "category": "finance",
+      "method": "PUT",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/finance/top-indices/{group_id}": {
+      "path": "/rest/finance/top-indices/{group_id}",
+      "category": "finance",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/finance/top-movers/{market_type}": {
+      "path": "/rest/finance/top-movers/{market_type}",
+      "category": "finance",
+      "method": "PUT",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/finance/top-z-scores/{market_type}": {
+      "path": "/rest/finance/top-z-scores/{market_type}",
+      "category": "finance",
+      "method": "PUT",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/finance/watchlist": {
+      "path": "/rest/finance/watchlist",
+      "category": "finance",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/finance/watchlist/news": {
+      "path": "/rest/finance/watchlist/news",
+      "category": "finance",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/finance/watchlist/quotes": {
+      "path": "/rest/finance/watchlist/quotes",
+      "category": "finance",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/finance/watchlist/summary": {
+      "path": "/rest/finance/watchlist/summary",
+      "category": "finance",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/homepage/weather": {
+      "path": "/rest/homepage/weather",
+      "category": "homepage",
+      "method": "GET",
+      "source_modules": [
+        {
+          "module": "constants-5Tlbn9CH.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/constants-5Tlbn9CH.js",
+          "occurrences": 1
+        },
+        {
+          "module": "constants-5Tlbn9CH.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/constants-5Tlbn9CH.js",
+          "occurrences": 1
+        }
+      ],
+      "module_count": 2
+    },
+    "/rest/homepage-widgets/cities-autosuggests": {
+      "path": "/rest/homepage-widgets/cities-autosuggests",
+      "category": "homepage-widgets",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/homepage-widgets/clock/current-location": {
+      "path": "/rest/homepage-widgets/clock/current-location",
+      "category": "homepage-widgets",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/homepage-widgets/dismiss/{widget_uuid}": {
+      "path": "/rest/homepage-widgets/dismiss/{widget_uuid}",
+      "category": "homepage-widgets",
+      "method": "GET",
+      "source_modules": [
+        {
+          "module": "HomepageWidgets-B5X_nv8w.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/HomepageWidgets-B5X_nv8w.js",
+          "occurrences": 1
+        }
+      ],
+      "module_count": 1
+    },
+    "/rest/homepage-widgets/public": {
+      "path": "/rest/homepage-widgets/public",
+      "category": "homepage-widgets",
+      "method": "GET",
+      "source_modules": [
+        {
+          "module": "HomepageWidgets-B5X_nv8w.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/HomepageWidgets-B5X_nv8w.js",
+          "occurrences": 1
+        }
+      ],
+      "module_count": 1
+    },
+    "/rest/homepage-widgets/upsell": {
+      "path": "/rest/homepage-widgets/upsell",
+      "category": "homepage-widgets",
+      "method": "GET",
+      "source_modules": [
+        {
+          "module": "bootstrap-CfKy_09H.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/bootstrap-CfKy_09H.js",
+          "occurrences": 1
+        }
+      ],
+      "module_count": 1
+    },
+    "/rest/homepage-widgets/upsell/add-to-cohort": {
+      "path": "/rest/homepage-widgets/upsell/add-to-cohort",
+      "category": "homepage-widgets",
+      "method": "POST",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/homepage-widgets/upsell/interacted": {
+      "path": "/rest/homepage-widgets/upsell/interacted",
+      "category": "homepage-widgets",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/homepage-widgets/watchlist/list-autosuggest": {
+      "path": "/rest/homepage-widgets/watchlist/list-autosuggest",
+      "category": "homepage-widgets",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/homepage-widgets/watchlist/subscription": {
+      "path": "/rest/homepage-widgets/watchlist/subscription",
+      "category": "homepage-widgets",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/homepage-widgets/weather": {
+      "path": "/rest/homepage-widgets/weather",
+      "category": "homepage-widgets",
+      "method": "GET",
+      "source_modules": [
+        {
+          "module": "discover-DVVq_aIT.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/discover-DVVq_aIT.js",
+          "occurrences": 1
+        }
+      ],
+      "module_count": 1
+    },
+    "/rest/incentives/comet-activation": {
+      "path": "/rest/incentives/comet-activation",
+      "category": "incentives",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/jobs/filters": {
+      "path": "/rest/jobs/filters",
+      "category": "jobs",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/jobs/search": {
+      "path": "/rest/jobs/search",
+      "category": "jobs",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/landing-page/academic/primer-queries": {
+      "path": "/rest/landing-page/academic/primer-queries",
+      "category": "landing-page",
+      "method": "GET",
+      "source_modules": [
+        {
+          "module": "academic-DGs03j5g.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/academic-DGs03j5g.js",
+          "occurrences": 1
+        },
+        {
+          "module": "academicKeys-VBytPExr.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/academicKeys-VBytPExr.js",
+          "occurrences": 1
+        }
+      ],
+      "module_count": 2
+    },
+    "/rest/landing-page/academic/tile-data": {
+      "path": "/rest/landing-page/academic/tile-data",
+      "category": "landing-page",
+      "method": "GET",
+      "source_modules": [
+        {
+          "module": "academic-DGs03j5g.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/academic-DGs03j5g.js",
+          "occurrences": 1
+        },
+        {
+          "module": "academicKeys-VBytPExr.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/academicKeys-VBytPExr.js",
+          "occurrences": 1
+        }
+      ],
+      "module_count": 2
+    },
+    "/rest/live-events/subscription": {
+      "path": "/rest/live-events/subscription",
+      "category": "live-events",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/media/search-images-for-entry": {
+      "path": "/rest/media/search-images-for-entry",
+      "category": "media",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/media/search-videos-for-entry": {
+      "path": "/rest/media/search-videos-for-entry",
+      "category": "media",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/meeting_assistant/events/{event_id}/bot": {
+      "path": "/rest/meeting_assistant/events/{event_id}/bot",
+      "category": "meeting_assistant",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/meeting_assistant/schedule": {
+      "path": "/rest/meeting_assistant/schedule",
+      "category": "meeting_assistant",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/memories/list": {
+      "path": "/rest/memories/list",
+      "category": "memories",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/models/config": {
+      "path": "/rest/models/config",
+      "category": "models",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/notifications/in-app": {
+      "path": "/rest/notifications/in-app",
+      "category": "notifications",
+      "method": "GET",
+      "source_modules": [
+        {
+          "module": "SidebarNotifications-jV80Fpon.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/SidebarNotifications-jV80Fpon.js",
+          "occurrences": 1
+        },
+        {
+          "module": "bootstrap-CfKy_09H.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/bootstrap-CfKy_09H.js",
+          "occurrences": 6
+        }
+      ],
+      "module_count": 2
+    },
+    "/rest/notifications/in-app/bulk-delete": {
+      "path": "/rest/notifications/in-app/bulk-delete",
+      "category": "notifications",
+      "method": "DELETE",
+      "source_modules": [
+        {
+          "module": "bootstrap-CfKy_09H.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/bootstrap-CfKy_09H.js",
+          "occurrences": 1
+        }
+      ],
+      "module_count": 1
+    },
+    "/rest/notifications/in-app/bulk-read": {
+      "path": "/rest/notifications/in-app/bulk-read",
+      "category": "notifications",
+      "method": "GET",
+      "source_modules": [
+        {
+          "module": "bootstrap-CfKy_09H.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/bootstrap-CfKy_09H.js",
+          "occurrences": 1
+        }
+      ],
+      "module_count": 1
+    },
+    "/rest/notifications/in-app/read": {
+      "path": "/rest/notifications/in-app/read",
+      "category": "notifications",
+      "method": "GET",
+      "source_modules": [
+        {
+          "module": "bootstrap-CfKy_09H.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/bootstrap-CfKy_09H.js",
+          "occurrences": 1
+        }
+      ],
+      "module_count": 1
+    },
+    "/rest/notifications/in-app/unread-count": {
+      "path": "/rest/notifications/in-app/unread-count",
+      "category": "notifications",
+      "method": "GET",
+      "source_modules": [
+        {
+          "module": "SidebarNotifications-jV80Fpon.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/SidebarNotifications-jV80Fpon.js",
+          "occurrences": 1
+        }
+      ],
+      "module_count": 1
+    },
+    "/rest/notifications/in-app/{notification_id}/read": {
+      "path": "/rest/notifications/in-app/{notification_id}/read",
+      "category": "notifications",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/notifications/preferences": {
+      "path": "/rest/notifications/preferences",
+      "category": "notifications",
+      "method": "GET",
+      "source_modules": [
+        {
+          "module": "bootstrap-CfKy_09H.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/bootstrap-CfKy_09H.js",
+          "occurrences": 1
+        }
+      ],
+      "module_count": 1
+    },
+    "/rest/notifications/sms/send-app-download-link": {
+      "path": "/rest/notifications/sms/send-app-download-link",
+      "category": "notifications",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/notifications/subscribe/{notification_type}": {
+      "path": "/rest/notifications/subscribe/{notification_type}",
+      "category": "notifications",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/notifications/unsubscribe/{notification_type}": {
+      "path": "/rest/notifications/unsubscribe/{notification_type}",
+      "category": "notifications",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/ntp/upsell": {
+      "path": "/rest/ntp/upsell",
+      "category": "ntp",
+      "method": "GET",
+      "source_modules": [
+        {
+          "module": "bootstrap-CfKy_09H.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/bootstrap-CfKy_09H.js",
+          "occurrences": 1
+        }
+      ],
+      "module_count": 1
+    },
+    "/rest/ntp/upsell/interacted": {
+      "path": "/rest/ntp/upsell/interacted",
+      "category": "ntp",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/perplexify-me/guestbook": {
+      "path": "/rest/perplexify-me/guestbook",
+      "category": "perplexify-me",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/pplx-api/playground/search": {
+      "path": "/rest/pplx-api/playground/search",
+      "category": "pplx-api",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/pplx-api/v2/groups": {
+      "path": "/rest/pplx-api/v2/groups",
+      "category": "pplx-api",
+      "method": "GET",
+      "source_modules": [
+        {
+          "module": "billing-DfxfqVz3.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/billing-DfxfqVz3.js",
+          "occurrences": 4
+        },
+        {
+          "module": "createApiGroupV2-D5iVEugz.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/createApiGroupV2-D5iVEugz.js",
+          "occurrences": 1
+        }
+      ],
+      "module_count": 2
+    },
+    "/rest/pplx-api/v2/groups/{api_org_id}": {
+      "path": "/rest/pplx-api/v2/groups/{api_org_id}",
+      "category": "pplx-api",
+      "method": "GET",
+      "source_modules": [
+        {
+          "module": "billing-DfxfqVz3.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/billing-DfxfqVz3.js",
+          "occurrences": 4
+        }
+      ],
+      "module_count": 1
+    },
+    "/rest/pplx-api/v2/groups/{api_org_id}/api-keys": {
+      "path": "/rest/pplx-api/v2/groups/{api_org_id}/api-keys",
+      "category": "pplx-api",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/pplx-api/v2/groups/{api_org_id}/auto-topup": {
+      "path": "/rest/pplx-api/v2/groups/{api_org_id}/auto-topup",
+      "category": "pplx-api",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/pplx-api/v2/groups/{api_org_id}/invoices": {
+      "path": "/rest/pplx-api/v2/groups/{api_org_id}/invoices",
+      "category": "pplx-api",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/pplx-api/v2/groups/{api_org_id}/topup": {
+      "path": "/rest/pplx-api/v2/groups/{api_org_id}/topup",
+      "category": "pplx-api",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/pplx-api/v2/groups/{api_org_id}/usage-analytics": {
+      "path": "/rest/pplx-api/v2/groups/{api_org_id}/usage-analytics",
+      "category": "pplx-api",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/rate-limit/all": {
+      "path": "/rest/rate-limit/all",
+      "category": "rate-limit",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/rate-limit/status": {
+      "path": "/rest/rate-limit/status",
+      "category": "rate-limit",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/realtime/create-entry": {
+      "path": "/rest/realtime/create-entry",
+      "category": "realtime",
+      "method": "POST",
+      "source_modules": [
+        {
+          "module": "AskInput-BJUfrHJq.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/AskInput-BJUfrHJq.js",
+          "occurrences": 1
+        }
+      ],
+      "module_count": 1
+    },
+    "/rest/realtime/search-web": {
+      "path": "/rest/realtime/search-web",
+      "category": "realtime",
+      "method": "GET",
+      "source_modules": [
+        {
+          "module": "AskInput-BJUfrHJq.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/AskInput-BJUfrHJq.js",
+          "occurrences": 1
+        }
+      ],
+      "module_count": 1
+    },
+    "/rest/realtime/search-youtube": {
+      "path": "/rest/realtime/search-youtube",
+      "category": "realtime",
+      "method": "GET",
+      "source_modules": [
+        {
+          "module": "AskInput-BJUfrHJq.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/AskInput-BJUfrHJq.js",
+          "occurrences": 1
+        }
+      ],
+      "module_count": 1
+    },
+    "/rest/realtime/v1/transcription-session": {
+      "path": "/rest/realtime/v1/transcription-session",
+      "category": "realtime",
+      "method": "GET",
+      "source_modules": [
+        {
+          "module": "AskInput-BJUfrHJq.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/AskInput-BJUfrHJq.js",
+          "occurrences": 1
+        }
+      ],
+      "module_count": 1
+    },
+    "/rest/realtime/v2/language-learning/session": {
+      "path": "/rest/realtime/v2/language-learning/session",
+      "category": "realtime",
+      "method": "GET",
+      "source_modules": [
+        {
+          "module": "AskInput-BJUfrHJq.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/AskInput-BJUfrHJq.js",
+          "occurrences": 1
+        }
+      ],
+      "module_count": 1
+    },
+    "/rest/realtime/v2/session": {
+      "path": "/rest/realtime/v2/session",
+      "category": "realtime",
+      "method": "GET",
+      "source_modules": [
+        {
+          "module": "AskInput-BJUfrHJq.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/AskInput-BJUfrHJq.js",
+          "occurrences": 1
+        }
+      ],
+      "module_count": 1
+    },
+    "/rest/shopping/generate-shopping-try-on": {
+      "path": "/rest/shopping/generate-shopping-try-on",
+      "category": "shopping",
+      "method": "POST",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/shopping/landing-page/tile-data": {
+      "path": "/rest/shopping/landing-page/tile-data",
+      "category": "shopping",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/shopping/retrieve-customer-shopping-info": {
+      "path": "/rest/shopping/retrieve-customer-shopping-info",
+      "category": "shopping",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/shopping/search-shopping-for-entry": {
+      "path": "/rest/shopping/search-shopping-for-entry",
+      "category": "shopping",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/shopping/try-on-photo/delete": {
+      "path": "/rest/shopping/try-on-photo/delete",
+      "category": "shopping",
+      "method": "DELETE",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/shopping/try-on-photo/generate-avatar": {
+      "path": "/rest/shopping/try-on-photo/generate-avatar",
+      "category": "shopping",
+      "method": "POST",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/shopping/try-on-photo/get": {
+      "path": "/rest/shopping/try-on-photo/get",
+      "category": "shopping",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/shopping/try-on-photo/save": {
+      "path": "/rest/shopping/try-on-photo/save",
+      "category": "shopping",
+      "method": "POST",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/shopping/user-orders": {
+      "path": "/rest/shopping/user-orders",
+      "category": "shopping",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/sources/search": {
+      "path": "/rest/sources/search",
+      "category": "sources",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/spaces/bookmarks": {
+      "path": "/rest/spaces/bookmarks",
+      "category": "spaces",
+      "method": "PUT",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/spaces/bookmarks/{bookmark_uuid}": {
+      "path": "/rest/spaces/bookmarks/{bookmark_uuid}",
+      "category": "spaces",
+      "method": "PUT",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/spaces/mentions": {
+      "path": "/rest/spaces/mentions",
+      "category": "spaces",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/spaces/org/pins": {
+      "path": "/rest/spaces/org/pins",
+      "category": "spaces",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/spaces/org/pins/{pin_uuid}": {
+      "path": "/rest/spaces/org/pins/{pin_uuid}",
+      "category": "spaces",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/spaces/writable": {
+      "path": "/rest/spaces/writable",
+      "category": "spaces",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/spaces/{space_uuid}/subscription": {
+      "path": "/rest/spaces/{space_uuid}/subscription",
+      "category": "spaces",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/spaces/{space_uuid}/tasks": {
+      "path": "/rest/spaces/{space_uuid}/tasks",
+      "category": "spaces",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/sports/cricket/icc/schedule": {
+      "path": "/rest/sports/cricket/icc/schedule",
+      "category": "sports",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/sports/cricket/icc/standings": {
+      "path": "/rest/sports/cricket/icc/standings",
+      "category": "sports",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/sports/european_tour": {
+      "path": "/rest/sports/european_tour",
+      "category": "sports",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/sports/f1": {
+      "path": "/rest/sports/f1",
+      "category": "sports",
+      "method": "GET",
+      "source_modules": [
+        {
+          "module": "event-B2RWgbJr.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/event-B2RWgbJr.js",
+          "occurrences": 1
+        }
+      ],
+      "module_count": 1
+    },
+    "/rest/sports/f1/live_racer": {
+      "path": "/rest/sports/f1/live_racer",
+      "category": "sports",
+      "method": "GET",
+      "source_modules": [
+        {
+          "module": "event-B2RWgbJr.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/event-B2RWgbJr.js",
+          "occurrences": 1
+        }
+      ],
+      "module_count": 1
+    },
+    "/rest/sports/football/{league}/ap-rankings": {
+      "path": "/rest/sports/football/{league}/ap-rankings",
+      "category": "sports",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/sports/football/{league}/brands": {
+      "path": "/rest/sports/football/{league}/brands",
+      "category": "sports",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/sports/football/{league}/events/{event_id}": {
+      "path": "/rest/sports/football/{league}/events/{event_id}",
+      "category": "sports",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/sports/football/{league}/events/{event_id}/injuries": {
+      "path": "/rest/sports/football/{league}/events/{event_id}/injuries",
+      "category": "sports",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/sports/football/{league}/events/{event_id}/leaders": {
+      "path": "/rest/sports/football/{league}/events/{event_id}/leaders",
+      "category": "sports",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/sports/football/{league}/events/{event_id}/odds/kalshi": {
+      "path": "/rest/sports/football/{league}/events/{event_id}/odds/kalshi",
+      "category": "sports",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/sports/football/{league}/events/{event_id}/play-by-play": {
+      "path": "/rest/sports/football/{league}/events/{event_id}/play-by-play",
+      "category": "sports",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/sports/football/{league}/events/{event_id}/related-games": {
+      "path": "/rest/sports/football/{league}/events/{event_id}/related-games",
+      "category": "sports",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/sports/football/{league}/schedule": {
+      "path": "/rest/sports/football/{league}/schedule",
+      "category": "sports",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/sports/football/{league}/standings": {
+      "path": "/rest/sports/football/{league}/standings",
+      "category": "sports",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/sports/football/{league}/tournament-odds": {
+      "path": "/rest/sports/football/{league}/tournament-odds",
+      "category": "sports",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/sports/global_baseball/{league}": {
+      "path": "/rest/sports/global_baseball/{league}",
+      "category": "sports",
+      "method": "GET",
+      "source_modules": [
+        {
+          "module": "event-B2RWgbJr.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/event-B2RWgbJr.js",
+          "occurrences": 1
+        }
+      ],
+      "module_count": 1
+    },
+    "/rest/sports/global_baseball/{league}/events/{event_id}": {
+      "path": "/rest/sports/global_baseball/{league}/events/{event_id}",
+      "category": "sports",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/sports/hype": {
+      "path": "/rest/sports/hype",
+      "category": "sports",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/sports/ipl": {
+      "path": "/rest/sports/ipl",
+      "category": "sports",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/sports/manifest": {
+      "path": "/rest/sports/manifest",
+      "category": "sports",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/sports/mlb": {
+      "path": "/rest/sports/mlb",
+      "category": "sports",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/sports/mlb/schedule/{team_id}": {
+      "path": "/rest/sports/mlb/schedule/{team_id}",
+      "category": "sports",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/sports/mlb/season": {
+      "path": "/rest/sports/mlb/season",
+      "category": "sports",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/sports/nba": {
+      "path": "/rest/sports/nba",
+      "category": "sports",
+      "method": "GET",
+      "source_modules": [
+        {
+          "module": "useSports-VjKQNFOZ.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useSports-VjKQNFOZ.js",
+          "occurrences": 5
+        }
+      ],
+      "module_count": 1
+    },
+    "/rest/sports/nba/players/{player_id}": {
+      "path": "/rest/sports/nba/players/{player_id}",
+      "category": "sports",
+      "method": "GET",
+      "source_modules": [
+        {
+          "module": "useSports-VjKQNFOZ.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useSports-VjKQNFOZ.js",
+          "occurrences": 3
+        }
+      ],
+      "module_count": 1
+    },
+    "/rest/sports/nba/players/{player_id}/bio": {
+      "path": "/rest/sports/nba/players/{player_id}/bio",
+      "category": "sports",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/sports/nba/season": {
+      "path": "/rest/sports/nba/season",
+      "category": "sports",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/sports/nba/teams/{team_id}": {
+      "path": "/rest/sports/nba/teams/{team_id}",
+      "category": "sports",
+      "method": "GET",
+      "source_modules": [
+        {
+          "module": "useSports-VjKQNFOZ.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useSports-VjKQNFOZ.js",
+          "occurrences": 2
+        }
+      ],
+      "module_count": 1
+    },
+    "/rest/sports/ncaam/tournament": {
+      "path": "/rest/sports/ncaam/tournament",
+      "category": "sports",
+      "method": "GET",
+      "source_modules": [
+        {
+          "module": "tournament-CRzY19NL.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/tournament-CRzY19NL.js",
+          "occurrences": 1
+        }
+      ],
+      "module_count": 1
+    },
+    "/rest/sports/ncaaw/tournament": {
+      "path": "/rest/sports/ncaaw/tournament",
+      "category": "sports",
+      "method": "GET",
+      "source_modules": [
+        {
+          "module": "tournament-CRzY19NL.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/tournament-CRzY19NL.js",
+          "occurrences": 1
+        }
+      ],
+      "module_count": 1
+    },
+    "/rest/sports/nfl/teams/{team_id}": {
+      "path": "/rest/sports/nfl/teams/{team_id}",
+      "category": "sports",
+      "method": "GET",
+      "source_modules": [
+        {
+          "module": "useSports-VjKQNFOZ.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useSports-VjKQNFOZ.js",
+          "occurrences": 1
+        }
+      ],
+      "module_count": 1
+    },
+    "/rest/sports/pga": {
+      "path": "/rest/sports/pga",
+      "category": "sports",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/sports/soccer/{league}/events/{event_id}": {
+      "path": "/rest/sports/soccer/{league}/events/{event_id}",
+      "category": "sports",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/sports/soccer/{league}/schedule": {
+      "path": "/rest/sports/soccer/{league}/schedule",
+      "category": "sports",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/sports/soccer/{league}/standings": {
+      "path": "/rest/sports/soccer/{league}/standings",
+      "category": "sports",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/sports/soccer/{league}/tournament": {
+      "path": "/rest/sports/soccer/{league}/tournament",
+      "category": "sports",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/sports/tennis/atp/tournaments/lavercup": {
+      "path": "/rest/sports/tennis/atp/tournaments/lavercup",
+      "category": "sports",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/sports/tennis/{league}": {
+      "path": "/rest/sports/tennis/{league}",
+      "category": "sports",
+      "method": "GET",
+      "source_modules": [
+        {
+          "module": "event-B2RWgbJr.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/event-B2RWgbJr.js",
+          "occurrences": 2
+        }
+      ],
+      "module_count": 1
+    },
+    "/rest/sports/tennis/{league}/events/{event_id}": {
+      "path": "/rest/sports/tennis/{league}/events/{event_id}",
+      "category": "sports",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/sports/tennis/{league}/tournaments/{season_id}": {
+      "path": "/rest/sports/tennis/{league}/tournaments/{season_id}",
+      "category": "sports",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/sports/wnba": {
+      "path": "/rest/sports/wnba",
+      "category": "sports",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/sports/wnba/schedule/{team_id}": {
+      "path": "/rest/sports/wnba/schedule/{team_id}",
+      "category": "sports",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/sports/wnba/season": {
+      "path": "/rest/sports/wnba/season",
+      "category": "sports",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/sports/wsc/story": {
+      "path": "/rest/sports/wsc/story",
+      "category": "sports",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/sports/wsc/story/{event_id}": {
+      "path": "/rest/sports/wsc/story/{event_id}",
+      "category": "sports",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/sports/{league}": {
+      "path": "/rest/sports/{league}",
+      "category": "sports",
+      "method": "GET",
+      "source_modules": [
+        {
+          "module": "event-B2RWgbJr.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/event-B2RWgbJr.js",
+          "occurrences": 1
+        },
+        {
+          "module": "EntityGroupProvider-DiMd94cM.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/EntityGroupProvider-DiMd94cM.js",
+          "occurrences": 1
+        }
+      ],
+      "module_count": 2
+    },
+    "/rest/sports/{league}/events/{event_id}/hype": {
+      "path": "/rest/sports/{league}/events/{event_id}/hype",
+      "category": "sports",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/sports/{league}/hype": {
+      "path": "/rest/sports/{league}/hype",
+      "category": "sports",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/sports/{league}/widget": {
+      "path": "/rest/sports/{league}/widget",
+      "category": "sports",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/sse/attachment_processing/subscribe": {
+      "path": "/rest/sse/attachment_processing/subscribe",
+      "category": "sse",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/sse/blocking_event_response": {
+      "path": "/rest/sse/blocking_event_response",
+      "category": "sse",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/sse/check-sources": {
+      "path": "/rest/sse/check-sources",
+      "category": "sse",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/sse/handle_perplexity_in_context_suggestion_answer": {
+      "path": "/rest/sse/handle_perplexity_in_context_suggestion_answer",
+      "category": "sse",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/sse/index_files": {
+      "path": "/rest/sse/index_files",
+      "category": "sse",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/sse/perplexity_ask": {
+      "path": "/rest/sse/perplexity_ask",
+      "category": "sse",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/sse/perplexity_ask/reconnect/{resume_entry_uuid}": {
+      "path": "/rest/sse/perplexity_ask/reconnect/{resume_entry_uuid}",
+      "category": "sse",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/sse/perplexity_clarifying_answer": {
+      "path": "/rest/sse/perplexity_clarifying_answer",
+      "category": "sse",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/sse/perplexity_connector_auth_response": {
+      "path": "/rest/sse/perplexity_connector_auth_response",
+      "category": "sse",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/sse/perplexity_skip_search": {
+      "path": "/rest/sse/perplexity_skip_search",
+      "category": "sse",
+      "method": "GET",
+      "source_modules": [
+        {
+          "module": "AnimatedWorkflowHeader-DBsPr4kV.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/AnimatedWorkflowHeader-DBsPr4kV.js",
+          "occurrences": 1
+        }
+      ],
+      "module_count": 1
+    },
+    "/rest/sse/perplexity_terminate": {
+      "path": "/rest/sse/perplexity_terminate",
+      "category": "sse",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/sse/places_review_summary_bulk": {
+      "path": "/rest/sse/places_review_summary_bulk",
+      "category": "sse",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/sse/shopping_review_summary": {
+      "path": "/rest/sse/shopping_review_summary",
+      "category": "sse",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/sse/sonar_file_upload_status": {
+      "path": "/rest/sse/sonar_file_upload_status",
+      "category": "sse",
+      "method": "POST",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/stripe/checkout-session": {
+      "path": "/rest/stripe/checkout-session",
+      "category": "stripe",
+      "method": "GET",
+      "source_modules": [
+        {
+          "module": "createCheckoutSession-B33mH1bS.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/createCheckoutSession-B33mH1bS.js",
+          "occurrences": 1
+        }
+      ],
+      "module_count": 1
+    },
+    "/rest/stripe/create-setup-intent-and-customer-session": {
+      "path": "/rest/stripe/create-setup-intent-and-customer-session",
+      "category": "stripe",
+      "method": "POST",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/stripe/get-customer-billing-info": {
+      "path": "/rest/stripe/get-customer-billing-info",
+      "category": "stripe",
+      "method": "GET",
+      "source_modules": [
+        {
+          "module": "billingKeys-B5qpyMR7.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/billingKeys-B5qpyMR7.js",
+          "occurrences": 1
+        },
+        {
+          "module": "billingKeys-B5qpyMR7.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/billingKeys-B5qpyMR7.js",
+          "occurrences": 1
+        }
+      ],
+      "module_count": 2
+    },
+    "/rest/stripe/prices": {
+      "path": "/rest/stripe/prices",
+      "category": "stripe",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/stripe/subscription-changes": {
+      "path": "/rest/stripe/subscription-changes",
+      "category": "stripe",
+      "method": "GET",
+      "source_modules": [
+        {
+          "module": "billingKeys-B5qpyMR7.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/billingKeys-B5qpyMR7.js",
+          "occurrences": 1
+        },
+        {
+          "module": "billingKeys-B5qpyMR7.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/billingKeys-B5qpyMR7.js",
+          "occurrences": 1
+        }
+      ],
+      "module_count": 2
+    },
+    "/rest/stripe/update-customer-shipping-address": {
+      "path": "/rest/stripe/update-customer-shipping-address",
+      "category": "stripe",
+      "method": "POST",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/stripe/upgrade-subscription-preview": {
+      "path": "/rest/stripe/upgrade-subscription-preview",
+      "category": "stripe",
+      "method": "GET",
+      "source_modules": [
+        {
+          "module": "billingKeys-B5qpyMR7.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/billingKeys-B5qpyMR7.js",
+          "occurrences": 1
+        },
+        {
+          "module": "billingKeys-B5qpyMR7.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/billingKeys-B5qpyMR7.js",
+          "occurrences": 1
+        }
+      ],
+      "module_count": 2
+    },
+    "/rest/tasks/finance": {
+      "path": "/rest/tasks/finance",
+      "category": "tasks",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/tasks/finance/tickers/{ticker}": {
+      "path": "/rest/tasks/finance/tickers/{ticker}",
+      "category": "tasks",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/tasks/finance/{task_id}": {
+      "path": "/rest/tasks/finance/{task_id}",
+      "category": "tasks",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/tasks/shortcuts/copy/{shortcut_id}": {
+      "path": "/rest/tasks/shortcuts/copy/{shortcut_id}",
+      "category": "tasks",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/tasks/shortcuts/mentions": {
+      "path": "/rest/tasks/shortcuts/mentions",
+      "category": "tasks",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/tasks/shortcuts/paste/{copy_token}": {
+      "path": "/rest/tasks/shortcuts/paste/{copy_token}",
+      "category": "tasks",
+      "method": "GET",
+      "source_modules": [
+        {
+          "module": "usePasteShortcutQuery-uvmehQkK.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/usePasteShortcutQuery-uvmehQkK.js",
+          "occurrences": 1
+        }
+      ],
+      "module_count": 1
+    },
+    "/rest/tasks/suggest": {
+      "path": "/rest/tasks/suggest",
+      "category": "tasks",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/tasks/{task_id}": {
+      "path": "/rest/tasks/{task_id}",
+      "category": "tasks",
+      "method": "GET",
+      "source_modules": [
+        {
+          "module": "getUserTask-C7eFwHJ6.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/getUserTask-C7eFwHJ6.js",
+          "occurrences": 1
+        },
+        {
+          "module": "updateUserTask-DjsYd4tS.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/updateUserTask-DjsYd4tS.js",
+          "occurrences": 1
+        }
+      ],
+      "module_count": 2
+    },
+    "/rest/thread/delete_all_threads": {
+      "path": "/rest/thread/delete_all_threads",
+      "category": "thread",
+      "method": "DELETE",
+      "source_modules": [
+        {
+          "module": "useThreadMutations-H9MBLFeN.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useThreadMutations-H9MBLFeN.js",
+          "occurrences": 1
+        }
+      ],
+      "module_count": 1
+    },
+    "/rest/thread/delete_thread_by_entry_uuid": {
+      "path": "/rest/thread/delete_thread_by_entry_uuid",
+      "category": "thread",
+      "method": "DELETE",
+      "source_modules": [
+        {
+          "module": "threadMutations-DnjD4xOB.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/threadMutations-DnjD4xOB.js",
+          "occurrences": 1
+        }
+      ],
+      "module_count": 1
+    },
+    "/rest/thread/entry/remove_widget": {
+      "path": "/rest/thread/entry/remove_widget",
+      "category": "thread",
+      "method": "DELETE",
+      "source_modules": [
+        {
+          "module": "threadMutations-DnjD4xOB.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/threadMutations-DnjD4xOB.js",
+          "occurrences": 1
+        }
+      ],
+      "module_count": 1
+    },
+    "/rest/thread/export": {
+      "path": "/rest/thread/export",
+      "category": "thread",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/thread/list_ask_threads": {
+      "path": "/rest/thread/list_ask_threads",
+      "category": "thread",
+      "method": "GET",
+      "source_modules": [
+        {
+          "module": "bootstrap-CfKy_09H.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/bootstrap-CfKy_09H.js",
+          "occurrences": 1
+        }
+      ],
+      "module_count": 1
+    },
+    "/rest/thread/list_recent": {
+      "path": "/rest/thread/list_recent",
+      "category": "thread",
+      "method": "GET",
+      "source_modules": [
+        {
+          "module": "useRecentItemsQuery-DICuqpHw.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useRecentItemsQuery-DICuqpHw.js",
+          "occurrences": 2
+        }
+      ],
+      "module_count": 1
+    },
+    "/rest/thread/mark_viewed/{context_uuid}": {
+      "path": "/rest/thread/mark_viewed/{context_uuid}",
+      "category": "thread",
+      "method": "PUT",
+      "source_modules": [
+        {
+          "module": "threadMutations-DnjD4xOB.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/threadMutations-DnjD4xOB.js",
+          "occurrences": 1
+        }
+      ],
+      "module_count": 1
+    },
+    "/rest/thread/reply/simulated": {
+      "path": "/rest/thread/reply/simulated",
+      "category": "thread",
+      "method": "GET",
+      "source_modules": [
+        {
+          "module": "threadMutations-DnjD4xOB.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/threadMutations-DnjD4xOB.js",
+          "occurrences": 1
+        }
+      ],
+      "module_count": 1
+    },
+    "/rest/thread/set_thread_title": {
+      "path": "/rest/thread/set_thread_title",
+      "category": "thread",
+      "method": "PUT",
+      "source_modules": [
+        {
+          "module": "markdown-Cximqwva.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/markdown-Cximqwva.js",
+          "occurrences": 1
+        }
+      ],
+      "module_count": 1
+    },
+    "/rest/thread/update_thread_access": {
+      "path": "/rest/thread/update_thread_access",
+      "category": "thread",
+      "method": "PUT",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/thread/{entry_uuid_or_slug}": {
+      "path": "/rest/thread/{entry_uuid_or_slug}",
+      "category": "thread",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/translation/detect-languages/{entry_uuid}": {
+      "path": "/rest/translation/detect-languages/{entry_uuid}",
+      "category": "translation",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/translation/phrase_info": {
+      "path": "/rest/translation/phrase_info",
+      "category": "translation",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/translation/translate": {
+      "path": "/rest/translation/translate",
+      "category": "translation",
+      "method": "GET",
+      "source_modules": [
+        {
+          "module": "Reviews-D6tnB-Xx.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/Reviews-D6tnB-Xx.js",
+          "occurrences": 1
+        }
+      ],
+      "module_count": 1
+    },
+    "/rest/travel/hotels/rate-verification": {
+      "path": "/rest/travel/hotels/rate-verification",
+      "category": "travel",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/travel/hotels/reservations": {
+      "path": "/rest/travel/hotels/reservations",
+      "category": "travel",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/travel/hotels/search-availability": {
+      "path": "/rest/travel/hotels/search-availability",
+      "category": "travel",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/travel/hotels/search-widgets": {
+      "path": "/rest/travel/hotels/search-widgets",
+      "category": "travel",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/travel/hotels/user/discount-offer": {
+      "path": "/rest/travel/hotels/user/discount-offer",
+      "category": "travel",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/travel/hotels/user/reservations": {
+      "path": "/rest/travel/hotels/user/reservations",
+      "category": "travel",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/travel/hotels/{slug}": {
+      "path": "/rest/travel/hotels/{slug}",
+      "category": "travel",
+      "method": "GET",
+      "source_modules": [
+        {
+          "module": "useHotelData-CM_OTUZd.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useHotelData-CM_OTUZd.js",
+          "occurrences": 2
+        }
+      ],
+      "module_count": 1
+    },
+    "/rest/travel/tile-data": {
+      "path": "/rest/travel/tile-data",
+      "category": "travel",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/uploads/batch_create_upload_urls": {
+      "path": "/rest/uploads/batch_create_upload_urls",
+      "category": "uploads",
+      "method": "POST",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/uploads/create_upload_url": {
+      "path": "/rest/uploads/create_upload_url",
+      "category": "uploads",
+      "method": "POST",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/user/carrier-billing-subscription": {
+      "path": "/rest/user/carrier-billing-subscription",
+      "category": "user",
+      "method": "GET",
+      "source_modules": [
+        {
+          "module": "details-CmOFrp8i.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/details-CmOFrp8i.js",
+          "occurrences": 1
+        }
+      ],
+      "module_count": 1
+    },
+    "/rest/user/delete-account": {
+      "path": "/rest/user/delete-account",
+      "category": "user",
+      "method": "DELETE",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/user/get_all_active_perks": {
+      "path": "/rest/user/get_all_active_perks",
+      "category": "user",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/user/get_user_ai_profile": {
+      "path": "/rest/user/get_user_ai_profile",
+      "category": "user",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/user/get_user_main_sidebar_hubs": {
+      "path": "/rest/user/get_user_main_sidebar_hubs",
+      "category": "user",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/user/get_user_pro_perk": {
+      "path": "/rest/user/get_user_pro_perk",
+      "category": "user",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/user/info": {
+      "path": "/rest/user/info",
+      "category": "user",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/user/previous-subscription": {
+      "path": "/rest/user/previous-subscription",
+      "category": "user",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/user/promotions": {
+      "path": "/rest/user/promotions",
+      "category": "user",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/user/save-settings": {
+      "path": "/rest/user/save-settings",
+      "category": "user",
+      "method": "POST",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/user/save_user_ai_profile": {
+      "path": "/rest/user/save_user_ai_profile",
+      "category": "user",
+      "method": "POST",
+      "source_modules": [
+        {
+          "module": "PersonalSearchSettingsMain-XJg1THcE.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/PersonalSearchSettingsMain-XJg1THcE.js",
+          "occurrences": 1
+        }
+      ],
+      "module_count": 1
+    },
+    "/rest/user/settings": {
+      "path": "/rest/user/settings",
+      "category": "user",
+      "method": "PUT",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/user/sign-out-all": {
+      "path": "/rest/user/sign-out-all",
+      "category": "user",
+      "method": "GET",
+      "source_modules": [
+        {
+          "module": "details-CmOFrp8i.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/details-CmOFrp8i.js",
+          "occurrences": 1
+        }
+      ],
+      "module_count": 1
+    },
+    "/rest/user/site-instructions": {
+      "path": "/rest/user/site-instructions",
+      "category": "user",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/user/site-instructions/{site}/reset": {
+      "path": "/rest/user/site-instructions/{site}/reset",
+      "category": "user",
+      "method": "PUT",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/user/subscribe_user_sidebar_hub/{hub_type}": {
+      "path": "/rest/user/subscribe_user_sidebar_hub/{hub_type}",
+      "category": "user",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    },
+    "/rest/user/subscription/refresh": {
+      "path": "/rest/user/subscription/refresh",
+      "category": "user",
+      "method": "GET",
+      "source_modules": [
+        {
+          "module": "bootstrap-CfKy_09H.js",
+          "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/bootstrap-CfKy_09H.js",
+          "occurrences": 1
+        }
+      ],
+      "module_count": 1
+    },
+    "/rest/user/unsubscribe_user_sidebar_hub/{hub_type}": {
+      "path": "/rest/user/unsubscribe_user_sidebar_hub/{hub_type}",
+      "category": "user",
+      "method": "GET",
+      "source_modules": [],
+      "module_count": 0
+    }
+  },
+  "statistics": {
+    "by_category": {
+      "finance": 56,
+      "sports": 50,
+      "enterprise": 32,
+      "collections": 21,
+      "user": 18,
+      "sse": 14,
+      "file-repository": 11,
+      "thread": 11,
+      "homepage-widgets": 10,
+      "notifications": 10,
+      "autosuggest": 9,
+      "billing": 9,
+      "entry": 9,
+      "shopping": 9,
+      "api-org-management": 8,
+      "connectors": 8,
+      "pplx-api": 8,
+      "spaces": 8,
+      "tasks": 8,
+      "travel": 8
+    },
+    "by_module_count": {
+      "0_modules": 309,
+      "1_module": 68,
+      "2_modules": 17,
+      "3+_modules": 3
+    }
+  }
+}

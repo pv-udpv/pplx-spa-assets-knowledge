@@ -1,0 +1,710 @@
+{
+  "metadata": {
+    "scan_type": "contextual_regex",
+    "endpoints_analyzed": 50,
+    "avg_old_confidence": 0.29200000000000004,
+    "avg_new_confidence": 0.0904
+  },
+  "results": [
+    {
+      "path": "/rest/academic/check-edu-institution",
+      "old_confidence": 0.2,
+      "new_confidence": 0.06,
+      "improvement": -0.14,
+      "module_count": 2,
+      "top_match": {
+        "module": "academicKeys-VBytPExr.js",
+        "pattern_type": "string_match",
+        "occurrences": 1,
+        "confidence": 0.06,
+        "context": "anding-page/academic/primer-queries\"),r=()=>e.makeQueryKey(\"/rest/academic/check-edu-institution\");e"
+      }
+    },
+    {
+      "path": "/rest/academic/courses-by-school",
+      "old_confidence": 0.2,
+      "new_confidence": 0.06,
+      "improvement": -0.14,
+      "module_count": 1,
+      "top_match": {
+        "module": "school-catalog-yxDpGfDT.js",
+        "pattern_type": "string_match",
+        "occurrences": 1,
+        "confidence": 0.06,
+        "context": "=50,offset:n=0,search:i})=>{try{const{data:o}=await re.GET(\"/rest/academic/courses-by-school\",t,{par"
+      }
+    },
+    {
+      "path": "/rest/api-org-management/organizations/{api_org_id}/file_repositories",
+      "old_confidence": 0.8,
+      "new_confidence": 0.24,
+      "improvement": -0.56,
+      "module_count": 2,
+      "top_match": {
+        "module": "files-CuF7U9YO.js",
+        "pattern_type": "string_match",
+        "occurrences": 4,
+        "confidence": 0.24,
+        "context": ":s,reason:a})=>{try{const{error:o,response:l}=await P.POST(\"/rest/api-org-management/organizations/{"
+      }
+    },
+    {
+      "path": "/rest/api-org-management/organizations/{api_org_id}/file_repositories/{repository_uuid}",
+      "old_confidence": 0.8,
+      "new_confidence": 0.24,
+      "improvement": -0.56,
+      "module_count": 2,
+      "top_match": {
+        "module": "files-repo-C4MZtHr0.js",
+        "pattern_type": "string_match",
+        "occurrences": 4,
+        "confidence": 0.24,
+        "context": ",reason:i})=>{const{data:r,error:s,response:a}=await x.GET(\"/rest/api-org-management/organizations/{"
+      }
+    },
+    {
+      "path": "/rest/api-org-management/organizations/{api_org_id}/file_repositories/{repository_uuid}/files",
+      "old_confidence": 0.4,
+      "new_confidence": 0.12,
+      "improvement": -0.28,
+      "module_count": 1,
+      "top_match": {
+        "module": "files-repo-C4MZtHr0.js",
+        "pattern_type": "string_match",
+        "occurrences": 2,
+        "confidence": 0.12,
+        "context": ",reason:i})=>{const{data:r,error:s,response:a}=await x.GET(\"/rest/api-org-management/organizations/{"
+      }
+    },
+    {
+      "path": "/rest/api-org-management/organizations/{api_org_id}/file_repositories/{repository_uuid}/files/{file_uuid}",
+      "old_confidence": 0.2,
+      "new_confidence": 0.06,
+      "improvement": -0.14,
+      "module_count": 1,
+      "top_match": {
+        "module": "files-repo-C4MZtHr0.js",
+        "pattern_type": "string_match",
+        "occurrences": 1,
+        "confidence": 0.06,
+        "context": ",reason:r})=>{try{const{error:s,response:a}=await x.DELETE(\"/rest/api-org-management/organizations/{"
+      }
+    },
+    {
+      "path": "/rest/api-org-management/organizations/{api_org_id}/file_repositories/{repository_uuid}/uploads",
+      "old_confidence": 0.2,
+      "new_confidence": 0.06,
+      "improvement": -0.14,
+      "module_count": 1,
+      "top_match": {
+        "module": "files-repo-C4MZtHr0.js",
+        "pattern_type": "string_match",
+        "occurrences": 1,
+        "confidence": 0.06,
+        "context": "nt_type:u.type})),{data:a,error:o,response:d}=await x.POST(\"/rest/api-org-management/organizations/{"
+      }
+    },
+    {
+      "path": "/rest/api-org-management/organizations/{api_org_id}/invites",
+      "old_confidence": 0.8,
+      "new_confidence": 0.24,
+      "improvement": -0.56,
+      "module_count": 1,
+      "top_match": {
+        "module": "useAPIAdmin-BRvcDBVA.js",
+        "pattern_type": "string_match",
+        "occurrences": 4,
+        "confidence": 0.24,
+        "context": ":r,reason:e})=>{try{const{error:t,response:a}=await p.POST(\"/rest/api-org-management/organizations/{"
+      }
+    },
+    {
+      "path": "/rest/api-org-management/organizations/{api_org_id}/users",
+      "old_confidence": 1.0,
+      "new_confidence": 0.3,
+      "improvement": -0.7,
+      "module_count": 1,
+      "top_match": {
+        "module": "useAPIAdmin-BRvcDBVA.js",
+        "pattern_type": "string_match",
+        "occurrences": 5,
+        "confidence": 0.3,
+        "context": "son:e})=>{try{const{data:t,error:a,response:o}=await p.GET(\"/rest/api-org-management/organizations/{"
+      }
+    },
+    {
+      "path": "/rest/api-org-management/organizations/{api_org_id}/users/{user_id}",
+      "old_confidence": 0.4,
+      "new_confidence": 0.12,
+      "improvement": -0.28,
+      "module_count": 1,
+      "top_match": {
+        "module": "useAPIAdmin-BRvcDBVA.js",
+        "pattern_type": "string_match",
+        "occurrences": 2,
+        "confidence": 0.12,
+        "context": ",reason:r})=>{try{const{error:e,response:t}=await p.DELETE(\"/rest/api-org-management/organizations/{"
+      }
+    },
+    {
+      "path": "/rest/article/emphasize_sources/{section_uuid}",
+      "old_confidence": 0.2,
+      "new_confidence": 0.06,
+      "improvement": -0.14,
+      "module_count": 2,
+      "top_match": {
+        "module": "threadMutations-DnjD4xOB.js",
+        "pattern_type": "string_match",
+        "occurrences": 1,
+        "confidence": 0.06,
+        "context": ",reason:t})=>{const{data:e,error:o,response:u}=await i.PUT(\"/rest/article/emphasize_sources/{section"
+      }
+    },
+    {
+      "path": "/rest/article/list_ask_articles",
+      "old_confidence": 0.4,
+      "new_confidence": 0.12,
+      "improvement": -0.28,
+      "module_count": 1,
+      "top_match": {
+        "module": "library-C4AwS7jG.js",
+        "pattern_type": "string_match",
+        "occurrences": 2,
+        "confidence": 0.12,
+        "context": "t opacity-50\"})}));he.displayName=\"FallbackImage\";const vt=\"/rest/article/list_ask_articles\",jt=(e,a"
+      }
+    },
+    {
+      "path": "/rest/article/{article_uuid_or_slug}",
+      "old_confidence": 0.6,
+      "new_confidence": 0.18,
+      "improvement": -0.42,
+      "module_count": 1,
+      "top_match": {
+        "module": "ArticleResultsProvider-C40it0gJ.js",
+        "pattern_type": "string_match",
+        "occurrences": 3,
+        "confidence": 0.18,
+        "context": "reason:a})=>{const{data:c,error:f,response:m}=await ae.GET(\"/rest/article/{article_uuid_or_slug}\",a,"
+      }
+    },
+    {
+      "path": "/rest/assets/signed-url/{asset_id}",
+      "old_confidence": 0.2,
+      "new_confidence": 0.06,
+      "improvement": -0.14,
+      "module_count": 1,
+      "top_match": {
+        "module": "library-C4AwS7jG.js",
+        "pattern_type": "string_match",
+        "occurrences": 1,
+        "confidence": 0.06,
+        "context": "ack(async A=>{const{data:v,error:M,response:T}=await z.GET(\"/rest/assets/signed-url/{asset_id}\",a,{p"
+      }
+    },
+    {
+      "path": "/rest/attribution/comet/1mo-promo/mark-eligible",
+      "old_confidence": 0.2,
+      "new_confidence": 0.06,
+      "improvement": -0.14,
+      "module_count": 1,
+      "top_match": {
+        "module": "handleCometDownload1moProIncentive-CipNW9LB.js",
+        "pattern_type": "string_match",
+        "occurrences": 1,
+        "confidence": 0.06,
+        "context": "tensionId:i})=>{try{const{error:o,response:t}=await s.POST(\"/rest/attribution/comet/1mo-promo/mark-e"
+      }
+    },
+    {
+      "path": "/rest/attribution/comet/event/{event_name}",
+      "old_confidence": 0.2,
+      "new_confidence": 0.06,
+      "improvement": -0.14,
+      "module_count": 1,
+      "top_match": {
+        "module": "spa-shell-CVspTkgB.js",
+        "pattern_type": "string_match",
+        "occurrences": 1,
+        "confidence": 0.06,
+        "context": "Name:e,reason:t})=>{try{const{data:s,error:n}=await W.POST(\"/rest/attribution/comet/event/{event_nam"
+      }
+    },
+    {
+      "path": "/rest/attribution/comet/session",
+      "old_confidence": 0.2,
+      "new_confidence": 0.06,
+      "improvement": -0.14,
+      "module_count": 1,
+      "top_match": {
+        "module": "spa-shell-CVspTkgB.js",
+        "pattern_type": "string_match",
+        "occurrences": 1,
+        "confidence": 0.06,
+        "context": "async({reason:e})=>{try{const{data:t,error:s}=await W.POST(\"/rest/attribution/comet/session\",e,{time"
+      }
+    },
+    {
+      "path": "/rest/attribution/dub/lead",
+      "old_confidence": 0.2,
+      "new_confidence": 0.06,
+      "improvement": -0.14,
+      "module_count": 1,
+      "top_match": {
+        "module": "spa-shell-CVspTkgB.js",
+        "pattern_type": "string_match",
+        "occurrences": 1,
+        "confidence": 0.06,
+        "context": "on:r})=>{try{const{data:a,error:i,response:o}=await W.POST(\"/rest/attribution/dub/lead\",r,{timeoutMs"
+      }
+    },
+    {
+      "path": "/rest/auth/get_special_profile",
+      "old_confidence": 0.4,
+      "new_confidence": 0.12,
+      "improvement": -0.28,
+      "module_count": 1,
+      "top_match": {
+        "module": "layout-sidebar-BPemXja1.js",
+        "pattern_type": "string_match",
+        "occurrences": 2,
+        "confidence": 0.12,
+        "context": "eQueryKey(\"/rest/user/promotions\",{}),Im=e=>J.makeQueryKey(\"/rest/auth/get_special_profile\",{profile"
+      }
+    },
+    {
+      "path": "/rest/autosuggest/academic/list-autosuggest",
+      "old_confidence": 0.2,
+      "new_confidence": 0.06,
+      "improvement": -0.14,
+      "module_count": 1,
+      "top_match": {
+        "module": "academic-DGs03j5g.js",
+        "pattern_type": "string_match",
+        "occurrences": 1,
+        "confidence": 0.06,
+        "context": "son:i})=>{try{const{error:r,data:a,response:o}=await s.GET(\"/rest/autosuggest/academic/list-autosugg"
+      }
+    },
+    {
+      "path": "/rest/autosuggest/finance/list-autosuggest",
+      "old_confidence": 0.2,
+      "new_confidence": 0.06,
+      "improvement": -0.14,
+      "module_count": 3,
+      "top_match": {
+        "module": "discover-DVVq_aIT.js",
+        "pattern_type": "string_match",
+        "occurrences": 1,
+        "confidence": 0.06,
+        "context": "function kt(){const{data:s,error:t,response:a}=await B.GET(\"/rest/autosuggest/finance/list-autosugge"
+      }
+    },
+    {
+      "path": "/rest/autosuggest/finance/tasks-autosuggest",
+      "old_confidence": 0.2,
+      "new_confidence": 0.06,
+      "improvement": -0.14,
+      "module_count": 1,
+      "top_match": {
+        "module": "useAutomationConfiguration-nDokkRwO.js",
+        "pattern_type": "string_match",
+        "occurrences": 1,
+        "confidence": 0.06,
+        "context": "son:s})=>{try{const{data:r,error:n,response:c}=await $.GET(\"/rest/autosuggest/finance/tasks-autosugg"
+      }
+    },
+    {
+      "path": "/rest/autosuggest/list-autosuggest",
+      "old_confidence": 0.2,
+      "new_confidence": 0.06,
+      "improvement": -0.14,
+      "module_count": 1,
+      "top_match": {
+        "module": "useAskInput-DhG96Wqe.js",
+        "pattern_type": "string_match",
+        "occurrences": 1,
+        "confidence": 0.06,
+        "context": "=0)return D;const{data:l,error:u,response:c}=await oe.POST(\"/rest/autosuggest/list-autosuggest\",a,{b"
+      }
+    },
+    {
+      "path": "/rest/autosuggest/reformulate-query",
+      "old_confidence": 0.2,
+      "new_confidence": 0.06,
+      "improvement": -0.14,
+      "module_count": 1,
+      "top_match": {
+        "module": "useGenerativeRefinement-Cx9oEn6r.js",
+        "pattern_type": "string_match",
+        "occurrences": 1,
+        "confidence": 0.06,
+        "context": "on:f})=>{try{const{data:t,error:n,response:o}=await L.POST(\"/rest/autosuggest/reformulate-query\",f,{"
+      }
+    },
+    {
+      "path": "/rest/autosuggest/shopping/list-autosuggest",
+      "old_confidence": 0.2,
+      "new_confidence": 0.06,
+      "improvement": -0.14,
+      "module_count": 1,
+      "top_match": {
+        "module": "shopping-BuNPVg54.js",
+        "pattern_type": "string_match",
+        "occurrences": 1,
+        "confidence": 0.06,
+        "context": "son:o})=>{try{const{error:s,data:i,response:r}=await N.GET(\"/rest/autosuggest/shopping/list-autosugg"
+      }
+    },
+    {
+      "path": "/rest/autosuggest/sports/list-autosuggest",
+      "old_confidence": 0.2,
+      "new_confidence": 0.06,
+      "improvement": -0.14,
+      "module_count": 1,
+      "top_match": {
+        "module": "index-DxzkC6Va.js",
+        "pattern_type": "string_match",
+        "occurrences": 1,
+        "confidence": 0.06,
+        "context": "on:e})=>{try{const{error:o,data:r,response:a}=await tt.GET(\"/rest/autosuggest/sports/list-autosugges"
+      }
+    },
+    {
+      "path": "/rest/autosuggest/track-query-clicked",
+      "old_confidence": 0.2,
+      "new_confidence": 0.2,
+      "improvement": 0.0,
+      "module_count": 2,
+      "top_match": {
+        "module": "useAskInput-DhG96Wqe.js",
+        "pattern_type": "exact_call",
+        "occurrences": 1,
+        "confidence": 0.2,
+        "context": "ed:c.isPersonalized,sourceDomain:void 0}),c.isPersonalized&&fetch(\"/rest/autosuggest/track-query-cli"
+      }
+    },
+    {
+      "path": "/rest/autosuggest/travel/list-autosuggest",
+      "old_confidence": 0.2,
+      "new_confidence": 0.06,
+      "improvement": -0.14,
+      "module_count": 1,
+      "top_match": {
+        "module": "travel-BoyWCysp.js",
+        "pattern_type": "string_match",
+        "occurrences": 1,
+        "confidence": 0.06,
+        "context": "son:i})=>{try{const{data:s,error:t,response:a}=await M.GET(\"/rest/autosuggest/travel/list-autosugges"
+      }
+    },
+    {
+      "path": "/rest/billing/braintree/paypal/client-token",
+      "old_confidence": 0.2,
+      "new_confidence": 0.06,
+      "improvement": -0.14,
+      "module_count": 3,
+      "top_match": {
+        "module": "billingKeys-B5qpyMR7.js",
+        "pattern_type": "string_match",
+        "occurrences": 1,
+        "confidence": 0.06,
+        "context": "rest/billing/personalization/status\"),o=()=>e.makeQueryKey(\"/rest/billing/braintree/paypal/client-to"
+      }
+    },
+    {
+      "path": "/rest/billing/braintree/subscription-details",
+      "old_confidence": 0.2,
+      "new_confidence": 0.06,
+      "improvement": -0.14,
+      "module_count": 2,
+      "top_match": {
+        "module": "billingKeys-B5qpyMR7.js",
+        "pattern_type": "string_match",
+        "occurrences": 1,
+        "confidence": 0.06,
+        "context": "(\"/rest/stripe/subscription-changes\"),a=()=>e.makeQueryKey(\"/rest/billing/braintree/subscription-det"
+      }
+    },
+    {
+      "path": "/rest/billing/commerce/carts",
+      "old_confidence": 0.6,
+      "new_confidence": 0.18,
+      "improvement": -0.42,
+      "module_count": 1,
+      "top_match": {
+        "module": "ShoppingPaymentInner-x1r-T8Ra.js",
+        "pattern_type": "string_match",
+        "occurrences": 3,
+        "confidence": 0.18,
+        "context": "eason:a})=>{const{data:n,error:r,response:i}=await ue.POST(\"/rest/billing/commerce/carts/{cart_id}/c"
+      }
+    },
+    {
+      "path": "/rest/billing/commerce/carts/{cart_id}/complete",
+      "old_confidence": 0.2,
+      "new_confidence": 0.06,
+      "improvement": -0.14,
+      "module_count": 1,
+      "top_match": {
+        "module": "ShoppingPaymentInner-x1r-T8Ra.js",
+        "pattern_type": "string_match",
+        "occurrences": 1,
+        "confidence": 0.06,
+        "context": "eason:a})=>{const{data:n,error:r,response:i}=await ue.POST(\"/rest/billing/commerce/carts/{cart_id}/c"
+      }
+    },
+    {
+      "path": "/rest/billing/commerce/carts/{cart_id}/update",
+      "old_confidence": 0.2,
+      "new_confidence": 0.06,
+      "improvement": -0.14,
+      "module_count": 1,
+      "top_match": {
+        "module": "ShoppingPaymentInner-x1r-T8Ra.js",
+        "pattern_type": "string_match",
+        "occurrences": 1,
+        "confidence": 0.06,
+        "context": "ason:a})=>{const{data:n,error:r,response:i}=await ue.PATCH(\"/rest/billing/commerce/carts/{cart_id}/u"
+      }
+    },
+    {
+      "path": "/rest/billing/create-government-subscription",
+      "old_confidence": 0.2,
+      "new_confidence": 0.06,
+      "improvement": -0.14,
+      "module_count": 1,
+      "top_match": {
+        "module": "SidebarGovBadge-F1hpysW6.js",
+        "pattern_type": "string_match",
+        "occurrences": 1,
+        "confidence": 0.06,
+        "context": "on:r})=>{try{const{data:s,error:t,response:n}=await M.POST(\"/rest/billing/create-government-subscrip"
+      }
+    },
+    {
+      "path": "/rest/billing/get-customer-portal",
+      "old_confidence": 0.2,
+      "new_confidence": 0.06,
+      "improvement": -0.14,
+      "module_count": 1,
+      "top_match": {
+        "module": "useUserPreviousSubscriptionQuery-ACOLWc8U.js",
+        "pattern_type": "string_match",
+        "occurrences": 1,
+        "confidence": 0.06,
+        "context": "son:t})=>{try{const{data:s,error:e,response:o}=await i.GET(\"/rest/billing/get-customer-portal\",t,{he"
+      }
+    },
+    {
+      "path": "/rest/billing/personalization/status",
+      "old_confidence": 0.2,
+      "new_confidence": 0.06,
+      "improvement": -0.14,
+      "module_count": 4,
+      "top_match": {
+        "module": "PersonalSearchSettingsMain-XJg1THcE.js",
+        "pattern_type": "string_match",
+        "occurrences": 1,
+        "confidence": 0.06,
+        "context": "yFn:async()=>{const{data:i,error:z,response:K}=await P.GET(\"/rest/billing/personalization/status\",s)"
+      }
+    },
+    {
+      "path": "/rest/billing/personalization/update",
+      "old_confidence": 0.2,
+      "new_confidence": 0.06,
+      "improvement": -0.14,
+      "module_count": 2,
+      "top_match": {
+        "module": "PersonalSearchSettingsMain-XJg1THcE.js",
+        "pattern_type": "string_match",
+        "occurrences": 1,
+        "confidence": 0.06,
+        "context": "sa-opt-in-submit\",{data:t,error:n,response:d}=await P.POST(\"/rest/billing/personalization/update\",r,"
+      }
+    },
+    {
+      "path": "/rest/browser/classify",
+      "old_confidence": 0.2,
+      "new_confidence": 0.06,
+      "improvement": -0.14,
+      "module_count": 1,
+      "top_match": {
+        "module": "layout-sidebar-BPemXja1.js",
+        "pattern_type": "string_match",
+        "occurrences": 1,
+        "confidence": 0.06,
+        "context": " 0}},Qc=600,Jg=async(e,t=Qc)=>{const{data:n}=await Ce.POST(\"/rest/browser/classify\",\"mobile_search_i"
+      }
+    },
+    {
+      "path": "/rest/browser/client_payload",
+      "old_confidence": 0.2,
+      "new_confidence": 0.06,
+      "improvement": -0.14,
+      "module_count": 1,
+      "top_match": {
+        "module": "layout-sidebar-BPemXja1.js",
+        "pattern_type": "string_match",
+        "occurrences": 1,
+        "confidence": 0.06,
+        "context": "t\",{request_id:c});const{error:_,response:b}=await Ce.POST(\"/rest/browser/client_payload\",s,{backOff"
+      }
+    },
+    {
+      "path": "/rest/browser/download",
+      "old_confidence": 0.2,
+      "new_confidence": 0.06,
+      "improvement": -0.14,
+      "module_count": 1,
+      "top_match": {
+        "module": "getCometDownloadURL-DlG-TDK8.js",
+        "pattern_type": "string_match",
+        "occurrences": 1,
+        "confidence": 0.06,
+        "context": "=new URLSearchParams(n),s=new URL(\"https://www.perplexity.ai/rest/browser/download\");return s.search"
+      }
+    },
+    {
+      "path": "/rest/browser/personalization/sidecar-recommended-queries",
+      "old_confidence": 0.2,
+      "new_confidence": 0.06,
+      "improvement": -0.14,
+      "module_count": 1,
+      "top_match": {
+        "module": "useAskInput-DhG96Wqe.js",
+        "pattern_type": "string_match",
+        "occurrences": 1,
+        "confidence": 0.06,
+        "context": ":e.domain_suggestions};const{data:n,error:r}=await oe.POST(\"/rest/browser/personalization/sidecar-re"
+      }
+    },
+    {
+      "path": "/rest/browser/tool_failure",
+      "old_confidence": 0.2,
+      "new_confidence": 0.06,
+      "improvement": -0.14,
+      "module_count": 1,
+      "top_match": {
+        "module": "layout-sidebar-BPemXja1.js",
+        "pattern_type": "string_match",
+        "occurrences": 1,
+        "confidence": 0.06,
+        "context": "async(e,t,n)=>{try{const{error:r,response:o}=await Ce.POST(\"/rest/browser/tool_failure\",n,{body:{cli"
+      }
+    },
+    {
+      "path": "/rest/browser/tool_result",
+      "old_confidence": 0.2,
+      "new_confidence": 0.06,
+      "improvement": -0.14,
+      "module_count": 1,
+      "top_match": {
+        "module": "layout-sidebar-BPemXja1.js",
+        "pattern_type": "string_match",
+        "occurrences": 1,
+        "confidence": 0.06,
+        "context": ")=>{try{const o=await e,{error:s,response:a}=await Ce.POST(\"/rest/browser/tool_result\",r,{body:{clie"
+      }
+    },
+    {
+      "path": "/rest/collections/create_collection",
+      "old_confidence": 0.2,
+      "new_confidence": 0.06,
+      "improvement": -0.14,
+      "module_count": 1,
+      "top_match": {
+        "module": "useCollectionMutations-DbzaA0bM.js",
+        "pattern_type": "string_match",
+        "occurrences": 1,
+        "confidence": 0.06,
+        "context": "template_id);const{data:l,error:f,response:h}=await P.POST(\"/rest/collections/create_collection\",d,{"
+      }
+    },
+    {
+      "path": "/rest/collections/delete_collection/{collection_uuid}",
+      "old_confidence": 0.2,
+      "new_confidence": 0.06,
+      "improvement": -0.14,
+      "module_count": 1,
+      "top_match": {
+        "module": "useCollectionMutations-DbzaA0bM.js",
+        "pattern_type": "string_match",
+        "occurrences": 1,
+        "confidence": 0.06,
+        "context": "id:a,reason:d})=>{const{error:e,response:l}=await P.DELETE(\"/rest/collections/delete_collection/{col"
+      }
+    },
+    {
+      "path": "/rest/collections/edit_collection/{collection_uuid}",
+      "old_confidence": 0.2,
+      "new_confidence": 0.06,
+      "improvement": -0.14,
+      "module_count": 1,
+      "top_match": {
+        "module": "useCollectionMutations-DbzaA0bM.js",
+        "pattern_type": "string_match",
+        "occurrences": 1,
+        "confidence": 0.06,
+        "context": ")=>{const l=le(d),{data:f,error:h,response:R}=await P.POST(\"/rest/collections/edit_collection/{colle"
+      }
+    },
+    {
+      "path": "/rest/collections/focused_web_config/links",
+      "old_confidence": 0.4,
+      "new_confidence": 0.12,
+      "improvement": -0.28,
+      "module_count": 1,
+      "top_match": {
+        "module": "useCollectionMutations-DbzaA0bM.js",
+        "pattern_type": "string_match",
+        "occurrences": 2,
+        "confidence": 0.12,
+        "context": "reason:t})=>{const{data:i,error:s,response:o}=await P.POST(\"/rest/collections/focused_web_config/lin"
+      }
+    },
+    {
+      "path": "/rest/collections/get_canonical_collection_contexts",
+      "old_confidence": 0.2,
+      "new_confidence": 0.06,
+      "improvement": -0.14,
+      "module_count": 1,
+      "top_match": {
+        "module": "slug-Cx3kxnrw.js",
+        "pattern_type": "string_match",
+        "occurrences": 1,
+        "confidence": 0.06,
+        "context": "on:o})=>{try{const{data:a,error:i,response:r}=await ce.GET(\"/rest/collections/get_canonical_collecti"
+      }
+    },
+    {
+      "path": "/rest/collections/get_collection",
+      "old_confidence": 0.4,
+      "new_confidence": 0.12,
+      "improvement": -0.28,
+      "module_count": 2,
+      "top_match": {
+        "module": "spa-shell-CVspTkgB.js",
+        "pattern_type": "string_match",
+        "occurrences": 2,
+        "confidence": 0.12,
+        "context": "son:s})=>{try{const{data:n,error:r,response:a}=await W.GET(\"/rest/collections/get_collection\",s,{par"
+      }
+    },
+    {
+      "path": "/rest/collections/get_collection_from_group_member",
+      "old_confidence": 0.2,
+      "new_confidence": 0.06,
+      "improvement": -0.14,
+      "module_count": 1,
+      "top_match": {
+        "module": "slug-Cx3kxnrw.js",
+        "pattern_type": "string_match",
+        "occurrences": 1,
+        "confidence": 0.06,
+        "context": "on:o})=>{try{const{data:a,error:i,response:r}=await ce.GET(\"/rest/collections/get_collection_from_gr"
+      }
+    }
+  ]
+}

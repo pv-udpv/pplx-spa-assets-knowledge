@@ -1,0 +1,58 @@
+{
+  "file": "pplx-stream-DVhlX0Bg.js",
+  "source_url": "https://pplx-next-static-public.perplexity.ai/_sidecar/assets/pplx-stream-DVhlX0Bg.js",
+  "sourcemap": "https://pplx-static-sourcemaps.perplexity.ai/_sidecar/assets/pplx-stream-DVhlX0Bg.js.map",
+  "type": "streaming_state_manager",
+  "description": "SSE/WebSocket streaming state management \u0434\u043b\u044f threads, entries \u0438 sources",
+  "enums": {
+    "xt": "SOURCE_STATUS (SELECTED, REVIEWED, REVIEWING, UNSORTED)",
+    "Kt": "BROWSER_SOURCE_TYPE (HISTORY, OPEN_TABS, RECENTLY_CLOSED_TABS)",
+    "qt": "THREAD_MODE (COPILOT, ARTICLE)",
+    "Vt": "ATTACHMENT_TYPE (MEETING_TRANSCRIPT)",
+    "zt": "ATTACHMENT_STATUS (IN_PROGRESS, FAILED)",
+    "Jt": "MODAL_TYPE (LOGIN, OPEN_PERMALINK, DOWNLOAD_COMET, ...)",
+    "Xt": "UPSELL_LOCATION (IN_THREAD, SIDEBAR, MODAL, ...)",
+    "Qt": "UPSELL_CTA_TYPE (PRO_UPGRADE, SIGN_UP_OR_LOGIN, CONNECTOR, ...)",
+    "Zt": "UPSELL_COLOR (PRIMARY_COLOR, SECONDARY_COLOR, MAX_COLOR, INVERTED)",
+    "T": "ENTRY_STATUS (PENDING, COMPLETED, FAILED, STAGED, REWRITING, RESUMING, BLOCKED)",
+    "$t": "PRIVACY_STATE (NONE, INCOGNITO)",
+    "jt": "STREAM_TYPE (FULL, STREAMING)",
+    "er": "PROGRESS_STATUS (IN_PROGRESS, DONE)",
+    "tr": "WIDGET_TYPE (FINANCE)",
+    "rr": "WIDGET_DATA_TYPE (CALENDAR_EVENT, PLACE_CARD, SHOPPING_CARD, ...)",
+    "nr": "SELECTION_STATUS (UNSELECTED, SELECTED, TIE)",
+    "sr": "ANSWER_MODE_TYPE (HOTELS, SHOPPING, JOBS, IMAGE, VIDEO, MAPS, ...)",
+    "or": "ASSET_TYPE (CODE_ASSET, CHART, CODE_FILE, APP, GENERATED_IMAGE, PDF, ...)",
+    "ar": "MCP_SERVER_TYPE (MCP_SERVER_TYPE_LOCAL)",
+    "ir": "BROWSER_SUGGESTION_TYPE (BROWSER_HISTORY, OPEN_TAB, RECENTLY_CLOSED_TAB)"
+  },
+  "constants": {
+    "ut": "CLIENT_SEARCH_PLACEHOLDER",
+    "Ce": "DEFAULT_SEARCH_PLACEHOLDER",
+    "pr": "streamId (localStorage key)"
+  },
+  "core_hooks": {
+    "Or": "useMutateEntry(entryId, mutator)",
+    "Rr": "useMutateEntries(threadId, mutator, {terminateStream})",
+    "Sr": "useDeleteEntry(entryId)",
+    "Tr": "useDeleteEntries(threadId)",
+    "Nr": "useGetStreamTimer(streamId)",
+    "hr": "useHasActiveStreams()",
+    "mr": "useGetActiveThreads()",
+    "wr": "useIngestInitialEntries(entries[])"
+  },
+  "state_management": {
+    "library": "Custom proxy-based (tracked state)",
+    "features": [
+      "WeakMap tracking",
+      "Proxy reactivity",
+      "Shallow equality",
+      "Middleware support"
+    ],
+    "creators": {
+      "ur": "createTrackedContext",
+      "at": "createStoreContext",
+      "cr": "createDerivedStore"
+    }
+  }
+}
