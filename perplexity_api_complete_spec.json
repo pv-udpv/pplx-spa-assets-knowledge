@@ -1,0 +1,3458 @@
+{
+  "metadata": {
+    "source": "21012026_2003.www.perplexity.ai.har.json",
+    "creator": "WebInspector",
+    "version": "537.36",
+    "total_requests": 786,
+    "extraction_date": "2026-01-21T19:09:42.464199"
+  },
+  "endpoints": {
+    "POST /rest/event/analytics": {
+      "path": "/rest/event/analytics",
+      "method": "POST",
+      "observed_calls": 2,
+      "query_params": {},
+      "request_schema": {
+        "type": "object",
+        "properties": {
+          "event_name": {
+            "type": "string"
+          },
+          "event_data": {
+            "type": "object",
+            "properties": {
+              "colorScheme": {
+                "type": "string"
+              },
+              "isStandaloneApp": {
+                "type": "boolean"
+              },
+              "timestamp": {
+                "type": "integer"
+              },
+              "isBrowserExtension": {
+                "type": "boolean"
+              },
+              "timeZone": {
+                "type": "string"
+              },
+              "isPro": {
+                "type": "boolean"
+              },
+              "userId": {
+                "type": "string"
+              },
+              "deviceInfo": {
+                "type": "object",
+                "properties": {
+                  "hardwareConcurrency": {
+                    "type": "integer"
+                  },
+                  "architecture": {
+                    "type": "integer"
+                  },
+                  "colorDepth": {
+                    "type": "integer"
+                  },
+                  "screenSize": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "hardwareConcurrency",
+                  "architecture",
+                  "colorDepth",
+                  "screenSize"
+                ]
+              },
+              "web_platform": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "colorScheme",
+              "isStandaloneApp",
+              "timestamp",
+              "isBrowserExtension",
+              "timeZone",
+              "isPro",
+              "userId",
+              "deviceInfo",
+              "web_platform"
+            ]
+          },
+          "url": {
+            "type": "string"
+          },
+          "referrer": {
+            "type": "string"
+          },
+          "language": {
+            "type": "string"
+          },
+          "screen": {
+            "type": "string"
+          },
+          "hostname": {
+            "type": "string"
+          },
+          "device_info": {
+            "type": "object",
+            "properties": {
+              "hardwareConcurrency": {
+                "type": "integer"
+              },
+              "architecture": {
+                "type": "integer"
+              },
+              "colorDepth": {
+                "type": "integer"
+              },
+              "screenSize": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "hardwareConcurrency",
+              "architecture",
+              "colorDepth",
+              "screenSize"
+            ]
+          },
+          "is_arc_browser": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "event_name",
+          "event_data",
+          "url",
+          "referrer",
+          "language",
+          "screen",
+          "hostname",
+          "device_info",
+          "is_arc_browser"
+        ]
+      },
+      "response_schema": {
+        "type": "object",
+        "properties": {
+          "accepted_events": {
+            "type": "integer"
+          },
+          "rejected_events": {
+            "type": "integer"
+          },
+          "status": {
+            "type": "string"
+          },
+          "total_events": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "accepted_events",
+          "rejected_events",
+          "status",
+          "total_events"
+        ]
+      },
+      "examples": {
+        "request": {
+          "event_name": "pageview",
+          "event_data": {
+            "colorScheme": "dark",
+            "isStandaloneApp": false,
+            "timestamp": 1769014804543,
+            "isBrowserExtension": false,
+            "timeZone": "Europe/Moscow",
+            "isPro": true,
+            "userId": "c0d5a3d2-bb3a-4465-abd8-c931b65b4676",
+            "deviceInfo": {
+              "hardwareConcurrency": 16,
+              "architecture": 255,
+              "colorDepth": 30,
+              "screenSize": "1536x864"
+            },
+            "web_platform": "web"
+          },
+          "url": "/",
+          "referrer": "",
+          "language": "ru-RU",
+          "screen": "1536x864",
+          "hostname": "www.perplexity.ai",
+          "device_info": {
+            "hardwareConcurrency": 16,
+            "architecture": 255,
+            "colorDepth": 30,
+            "screenSize": "1536x864"
+          },
+          "is_arc_browser": false
+        },
+        "response": {
+          "accepted_events": 1,
+          "rejected_events": 0,
+          "status": "completed",
+          "total_events": 1
+        }
+      }
+    },
+    "GET /rest/user/settings": {
+      "path": "/rest/user/settings",
+      "method": "GET",
+      "observed_calls": 1,
+      "query_params": {
+        "skip_connector_picker_credentials": {
+          "type": "string",
+          "example": "true"
+        },
+        "version": {
+          "type": "string",
+          "example": "2.18"
+        },
+        "source": {
+          "type": "string",
+          "example": "default"
+        }
+      },
+      "request_schema": null,
+      "response_schema": {
+        "type": "object",
+        "properties": {
+          "pages_limit": {
+            "type": "integer"
+          },
+          "upload_limit": {
+            "type": "integer"
+          },
+          "create_limit": {
+            "type": "integer"
+          },
+          "article_image_upload_limit": {
+            "type": "integer"
+          },
+          "max_files_per_user": {
+            "type": "integer"
+          },
+          "max_files_per_repository": {
+            "type": "integer"
+          },
+          "connector_limits": {
+            "type": "object",
+            "properties": {
+              "repo_type_limits": {
+                "type": "object",
+                "properties": {
+                  "COLLECTION": {
+                    "type": "object",
+                    "properties": {
+                      "max_files": {
+                        "type": "object"
+                      },
+                      "max_folders": {
+                        "type": "object"
+                      }
+                    },
+                    "required": [
+                      "max_files",
+                      "max_folders"
+                    ]
+                  }
+                },
+                "required": [
+                  "COLLECTION"
+                ]
+              },
+              "global_file_count": {
+                "type": "integer"
+              },
+              "max_file_size_mb": {
+                "type": "integer"
+              },
+              "max_attachment_file_size_mb": {
+                "type": "integer"
+              },
+              "daily_attachment_limit": {
+                "type": "integer"
+              },
+              "weekly_attachment_limit": {
+                "type": "null"
+              },
+              "daily_attachment_limit_non_priority_country": {
+                "type": "null"
+              }
+            },
+            "required": [
+              "repo_type_limits",
+              "global_file_count",
+              "max_file_size_mb",
+              "max_attachment_file_size_mb",
+              "daily_attachment_limit",
+              "weekly_attachment_limit",
+              "daily_attachment_limit_non_priority_country"
+            ]
+          },
+          "sources": {
+            "type": "object",
+            "properties": {
+              "source_to_limit": {
+                "type": "object",
+                "properties": {
+                  "web": {
+                    "type": "object",
+                    "properties": {
+                      "monthly_limit": {
+                        "type": "object"
+                      },
+                      "remaining": {
+                        "type": "object"
+                      }
+                    },
+                    "required": [
+                      "monthly_limit",
+                      "remaining"
+                    ]
+                  },
+                  "scholar": {
+                    "type": "object",
+                    "properties": {
+                      "monthly_limit": {
+                        "type": "object"
+                      },
+                      "remaining": {
+                        "type": "object"
+                      }
+                    },
+                    "required": [
+                      "monthly_limit",
+                      "remaining"
+                    ]
+                  },
+                  "social": {
+                    "type": "object",
+                    "properties": {
+                      "monthly_limit": {
+                        "type": "object"
+                      },
+                      "remaining": {
+                        "type": "object"
+                      }
+                    },
+                    "required": [
+                      "monthly_limit",
+                      "remaining"
+                    ]
+                  },
+                  "google_drive": {
+                    "type": "object",
+                    "properties": {
+                      "monthly_limit": {
+                        "type": "object"
+                      },
+                      "remaining": {
+                        "type": "object"
+                      }
+                    },
+                    "required": [
+                      "monthly_limit",
+                      "remaining"
+                    ]
+                  },
+                  "gcal": {
+                    "type": "object",
+                    "properties": {
+                      "monthly_limit": {
+                        "type": "object"
+                      },
+                      "remaining": {
+                        "type": "object"
+                      }
+                    },
+                    "required": [
+                      "monthly_limit",
+                      "remaining"
+                    ]
+                  },
+                  "dropbox": {
+                    "type": "object",
+                    "properties": {
+                      "monthly_limit": {
+                        "type": "object"
+                      },
+                      "remaining": {
+                        "type": "object"
+                      }
+                    },
+                    "required": [
+                      "monthly_limit",
+                      "remaining"
+                    ]
+                  },
+                  "edgar": {
+                    "type": "object",
+                    "properties": {
+                      "monthly_limit": {
+                        "type": "object"
+                      },
+                      "remaining": {
+                        "type": "object"
+                      }
+                    },
+                    "required": [
+                      "monthly_limit",
+                      "remaining"
+                    ]
+                  },
+                  "notion_mcp": {
+                    "type": "object",
+                    "properties": {
+                      "monthly_limit": {
+                        "type": "object"
+                      },
+                      "remaining": {
+                        "type": "object"
+                      }
+                    },
+                    "required": [
+                      "monthly_limit",
+                      "remaining"
+                    ]
+                  },
+                  "outlook": {
+                    "type": "object",
+                    "properties": {
+                      "monthly_limit": {
+                        "type": "object"
+                      },
+                      "remaining": {
+                        "type": "object"
+                      }
+                    },
+                    "required": [
+                      "monthly_limit",
+                      "remaining"
+                    ]
+                  },
+                  "linear_alt": {
+                    "type": "object",
+                    "properties": {
+                      "monthly_limit": {
+                        "type": "object"
+                      },
+                      "remaining": {
+                        "type": "object"
+                      }
+                    },
+                    "required": [
+                      "monthly_limit",
+                      "remaining"
+                    ]
+                  },
+                  "github_mcp_direct": {
+                    "type": "object",
+                    "properties": {
+                      "monthly_limit": {
+                        "type": "object"
+                      },
+                      "remaining": {
+                        "type": "object"
+                      }
+                    },
+                    "required": [
+                      "monthly_limit",
+                      "remaining"
+                    ]
+                  },
+                  "asana_mcp_merge": {
+                    "type": "object",
+                    "properties": {
+                      "monthly_limit": {
+                        "type": "object"
+                      },
+                      "remaining": {
+                        "type": "object"
+                      }
+                    },
+                    "required": [
+                      "monthly_limit",
+                      "remaining"
+                    ]
+                  },
+                  "slack_direct": {
+                    "type": "object",
+                    "properties": {
+                      "monthly_limit": {
+                        "type": "object"
+                      },
+                      "remaining": {
+                        "type": "object"
+                      }
+                    },
+                    "required": [
+                      "monthly_limit",
+                      "remaining"
+                    ]
+                  },
+                  "jira_mcp_merge": {
+                    "type": "object",
+                    "properties": {
+                      "monthly_limit": {
+                        "type": "object"
+                      },
+                      "remaining": {
+                        "type": "object"
+                      }
+                    },
+                    "required": [
+                      "monthly_limit",
+                      "remaining"
+                    ]
+                  },
+                  "confluence_mcp_merge": {
+                    "type": "object",
+                    "properties": {
+                      "monthly_limit": {
+                        "type": "object"
+                      },
+                      "remaining": {
+                        "type": "object"
+                      }
+                    },
+                    "required": [
+                      "monthly_limit",
+                      "remaining"
+                    ]
+                  },
+                  "microsoft_teams_mcp_merge": {
+                    "type": "object",
+                    "properties": {
+                      "monthly_limit": {
+                        "type": "object"
+                      },
+                      "remaining": {
+                        "type": "object"
+                      }
+                    },
+                    "required": [
+                      "monthly_limit",
+                      "remaining"
+                    ]
+                  },
+                  "wiley_mcp_cashmere": {
+                    "type": "object",
+                    "properties": {
+                      "monthly_limit": {
+                        "type": "object"
+                      },
+                      "remaining": {
+                        "type": "object"
+                      }
+                    },
+                    "required": [
+                      "monthly_limit",
+                      "remaining"
+                    ]
+                  },
+                  "cbinsights_mcp_cashmere": {
+                    "type": "object",
+                    "properties": {
+                      "monthly_limit": {
+                        "type": "object"
+                      },
+                      "remaining": {
+                        "type": "object"
+                      }
+                    },
+                    "required": [
+                      "monthly_limit",
+                      "remaining"
+                    ]
+                  },
+                  "pitchbook_mcp_cashmere": {
+                    "type": "object",
+                    "properties": {
+                      "monthly_limit": {
+                        "type": "object"
+                      },
+                      "remaining": {
+                        "type": "object"
+                      }
+                    },
+                    "required": [
+                      "monthly_limit",
+                      "remaining"
+                    ]
+                  },
+                  "statista_mcp_cashmere": {
+                    "type": "object",
+                    "properties": {
+                      "monthly_limit": {
+                        "type": "object"
+                      },
+                      "remaining": {
+                        "type": "object"
+                      }
+                    },
+                    "required": [
+                      "monthly_limit",
+                      "remaining"
+                    ]
+                  },
+                  "zoom": {
+                    "type": "object",
+                    "properties": {
+                      "monthly_limit": {
+                        "type": "object"
+                      },
+                      "remaining": {
+                        "type": "object"
+                      }
+                    },
+                    "required": [
+                      "monthly_limit",
+                      "remaining"
+                    ]
+                  }
+                },
+                "required": [
+                  "web",
+                  "scholar",
+                  "social",
+                  "google_drive",
+                  "gcal",
+                  "dropbox",
+                  "edgar",
+                  "notion_mcp",
+                  "outlook",
+                  "linear_alt"
+                ]
+              }
+            },
+            "required": [
+              "source_to_limit"
+            ]
+          },
+          "has_ai_profile": {
+            "type": "boolean"
+          },
+          "referral_code": {
+            "type": "string"
+          },
+          "referral_num_success": {
+            "type": "integer"
+          },
+          "referral_num_coupons": {
+            "type": "integer"
+          },
+          "stripe_status": {
+            "type": "string"
+          },
+          "revenuecat_status": {
+            "type": "string"
+          },
+          "revenuecat_source": {
+            "type": "string"
+          },
+          "subscription_status": {
+            "type": "string"
+          },
+          "subscription_source": {
+            "type": "string"
+          },
+          "subscription_tier": {
+            "type": "string"
+          },
+          "coupon_metadata": {
+            "type": "null"
+          },
+          "default_model": {
+            "type": "string"
+          },
+          "default_image_generation_model": {
+            "type": "string"
+          },
+          "default_video_generation_model": {
+            "type": "string"
+          },
+          "query_count": {
+            "type": "integer"
+          },
+          "query_count_copilot": {
+            "type": "integer"
+          },
+          "query_count_mobile": {
+            "type": "integer"
+          },
+          "disable_training": {
+            "type": "boolean"
+          },
+          "is_sidebar_collapsed": {
+            "type": "boolean"
+          },
+          "default_copilot": {
+            "type": "boolean"
+          },
+          "notif_status": {
+            "type": "string"
+          },
+          "email_status": {
+            "type": "string"
+          },
+          "time_zone": {
+            "type": "string"
+          },
+          "device_language": {
+            "type": "string"
+          },
+          "discover_homepage_enabled": {
+            "type": "boolean"
+          },
+          "always_allow_browser_agent": {
+            "type": "boolean"
+          },
+          "has_accepted_api_terms": {
+            "type": "boolean"
+          },
+          "has_data_retention_warning": {
+            "type": "boolean"
+          },
+          "is_verified": {
+            "type": "boolean"
+          },
+          "allow_article_creation": {
+            "type": "boolean"
+          },
+          "connectors": {
+            "type": "object",
+            "properties": {
+              "connectors": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "object"
+                    },
+                    "auth_type": {
+                      "type": "object"
+                    },
+                    "connected": {
+                      "type": "object"
+                    },
+                    "error": {
+                      "type": "object"
+                    },
+                    "picker_credentials": {
+                      "type": "object"
+                    },
+                    "connection_display_name": {
+                      "type": "object"
+                    },
+                    "connection_uuid": {
+                      "type": "object"
+                    },
+                    "has_required_scopes": {
+                      "type": "object"
+                    },
+                    "connection_type": {
+                      "type": "object"
+                    },
+                    "capabilities": {
+                      "type": "object"
+                    },
+                    "disabled_capabilities": {
+                      "type": "object"
+                    }
+                  },
+                  "required": [
+                    "name",
+                    "auth_type",
+                    "connected",
+                    "error",
+                    "picker_credentials",
+                    "connection_display_name",
+                    "connection_uuid",
+                    "has_required_scopes",
+                    "connection_type",
+                    "capabilities"
+                  ]
+                },
+                "minItems": 13,
+                "maxItems": 13
+              }
+            },
+            "required": [
+              "connectors"
+            ]
+          }
+        },
+        "required": [
+          "pages_limit",
+          "upload_limit",
+          "create_limit",
+          "article_image_upload_limit",
+          "max_files_per_user",
+          "max_files_per_repository",
+          "connector_limits",
+          "sources",
+          "has_ai_profile",
+          "referral_code"
+        ]
+      },
+      "examples": {
+        "request": null,
+        "response": {
+          "pages_limit": 100,
+          "upload_limit": 500,
+          "create_limit": 99,
+          "article_image_upload_limit": 500,
+          "max_files_per_user": 500,
+          "max_files_per_repository": 50,
+          "connector_limits": {
+            "repo_type_limits": {
+              "COLLECTION": {
+                "max_files": 50,
+                "max_folders": 50
+              }
+            },
+            "global_file_count": 500,
+            "max_file_size_mb": 50,
+            "max_attachment_file_size_mb": 50,
+            "daily_attachment_limit": 500,
+            "weekly_attachment_limit": null,
+            "daily_attachment_limit_non_priority_country": null
+          },
+          "sources": {
+            "source_to_limit": {
+              "web": {
+                "monthly_limit": null,
+                "remaining": null
+              },
+              "scholar": {
+                "monthly_limit": null,
+                "remaining": null
+              },
+              "social": {
+                "monthly_limit": null,
+                "remaining": null
+              },
+              "google_drive": {
+                "monthly_limit": null,
+                "remaining": null
+              },
+              "gcal": {
+                "monthly_limit": null,
+                "remaining": null
+              },
+              "dropbox": {
+                "monthly_limit": null,
+                "remaining": null
+              },
+              "edgar": {
+                "monthly_limit": null,
+                "remaining": null
+              },
+              "notion_mcp": {
+                "monthly_limit": null,
+                "remaining": null
+              },
+              "outlook": {
+                "monthly_limit": null,
+                "remaining": null
+              },
+              "linear_alt": {
+                "monthly_limit": null,
+                "remaining": null
+              },
+              "github_mcp_direct": {
+                "monthly_limit": null,
+                "remaining": null
+              },
+              "asana_mcp_merge": {
+                "monthly_limit": null,
+                "remaining": null
+              },
+              "slack_direct": {
+                "monthly_limit": null,
+                "remaining": null
+              },
+              "jira_mcp_merge": {
+                "monthly_limit": null,
+                "remaining": null
+              },
+              "confluence_mcp_merge": {
+                "monthly_limit": null,
+                "remaining": null
+              },
+              "microsoft_teams_mcp_merge": {
+                "monthly_limit": null,
+                "remaining": null
+              },
+              "wiley_mcp_cashmere": {
+                "monthly_limit": 5,
+                "remaining": 5
+              },
+              "cbinsights_mcp_cashmere": {
+                "monthly_limit": 5,
+                "remaining": 5
+              },
+              "pitchbook_mcp_cashmere": {
+                "monthly_limit": 5,
+                "remaining": 5
+              },
+              "statista_mcp_cashmere": {
+                "monthly_limit": 5,
+                "remaining": 5
+              },
+              "zoom": {
+                "monthly_limit": null,
+                "remaining": null
+              }
+            }
+          },
+          "has_ai_profile": true,
+          "referral_code": "YIQ3WA6S",
+          "referral_num_success": 2,
+          "referral_num_coupons": 2,
+          "stripe_status": "none",
+          "revenuecat_status": "active",
+          "revenuecat_source": "ios",
+          "subscription_status": "active",
+          "subscription_source": "ios",
+          "subscription_tier": "yearly",
+          "coupon_metadata": null,
+          "default_model": "gpt41",
+          "default_image_generation_model": "default",
+          "default_video_generation_model": "default",
+          "query_count": 21329,
+          "query_count_copilot": 17191,
+          "query_count_mobile": 5764,
+          "disable_training": true,
+          "is_sidebar_collapsed": false,
+          "default_copilot": true,
+          "notif_status": "daily",
+          "email_status": "daily",
+          "time_zone": "America/New_York",
+          "device_language": "ru-RU",
+          "discover_homepage_enabled": false,
+          "always_allow_browser_agent": true,
+          "has_accepted_api_terms": false,
+          "has_data_retention_warning": false,
+          "is_verified": false,
+          "allow_article_creation": true,
+          "connectors": {
+            "connectors": [
+              {
+                "name": "google_drive",
+                "auth_type": "oauth",
+                "connected": true,
+                "error": null,
+                "picker_credentials": null,
+                "connection_display_name": "ormwish@gmail.com",
+                "connection_uuid": "6b95f75b-8f4b-474c-a632-0c5acf46676c",
+                "has_required_scopes": false,
+                "connection_type": "GOOGLE_DRIVE",
+                "capabilities": {
+                  "direct_api_search": true,
+                  "high_precision_search": true,
+                  "file_upload": true
+                },
+                "disabled_capabilities": []
+              },
+              {
+                "name": "gcal",
+                "auth_type": "oauth",
+                "connected": true,
+                "error": null,
+                "picker_credentials": null,
+                "connection_display_name": "ormwish@gmail.com",
+                "connection_uuid": "baba148a-4ff7-4167-8cce-5aa2a4e10f13",
+                "has_required_scopes": true,
+                "connection_type": "GCAL",
+                "capabilities": {},
+                "disabled_capabilities": []
+              },
+              {
+                "name": "dropbox",
+                "auth_type": "oauth",
+                "connected": true,
+                "error": null,
+                "picker_credentials": null,
+                "connection_display_name": "ormwish@gmail.com",
+                "connection_uuid": "9acb1ee2-b9c4-4cbf-aedb-ab4204b66876",
+                "has_required_scopes": false,
+                "connection_type": "DROPBOX",
+                "capabilities": {
+                  "direct_api_search": true,
+                  "high_precision_search": true,
+                  "file_upload": true
+                },
+                "disabled_capabilities": []
+              },
+              {
+                "name": "edgar",
+                "auth_type": "none",
+                "connected": false,
+                "error": null,
+                "picker_credentials": null,
+                "connection_display_name": null,
+                "connection_uuid": null,
+                "has_required_scopes": null,
+                "connection_type": null,
+                "capabilities": {},
+                "disabled_capabilities": []
+              },
+              {
+                "name": "outlook",
+                "auth_type": "oauth",
+                "connected": false,
+                "error": null,
+                "picker_credentials": null,
+                "connection_display_name": null,
+                "connection_uuid": null,
+                "has_required_scopes": null,
+                "connection_type": "OUTLOOK",
+                "capabilities": {},
+                "disabled_capabilities": []
+              },
+              {
+                "name": "linear_alt",
+                "auth_type": "oauth",
+                "connected": true,
+                "error": null,
+                "picker_credentials": null,
+                "connection_display_name": null,
+                "connection_uuid": "2c8a8412-d359-4a2e-9740-3965e138476f",
+                "has_required_scopes": false,
+                "connection_type": "LINEAR_ALT",
+                "capabilities": {},
+                "disabled_capabilities": []
+              },
+              {
+                "name": "notion_mcp",
+                "auth_type": "oauth",
+                "connected": false,
+                "error": null,
+                "picker_credentials": null,
+                "connection_display_name": null,
+                "connection_uuid": null,
+                "has_required_scopes": null,
+                "connection_type": "NOTION_MCP",
+                "capabilities": {},
+                "disabled_capabilities": []
+              },
+              {
+                "name": "github_mcp_direct",
+                "auth_type": "oauth",
+                "connected": true,
+                "error": null,
+                "picker_credentials": null,
+                "connection_display_name": "ormwish@gmail.com",
+                "connection_uuid": "72e0b343-28f6-4991-a701-1231c6be9780",
+                "has_required_scopes": false,
+                "connection_type": "GITHUB_MCP_DIRECT",
+                "capabilities": {},
+                "disabled_capabilities": []
+              },
+              {
+                "name": "asana_mcp_merge",
+                "auth_type": "oauth",
+                "connected": false,
+                "error": null,
+                "picker_credentials": null,
+                "connection_display_name": null,
+                "connection_uuid": null,
+                "has_required_scopes": null,
+                "connection_type": "ASANA_MCP_MERGE",
+                "capabilities": {},
+                "disabled_capabilities": []
+              },
+              {
+                "name": "slack_direct",
+                "auth_type": "oauth",
+                "connected": false,
+                "error": null,
+                "picker_credentials": null,
+                "connection_display_name": null,
+                "connection_uuid": null,
+                "has_required_scopes": null,
+                "connection_type": "SLACK_DIRECT",
+                "capabilities": {},
+                "disabled_capabilities": []
+              },
+              {
+                "name": "jira_mcp_merge",
+                "auth_type": "oauth",
+                "connected": false,
+                "error": null,
+                "picker_credentials": null,
+                "connection_display_name": null,
+                "connection_uuid": null,
+                "has_required_scopes": null,
+                "connection_type": "JIRA_MCP_MERGE",
+                "capabilities": {},
+                "disabled_capabilities": []
+              },
+              {
+                "name": "confluence_mcp_merge",
+                "auth_type": "oauth",
+                "connected": false,
+                "error": null,
+                "picker_credentials": null,
+                "connection_display_name": null,
+                "connection_uuid": null,
+                "has_required_scopes": null,
+                "connection_type": "CONFLUENCE_MCP_MERGE",
+                "capabilities": {},
+                "disabled_capabilities": []
+              },
+              {
+                "name": "microsoft_teams_mcp_merge",
+                "auth_type": "oauth",
+                "connected": false,
+                "error": null,
+                "picker_credentials": null,
+                "connection_display_name": null,
+                "connection_uuid": null,
+                "has_required_scopes": null,
+                "connection_type": "MICROSOFT_TEAMS_MCP_MERGE",
+                "capabilities": {},
+                "disabled_capabilities": []
+              }
+            ]
+          }
+        }
+      }
+    },
+    "GET /rest/user/info": {
+      "path": "/rest/user/info",
+      "method": "GET",
+      "observed_calls": 1,
+      "query_params": {
+        "version": {
+          "type": "string",
+          "example": "2.18"
+        },
+        "source": {
+          "type": "string",
+          "example": "default"
+        }
+      },
+      "request_schema": null,
+      "response_schema": {
+        "type": "object",
+        "properties": {
+          "is_gov": {
+            "type": "boolean"
+          },
+          "is_student": {
+            "type": "boolean"
+          },
+          "is_enterprise": {
+            "type": "boolean"
+          },
+          "has_non_public_email": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "is_gov",
+          "is_student",
+          "is_enterprise",
+          "has_non_public_email"
+        ]
+      },
+      "examples": {
+        "request": null,
+        "response": {
+          "is_gov": false,
+          "is_student": false,
+          "is_enterprise": false,
+          "has_non_public_email": false
+        }
+      }
+    },
+    "GET /rest/user/get_user_main_sidebar_hubs": {
+      "path": "/rest/user/get_user_main_sidebar_hubs",
+      "method": "GET",
+      "observed_calls": 1,
+      "query_params": {
+        "version": {
+          "type": "string",
+          "example": "2.18"
+        },
+        "source": {
+          "type": "string",
+          "example": "default"
+        }
+      },
+      "request_schema": null,
+      "response_schema": {
+        "type": "object",
+        "properties": {
+          "sidebar_hubs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1,
+            "maxItems": 1
+          }
+        },
+        "required": [
+          "sidebar_hubs"
+        ]
+      },
+      "examples": {
+        "request": null,
+        "response": {
+          "sidebar_hubs": [
+            "SIDEBAR_SPACES"
+          ]
+        }
+      }
+    },
+    "GET /rest/tasks/shortcuts/mentions": {
+      "path": "/rest/tasks/shortcuts/mentions",
+      "method": "GET",
+      "observed_calls": 1,
+      "query_params": {
+        "order_by": {
+          "type": "string",
+          "example": "created_at"
+        },
+        "version": {
+          "type": "string",
+          "example": "2.18"
+        },
+        "source": {
+          "type": "string",
+          "example": "default"
+        }
+      },
+      "request_schema": null,
+      "response_schema": {
+        "type": "object",
+        "properties": {
+          "tasks": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "task_id": {
+                  "type": "string"
+                },
+                "task_name": {
+                  "type": "string"
+                },
+                "prompt": {
+                  "type": "string"
+                },
+                "model_preference": {
+                  "type": "string"
+                },
+                "sources": {
+                  "type": "array",
+                  "items": {
+                    "type": "object"
+                  },
+                  "minItems": 1,
+                  "maxItems": 1
+                },
+                "preconfigured": {
+                  "type": "boolean"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
+                },
+                "metadata": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "task_id",
+                "task_name",
+                "prompt",
+                "model_preference",
+                "sources",
+                "preconfigured",
+                "created_at",
+                "updated_at",
+                "metadata"
+              ]
+            },
+            "minItems": 44,
+            "maxItems": 44
+          }
+        },
+        "required": [
+          "tasks"
+        ]
+      },
+      "examples": {
+        "request": null,
+        "response": {
+          "tasks": [
+            {
+              "task_id": "1002786bf9f3469ca7957ce6f112a36b",
+              "task_name": "async-fetch-all-files-after-and-download",
+              "prompt": "Ok, can we async fetch all the files after and download?",
+              "model_preference": "pplx_pro",
+              "sources": [
+                "web"
+              ],
+              "preconfigured": false,
+              "created_at": "2026-01-19T17:28:28.124575Z",
+              "updated_at": "2026-01-19T17:28:28.124575Z",
+              "metadata": null
+            },
+            {
+              "task_id": "8a241b5150144c72a8af1f34e3f6b98c",
+              "task_name": "perplexity-ai-unofficial",
+              "prompt": "pv-udpv/perplexity-ai-unofficial repo",
+              "model_preference": "pplx_pro",
+              "sources": [
+                "web",
+                "github_mcp_direct"
+              ],
+              "preconfigured": false,
+              "created_at": "2026-01-18T21:57:19.129175Z",
+              "updated_at": "2026-01-18T21:57:19.129175Z",
+              "metadata": null
+            },
+            {
+              "task_id": "c7a8f3c8417e42eba990765af8ea328b",
+              "task_name": "repo-dependency-impact-analyzer-github",
+              "prompt": ".Ты выступаешь как Repo Dependency & Impact Analyst для GitHub‑репозиториев.\nВходные данные я буду давать так:\n\nссылку на репозиторий (или конкретный PR / issue / commit);\n\nкраткий контекст задачи (что хотим понять или построить).\n\nТвоя задача:\n\nСтроить текстовое представление dependency tree:\n\nуровни: модули/пакеты → файлы → ключевые сущности (классы/функции).\n\nфиксировать основные связи: импорты между файлами, важные точки входа, слои.\n\nДавать «scope» для указанного объекта (PR / issue / commit / файла):\n\nкакие файлы и сущности затронуты;\n\nкакие ещё PR / issues логично связаны по области кода;\n\nоценка потенциального blast radius (какие части системы могут быть затронуты изменениями).\n\nДавать краткий вывод для архитектора:\n\nриски (по сложности, связанности, архитектурным допущениям);\n\nгде разумно провести доп. рефакторинг / декомпозицию;\n\nкакие метрики/артефакты стоит собирать в отдельный тул.\n\nФормат ответа:\n\nСначала 3–5 пунктов «TL;DR для ревьюера/архитектора».\n\nЗатем:\n\n«Область изменений» — маркированный список по слоям/модулям.\n\n«Связанные части системы» — что зависит от изменяемого кода.\n\n«Риски и рекомендации» — конкретные, технически ориентированные пункты.\n\nЕсли контекста мало, сначала запроси у меня:\n\nссылку на репозиторий/PR/issue,\n\nязык/стек,\n\nцель анализа (напр. «найти hot‑spots», «оценить PR» и т.п.).\n\nВсегда ориентируй ответ на senior/tech‑lead аудиторию: меньше общих слов, больше структурированных наблюдений, связей и архитектурных выводов.\n\nпри комментировании issue/pr/commit - всегда используй штамп идентификатор треда в www.perplexity.ai и пощписывайся как ◇pplx-ai-ctx-{slug} to allow tag you and you find proper ctx ",
+              "model_preference": "pplx_pro",
+              "sources": [
+                "web",
+                "github_mcp_direct",
+                "dropbox",
+                "social"
+              ],
+              "preconfigured": false,
+              "created_at": "2026-01-14T20:48:07.516137Z",
+              "updated_at": "2026-01-14T20:48:07.516137Z",
+              "metadata": null
+            },
+            {
+              "task_id": "91b40e01f3104de692e6c74c13fd967e",
+              "task_name": "tshoot-context",
+              "prompt": "Твоя задача - серьезный траблшутинг контекста, который тебе передан. Траблшутинг сети, процессов и пр.",
+              "model_preference": "claude45sonnetthinking",
+              "sources": [
+                "web",
+                "social",
+                "github_mcp_direct"
+              ],
+              "preconfigured": false,
+              "created_at": "2026-01-13T16:05:59.138817Z",
+              "updated_at": "2026-01-13T16:05:59.138817Z",
+              "metadata": null
+            },
+            {
+              "task_id": "2659998f3ab74e4aaee1fabbd4b8c6d6",
+              "task_name": "expand",
+              "prompt": "контекст пошире",
+              "model_preference": "claude45sonnetthinking",
+              "sources": [
+                "web",
+                "github_mcp_direct"
+              ],
+              "preconfigured": false,
+              "created_at": "2026-01-13T06:35:43.602746Z",
+              "updated_at": "2026-01-13T06:35:43.602746Z",
+              "metadata": null
+            },
+            {
+              "task_id": "e375a488d016485f880457d36bc41f3c",
+              "task_name": "plan-claude-45-thinking",
+              "prompt": "I need you to plan ",
+              "model_preference": "claude45sonnetthinking",
+              "sources": [
+                "web",
+                "github_mcp_direct"
+              ],
+              "preconfigured": false,
+              "created_at": "2026-01-13T03:47:07.013013Z",
+              "updated_at": "2026-01-13T03:47:07.013013Z",
+              "metadata": null
+            },
+            {
+              "task_id": "5a660df0993649e1be6072c3794d419b",
+              "task_name": "templates-prompts-agents-perplexity-research",
+              "prompt": "Шаблоны промптов для агентов в Perplexity Research",
+              "model_preference": "pplx_pro",
+              "sources": [
+                "web"
+              ],
+              "preconfigured": false,
+              "created_at": "2025-12-31T15:55:32.029811Z",
+              "updated_at": "2025-12-31T15:55:32.029811Z",
+              "metadata": null
+            },
+            {
+              "task_id": "80b8eddfaabd411880b1208822ce5d25",
+              "task_name": "init-mcp-tools-workflow-high-verbosi",
+              "prompt": "   ",
+              "model_preference": "pplx_pro",
+              "sources": [
+                "dropbox",
+                "scholar",
+                "social",
+                "github_mcp_direct",
+                "linear_alt",
+                "edgar",
+                "gcal",
+                "web"
+              ],
+              "preconfigured": false,
+              "created_at": "2025-12-27T00:28:54.636803Z",
+              "updated_at": "2025-12-27T00:28:54.636803Z",
+              "metadata": null
+            },
+            {
+              "task_id": "022e1123826b476089d64d23bff8584e",
+              "task_name": "new-thread-default-all",
+              "prompt": "Init-thread message used to setup mcp-tools attached into the </assistant> runtime context.  \n\nMCP tools \n<mcp-tools>\n  @GitHub\n  @GoogleDrive\n  ...\n- see the pplx-web-mcp.json in the global/space/thread/threadentry/page assets \n",
+              "model_preference": "pplx_pro",
+              "sources": [
+                "web",
+                "github_mcp_direct",
+                "linear_alt",
+                "edgar",
+                "gcal",
+                "scholar",
+                "social",
+                "dropbox"
+              ],
+              "preconfigured": false,
+              "created_at": "2025-12-26T22:23:24.903254Z",
+              "updated_at": "2025-12-26T22:23:24.903254Z",
+              "metadata": null
+            },
+            {
+              "task_id": "0086a9a10ac343299b127bf6e1e1a793",
+              "task_name": "research-with-outline-keys",
+              "prompt": "Проанализируй , выдай аутлайн и инсайты\n",
+              "model_preference": "pplx_alpha",
+              "sources": [
+                "web",
+                "github_mcp_direct"
+              ],
+              "preconfigured": false,
+              "created_at": "2025-12-24T22:19:31.082403Z",
+              "updated_at": "2025-12-24T22:19:31.082403Z",
+              "metadata": null
+            },
+            {
+              "task_id": "7d5958b9e67f4740a31dc7acde3e8373",
+              "task_name": "go-next-task-with-gh",
+              "prompt": "Proceed with next steps as mentioned previously",
+              "model_preference": "claude45sonnetthinking",
+              "sources": [
+                "web",
+                "github_mcp_direct"
+              ],
+              "preconfigured": false,
+              "created_at": "2025-12-24T20:29:00.865765Z",
+              "updated_at": "2025-12-24T20:29:00.865765Z",
+              "metadata": null
+            },
+            {
+              "task_id": "a3ddab97b036447189ce15c1cfc78b65",
+              "task_name": "gh",
+              "prompt": "@GitHub",
+              "model_preference": "pplx_pro",
+              "sources": [
+                "web",
+                "github_mcp_direct"
+              ],
+              "preconfigured": false,
+              "created_at": "2025-12-14T16:15:19.253324Z",
+              "updated_at": "2025-12-14T19:14:38.611031Z",
+              "metadata": null
+            },
+            {
+              "task_id": "dd8f15ef05514283aa3296061ec04872",
+              "task_name": "rich-ascii-diagrams-in-python",
+              "prompt": "А можно из питона rich/ascii диаграммы?* Ну там типа боксы для нод, тенюшки",
+              "model_preference": "pplx_pro_upgraded",
+              "sources": [
+                "web"
+              ],
+              "preconfigured": false,
+              "created_at": "2025-11-09T20:49:57.482912Z",
+              "updated_at": "2025-11-09T20:49:57.482912Z",
+              "metadata": null
+            },
+            {
+              "task_id": "6fae456516db4cb8aaf21efc8716b7c6",
+              "task_name": "gh-issue-create",
+              "prompt": "@GitHub create issue in the repository <REPOSITORY>\nContext: \n",
+              "model_preference": "pplx_pro",
+              "sources": [
+                "web",
+                "github_mcp_direct"
+              ],
+              "preconfigured": false,
+              "created_at": "2025-11-09T16:17:39.459572Z",
+              "updated_at": "2025-11-09T16:17:39.459572Z",
+              "metadata": null
+            },
+            {
+              "task_id": "2190e299225c45d3846272ce6f8411cf",
+              "task_name": "gh-research-repo",
+              "prompt": "@GitHub research repository and provide comprehensive multidimensional report. Create PR with results ",
+              "model_preference": "pplx_alpha",
+              "sources": [
+                "web",
+                "github_mcp_direct"
+              ],
+              "preconfigured": false,
+              "created_at": "2025-11-09T16:16:21.191716Z",
+              "updated_at": "2025-12-11T21:04:16.846594Z",
+              "metadata": null
+            },
+            {
+              "task_id": "824b612b673943d3b03639616dc83be7",
+              "task_name": "gh-create-repo",
+              "prompt": "@GitHub create repo",
+              "model_preference": "turbo",
+              "sources": [
+                "github_mcp_direct",
+                "web",
+                "social"
+              ],
+              "preconfigured": false,
+              "created_at": "2025-11-09T16:15:24.428924Z",
+              "updated_at": "2025-11-09T16:15:24.428924Z",
+              "metadata": null
+            },
+            {
+              "task_id": "ba179bf063824d8189b7aa5c3ecc5e56",
+              "task_name": "cli-design-client-auth-config-api",
+              "prompt": "Design cli for the client\nauth\nconfig\napi <method> <resource-or-query>\n\nor smth like ...",
+              "model_preference": "pplx_pro",
+              "sources": [
+                "github_mcp_direct",
+                "web",
+                "social"
+              ],
+              "preconfigured": false,
+              "created_at": "2025-11-08T00:31:26.772998Z",
+              "updated_at": "2025-11-08T00:31:26.772998Z",
+              "metadata": null
+            },
+            {
+              "task_id": "0ea8d7b16e16462d88b0888cfc0a262e",
+              "task_name": "tv-channel-fetch-test",
+              "prompt": "(.venv) pv@pv-cargo:~/middleware/ipytvportal$ cat api.py \nimport logging\nimport orjson\nimport requests\nfrom requests import exceptions as rexc\nimport urllib3\n\nurllib3.disable_warnings()\n\nfrom .config import *\n# from config import *\n\nlogging.getLogger(__name__)\nlogger = logging.getLogger(__name__)\n\n\ndef jsonsql_call(method, params: dict, request_id=1, uri=RPC_URI, session_id=SESSION_ID, timeout=360):\n    request_dict = {\n        \"jsonrpc\": \"2.0\",\n        \"id\": request_id,\n        \"method\": method,\n        \"params\": params\n    }\n    try:\n        headers = {'Iptvportal-authorization': f'sessionid={session_id}',\n                   'Accept': 'application/json'} if session_id else None\n        logger.info(f'URI -- {uri}, SESS_ID -- {session_id}')\n\n        resp = requests.request('POST', uri, data=orjson.dumps(request_dict), headers=headers, timeout=timeout,\n                                verify=False)\n        if resp.status_code == 200:\n            result: list[list] or dict = orjson.loads(resp.content)\n            return result.get('result', result)\n        if resp.status_code == 401:\n            logger.warning('REAUTH')\n            s: dict = jsonsql_call('authorize_user', params=dict(username=USERNAME, password=PASSWORD), uri=AUTH_URI,\n                                   session_id=None)\n            session_id = s['session_id']\n            result: list or dict = jsonsql_call(method, params, session_id=session_id)\n            return result\n        if resp.status_code in range(500 - 510):\n            logger.critical(resp.text)\n            return resp.text\n\n    except rexc.ReadTimeout or rexc.Timeout or rexc.ConnectionError or rexc.HTTPError as rto:\n        logger.exception(rto)\n        return\n\n\n-----\nЭто древняя реализация, но работает. Можешь в итоге написать клиента с учётом старой версии и того, что мы обсудили выше?\n\n(.venv) pv@pv-cargo:~/middleware/ipytvportal$ cat config.py \nDOMAIN = 'adstat'\nRPC_URI = f'https://{DOMAIN}.admin.iptvportal.ru/api/jsonsql/'\nAUTH_URI = f'https://{DOMAIN}.admin.iptvportal.ru/api/jsonrpc/'\nSESSION_ID = 'bbce5e5653cb4c0199e1e398cde99b16'\nHEADERS = {'Iptvportal-authorization': f'sessionid={SESSION_ID}',\n           'Accept'                  : 'application/json'}\n\n\n(.venv) pv@pv-cargo:~/middleware/ipytvportal/misc$ cat epg_test.py \nfrom components.api import *\nfrom ipytvportal.config import SESSION_ID\nfrom ipytvportal.config import RPC_URI\nfrom datetime import datetime as dt\n\nwindow = {\n    \"from\": \"2020-02-17 00:00:00\",\n    \"to\": \"2020-04-20 00:00:00\"\n}\n\nchannels_filter = [\n    4250, 4252, 4253, 4254, 4270, 4257, 5710, 5715, 10940, 5713, 5712, 5711, 5719, 5709, 5714, 5716, 4712, 4714, 4713,    4711, 4715, 4722, 4720, 4725, 4705, 4710, 5160, 5158, 5155, 5154, 5156, 5151, 5157, 5159, 5153, 5152, 5150, 6130,\n    6133, 5460, 6138, 6137, 6135, 3060, 6132, 6134, 6136, 6131, 6139, 6145, 6128, 10190, 6146, 6141, 6144, 6147, 6129\n]\nprograms_filter = [\n    # 12690411,\n]\n\ngenre_filter = [\n    \"Спортивные программы\",\n]\n\ncategory_filter = [\n    \"Трансляция\"\n]\n\ncomplete_playlog = {\n    \"data\": [\n        {\"terminal_playlog\": \"start\", \"as\": \"playlog__start\"},\n        {\"terminal_playlog\": \"domain_id\", \"as\": \"playlog__domain_id\"},\n        {\"terminal_playlog\": \"mac_addr\", \"as\": \"playlog__mac_addr\"},\n        # {\"tv_program\": \"channel_id\", \"as\": \"playlog__channel_id\"},\n        {\"tv_channel\": \"name\", \"as\": \"playlog__channel_name\"},\n        # {\"tv_program\": \"id\", \"as\": \"playlog__program_id\"},\n        # {\"tv_program\": \"title\", \"as\": \"playlog__program_title\"},\n        # {\"tv_category\": \"id\", \"as\": \"playlog__category_id\"},\n        # {\"tv_category\": \"name\", \"as\": \"playlog__category\"},\n        # {\"tv_category\": \"genre\", \"as\": \"playlog__genre\"},\n        # {\"tv_program\": \"start\", \"as\": \"playlog__program_start\"},\n        # {\"tv_program\": \"stop\", \"as\": \"playlog__program_stop\"},\n    ],\n    \"from\": [\n        {\"table\": \"terminal_playlog\", \"as\": \"terminal_playlog\"},\n        {\"join\": \"tv_channel\", \"as\": \"tv_channel\",\n         \"on\": {\n             \"and\": [\n                 {\"eq\": [{\"tv_channel\": \"id\"}, {\"terminal_playlog\": \"channel_id\"}]},\n             ]\n         }\n         },\n        {\"join\": \"tv_program\", \"as\": \"tv_program\",\n         \"on\": {\n             \"and\": [\n                 {\"eq\": [{\"tv_program\": \"epg_provider_id\"}, 36]},\n                 {\"gt\": [{\"terminal_playlog\": \"start\"}, {\"tv_program\": \"start\"}]},\n                 {\"lt\": [{\"terminal_playlog\": \"start\"}, {\"tv_program\": \"stop\"}]},\n                 {\"eq\": [{\"tv_channel\": \"id\"}, {\"tv_program\": \"channel_id\"}]},\n             ]\n         }\n         },\n        {\"join\": \"tv_program_category\", \"as\": \"crosscat\",\n         \"on\": {\n             \"and\": [\n                 {\"eq\": [{\"crosscat\": \"program_id\"}, {\"tv_program\": \"id\"}]}\n             ]\n         }},\n        {\"join\": \"tv_category\", \"as\": \"tv_category\",\n         \"on\": {\n             \"and\": [\n                 {\"eq\": [{\"crosscat\": \"category_id\"}, {\"tv_category\": \"id\"}]}\n             ]\n         }},\n\n    ],\n    \"where\": {\n        \"and\": [\n\n            {\"gt\": [{\"terminal_playlog\": \"start\"}, window[\"from\"]]},\n            {\"lt\": [{\"terminal_playlog\": \"start\"}, window[\"to\"]]},\n            # {\"in\": [{\"terminal_playlog\": \"channel_id\"}, channels_filter]},\n            # {\"in\": [{\"tv_program\": \"id\"}, programs_filter]},\n            # {\"in\": [{\"tv_category\": \"genre\"}, genre_filter]},\n            # {\"in\": [{\"tv_category\": \"name\"}, category_filter]},\n        ]\n    },\n    # \"group_by\": [\n    #\n    # ],\n    # \"limit\": 10\n}\n\naggr_playlog = {\n    \"data\": [\n        {\"function\": \"count\",\n         \"args\": [\"*\"],\n         \"as\": \"rowcount\"},\n        {\"function\": \"count\",\n         \"args\": {\"function\": \"distinct\",\n                  \"args\": {\"q\": \"playlog__mac_addr\"}\n                  },\n         \"as\": \"uniques\"},\n        # {\"q\": \"playlog__genre\"},\n        # {\"q\": \"playlog__channel_name\"}\n    ],\n    \"from\": [\n        {\"select\": complete_playlog, \"as\": \"q\"}\n    ],\n    \"group_by\": [\n        # {\"q\": \"playlog__channel_name\"},\n        # {\"q\": \"playlog__genre\"}\n    ]\n}\n\n\n\n# aggr_playlog = {\n#     \"data\": [\n#         {\"function\": \"count\",\n#          \"args\": [\"*\"],\n#          \"as\": \"rowcount\"},\n#         {\"function\": \"count\",\n#          \"args\": {\"function\": \"distinct\",\n#                   \"args\": {\"q\": \"mac_addr\"}\n#                   },\n#          \"as\": \"uniques\"},\n#         # {\"q\": \"playlog__genre\"},\n#         # {\"q\": \"playlog__channel_name\"}\n#     ],\n#     \"from\": [\n#         {\"table\": \"terminal_playlog\", \"as\": \"q\"}\n#     ],\n#     \"where\": {\n#         \"and\": [\n#\n#             {\"gt\": [{\"q\": \"start\"}, window[\"from\"]]},\n#             {\"lt\": [{\"q\": \"start\"}, window[\"to\"]]},\n#             # {\"in\": [{\"terminal_playlog\": \"channel_id\"}, channels_filter]},\n#             # {\"in\": [{\"tv_program\": \"id\"}, programs_filter]},\n#             # {\"in\": [{\"tv_category\": \"genre\"}, genre_filter]},\n#             # {\"in\": [{\"tv_category\": \"name\"}, category_filter]},\n#         ]\n#     },\n#     \"group_by\": [\n#         # {\"q\": \"playlog__channel_name\"},\n#         # {\"q\": \"playlog__genre\"}\n#     ]\n# }\n\nraw_channels = {\n    \"data\": [\n        {\"function\": \"regexp_replace\",\n         \"args\": [\n             {\"tv_channel\": \"name\"},\n             \"\\s\\(.*\",\n             \"\"\n         ], \"as\": \"cleared\"},\n        \"name\",\n        \"id\"\n    ],\n    \"from\": \"tv_channel\",\n    # \"where\": {\"ilike\": [\"name\", \"домашний%\"]}\n}\n\nbest_products = {\n    \"data\": [\n        {\"channels\": \"cleared\", \"as\": \"cl_name\"},\n        {\"channels\": \"name\"},\n        {\"channels\": \"id\"}\n    ],\n    \"from\": [\n        {\"select\": raw_channels, \"as\": \"channels\"}\n    ],\n    \"where\": {\n        \"and\": [\n            {\"in\": [{\"channels\": \"id\"},\n                    [4250, 4252, 4253, 4254, 4270, 4257, 5710, 5715, 10940, 5713, 5712, 5711, 5719, 5709, 5714, 5716,\n                     4712, 4714, 4713, 4711, 4715, 4722, 4720, 4725, 4705, 4710, 5160, 5158, 5155, 5154, 5156, 5151,\n                     5157, 5159, 5153, 5152, 5150, 6130, 6133, 5460, 6138, 6137, 6135, 3060, 6132, 6134, 6136, 6131,\n                     6139, 6145, 6128, 10190, 6146, 6141, 6144, 6147, 6129]]}\n        ]\n    }\n}\n\n\nbest_epg = {\n    \"data\": [\n        {\"function\": \"distinct\",\n         \"args\": [{\"tv_program\": \"title\"},\n                  # {\"tv_category\": \"name\"},\n                  # {\"tv_category\": \"genre\"}\n                  ]},\n        # {}\n    ],\n    \"from\": [\n        {\"table\": \"tv_program\", \"as\": \"tv_program\"},\n        {\"join\": \"tv_program_category\", \"as\": \"crs\",\n         \"on\": {\n             \"and\": [\n                 {\"eq\": [{\"crs\": \"program_id\"}, {\"tv_program\": \"id\"}]}\n             ]\n         }},\n        {\"join\": \"tv_category\", \"as\": \"tv_category\",\n         \"on\": {\n             \"and\": [\n                 {\"eq\": [{\"crs\": \"category_id\"}, {\"tv_category\": \"id\"}]}\n             ]\n         }},\n        {\"join\": \"tv_channel\", \"as\": \"tv_channel\",\n         \"on\": {\n             \"and\": [\n                 {\"eq\": [{\"tv_program\": \"channel_id\"}, {\"tv_channel\": \"id\"}]}\n             ]\n         }}\n    ],\n    \"where\": {\n        \"and\": [\n            {\"eq\": [{\"tv_program\": \"epg_provider_id\"}, 36]},\n            {\"gt\": [{\"tv_program\": \"start\"}, \"2020-01-01 00:00:00\"]},\n            {\"lt\": [{\"tv_program\": \"stop\"}, \"2020-01-31 00:00:00\"]},\n            {\"in\": [{\"tv_program\": \"channel_id\"}, [4250, 4252, 4253, 4254, 4270, 4257, 5710, 5715, 10940, 5713, 5712, 5711, 5719, 5709, 5714, 5716,\n                     4712, 4714, 4713, 4711, 4715, 4722, 4720, 4725, 4705, 4710, 5160, 5158, 5155, 5154, 5156, 5151,\n                     5157, 5159, 5153, 5152, 5150, 6130, 6133, 5460, 6138, 6137, 6135, 3060, 6132, 6134, 6136, 6131,\n                     6139, 6145, 6128, 10190, 6146, 6141, 6144, 6147, 6129]]}\n        ]\n    }\n}\n\nq = {\n    \"data\": [\n        {\"function\": \"count\",\n         \"args\": {\"function\": \"distinct\",\n                  \"args\": {\"bp\": \"cleared\"}\n                  },\n         \"as\": \"uniques\"},\n        {\"function\": \"count\", \"args\": [\"*\"]}\n    ],\n    \"from\": [\n        {\"select\": raw_channels, \"as\": \"bp\"},\n\n    ],\n\n}\ntop_products = {\n    \"data\": [\n        {\"channels\": \"cleared\"},\n        {\"channels\": \"name\"},\n        {\"channels\": \"id\"}\n    ],\n    \"from\": [\n        {\"select\": raw_channels, \"as\": \"channels\"}\n    ],\n    \"where\": {\n        \"and\": [\n            {\"in\": [{\"channels\": \"id\"},\n                    [1920, 1922, 1923, 1921, 1925, 1924, 5830, 5832, 5831, 2830, 2832, 2831, 5590, 5535, 5170, 5530,\n                     4130, 3472, 4125, 4135, 4120, 4140, 4050, 4110, 3480, 1310, 3855, 3474, 5551, 5550, 4010, 4960,\n                     4962, 4964, 4961, 4959, 1980, 6607, 6608, 6609, 1982, 1983, 5092, 5094, 5093, 5095, 5091, 5097,\n                     5096, 5090]]}\n        ]\n    }\n}\n\nother_products = {\n    \"data\": [\n        {\"channels\": \"cleared\"},\n        {\"channels\": \"name\"},\n        {\"channels\": \"id\"}\n    ],\n    \"from\": [\n        {\"select\": raw_channels, \"as\": \"channels\"}\n    ],\n    \"where\": {\n        \"and\": [\n            {\"not\": {\"in\": [{\"channels\": \"id\"},\n                            [4250, 4252, 4253, 4254, 4270, 4257, 5710, 5715, 10940, 5713, 5712, 5711, 5719, 5709, 5714,\n                             5716, 4712, 4714, 4713, 4711, 4715, 4722, 4720, 4725, 4705, 4710, 5160, 5158, 5155, 5154,                             5156, 5151, 5157, 5159, 5153, 5152, 5150, 6130, 6133, 5460, 6138, 6137, 6135, 3060, 6132,                             6134, 6136, 6131, 6139, 6145, 6128, 10190, 6146, 6141, 6144, 6147, 6129, 1920, 1922, 1923,\n                             1921, 1925, 1924, 5830, 5832, 5831, 2830, 2832, 2831, 5590, 5535, 5170, 5530, 4130, 3472,                             4125, 4135, 4120, 4140, 4050, 4110, 3480, 1310, 3855, 3474, 5551, 5550, 4010, 4960, 4962,                             4964, 4961, 4959, 1980, 6607, 6608, 6609, 1982, 1983, 5092, 5094, 5093, 5095, 5091, 5097,                             5096, 5090]]}}\n        ]\n    }\n}\n\nraw_domains = {\n    \"data\": [\n      \"name\", \"id\", \"city\"\n    ],\n    \"from\": [\n        {\"table\": \"domain\"}\n    ],\n}\n\n\n\n# domains = {\n#     \"data\": [\n#         {\"function\": \"count\", \"args\": [\"*\"], \"as\": \"cnt\"},\n#         {\"d\": \"city\"},\n#     ],\n#     \"from\": {\n#         \"select\" : domains, \"as\": \"d\"\n#     },\n#     \"group_by\": {\"d\": \"city\"},\n#     \"order_by\": \"cnt\"\n#\n# }\n\n\n\ndef prepare_playlog(raw_log):\n    log_list = []\n    for log in raw_log:\n        playlog_start = dt.strptime(log[0], \"%Y-%m-%d %H:%M:%S\")\n        d = {}\n        d['date'] = playlog_start.date()\n        d['dow'] = playlog_start.isoweekday()\n        d['hod'] = playlog_start.hour\n        d['playlog_start'] = playlog_start\n        d['terminal_domain_id'] = int(log[1])\n        d['terminal_mac_addr'] = str(log[2])\n        d['tv_channel_id'] = int(log[3])\n        d['tv_channel_name'] = str(log[4])\n        # d['tv_channel_name_cleared'] = None\n        d['epg_program_id'] = log[5]\n        d['epg_program_title'] = log[6]\n        d['epg_program_category_id'] = log[7]\n        d['epg_program_category_name'] = log[8]\n        d['epg_program_category_genre'] = log[9]\n        d['epg_program_start'] = dt.strptime(log[10], \"%Y-%m-%d %H:%M:%S\")\n        d['epg_program_stop'] = dt.strptime(log[11], \"%Y-%m-%d %H:%M:%S\")\n        log_list.append(d)\n    query = (F\"INSERT INTO playlogs ({','.join(log_list[0].keys())}) VALUES\", log_list)\n    # print(pjd(log_list))\n    return query\n\n\n\ndecember = {\n    \"data\": [\n        \"mac_addr\",\n        # \"start\",\n        # \"stop\",\n        {\"function\": \"date\",\n         \"args\": [\"start\"], \"as\": \"s\"},\n\n    ],\n    \"from\": [{\"table\": \"terminal_playlog\", \"as\": \"terminal_playlog\"}],\n    \"where\": {\n        \"and\": [\n            {\"or\": [\n                {\"eq\": [\"start\", \"2020-04-20 00:00:00\"]},\n                {\"gt\": [\"start\", \"2020-02-20 00:00:00\"]},\n            ]},\n            {\"lt\": [\"start\", \"2020-04-29 00:00:00\"]},\n        ]\n    },\n    # \"group_by\": \"start\"\n}\n# res = jsonsql_call('select', best_epg, session_id=SESSION_ID, uri=RPC_URI)\n# with open('progs', 'w') as f:\n#     f.write(pjd(res))\n# print(pjd(res))\n# exit()\n# res = jsonsql_call('select', complete_playlog, session_id=SESSION_ID, uri=RPC_URI)\n\n\n# res = jsonsql_call('select', december, session_id=SESSION_ID, uri=RPC_URI)\n\n# with open(\"plogs.csv\", 'w', newline='') as myfile:\n#     wr = csv.writer(myfile, quoting=csv.QUOTE_ALL)\n#     wr.writerow([\"mac_addr\", \"start\", \"stop\", \"date\"])\n#     for r in res:\n#         wr.writerow(r)\n#\n# rdict = {}\n# for r in res:\n#     if r[1] not in rdict:\n#         rdict[r[1]] = set()\n#     rdict[r[1]].add(r[0])\n#\n# for k, v in rdict.items():\n#     print(f\"{k}: {len(v)}\")\n\n# print(pjd(rdict))\n# print(pjd(res))\n\n\n\n\n\n\n\n# res = jsonsql_call('select', aggr_playlog, session_id=SESSION_ID, uri=RPC_URI)\n# res = jsonsql_call('select', best_products, session_id=SESSION_ID, uri=RPC_URI)\n# res = jsonsql_call('select', top_products, session_id=SESSION_ID, uri=RPC_URI)\n# res = jsonsql_call('select', other_products, session_id=SESSION_ID, uri=RPC_URI)\n# res = jsonsql_call('select', raw_channels, session_id=SESSION_ID, uri=RPC_URI)\n# res = jsonsql_call('select', q, session_id=SESSION_ID, uri=RPC_URI)\n# res = jsonsql_call('select', raw_domains, session_id=SESSION_ID, uri=RPC_URI)\n\n# base_settings = {'city': 'Москва', 'region': 571}\n\n# regions_to_dom_ids = {\n#     571: []\n# }\n#\n# for dom in res:\n#     if dom[0] not in domains.keys():\n#         regions_to_dom_ids[571].append({\"city\": \"Москва\", \"id\": dom[1]})\n#     else:\n#         ddom = domains[dom[0]]\n#         if ddom[\"region\"] not in regions_to_dom_ids:\n#             regions_to_dom_ids[ddom[\"region\"]] = []\n#         ddom['id'] = dom[1]\n#         regions_to_dom_ids[ddom[\"region\"]].append(ddom)\n# try:\n#     btf = pjd(res)\n#     if not res:\n#         print('An empty answer')\n#         exit()\n#     # sql = prepare_playlog(res)\n#     print(btf)\n# except Exception as e:\n#     print(e.args)\n#     exit()\n# print(\"FETCHED, PREPARE UR ANUS!\\n\")\n\n\n\nplog = {\n    \"data\": \"mac_addr\",\n    \"from\": \"terminal_playlog\",\n    \"where\": {\n        \"and\": [\n            {\"or\": [\n                {\"eq\": [\"start\", \"2020-08-01 00:00:00\"]},\n                {\"gt\": [\"start\", \"2020-09-01 00:00:00\"]},\n            ]},\n            {\"lt\": [\"start\", \"2020-09-05 00:00:00\"]},\n            {\"eq\": [\"mac_addr\", \"10:27:be:15:9d:ee\"]}\n        ]\n    },\n    \"limit\": 10\n}\n\nres = jsonsql_call('select', plog, session_id=SESSION_ID, uri=RPC_URI)\nprint(res)\nexit()\n\nfrom refbooks import rb_puid20\n\n# cr = ch.Client(host=\"5.180.16.20\", database=\"directad\")\n\ntvchans = build_channels_query()\ntvdict = {}\ntvcchan = jsonsql_call(\"select\", build_channels_query(), session_id=SESSION_ID, uri=RPC_URI)\n\nrefbookpath = f\"/Users/pv/Library/Mobile Documents/com~apple~CloudDocs/PyCharmProjects/mewt-middleware/refbooks/iptv_portal_channels.py\"\nchan_dict = {}\nfor chan in tvcchan:\n    cid, raw_name, cleared_name = chan\n\n    def get_in_rb(name, name2):\n        if name2 == 'россия 1':\n            _map = 475\n        elif name2 == \"hustler hd\":\n            _map = 110\n        elif name2 == \"русский экстрим\":\n            _map = 174\n        elif name2 == \"русский экстрим uhd\":\n            _map = 175\n        elif name2 == \"здоровье\":\n            _map = 304\n        elif name2 == \"мир 24\":\n            _map = 377\n        elif name2 == \"старт hd\":\n            _map = 514\n        elif name2 == \"наука 2.0\":\n            _map = 401\n        elif name2 == \"тнт hd\":\n            _map = 554\n        elif name2 == \"дикая охота hd\":\n            _map = 554\n        elif name2 == [\"fashion one россия\", \"fashion one hd\"]:\n            _map = 75\n        else:\n            _map = rb_puid20.name_index.get(name, None) or rb_puid20.name_index.get(name2, None)\n\n        return _map\n\n    chan_dict[cid] = {\"raw_name\": raw_name.lower(), \"cleared_name\": cleared_name.lower(), \"id\": cid, \"rb_puid20_id\": get_in_rb(raw_name.lower(), cleared_name.lower())}\n\n    with open(refbookpath, 'w') as rb:\n        rb.writelines(\n            [\n                \"# IPTVCHANNELS\",\n                \"\\n\\n\"\n                \"channel_id_index = \",\n                str(chan_dict)\n            ]\n        )\n\nprint(chan_dict)\nmatched: int = 0\nnmatched: int = 0\nchans_set: set = set()\n\nfor i in chan_dict.values():\n    if not i['rb_puid20_id']:\n        nmatched += 1\n        i['matched'] = False\n        print(i)\n    else: matched += 1; i['matched'] = True\n    chans_set.add(i['cleared_name'])\n\nprint(matched, '/', nmatched, len(chans_set))\n\n# for chan in tvcchan:\n#     if chan[1] not in tvdict:\n#         tvdict[chan[1]] = {\"id\": [chan[0]], \"name\": chan[1], \"reqs\": 0, \"puid20=\": 0}\n#     else:\n#         tvdict[chan[1]]['id'].append(chan[0])\n#\n#\n# chans = cr.execute(\"select count() as c, content from linear where business_unit = 'emteks' and content != 'Видеонаблюдение' group by content order by c desc\")\n#\n# for chan in chans:\n#     try:\n#         tvdict[chan[1]][\"reqs\"] += chan[0]\n#     except KeyError:\n#         print(chan)\n# cr.disconnect()\n# tv_list = tvdict.values()\n# s_tvlist = sorted(tv_list, key=lambda i: i['reqs'], reverse=True)\n# print(pjd(s_tvlist))\n# with open('channels.csv', 'w') as f:\n#     wr = csv.writer(f)\n#     wr.writerow(s_tvlist[0].keys())\n#     for r in s_tvlist:\n#         wr.writerow(r.values())\n\n\n#\n# try:\n#     resp = ch.execute(*sql)\n#     print('DONE, MFUCKERS')\n# finally:\n#     ch.disconnect()\n# exit()\n\n# print(sql)\n# print(btf)\n# print(pjd(regions_to_dom_ids))\n# with open('regs   _doms_mapping.json', \"w\") as dm:\n#     dm.write(pjd(regions_to_dom_ids))\n# with open('tv_channels.json', 'w') as f:\n# with open('december_epg.json', 'w') as f:\n# with open('playlogs_december.json', 'w') as f:\n#     f.write(btf)\n# print(btf)\n# print(\", \".join([str(_[1]) for _ in res]))\n# print(len(res))\n\n\n#\n# plog_select = {\n#     \"\"\n# }\n(.venv) pv@pv-cargo:~/middleware/ipytvportal/misc$ \n\n\nНапиши для старого кода тест с забором tv_channel\n",
+              "model_preference": "pplx_alpha",
+              "sources": [
+                "web"
+              ],
+              "preconfigured": false,
+              "created_at": "2025-11-07T23:00:29.468329Z",
+              "updated_at": "2025-11-07T23:00:29.468329Z",
+              "metadata": null
+            },
+            {
+              "task_id": "104258257d3647569ac5a7de3ae45b64",
+              "task_name": "extract_code_blocks",
+              "prompt": "Extract all code and preformatted blocks from the current page and return a table listing each code snippet with its detected programming language.",
+              "model_preference": "pplx_pro",
+              "sources": [
+                "web"
+              ],
+              "preconfigured": false,
+              "created_at": "2025-10-28T19:36:00.236904Z",
+              "updated_at": "2025-10-28T19:36:00.236904Z",
+              "metadata": null
+            },
+            {
+              "task_id": "3c109ec9234341c285037a30167134a0",
+              "task_name": "folder_size_scan",
+              "prompt": "Scan folders to calculate their disk usage, excluding already scanned folders using a cache, and support separate target scans that update the global cache. Respect .ignore files during scanning.",
+              "model_preference": "pplx_pro",
+              "sources": [
+                "web"
+              ],
+              "preconfigured": false,
+              "created_at": "2025-09-27T17:31:22.778336Z",
+              "updated_at": "2025-09-27T17:31:22.778336Z",
+              "metadata": null
+            },
+            {
+              "task_id": "c12c001eab044003bdd277c901ed7ca7",
+              "task_name": "extract_tables",
+              "prompt": "Извлечь все таблицы с текущей страницы, объединить их в одну и подготовить данные для последующего анализа.",
+              "model_preference": "pplx_pro",
+              "sources": [
+                "web"
+              ],
+              "preconfigured": false,
+              "created_at": "2025-09-27T14:24:06.992181Z",
+              "updated_at": "2025-09-27T14:24:06.992181Z",
+              "metadata": null
+            },
+            {
+              "task_id": "8ab08980177b4405984ee73837a84dea",
+              "task_name": "init_python_project",
+              "prompt": "Инициализировать Python-проект с использованием uv как менеджера, создать структуру каталогов src, tests, docs, настроить pyproject.toml, выполнить git инициализацию и создать или привязать GitHub репозиторий через gh, а также разместить все файлы и конфиги в .local/duscan/.",
+              "model_preference": "pplx_pro",
+              "sources": [
+                "web"
+              ],
+              "preconfigured": false,
+              "created_at": "2025-09-27T09:03:04.362461Z",
+              "updated_at": "2025-09-27T09:03:04.362461Z",
+              "metadata": null
+            },
+            {
+              "task_id": "38a7c261b17e424ab43645d2346cb1c4",
+              "task_name": "proverka_koda",
+              "prompt": "Проверьте текущий код на наличие ошибок и сообщите, если они есть.",
+              "model_preference": "pplx_pro",
+              "sources": [
+                "web"
+              ],
+              "preconfigured": false,
+              "created_at": "2025-09-24T23:31:06.805999Z",
+              "updated_at": "2025-09-24T23:31:06.805999Z",
+              "metadata": null
+            },
+            {
+              "task_id": "edc392c4a20f4853bd7d339cf99e9531",
+              "task_name": "review-selection",
+              "prompt": "Review selection",
+              "model_preference": "pplx_alpha",
+              "sources": [
+                "web"
+              ],
+              "preconfigured": false,
+              "created_at": "2025-09-08T20:33:44.440265Z",
+              "updated_at": "2025-09-08T20:33:44.440265Z",
+              "metadata": null
+            },
+            {
+              "task_id": "349e96d388b5412d995eac613aa72641",
+              "task_name": "summarise-given-ctx",
+              "prompt": "Проанализируй контекст. Предоставь суммаризованную версию данного контекста. Укажи на важные моменты",
+              "model_preference": "pplx_alpha",
+              "sources": [
+                "web",
+                "scholar",
+                "social",
+                "edgar"
+              ],
+              "preconfigured": false,
+              "created_at": "2025-09-08T18:34:43.661044Z",
+              "updated_at": "2025-09-08T18:34:43.661044Z",
+              "metadata": null
+            },
+            {
+              "task_id": "42a581dfd400451a9d6f60d547126404",
+              "task_name": "translate-to-russian-preserve-style",
+              "prompt": "translate to russian, preserve style of original",
+              "model_preference": "pplx_pro",
+              "sources": [
+                "web"
+              ],
+              "preconfigured": false,
+              "created_at": "2025-09-03T19:35:22.101764Z",
+              "updated_at": "2025-09-03T19:35:22.101764Z",
+              "metadata": null
+            },
+            {
+              "task_id": "737c748c41c44e9894671d9134301ca6",
+              "task_name": "translate-to-russian-style",
+              "prompt": "translate to russian, preserve style of original with your context and nuances of russian language itself",
+              "model_preference": "pplx_pro",
+              "sources": [
+                "web"
+              ],
+              "preconfigured": false,
+              "created_at": "2025-09-03T19:34:38.737272Z",
+              "updated_at": "2025-09-03T19:34:38.737272Z",
+              "metadata": null
+            },
+            {
+              "task_id": "65b1e3eaecd64f5184865ac34670143a",
+              "task_name": "issledovat-rezultat-na-russkom",
+              "prompt": "Исследуй, результат на русском",
+              "model_preference": "claude37sonnetthinking",
+              "sources": [
+                "web",
+                "social",
+                "edgar",
+                "scholar"
+              ],
+              "preconfigured": false,
+              "created_at": "2025-09-03T18:59:24.213526Z",
+              "updated_at": "2025-09-03T18:59:24.213526Z",
+              "metadata": null
+            },
+            {
+              "task_id": "d26bbd69e83541ad9755078055ce944e",
+              "task_name": "analyze-all-sources",
+              "prompt": "Проанализируй",
+              "model_preference": "pplx_alpha",
+              "sources": [
+                "web",
+                "scholar",
+                "social",
+                "edgar"
+              ],
+              "preconfigured": false,
+              "created_at": "2025-09-03T18:10:27.159592Z",
+              "updated_at": "2025-09-03T18:10:27.159592Z",
+              "metadata": null
+            },
+            {
+              "task_id": "984e2ec43655479cbfac1ad17f86392c",
+              "task_name": "extract-and-merge-tables-from-thread-sonet4",
+              "prompt": "Проанализируй тред, вытащи все таблицы, сведи в одну.",
+              "model_preference": "claude37sonnetthinking",
+              "sources": [
+                "web",
+                "scholar"
+              ],
+              "preconfigured": false,
+              "created_at": "2025-09-03T18:08:15.538747Z",
+              "updated_at": "2025-09-03T18:08:32.197240Z",
+              "metadata": null
+            },
+            {
+              "task_id": "8fd1c17852a94bcd913bb6ed546842ea",
+              "task_name": "tshoot",
+              "prompt": "Ты - агент по устранению неисправностей. Проанализируй сообщение пользователя {subj}, оцени стек, продумай решение, задай вопросы если надо и предоставь ответ в виде команд, введя которые пользователь:\n- продиагностирует проблему более детально\n- решит проблему\n\nsubj:",
+              "model_preference": "pplx_pro",
+              "sources": [
+                "web",
+                "scholar",
+                "social"
+              ],
+              "preconfigured": false,
+              "created_at": "2025-09-03T14:49:38.889391Z",
+              "updated_at": "2025-09-03T18:09:21.340534Z",
+              "metadata": null
+            },
+            {
+              "task_id": "50fb46f71e594825a53f7632483fc0e8",
+              "task_name": "wflow",
+              "prompt": "Проанализируй, пжс, напиши step-by-step workflow.",
+              "model_preference": "pplx_pro",
+              "sources": [
+                "web"
+              ],
+              "preconfigured": false,
+              "created_at": "2025-08-26T22:27:10.910106Z",
+              "updated_at": "2025-08-26T22:27:10.910106Z",
+              "metadata": null
+            },
+            {
+              "task_id": "3b9190d2367e4a69925f1d4b20de7e1a",
+              "task_name": "teach-me-comet",
+              "prompt": "Teach me how to use Comet based on my browsing and query history, highlight the most recent feature updates, suggest five personalized and specific queries I should try, and surface the most compelling use case and prompt examples shared on social media.",
+              "model_preference": "pplx_alpha",
+              "sources": [
+                "web"
+              ],
+              "preconfigured": false,
+              "created_at": "2025-08-26T19:33:04.287083Z",
+              "updated_at": "2025-08-26T19:33:04.287083Z",
+              "metadata": null
+            },
+            {
+              "task_id": "f303ff12af934d16abcb631faa598efa",
+              "task_name": "api-callings",
+              "prompt": "will you do the new working example",
+              "model_preference": "pplx_pro",
+              "sources": [
+                "web"
+              ],
+              "preconfigured": false,
+              "created_at": "2025-08-26T19:32:17.363612Z",
+              "updated_at": "2025-08-26T19:32:17.363612Z",
+              "metadata": null
+            },
+            {
+              "task_id": "a1b2c3d4e5f6789012345678901234ab",
+              "task_name": "trending-on-social",
+              "prompt": "I want to know about the latest trending topics. Scroll through each of my social media websites that I'm logged into, review the posts from the past 24 hours and summarize the trending events.",
+              "model_preference": "pplx_pro",
+              "sources": [
+                "web"
+              ],
+              "preconfigured": true,
+              "created_at": "2025-07-16T00:00:00",
+              "updated_at": "2025-07-16T00:00:00",
+              "metadata": null
+            },
+            {
+              "task_id": "9e8d7c6b5a49382716051234567890ef",
+              "task_name": "evaluate-this-deal",
+              "prompt": "Evaluate whether this is a good deal by checking its price history over time, comparing current pricing across other major retailers, and analyzing recent customer reviews for patterns in quality, reliability, and satisfaction. Highlight any red flags or standout features, and let me know if now is the best time to buy or if I should wait for a better price.",
+              "model_preference": "pplx_pro",
+              "sources": [
+                "web"
+              ],
+              "preconfigured": true,
+              "created_at": "2025-07-16T00:00:00",
+              "updated_at": "2025-07-16T00:00:00",
+              "metadata": null
+            },
+            {
+              "task_id": "b1c2d3e4f5a6789012345678901234cd",
+              "task_name": "prep-next-meeting",
+              "prompt": "Help me prepare for my next meeting by listing the participants, outlining the meeting goals and agenda, highlighting anything I should review or prepare, and suggesting questions I could ask. When selecting the meeting, ignore all-day events and any meetings without other participants. If any participants are external to my company, include a brief bio.",
+              "model_preference": "pplx_pro",
+              "sources": [
+                "web"
+              ],
+              "preconfigured": true,
+              "created_at": "2025-07-16T00:00:00",
+              "updated_at": "2025-07-16T00:00:00",
+              "metadata": null
+            },
+            {
+              "task_id": "c2d3e4f5a6b7890123456789012345de",
+              "task_name": "write",
+              "prompt": "Take this rough idea or sentence and develop it into a compelling paragraph or argument. Maintain the original intent, but add nuance, evidence, or examples to strengthen it. Sound confident and clear.",
+              "model_preference": "pplx_pro",
+              "sources": [
+                "web"
+              ],
+              "preconfigured": true,
+              "created_at": "2025-07-16T00:00:00",
+              "updated_at": "2025-07-16T00:00:00",
+              "metadata": null
+            },
+            {
+              "task_id": "a1b2c3d4e5f67890abcdef1234567890",
+              "task_name": "sonar",
+              "prompt": "",
+              "model_preference": "experimental",
+              "sources": [
+                "web"
+              ],
+              "preconfigured": true,
+              "created_at": "2025-07-16T00:00:00",
+              "updated_at": "2025-07-16T00:00:00",
+              "metadata": null
+            },
+            {
+              "task_id": "f47ac10b58cc4372a5678d33d5e8a92a",
+              "task_name": "claude-4-0-sonnet",
+              "prompt": "",
+              "model_preference": "claude2",
+              "sources": [
+                "web"
+              ],
+              "preconfigured": true,
+              "created_at": "2025-07-16T00:00:00",
+              "updated_at": "2025-07-16T00:00:00",
+              "metadata": null
+            },
+            {
+              "task_id": "5a8b9c2d3e4f5678901a2b3c4d5e6f78",
+              "task_name": "gpt5",
+              "prompt": "",
+              "model_preference": "gpt5",
+              "sources": [
+                "web"
+              ],
+              "preconfigured": true,
+              "created_at": "2025-07-16T00:00:00",
+              "updated_at": "2025-07-16T00:00:00",
+              "metadata": null
+            },
+            {
+              "task_id": "3e4666bf9f7f4136885bbe999c1a7b23",
+              "task_name": "gemini-2-5-pro-06-05",
+              "prompt": "",
+              "model_preference": "gemini2flash",
+              "sources": [
+                "web"
+              ],
+              "preconfigured": true,
+              "created_at": "2025-07-16T00:00:00",
+              "updated_at": "2025-07-16T00:00:00",
+              "metadata": null
+            },
+            {
+              "task_id": "9c8e4f2a1b3d4c5e6f789012a3b4c5d6",
+              "task_name": "o3",
+              "prompt": "",
+              "model_preference": "o3",
+              "sources": [
+                "web"
+              ],
+              "preconfigured": true,
+              "created_at": "2025-07-16T00:00:00",
+              "updated_at": "2025-07-16T00:00:00",
+              "metadata": null
+            },
+            {
+              "task_id": "b8f3a2d1c4e5f6789012345678901234",
+              "task_name": "claude-4-0-sonnet-thinking",
+              "prompt": "",
+              "model_preference": "claude37sonnetthinking",
+              "sources": [
+                "web"
+              ],
+              "preconfigured": true,
+              "created_at": "2025-07-16T00:00:00",
+              "updated_at": "2025-07-16T00:00:00",
+              "metadata": null
+            }
+          ]
+        }
+      }
+    },
+    "GET /rest/user/get_user_ai_profile": {
+      "path": "/rest/user/get_user_ai_profile",
+      "method": "GET",
+      "observed_calls": 1,
+      "query_params": {
+        "version": {
+          "type": "string",
+          "example": "2.18"
+        },
+        "source": {
+          "type": "string",
+          "example": "default"
+        }
+      },
+      "request_schema": null,
+      "response_schema": {
+        "type": "object",
+        "properties": {
+          "has_profile": {
+            "type": "boolean"
+          },
+          "disabled": {
+            "type": "boolean"
+          },
+          "bio": {
+            "type": "string"
+          },
+          "location": {
+            "type": "string"
+          },
+          "language": {
+            "type": "string"
+          },
+          "response_language": {
+            "type": "string"
+          },
+          "location_lat": {
+            "type": "string"
+          },
+          "location_lng": {
+            "type": "string"
+          },
+          "location_city": {
+            "type": "string"
+          },
+          "location_region": {
+            "type": "string"
+          },
+          "location_country": {
+            "type": "string"
+          },
+          "prefers_metric": {
+            "type": "null"
+          },
+          "use_memory": {
+            "type": "boolean"
+          },
+          "use_search_history": {
+            "type": "boolean"
+          },
+          "answer_styling_preferences": {
+            "type": "null"
+          }
+        },
+        "required": [
+          "has_profile",
+          "disabled",
+          "bio",
+          "location",
+          "language",
+          "response_language",
+          "location_lat",
+          "location_lng",
+          "location_city",
+          "location_region"
+        ]
+      },
+      "examples": {
+        "request": null,
+        "response": {
+          "has_profile": true,
+          "disabled": false,
+          "bio": "Software Architect | Python 3.12+ | VSCode | Cline | MCP | GitHub | API Integration Expert | Reverse Engineer\nRole context:\n- Multirole Assistant\n- Focus: solution architecture, reverse engineering, API integration, Python, VSCode\nResponse style:\n1. Provide in-depth technical, architectural, and code-first answers in markdown. For diagrams use python diagrams/mermaid. For representing SQLModel/Pydantic as ERD use {python package suitable or mermaid}. \n2. Introduce options/trade-offs, highlight best practices & caveats.\n3. Prefer concise, actionable content: code blocks, comparison tables, diagrams, workflows.\n4. Optimize for modularity, scalability, clarity, and business acceleration (“time-to-value”).\n5. Surface integration constraints, dependency lists, data formats, and config tips.\n6.  Another agent can be involved too, so instruct them (.copilot-instructions.md), as well as delegate using issues/prs.\n8. For coding tasks don't forget the spawning new .venv, install and imports first.\n9. For python use `uv` as package manager.\n10. For coding tasks first spawn corresponding ISSUE/PR to checkout. In addition to using GitHub MCP, you will be able to request temporary PAT, extending your capabilities.\nFor the code has been proven working, especially single-file-tools make the gist without questions (except github related something is on-the-go.)\nAlways answer as if to senior/tech lead/architect developer; questions may assume strong technical background",
+          "location": "Sankt-Peterburg, Sankt-Peterburg, RU",
+          "language": "russian",
+          "response_language": "russian",
+          "location_lat": "59.961790",
+          "location_lng": "30.405888",
+          "location_city": "Sankt-Peterburg",
+          "location_region": "Sankt-Peterburg",
+          "location_country": "RU",
+          "prefers_metric": null,
+          "use_memory": true,
+          "use_search_history": true,
+          "answer_styling_preferences": null
+        }
+      }
+    },
+    "GET /rest/homepage-widgets/upsell": {
+      "path": "/rest/homepage-widgets/upsell",
+      "method": "GET",
+      "observed_calls": 1,
+      "query_params": {
+        "version": {
+          "type": "string",
+          "example": "2.18"
+        },
+        "source": {
+          "type": "string",
+          "example": "default"
+        }
+      },
+      "request_schema": null,
+      "response_schema": {
+        "type": "object",
+        "properties": {
+          "upsell_information": {
+            "type": "null"
+          },
+          "product_banner_information": {
+            "type": "null"
+          }
+        },
+        "required": [
+          "upsell_information",
+          "product_banner_information"
+        ]
+      },
+      "examples": {
+        "request": null,
+        "response": {
+          "upsell_information": null,
+          "product_banner_information": null
+        }
+      }
+    },
+    "GET /rest/academic/check-edu-institution": {
+      "path": "/rest/academic/check-edu-institution",
+      "method": "GET",
+      "observed_calls": 1,
+      "query_params": {
+        "version": {
+          "type": "string",
+          "example": "2.18"
+        },
+        "source": {
+          "type": "string",
+          "example": "default"
+        }
+      },
+      "request_schema": null,
+      "response_schema": {
+        "type": "object",
+        "properties": {
+          "institution": {
+            "type": "null"
+          }
+        },
+        "required": [
+          "institution"
+        ]
+      },
+      "examples": {
+        "request": null,
+        "response": {
+          "institution": null
+        }
+      }
+    },
+    "GET /rest/experiments/attributes": {
+      "path": "/rest/experiments/attributes",
+      "method": "GET",
+      "observed_calls": 1,
+      "query_params": {
+        "version": {
+          "type": "string",
+          "example": "2.18"
+        },
+        "source": {
+          "type": "string",
+          "example": "default"
+        }
+      },
+      "request_schema": null,
+      "response_schema": {
+        "type": "object",
+        "properties": {
+          "server_is_pro": {
+            "type": "boolean"
+          },
+          "server_is_max": {
+            "type": "boolean"
+          },
+          "server_is_enterprise": {
+            "type": "boolean"
+          },
+          "server_is_student": {
+            "type": "boolean"
+          },
+          "server_is_comet_eligible": {
+            "type": "boolean"
+          },
+          "server_subscription_source": {
+            "type": "string"
+          },
+          "server_payment_tier": {
+            "type": "string"
+          },
+          "server_has_available_referrals": {
+            "type": "boolean"
+          },
+          "server_available_connectors": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 13,
+            "maxItems": 13
+          },
+          "server_enabled_connectors": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 5,
+            "maxItems": 5
+          },
+          "server_api_client": {
+            "type": "string"
+          },
+          "server_app_version": {
+            "type": "null"
+          },
+          "server_accept_language": {
+            "type": "string"
+          },
+          "server_user_agent": {
+            "type": "string"
+          },
+          "server_locale": {
+            "type": "string"
+          },
+          "server_country": {
+            "type": "string"
+          },
+          "server_city": {
+            "type": "string"
+          },
+          "server_latitude": {
+            "type": "string"
+          },
+          "server_longitude": {
+            "type": "string"
+          },
+          "server_timezone": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "server_is_pro",
+          "server_is_max",
+          "server_is_enterprise",
+          "server_is_student",
+          "server_is_comet_eligible",
+          "server_subscription_source",
+          "server_payment_tier",
+          "server_has_available_referrals",
+          "server_available_connectors",
+          "server_enabled_connectors"
+        ]
+      },
+      "examples": {
+        "request": null,
+        "response": {
+          "server_is_pro": true,
+          "server_is_max": false,
+          "server_is_enterprise": false,
+          "server_is_student": false,
+          "server_is_comet_eligible": false,
+          "server_subscription_source": "ios",
+          "server_payment_tier": "paid",
+          "server_has_available_referrals": true,
+          "server_available_connectors": [
+            "google_drive",
+            "gcal",
+            "dropbox",
+            "edgar",
+            "outlook",
+            "linear_alt",
+            "notion_mcp",
+            "github_mcp_direct",
+            "asana_mcp_merge",
+            "slack_direct",
+            "jira_mcp_merge",
+            "confluence_mcp_merge",
+            "microsoft_teams_mcp_merge"
+          ],
+          "server_enabled_connectors": [
+            "google_drive",
+            "gcal",
+            "dropbox",
+            "linear_alt",
+            "github_mcp_direct"
+          ],
+          "server_api_client": "default",
+          "server_app_version": null,
+          "server_accept_language": "ru-RU",
+          "server_user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0",
+          "server_locale": "ru-RU",
+          "server_country": "US",
+          "server_city": "Atlanta",
+          "server_latitude": "33.74900",
+          "server_longitude": "-84.38798",
+          "server_timezone": "America/New_York"
+        }
+      }
+    },
+    "POST /rest/autosuggest/list-autosuggest": {
+      "path": "/rest/autosuggest/list-autosuggest",
+      "method": "POST",
+      "observed_calls": 3,
+      "query_params": {
+        "version": {
+          "type": "string",
+          "example": "2.18"
+        },
+        "source": {
+          "type": "string",
+          "example": "default"
+        }
+      },
+      "request_schema": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string"
+          },
+          "sources": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1,
+            "maxItems": 1
+          },
+          "search_mode": {
+            "type": "string"
+          },
+          "source_tab_url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "query",
+          "sources",
+          "search_mode",
+          "source_tab_url"
+        ]
+      },
+      "response_schema": {
+        "type": "object",
+        "properties": {
+          "results": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "query": {
+                  "type": "string"
+                },
+                "query_uuid": {
+                  "type": "null"
+                },
+                "url": {
+                  "type": "null"
+                },
+                "display_text": {
+                  "type": "null"
+                },
+                "search_kind": {
+                  "type": "null"
+                },
+                "category": {
+                  "type": "null"
+                },
+                "image": {
+                  "type": "null"
+                },
+                "isPersonalized": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "query",
+                "query_uuid",
+                "url",
+                "display_text",
+                "search_kind",
+                "category",
+                "image",
+                "isPersonalized"
+              ]
+            },
+            "minItems": 6,
+            "maxItems": 6
+          }
+        },
+        "required": [
+          "results"
+        ]
+      },
+      "examples": {
+        "request": {
+          "query": "",
+          "sources": [
+            "web"
+          ],
+          "search_mode": "search",
+          "source_tab_url": ""
+        },
+        "response": {
+          "results": [
+            {
+              "query": "Объясни, как использовать loop в pattern для обработки ошибок",
+              "query_uuid": null,
+              "url": null,
+              "display_text": null,
+              "search_kind": null,
+              "category": null,
+              "image": null,
+              "isPersonalized": true
+            },
+            {
+              "query": "Покажи примеры использования OpenRTB в Python SSP клиентах",
+              "query_uuid": null,
+              "url": null,
+              "display_text": null,
+              "search_kind": null,
+              "category": null,
+              "image": null,
+              "isPersonalized": true
+            },
+            {
+              "query": "Объясни, как работает кеширование creatives в Prebid Server",
+              "query_uuid": null,
+              "url": null,
+              "display_text": null,
+              "search_kind": null,
+              "category": null,
+              "image": null,
+              "isPersonalized": true
+            },
+            {
+              "query": "Рекомендовать инструменты для визуализации данных в Python",
+              "query_uuid": null,
+              "url": null,
+              "display_text": null,
+              "search_kind": null,
+              "category": null,
+              "image": null,
+              "isPersonalized": true
+            },
+            {
+              "query": "Покажи лучшие практики настройки Docker для Python проектов",
+              "query_uuid": null,
+              "url": null,
+              "display_text": null,
+              "search_kind": null,
+              "category": null,
+              "image": null,
+              "isPersonalized": true
+            },
+            {
+              "query": "Сравни производительность uv и стандартного Python HTTP сервера",
+              "query_uuid": null,
+              "url": null,
+              "display_text": null,
+              "search_kind": null,
+              "category": null,
+              "image": null,
+              "isPersonalized": true
+            }
+          ]
+        }
+      }
+    },
+    "GET /rest/homepage-widgets": {
+      "path": "/rest/homepage-widgets",
+      "method": "GET",
+      "observed_calls": 1,
+      "query_params": {
+        "searchMode": {
+          "type": "string",
+          "example": "search"
+        },
+        "version": {
+          "type": "string",
+          "example": "2.18"
+        },
+        "source": {
+          "type": "string",
+          "example": "default"
+        }
+      },
+      "request_schema": null,
+      "response_schema": {
+        "type": "object",
+        "properties": {
+          "widgets": {
+            "type": "array",
+            "items": {}
+          },
+          "enabled_widgets": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 8,
+            "maxItems": 8
+          },
+          "all_widgets": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 8,
+            "maxItems": 8
+          }
+        },
+        "required": [
+          "widgets",
+          "enabled_widgets",
+          "all_widgets"
+        ]
+      },
+      "examples": {
+        "request": null,
+        "response": {
+          "widgets": [],
+          "enabled_widgets": [
+            "QUERY",
+            "SPORTS",
+            "ANNOUNCEMENT",
+            "SPACE",
+            "WEATHER",
+            "WATCHLIST",
+            "DISCOVER",
+            "FINANCE"
+          ],
+          "all_widgets": [
+            "ANNOUNCEMENT",
+            "QUERY",
+            "WEATHER",
+            "DISCOVER",
+            "FINANCE",
+            "SPORTS",
+            "WATCHLIST",
+            "SPACE"
+          ]
+        }
+      }
+    },
+    "GET /rest/notifications/in-app/unread-count": {
+      "path": "/rest/notifications/in-app/unread-count",
+      "method": "GET",
+      "observed_calls": 1,
+      "query_params": {
+        "version": {
+          "type": "string",
+          "example": "2.18"
+        },
+        "source": {
+          "type": "string",
+          "example": "default"
+        }
+      },
+      "request_schema": null,
+      "response_schema": {
+        "type": "object",
+        "properties": {
+          "unread_count": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "unread_count"
+        ]
+      },
+      "examples": {
+        "request": null,
+        "response": {
+          "unread_count": 0
+        }
+      }
+    },
+    "GET /rest/rate-limit/status": {
+      "path": "/rest/rate-limit/status",
+      "method": "GET",
+      "observed_calls": 1,
+      "query_params": {
+        "version": {
+          "type": "string",
+          "example": "2.18"
+        },
+        "source": {
+          "type": "string",
+          "example": "default"
+        }
+      },
+      "request_schema": null,
+      "response_schema": {
+        "type": "object",
+        "properties": {
+          "modes": {
+            "type": "object",
+            "properties": {
+              "pro_search": {
+                "type": "object",
+                "properties": {
+                  "available": {
+                    "type": "boolean"
+                  },
+                  "remaining_detail": {
+                    "type": "object",
+                    "properties": {
+                      "kind": {
+                        "type": "object"
+                      }
+                    },
+                    "required": [
+                      "kind"
+                    ]
+                  }
+                },
+                "required": [
+                  "available",
+                  "remaining_detail"
+                ]
+              },
+              "research": {
+                "type": "object",
+                "properties": {
+                  "available": {
+                    "type": "boolean"
+                  },
+                  "remaining_detail": {
+                    "type": "object",
+                    "properties": {
+                      "kind": {
+                        "type": "object"
+                      }
+                    },
+                    "required": [
+                      "kind"
+                    ]
+                  }
+                },
+                "required": [
+                  "available",
+                  "remaining_detail"
+                ]
+              },
+              "labs": {
+                "type": "object",
+                "properties": {
+                  "available": {
+                    "type": "boolean"
+                  },
+                  "remaining_detail": {
+                    "type": "object",
+                    "properties": {
+                      "kind": {
+                        "type": "object"
+                      },
+                      "remaining": {
+                        "type": "object"
+                      }
+                    },
+                    "required": [
+                      "kind",
+                      "remaining"
+                    ]
+                  }
+                },
+                "required": [
+                  "available",
+                  "remaining_detail"
+                ]
+              }
+            },
+            "required": [
+              "pro_search",
+              "research",
+              "labs"
+            ]
+          },
+          "sources": {
+            "type": "object",
+            "properties": {
+              "org": {
+                "type": "object",
+                "properties": {
+                  "available": {
+                    "type": "boolean"
+                  },
+                  "remaining_detail": {
+                    "type": "object",
+                    "properties": {
+                      "kind": {
+                        "type": "object"
+                      },
+                      "remaining": {
+                        "type": "object"
+                      }
+                    },
+                    "required": [
+                      "kind",
+                      "remaining"
+                    ]
+                  }
+                },
+                "required": [
+                  "available",
+                  "remaining_detail"
+                ]
+              },
+              "crunchbase": {
+                "type": "object",
+                "properties": {
+                  "available": {
+                    "type": "boolean"
+                  },
+                  "remaining_detail": {
+                    "type": "object",
+                    "properties": {
+                      "kind": {
+                        "type": "object"
+                      },
+                      "remaining": {
+                        "type": "object"
+                      }
+                    },
+                    "required": [
+                      "kind",
+                      "remaining"
+                    ]
+                  }
+                },
+                "required": [
+                  "available",
+                  "remaining_detail"
+                ]
+              },
+              "factset": {
+                "type": "object",
+                "properties": {
+                  "available": {
+                    "type": "boolean"
+                  },
+                  "remaining_detail": {
+                    "type": "object",
+                    "properties": {
+                      "kind": {
+                        "type": "object"
+                      },
+                      "remaining": {
+                        "type": "object"
+                      }
+                    },
+                    "required": [
+                      "kind",
+                      "remaining"
+                    ]
+                  }
+                },
+                "required": [
+                  "available",
+                  "remaining_detail"
+                ]
+              },
+              "onedrive": {
+                "type": "object",
+                "properties": {
+                  "available": {
+                    "type": "boolean"
+                  },
+                  "remaining_detail": {
+                    "type": "object",
+                    "properties": {
+                      "kind": {
+                        "type": "object"
+                      },
+                      "remaining": {
+                        "type": "object"
+                      }
+                    },
+                    "required": [
+                      "kind",
+                      "remaining"
+                    ]
+                  }
+                },
+                "required": [
+                  "available",
+                  "remaining_detail"
+                ]
+              },
+              "sharepoint": {
+                "type": "object",
+                "properties": {
+                  "available": {
+                    "type": "boolean"
+                  },
+                  "remaining_detail": {
+                    "type": "object",
+                    "properties": {
+                      "kind": {
+                        "type": "object"
+                      },
+                      "remaining": {
+                        "type": "object"
+                      }
+                    },
+                    "required": [
+                      "kind",
+                      "remaining"
+                    ]
+                  }
+                },
+                "required": [
+                  "available",
+                  "remaining_detail"
+                ]
+              },
+              "box": {
+                "type": "object",
+                "properties": {
+                  "available": {
+                    "type": "boolean"
+                  },
+                  "remaining_detail": {
+                    "type": "object",
+                    "properties": {
+                      "kind": {
+                        "type": "object"
+                      },
+                      "remaining": {
+                        "type": "object"
+                      }
+                    },
+                    "required": [
+                      "kind",
+                      "remaining"
+                    ]
+                  }
+                },
+                "required": [
+                  "available",
+                  "remaining_detail"
+                ]
+              },
+              "wiley_mcp_cashmere": {
+                "type": "object",
+                "properties": {
+                  "available": {
+                    "type": "boolean"
+                  },
+                  "remaining_detail": {
+                    "type": "object",
+                    "properties": {
+                      "kind": {
+                        "type": "object"
+                      },
+                      "remaining": {
+                        "type": "object"
+                      }
+                    },
+                    "required": [
+                      "kind",
+                      "remaining"
+                    ]
+                  }
+                },
+                "required": [
+                  "available",
+                  "remaining_detail"
+                ]
+              },
+              "cbinsights_mcp_cashmere": {
+                "type": "object",
+                "properties": {
+                  "available": {
+                    "type": "boolean"
+                  },
+                  "remaining_detail": {
+                    "type": "object",
+                    "properties": {
+                      "kind": {
+                        "type": "object"
+                      },
+                      "remaining": {
+                        "type": "object"
+                      }
+                    },
+                    "required": [
+                      "kind",
+                      "remaining"
+                    ]
+                  }
+                },
+                "required": [
+                  "available",
+                  "remaining_detail"
+                ]
+              },
+              "pitchbook_mcp_cashmere": {
+                "type": "object",
+                "properties": {
+                  "available": {
+                    "type": "boolean"
+                  },
+                  "remaining_detail": {
+                    "type": "object",
+                    "properties": {
+                      "kind": {
+                        "type": "object"
+                      },
+                      "remaining": {
+                        "type": "object"
+                      }
+                    },
+                    "required": [
+                      "kind",
+                      "remaining"
+                    ]
+                  }
+                },
+                "required": [
+                  "available",
+                  "remaining_detail"
+                ]
+              },
+              "statista_mcp_cashmere": {
+                "type": "object",
+                "properties": {
+                  "available": {
+                    "type": "boolean"
+                  },
+                  "remaining_detail": {
+                    "type": "object",
+                    "properties": {
+                      "kind": {
+                        "type": "object"
+                      },
+                      "remaining": {
+                        "type": "object"
+                      }
+                    },
+                    "required": [
+                      "kind",
+                      "remaining"
+                    ]
+                  }
+                },
+                "required": [
+                  "available",
+                  "remaining_detail"
+                ]
+              }
+            },
+            "required": [
+              "org",
+              "crunchbase",
+              "factset",
+              "onedrive",
+              "sharepoint",
+              "box",
+              "wiley_mcp_cashmere",
+              "cbinsights_mcp_cashmere",
+              "pitchbook_mcp_cashmere",
+              "statista_mcp_cashmere"
+            ]
+          }
+        },
+        "required": [
+          "modes",
+          "sources"
+        ]
+      },
+      "examples": {
+        "request": null,
+        "response": {
+          "modes": {
+            "pro_search": {
+              "available": true,
+              "remaining_detail": {
+                "kind": "not_provided"
+              }
+            },
+            "research": {
+              "available": true,
+              "remaining_detail": {
+                "kind": "not_provided"
+              }
+            },
+            "labs": {
+              "available": true,
+              "remaining_detail": {
+                "kind": "exact",
+                "remaining": 50
+              }
+            }
+          },
+          "sources": {
+            "org": {
+              "available": false,
+              "remaining_detail": {
+                "kind": "exact",
+                "remaining": 0
+              }
+            },
+            "crunchbase": {
+              "available": false,
+              "remaining_detail": {
+                "kind": "exact",
+                "remaining": 0
+              }
+            },
+            "factset": {
+              "available": false,
+              "remaining_detail": {
+                "kind": "exact",
+                "remaining": 0
+              }
+            },
+            "onedrive": {
+              "available": false,
+              "remaining_detail": {
+                "kind": "exact",
+                "remaining": 0
+              }
+            },
+            "sharepoint": {
+              "available": false,
+              "remaining_detail": {
+                "kind": "exact",
+                "remaining": 0
+              }
+            },
+            "box": {
+              "available": false,
+              "remaining_detail": {
+                "kind": "exact",
+                "remaining": 0
+              }
+            },
+            "wiley_mcp_cashmere": {
+              "available": true,
+              "remaining_detail": {
+                "kind": "exact",
+                "remaining": 5
+              }
+            },
+            "cbinsights_mcp_cashmere": {
+              "available": true,
+              "remaining_detail": {
+                "kind": "exact",
+                "remaining": 5
+              }
+            },
+            "pitchbook_mcp_cashmere": {
+              "available": true,
+              "remaining_detail": {
+                "kind": "exact",
+                "remaining": 5
+              }
+            },
+            "statista_mcp_cashmere": {
+              "available": true,
+              "remaining_detail": {
+                "kind": "exact",
+                "remaining": 5
+              }
+            }
+          }
+        }
+      }
+    },
+    "GET /rest/thread/list_recent": {
+      "path": "/rest/thread/list_recent",
+      "method": "GET",
+      "observed_calls": 1,
+      "query_params": {
+        "version": {
+          "type": "string",
+          "example": "2.18"
+        },
+        "source": {
+          "type": "string",
+          "example": "default"
+        }
+      },
+      "request_schema": null,
+      "response_schema": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "uuid": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string"
+            },
+            "link": {
+              "type": "string"
+            },
+            "variant": {
+              "type": "string"
+            },
+            "unread": {
+              "type": "boolean"
+            },
+            "status": {
+              "type": "string"
+            },
+            "context_uuid": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "uuid",
+            "title",
+            "link",
+            "variant",
+            "unread",
+            "status",
+            "context_uuid"
+          ]
+        },
+        "minItems": 20,
+        "maxItems": 20
+      },
+      "examples": {
+        "request": null,
+        "response": [
+          {
+            "uuid": "a93844ba-2837-4e03-b934-bae9b5ef0b4a",
+            "title": "Проанализируй текущее состояние репозитория, посоветуй дальнейшие шаги.\n@GitHub @Perplexity SPA Reve",
+            "link": "/search/proanalizirui-tekushchee-sosto-qThEuig3TgO5NLrpte8LSg",
+            "variant": "thread",
+            "unread": false,
+            "status": "completed",
+            "context_uuid": "e398e9b0-7bff-4046-850e-ef42028419c3"
+          },
+          {
+            "uuid": "b899b86a-f5dd-4869-9576-fbc1b9411342",
+            "title": "pplx-unofficial-sdk Project Structure \nbuild: webpack configuration, and some other useful scripts.\n",
+            "link": "/search/pplx-unofficial-sdk-project-st-uJm4avXdSGmVdvvBuUETQg",
+            "variant": "thread",
+            "unread": false,
+            "status": "pending",
+            "context_uuid": "6a76dd46-28cb-4dcb-b662-a7374f41059c"
+          },
+          {
+            "uuid": "859eabe4-d78a-47ba-b023-b1b3cc2b4799",
+            "title": "@Prompt/Agent Engineering проанализируй текущий спейс с точки зрения инструкций",
+            "link": "/search/prompt-agent-engineering-proan-hZ6r5NeKR7qwI7GzzCtHmQ",
+            "variant": "thread",
+            "unread": false,
+            "status": "completed",
+            "context_uuid": "2b23b820-085d-4ecc-adca-e22a55fb3c9f"
+          },
+          {
+            "uuid": "88124a65-ed08-4933-96be-9ad2c3d3b9d7",
+            "title": "Создай новый репозиторий, в который будет закидываться assets perpexity ai spa, где его тайпскриптом",
+            "link": "/search/sozdai-novyi-repozitorii-v-kot-iBJKZe0ISTOWvprSw9O51w",
+            "variant": "thread",
+            "unread": false,
+            "status": "completed",
+            "context_uuid": "b3812998-314e-49e1-a39e-5843945fce50"
+          },
+          {
+            "uuid": "12fa364c-1d4f-4a5a-b3a0-fc8820665483",
+            "title": "Browser CDP Pipeline — CDPClient, BrowserAutomation, Chrome extension, capture presets",
+            "link": "/search/browser-cdp-pipeline-cdpclient-Evo2TB1PSlqzoPyIIGZUgw",
+            "variant": "thread",
+            "unread": false,
+            "status": "completed",
+            "context_uuid": "bd47c331-ded6-4ebb-982a-7eaafed7f28f"
+          },
+          {
+            "uuid": "4b5ee465-9262-41dd-a811-be06106cb531",
+            "title": "@Github MCP & automcp Generation — AutoMCPGenerator, automcp config, integration",
+            "link": "/search/github-mcp-automcp-generation-S17kZZJiQd2oEb4GEGy1MQ",
+            "variant": "thread",
+            "unread": false,
+            "status": "completed",
+            "context_uuid": "ac8106b8-68b2-4ce9-815c-316d4e12d7c3"
+          },
+          {
+            "uuid": "18499c45-d0b8-45e1-bb14-7c3e5c2b3305",
+            "title": "AST Parsing & Knowledge Base — детали работы с ts-morph, типы извлечения, KB структура",
+            "link": "/search/ast-parsing-knowledge-base-det-GEmcRdC4ReG7FHw.XCszBQ",
+            "variant": "thread",
+            "unread": false,
+            "status": "completed",
+            "context_uuid": "999c9417-d7c0-44f5-924d-95fc8a3022c3"
+          },
+          {
+            "uuid": "dcd40cc9-ecaf-49e7-865d-f1f6ffd22d2e",
+            "title": "Проанализируй тред, подумай есть ли смысл переделать его уже в спейс и если да -- то как оргпанизова",
+            "link": "/search/proanalizirui-tred-podumai-est-3NQMyeyvSeeGXfH2_9ItLg",
+            "variant": "thread",
+            "unread": false,
+            "status": "completed",
+            "context_uuid": "d23391ec-cfc1-4fe6-9a7d-ba1cac240ee6"
+          },
+          {
+            "uuid": "408e3325-0fcb-4bcc-9bcd-2b413f4134e0",
+            "title": "@GitHub [https://github.com/pv-udpv/pplx-spa-assets-knowledge](https://github.com/pv-udpv/pplx-spa-a",
+            "link": "/search/github-https-github-com-pv-udp-QI4zJQ_LS8ybzStBP0E04A",
+            "variant": "thread",
+            "unread": false,
+            "status": "completed",
+            "context_uuid": "deb5a09d-5f08-457e-abf8-67ad9445105d"
+          },
+          {
+            "uuid": "ee013d6d-b27d-49fc-b90e-7675f34822d2",
+            "title": "Ищите способы оптимизации",
+            "link": "/search/ishchite-sposoby-optimizatsii-7gE9bbJ9Sfy5DnZ180gi0g",
+            "variant": "thread",
+            "unread": false,
+            "status": "completed",
+            "context_uuid": "e87c0755-9c7e-48c1-8418-8e7be4042292"
+          },
+          {
+            "uuid": "3219f875-9bbe-45a8-9e30-ff4ec6a68d5b",
+            "title": "devtools console script to get the caches (precache)",
+            "link": "/search/devtools-console-script-to-get-Mhn4dZu.RaieMP9OxqaNWw",
+            "variant": "thread",
+            "unread": false,
+            "status": "completed",
+            "context_uuid": "4cefe040-9b6f-4b8c-bc9f-5969fb74d56b"
+          },
+          {
+            "uuid": "6c0735b0-9d9e-4c7c-bc17-d0f4afdc4e32",
+            "title": "Я вот тут подумал: надо наверно обязательно в ISSUE при разработке чего либо, прикреплять сорс файл.",
+            "link": "/search/ia-vot-tut-podumal-nado-navern-bAc1sJ2eTHy8F9D0r9xOMg",
+            "variant": "thread",
+            "unread": false,
+            "status": "completed",
+            "context_uuid": "63ae6a15-618a-4425-94fb-326a83e660c6"
+          },
+          {
+            "uuid": "d801acfb-803c-4ffa-a232-cf869cadc14c",
+            "title": "Я вот тут подумал: надо наверно обязательно в ISSUE при разработке чего либо, прикреплять сорс файл.",
+            "link": "/search/ia-vot-tut-podumal-nado-navern-2AGs.4A8T_qiMs.GnK3BTA",
+            "variant": "thread",
+            "unread": false,
+            "status": "completed",
+            "context_uuid": "f7864301-170a-413c-ab10-a0764b5b8a43"
+          },
+          {
+            "uuid": "7aee2a72-8b78-4ea5-8627-9609b0ca7f94",
+            "title": "Погнали! Создам полноценный Python-скрипт для автоматизации создания issues с прикреплёнными файлами",
+            "link": "/search/pognali-sozdam-polnotsennyi-py-eu4qcot4TqWGJ5YJsMp_lA",
+            "variant": "thread",
+            "unread": false,
+            "status": "completed",
+            "context_uuid": "b257a961-e667-4542-b1a2-dd097ee59a7d"
+          },
+          {
+            "uuid": "d0e6ca5e-1c22-48b3-8c39-edb73c73279b",
+            "title": "Да, можно: из CacheStorage асинхронно вытащить все Response, собрать их в один JSON и одним файлом с",
+            "link": "/search/da-mozhno-iz-cachestorage-asin-0ObKXhwiSLOMOe23PHMnmw",
+            "variant": "thread",
+            "unread": false,
+            "status": "completed",
+            "context_uuid": "d4d3cf76-0c27-4a7c-bc8f-ea2d2ae931bc"
+          },
+          {
+            "uuid": "9ff41ff4-e12e-4d02-a23c-d90b2ee35f83",
+            "title": "@GitHub [pplx-unofficial-sdk - reverse engineered client](https://www.perplexity.ai/spaces/pplx-unof",
+            "link": "/search/github-pplx-unofficial-sdk-rev-n_Qf9OEuTQKiPNkLLuNfgw",
+            "variant": "thread",
+            "unread": false,
+            "status": "completed",
+            "context_uuid": "7f5c473c-f0d1-4be8-97af-7f89e9bb88c9"
+          },
+          {
+            "uuid": "fcbbc62c-4b1e-4631-b09c-e35287c545ba",
+            "title": "@GitHub @pplx-unofficial-sdk - reverse engineered client Make the sidecar in form of userscript that",
+            "link": "/search/github-pplx-unofficial-sdk-rev-_LvGLEseRjGwnONSh8VFug",
+            "variant": "thread",
+            "unread": false,
+            "status": "pending",
+            "context_uuid": "d4fe584b-ad26-460f-9c55-778710818380"
+          },
+          {
+            "uuid": "b627aca9-7766-4ee0-b1df-672d79adfb5c",
+            "title": "@GitHub @pplx-unofficial-sdk - reverse engineered client",
+            "link": "/search/github-pplx-unofficial-sdk-rev-tiesqXdmTuCx32ctea37XA",
+            "variant": "thread",
+            "unread": false,
+            "status": "pending",
+            "context_uuid": "78183e99-3e5c-4b7d-a922-192cb12a755c"
+          },
+          {
+            "uuid": "2918bb6f-2c5a-4188-8091-e44d1afeba2c",
+            "title": "@GitHub @pplx-unofficial-sdk - reverse engineered client ehttps://pplx-next-static-public.perplexity",
+            "link": "/search/github-pplx-unofficial-sdk-rev-KRi7byxaQYiAkeRNGv66LA",
+            "variant": "thread",
+            "unread": false,
+            "status": "completed",
+            "context_uuid": "cd9751ee-11a4-4374-9bd3-6d89cb959f37"
+          },
+          {
+            "uuid": "60ff6014-f94c-407e-b4d8-e7545b1814be",
+            "title": "@GitHub @Веб [https://pplx-next-static-public.perplexity.ai/_spa/assets/pplx-stream-D3-uFWQX.js](htt",
+            "link": "/search/github-veb-https-pplx-next-sta-YP9gFPlMQH602OdUWxgUvg",
+            "variant": "thread",
+            "unread": false,
+            "status": "pending",
+            "context_uuid": "c782450d-160a-4a07-9c63-855250093a55"
+          }
+        ]
+      }
+    },
+    "GET /rest/enterprise/user/pending-invitation": {
+      "path": "/rest/enterprise/user/pending-invitation",
+      "method": "GET",
+      "observed_calls": 1,
+      "query_params": {
+        "version": {
+          "type": "string",
+          "example": "2.18"
+        },
+        "source": {
+          "type": "string",
+          "example": "default"
+        }
+      },
+      "request_schema": null,
+      "response_schema": {
+        "type": "object",
+        "properties": {
+          "pending_invitation": {
+            "type": "null"
+          }
+        },
+        "required": [
+          "pending_invitation"
+        ]
+      },
+      "examples": {
+        "request": null,
+        "response": {
+          "pending_invitation": null
+        }
+      }
+    },
+    "GET /rest/ping": {
+      "path": "/rest/ping",
+      "method": "GET",
+      "observed_calls": 1,
+      "query_params": {
+        "version": {
+          "type": "string",
+          "example": "2.18"
+        },
+        "source": {
+          "type": "string",
+          "example": "default"
+        }
+      },
+      "request_schema": null,
+      "response_schema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status"
+        ]
+      },
+      "examples": {
+        "request": null,
+        "response": {
+          "status": "ok"
+        }
+      }
+    }
+  },
+  "call_flow": [
+    {
+      "timestamp": "2026-01-21T17:00:04.544Z",
+      "method": "POST",
+      "path": "/rest/event/analytics",
+      "status": 200,
+      "duration_ms": 711.8140000093263
+    },
+    {
+      "timestamp": "2026-01-21T17:00:04.603Z",
+      "method": "GET",
+      "path": "/rest/user/settings",
+      "status": 200,
+      "duration_ms": 288.5569999925792
+    },
+    {
+      "timestamp": "2026-01-21T17:00:04.604Z",
+      "method": "GET",
+      "path": "/rest/user/info",
+      "status": 200,
+      "duration_ms": 224.2559999867808
+    },
+    {
+      "timestamp": "2026-01-21T17:00:04.605Z",
+      "method": "GET",
+      "path": "/rest/user/get_user_main_sidebar_hubs",
+      "status": 200,
+      "duration_ms": 318.9880000136327
+    },
+    {
+      "timestamp": "2026-01-21T17:00:04.606Z",
+      "method": "GET",
+      "path": "/rest/tasks/shortcuts/mentions",
+      "status": 200,
+      "duration_ms": 426.59200000343844
+    },
+    {
+      "timestamp": "2026-01-21T17:00:04.606Z",
+      "method": "GET",
+      "path": "/rest/user/get_user_ai_profile",
+      "status": 200,
+      "duration_ms": 328.9150000200607
+    },
+    {
+      "timestamp": "2026-01-21T17:00:04.607Z",
+      "method": "GET",
+      "path": "/rest/homepage-widgets/upsell",
+      "status": 200,
+      "duration_ms": 431.1450000095647
+    },
+    {
+      "timestamp": "2026-01-21T17:00:04.607Z",
+      "method": "GET",
+      "path": "/rest/academic/check-edu-institution",
+      "status": 200,
+      "duration_ms": 306.74400000134483
+    },
+    {
+      "timestamp": "2026-01-21T17:00:04.609Z",
+      "method": "GET",
+      "path": "/rest/experiments/attributes",
+      "status": 200,
+      "duration_ms": 428.6969999957364
+    },
+    {
+      "timestamp": "2026-01-21T17:00:04.643Z",
+      "method": "POST",
+      "path": "/rest/autosuggest/list-autosuggest",
+      "status": 200,
+      "duration_ms": 395.076999993762
+    },
+    {
+      "timestamp": "2026-01-21T17:00:10.869Z",
+      "method": "GET",
+      "path": "/rest/homepage-widgets",
+      "status": 200,
+      "duration_ms": 307.8300000051968
+    },
+    {
+      "timestamp": "2026-01-21T17:00:14.186Z",
+      "method": "POST",
+      "path": "/rest/event/analytics",
+      "status": 200,
+      "duration_ms": 535.3030000114813
+    },
+    {
+      "timestamp": "2026-01-21T17:00:14.284Z",
+      "method": "GET",
+      "path": "/rest/notifications/in-app/unread-count",
+      "status": 200,
+      "duration_ms": 232.0060000056401
+    },
+    {
+      "timestamp": "2026-01-21T17:00:14.284Z",
+      "method": "GET",
+      "path": "/rest/rate-limit/status",
+      "status": 200,
+      "duration_ms": 232.3319999850355
+    },
+    {
+      "timestamp": "2026-01-21T17:00:14.313Z",
+      "method": "POST",
+      "path": "/rest/autosuggest/list-autosuggest",
+      "status": 200,
+      "duration_ms": 457.3849999869708
+    },
+    {
+      "timestamp": "2026-01-21T17:00:15.198Z",
+      "method": "GET",
+      "path": "/rest/thread/list_recent",
+      "status": 200,
+      "duration_ms": 227.58299999986775
+    },
+    {
+      "timestamp": "2026-01-21T17:00:15.622Z",
+      "method": "GET",
+      "path": "/rest/enterprise/user/pending-invitation",
+      "status": 200,
+      "duration_ms": 211.10200000111945
+    },
+    {
+      "timestamp": "2026-01-21T17:00:16.261Z",
+      "method": "GET",
+      "path": "/rest/ping",
+      "status": 200,
+      "duration_ms": 187.83799998345785
+    },
+    {
+      "timestamp": "2026-01-21T17:00:16.264Z",
+      "method": "POST",
+      "path": "/rest/autosuggest/list-autosuggest",
+      "status": 200,
+      "duration_ms": 286.5950000123121
+    }
+  ],
+  "schemas": {},
+  "statistics": {
+    "endpoints_har": 16,
+    "endpoints_js": 402,
+    "endpoints_total": 403,
+    "js_modules": 746,
+    "total_js_size_mb": 8.931620597839355
+  }
+}

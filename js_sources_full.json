@@ -1,0 +1,3098 @@
+[
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/index.html-Djc1eTpU.js",
+    "filename": "index.html-Djc1eTpU.js",
+    "category": "spa_assets",
+    "size": 4466,
+    "status": 200,
+    "path": "js/spa_assets/index.html-Djc1eTpU.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/vite-BvdIPCNX.js",
+    "filename": "vite-BvdIPCNX.js",
+    "category": "spa_assets",
+    "size": 2066,
+    "status": 200,
+    "path": "js/spa_assets/vite-BvdIPCNX.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/vendors-Czx2bdUR.js",
+    "filename": "vendors-Czx2bdUR.js",
+    "category": "spa_assets",
+    "size": 419661,
+    "status": 200,
+    "path": "js/spa_assets/vendors-Czx2bdUR.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/platform-BMCQRRfO.js",
+    "filename": "platform-BMCQRRfO.js",
+    "category": "spa_assets",
+    "size": 82702,
+    "status": 200,
+    "path": "js/spa_assets/platform-BMCQRRfO.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/i18n-Dd63s9EG.js",
+    "filename": "i18n-Dd63s9EG.js",
+    "category": "spa_assets",
+    "size": 107304,
+    "status": 200,
+    "path": "js/spa_assets/i18n-Dd63s9EG.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/icons-C77LVPXu.js",
+    "filename": "icons-C77LVPXu.js",
+    "category": "spa_assets",
+    "size": 3199,
+    "status": 200,
+    "path": "js/spa_assets/icons-C77LVPXu.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/platform-components-1h5IBUHL.js",
+    "filename": "platform-components-1h5IBUHL.js",
+    "category": "spa_assets",
+    "size": 11527,
+    "status": 200,
+    "path": "js/spa_assets/platform-components-1h5IBUHL.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/react-query-B7l3l1WN.js",
+    "filename": "react-query-B7l3l1WN.js",
+    "category": "spa_assets",
+    "size": 43252,
+    "status": 200,
+    "path": "js/spa_assets/react-query-B7l3l1WN.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/layout-page-BpNcAh6q.js",
+    "filename": "layout-page-BpNcAh6q.js",
+    "category": "spa_assets",
+    "size": 14226,
+    "status": 200,
+    "path": "js/spa_assets/layout-page-BpNcAh6q.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/layout-sidebar-HeATRtb8.js",
+    "filename": "layout-sidebar-HeATRtb8.js",
+    "category": "spa_assets",
+    "size": 208199,
+    "status": 200,
+    "path": "js/spa_assets/layout-sidebar-HeATRtb8.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/pplx-stream-BNfq1IJJ.js",
+    "filename": "pplx-stream-BNfq1IJJ.js",
+    "category": "spa_assets",
+    "size": 33076,
+    "status": 200,
+    "path": "js/spa_assets/pplx-stream-BNfq1IJJ.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/spa-shell-B08wNfRG.js",
+    "filename": "spa-shell-B08wNfRG.js",
+    "category": "spa_assets",
+    "size": 257308,
+    "status": 200,
+    "path": "js/spa_assets/spa-shell-B08wNfRG.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/bootstrap-CCAuGSUQ.js",
+    "filename": "bootstrap-CCAuGSUQ.js",
+    "category": "spa_assets",
+    "size": 356465,
+    "status": 200,
+    "path": "js/spa_assets/bootstrap-CCAuGSUQ.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useSingularAttributionAppLink-DuKawupu.js",
+    "filename": "useSingularAttributionAppLink-DuKawupu.js",
+    "category": "spa_assets",
+    "size": 1464,
+    "status": 200,
+    "path": "js/spa_assets/useSingularAttributionAppLink-DuKawupu.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/index-Bf2qc8Rt.js",
+    "filename": "index-Bf2qc8Rt.js",
+    "category": "spa_assets",
+    "size": 150,
+    "status": 200,
+    "path": "js/spa_assets/index-Bf2qc8Rt.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/DelimiterList-BQgwEC3V.js",
+    "filename": "DelimiterList-BQgwEC3V.js",
+    "category": "spa_assets",
+    "size": 671,
+    "status": 200,
+    "path": "js/spa_assets/DelimiterList-BQgwEC3V.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/Button-Bk5hyz9w.js",
+    "filename": "Button-Bk5hyz9w.js",
+    "category": "spa_assets",
+    "size": 1147,
+    "status": 200,
+    "path": "js/spa_assets/Button-Bk5hyz9w.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/CloseButton-tFUCTrb9.js",
+    "filename": "CloseButton-tFUCTrb9.js",
+    "category": "spa_assets",
+    "size": 533,
+    "status": 200,
+    "path": "js/spa_assets/CloseButton-tFUCTrb9.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/framer-motion-B91HtIwS.js",
+    "filename": "framer-motion-B91HtIwS.js",
+    "category": "spa_assets",
+    "size": 124301,
+    "status": 200,
+    "path": "js/spa_assets/framer-motion-B91HtIwS.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/Modal-DMXIxTK1.js",
+    "filename": "Modal-DMXIxTK1.js",
+    "category": "spa_assets",
+    "size": 7083,
+    "status": 200,
+    "path": "js/spa_assets/Modal-DMXIxTK1.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/CitationFavicon-erOeQYT-.js",
+    "filename": "CitationFavicon-erOeQYT-.js",
+    "category": "spa_assets",
+    "size": 1448,
+    "status": 200,
+    "path": "js/spa_assets/CitationFavicon-erOeQYT-.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/connectors-CoeqMfJH.js",
+    "filename": "connectors-CoeqMfJH.js",
+    "category": "spa_assets",
+    "size": 1938,
+    "status": 200,
+    "path": "js/spa_assets/connectors-CoeqMfJH.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/fileUploadUtils-CD-ymFRq.js",
+    "filename": "fileUploadUtils-CD-ymFRq.js",
+    "category": "spa_assets",
+    "size": 1413,
+    "status": 200,
+    "path": "js/spa_assets/fileUploadUtils-CD-ymFRq.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/DateTimeUtils-mTRPePQ_.js",
+    "filename": "DateTimeUtils-mTRPePQ_.js",
+    "category": "spa_assets",
+    "size": 2617,
+    "status": 200,
+    "path": "js/spa_assets/DateTimeUtils-mTRPePQ_.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/UTCDate-X0j4GFGV.js",
+    "filename": "UTCDate-X0j4GFGV.js",
+    "category": "spa_assets",
+    "size": 283,
+    "status": 200,
+    "path": "js/spa_assets/UTCDate-X0j4GFGV.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/CitationDomain-8iwDwk4R.js",
+    "filename": "CitationDomain-8iwDwk4R.js",
+    "category": "spa_assets",
+    "size": 43221,
+    "status": 200,
+    "path": "js/spa_assets/CitationDomain-8iwDwk4R.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/Image-D4lTzmnT.js",
+    "filename": "Image-D4lTzmnT.js",
+    "category": "spa_assets",
+    "size": 5335,
+    "status": 200,
+    "path": "js/spa_assets/Image-D4lTzmnT.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/index-DLoiC5mb.js",
+    "filename": "index-DLoiC5mb.js",
+    "category": "spa_assets",
+    "size": 4711,
+    "status": 200,
+    "path": "js/spa_assets/index-DLoiC5mb.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/index-C8UQH0KD.js",
+    "filename": "index-C8UQH0KD.js",
+    "category": "spa_assets",
+    "size": 334,
+    "status": 200,
+    "path": "js/spa_assets/index-C8UQH0KD.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/index-BylU1bWp.js",
+    "filename": "index-BylU1bWp.js",
+    "category": "spa_assets",
+    "size": 3454,
+    "status": 200,
+    "path": "js/spa_assets/index-BylU1bWp.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/Checkbox-uFiymtL0.js",
+    "filename": "Checkbox-uFiymtL0.js",
+    "category": "spa_assets",
+    "size": 1178,
+    "status": 200,
+    "path": "js/spa_assets/Checkbox-uFiymtL0.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/Switch-Df-pC_m2.js",
+    "filename": "Switch-Df-pC_m2.js",
+    "category": "spa_assets",
+    "size": 3459,
+    "status": 200,
+    "path": "js/spa_assets/Switch-Df-pC_m2.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/Menu-DHBE-UKe.js",
+    "filename": "Menu-DHBE-UKe.js",
+    "category": "spa_assets",
+    "size": 32367,
+    "status": 200,
+    "path": "js/spa_assets/Menu-DHBE-UKe.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/Badge-C5eABXog.js",
+    "filename": "Badge-C5eABXog.js",
+    "category": "spa_assets",
+    "size": 750,
+    "status": 200,
+    "path": "js/spa_assets/Badge-C5eABXog.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/ScrollArea-DsjQvcQd.js",
+    "filename": "ScrollArea-DsjQvcQd.js",
+    "category": "spa_assets",
+    "size": 2310,
+    "status": 200,
+    "path": "js/spa_assets/ScrollArea-DsjQvcQd.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/DropDownMenu-HkG4-4S3.js",
+    "filename": "DropDownMenu-HkG4-4S3.js",
+    "category": "spa_assets",
+    "size": 12442,
+    "status": 200,
+    "path": "js/spa_assets/DropDownMenu-HkG4-4S3.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/connectorMutations-ZdZSYSMA.js",
+    "filename": "connectorMutations-ZdZSYSMA.js",
+    "category": "spa_assets",
+    "size": 2885,
+    "status": 200,
+    "path": "js/spa_assets/connectorMutations-ZdZSYSMA.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useFileConnectorUrl-D5ud58cG.js",
+    "filename": "useFileConnectorUrl-D5ud58cG.js",
+    "category": "spa_assets",
+    "size": 1129,
+    "status": 200,
+    "path": "js/spa_assets/useFileConnectorUrl-D5ud58cG.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useGetSettingsRoute-Dw_XDZVP.js",
+    "filename": "useGetSettingsRoute-Dw_XDZVP.js",
+    "category": "spa_assets",
+    "size": 216,
+    "status": 200,
+    "path": "js/spa_assets/useGetSettingsRoute-Dw_XDZVP.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useOAuthReferrer-ClfYIPJf.js",
+    "filename": "useOAuthReferrer-ClfYIPJf.js",
+    "category": "spa_assets",
+    "size": 983,
+    "status": 200,
+    "path": "js/spa_assets/useOAuthReferrer-ClfYIPJf.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/fileUtils-8BOFx52i.js",
+    "filename": "fileUtils-8BOFx52i.js",
+    "category": "spa_assets",
+    "size": 10198,
+    "status": 200,
+    "path": "js/spa_assets/fileUtils-8BOFx52i.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useBrandedVisitorGate-Cmwqd3wI.js",
+    "filename": "useBrandedVisitorGate-Cmwqd3wI.js",
+    "category": "spa_assets",
+    "size": 1956,
+    "status": 200,
+    "path": "js/spa_assets/useBrandedVisitorGate-Cmwqd3wI.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/index-ah7kvVNA.js",
+    "filename": "index-ah7kvVNA.js",
+    "category": "spa_assets",
+    "size": 3275,
+    "status": 200,
+    "path": "js/spa_assets/index-ah7kvVNA.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/consts-CtVL5_BO.js",
+    "filename": "consts-CtVL5_BO.js",
+    "category": "spa_assets",
+    "size": 132,
+    "status": 200,
+    "path": "js/spa_assets/consts-CtVL5_BO.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useCueImpressionLimit-CS5wzvCs.js",
+    "filename": "useCueImpressionLimit-CS5wzvCs.js",
+    "category": "spa_assets",
+    "size": 703,
+    "status": 200,
+    "path": "js/spa_assets/useCueImpressionLimit-CS5wzvCs.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/SegmentedControlOption-0zotoz8P.js",
+    "filename": "SegmentedControlOption-0zotoz8P.js",
+    "category": "spa_assets",
+    "size": 6847,
+    "status": 200,
+    "path": "js/spa_assets/SegmentedControlOption-0zotoz8P.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useConnectorsDirectApiSearchVariation-BrZfJ9i1.js",
+    "filename": "useConnectorsDirectApiSearchVariation-BrZfJ9i1.js",
+    "category": "spa_assets",
+    "size": 457,
+    "status": 200,
+    "path": "js/spa_assets/useConnectorsDirectApiSearchVariation-BrZfJ9i1.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/stringUtils-CGwgpSsi.js",
+    "filename": "stringUtils-CGwgpSsi.js",
+    "category": "spa_assets",
+    "size": 625,
+    "status": 200,
+    "path": "js/spa_assets/stringUtils-CGwgpSsi.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useSources-PbBoU2Y3.js",
+    "filename": "useSources-PbBoU2Y3.js",
+    "category": "spa_assets",
+    "size": 3717,
+    "status": 200,
+    "path": "js/spa_assets/useSources-PbBoU2Y3.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/Avatar--hxKmb5O.js",
+    "filename": "Avatar--hxKmb5O.js",
+    "category": "spa_assets",
+    "size": 2462,
+    "status": 200,
+    "path": "js/spa_assets/Avatar--hxKmb5O.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/connectorDetails-CFY7QwUX.js",
+    "filename": "connectorDetails-CFY7QwUX.js",
+    "category": "spa_assets",
+    "size": 18749,
+    "status": 200,
+    "path": "js/spa_assets/connectorDetails-CFY7QwUX.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useConnectorDetails-CsLrC0nZ.js",
+    "filename": "useConnectorDetails-CsLrC0nZ.js",
+    "category": "spa_assets",
+    "size": 1574,
+    "status": 200,
+    "path": "js/spa_assets/useConnectorDetails-CsLrC0nZ.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useSourceActivity-BWsWgOTe.js",
+    "filename": "useSourceActivity-BWsWgOTe.js",
+    "category": "spa_assets",
+    "size": 476,
+    "status": 200,
+    "path": "js/spa_assets/useSourceActivity-BWsWgOTe.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/SourcesMenu-xMr6GDIG.js",
+    "filename": "SourcesMenu-xMr6GDIG.js",
+    "category": "spa_assets",
+    "size": 47170,
+    "status": 200,
+    "path": "js/spa_assets/SourcesMenu-xMr6GDIG.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useGoogleDrivePicker-DtCnsiVd.js",
+    "filename": "useGoogleDrivePicker-DtCnsiVd.js",
+    "category": "spa_assets",
+    "size": 11787,
+    "status": 200,
+    "path": "js/spa_assets/useGoogleDrivePicker-DtCnsiVd.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useMicrosoftPickerModal-CVlcIgFM.js",
+    "filename": "useMicrosoftPickerModal-CVlcIgFM.js",
+    "category": "spa_assets",
+    "size": 2445,
+    "status": 200,
+    "path": "js/spa_assets/useMicrosoftPickerModal-CVlcIgFM.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/ConditionalWrapper-Ea5_kEio.js",
+    "filename": "ConditionalWrapper-Ea5_kEio.js",
+    "category": "spa_assets",
+    "size": 26936,
+    "status": 200,
+    "path": "js/spa_assets/ConditionalWrapper-Ea5_kEio.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useSharedSourceSelection-DlbVDqfO.js",
+    "filename": "useSharedSourceSelection-DlbVDqfO.js",
+    "category": "spa_assets",
+    "size": 3082,
+    "status": 200,
+    "path": "js/spa_assets/useSharedSourceSelection-DlbVDqfO.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/react-spring_web.modern-N_j-tlbR.js",
+    "filename": "react-spring_web.modern-N_j-tlbR.js",
+    "category": "spa_assets",
+    "size": 43211,
+    "status": 200,
+    "path": "js/spa_assets/react-spring_web.modern-N_j-tlbR.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/askInputMenu-TmOo_pxK.js",
+    "filename": "askInputMenu-TmOo_pxK.js",
+    "category": "spa_assets",
+    "size": 17886,
+    "status": 200,
+    "path": "js/spa_assets/askInputMenu-TmOo_pxK.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/IncognitoIcon-DRjlYWiS.js",
+    "filename": "IncognitoIcon-DRjlYWiS.js",
+    "category": "spa_assets",
+    "size": 2283,
+    "status": 200,
+    "path": "js/spa_assets/IncognitoIcon-DRjlYWiS.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/objectWithoutPropertiesLoose-Cv5OCJ0e.js",
+    "filename": "objectWithoutPropertiesLoose-Cv5OCJ0e.js",
+    "category": "spa_assets",
+    "size": 498,
+    "status": 200,
+    "path": "js/spa_assets/objectWithoutPropertiesLoose-Cv5OCJ0e.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/react-textarea-autosize.browser.esm-BairCocq.js",
+    "filename": "react-textarea-autosize.browser.esm-BairCocq.js",
+    "category": "spa_assets",
+    "size": 3540,
+    "status": 200,
+    "path": "js/spa_assets/react-textarea-autosize.browser.esm-BairCocq.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/lexical-DJCOkf2n.js",
+    "filename": "lexical-DJCOkf2n.js",
+    "category": "spa_assets",
+    "size": 268249,
+    "status": 200,
+    "path": "js/spa_assets/lexical-DJCOkf2n.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/FormError-B1d_xR1e.js",
+    "filename": "FormError-B1d_xR1e.js",
+    "category": "spa_assets",
+    "size": 360,
+    "status": 200,
+    "path": "js/spa_assets/FormError-B1d_xR1e.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/FormItemHeader-BVXE-K-n.js",
+    "filename": "FormItemHeader-BVXE-K-n.js",
+    "category": "spa_assets",
+    "size": 956,
+    "status": 200,
+    "path": "js/spa_assets/FormItemHeader-BVXE-K-n.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/Input-CoXD8zAX.js",
+    "filename": "Input-CoXD8zAX.js",
+    "category": "spa_assets",
+    "size": 5678,
+    "status": 200,
+    "path": "js/spa_assets/Input-CoXD8zAX.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/ResizableInputV2-BFI7V5-z.js",
+    "filename": "ResizableInputV2-BFI7V5-z.js",
+    "category": "spa_assets",
+    "size": 23942,
+    "status": 200,
+    "path": "js/spa_assets/ResizableInputV2-BFI7V5-z.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/SuggestDropdown-DqpsHV8A.js",
+    "filename": "SuggestDropdown-DqpsHV8A.js",
+    "category": "spa_assets",
+    "size": 13213,
+    "status": 200,
+    "path": "js/spa_assets/SuggestDropdown-DqpsHV8A.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/domHelpers-CZ5ovM57.js",
+    "filename": "domHelpers-CZ5ovM57.js",
+    "category": "spa_assets",
+    "size": 334,
+    "status": 200,
+    "path": "js/spa_assets/domHelpers-CZ5ovM57.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/tasksKeys-CbR5ZjcD.js",
+    "filename": "tasksKeys-CbR5ZjcD.js",
+    "category": "spa_assets",
+    "size": 607,
+    "status": 200,
+    "path": "js/spa_assets/tasksKeys-CbR5ZjcD.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/constants-DCve2gpC.js",
+    "filename": "constants-DCve2gpC.js",
+    "category": "spa_assets",
+    "size": 224,
+    "status": 200,
+    "path": "js/spa_assets/constants-DCve2gpC.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useShortcutsTypeaheadQuery-Cl3sAc8U.js",
+    "filename": "useShortcutsTypeaheadQuery-Cl3sAc8U.js",
+    "category": "spa_assets",
+    "size": 865,
+    "status": 200,
+    "path": "js/spa_assets/useShortcutsTypeaheadQuery-Cl3sAc8U.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useSuggestDropdownKeyDown-Dls2nJrS.js",
+    "filename": "useSuggestDropdownKeyDown-Dls2nJrS.js",
+    "category": "spa_assets",
+    "size": 1849,
+    "status": 200,
+    "path": "js/spa_assets/useSuggestDropdownKeyDown-Dls2nJrS.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useAskInput-DKEsax4w.js",
+    "filename": "useAskInput-DKEsax4w.js",
+    "category": "spa_assets",
+    "size": 22331,
+    "status": 200,
+    "path": "js/spa_assets/useAskInput-DKEsax4w.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useModelMenuItems-CTsaCCnQ.js",
+    "filename": "useModelMenuItems-CTsaCCnQ.js",
+    "category": "spa_assets",
+    "size": 5667,
+    "status": 200,
+    "path": "js/spa_assets/useModelMenuItems-CTsaCCnQ.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/SearchModelMenu-D9OcQWqj.js",
+    "filename": "SearchModelMenu-D9OcQWqj.js",
+    "category": "spa_assets",
+    "size": 8631,
+    "status": 200,
+    "path": "js/spa_assets/SearchModelMenu-D9OcQWqj.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/historySearchParams-DDKzrE2v.js",
+    "filename": "historySearchParams-DDKzrE2v.js",
+    "category": "spa_assets",
+    "size": 486,
+    "status": 200,
+    "path": "js/spa_assets/historySearchParams-DDKzrE2v.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/AnimatedGradientBorderWrapper-DioiGcWE.js",
+    "filename": "AnimatedGradientBorderWrapper-DioiGcWE.js",
+    "category": "spa_assets",
+    "size": 1482,
+    "status": 200,
+    "path": "js/spa_assets/AnimatedGradientBorderWrapper-DioiGcWE.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/DropZone-BYJkWXlD.js",
+    "filename": "DropZone-BYJkWXlD.js",
+    "category": "spa_assets",
+    "size": 2694,
+    "status": 200,
+    "path": "js/spa_assets/DropZone-BYJkWXlD.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/AskInput-DzH_2e8Q.js",
+    "filename": "AskInput-DzH_2e8Q.js",
+    "category": "spa_assets",
+    "size": 39236,
+    "status": 200,
+    "path": "js/spa_assets/AskInput-DzH_2e8Q.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useSubmitHandlerWithSBS-CyUUjTHo.js",
+    "filename": "useSubmitHandlerWithSBS-CyUUjTHo.js",
+    "category": "spa_assets",
+    "size": 820,
+    "status": 200,
+    "path": "js/spa_assets/useSubmitHandlerWithSBS-CyUUjTHo.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useHomeAskInput-D7chzHN2.js",
+    "filename": "useHomeAskInput-D7chzHN2.js",
+    "category": "spa_assets",
+    "size": 2412,
+    "status": 200,
+    "path": "js/spa_assets/useHomeAskInput-D7chzHN2.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/HomepageComponentsProvider-DbEw1c3Z.js",
+    "filename": "HomepageComponentsProvider-DbEw1c3Z.js",
+    "category": "spa_assets",
+    "size": 459,
+    "status": 200,
+    "path": "js/spa_assets/HomepageComponentsProvider-DbEw1c3Z.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useHasMounted-CFc6vHtM.js",
+    "filename": "useHasMounted-CFc6vHtM.js",
+    "category": "spa_assets",
+    "size": 243,
+    "status": 200,
+    "path": "js/spa_assets/useHasMounted-CFc6vHtM.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/shortcut-Enk1-9TG.js",
+    "filename": "shortcut-Enk1-9TG.js",
+    "category": "spa_assets",
+    "size": 472,
+    "status": 200,
+    "path": "js/spa_assets/shortcut-Enk1-9TG.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/spaces-60BPfAAI.js",
+    "filename": "spaces-60BPfAAI.js",
+    "category": "spa_assets",
+    "size": 143,
+    "status": 200,
+    "path": "js/spa_assets/spaces-60BPfAAI.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useRecentCollectionsQuery-E0FiN3do.js",
+    "filename": "useRecentCollectionsQuery-E0FiN3do.js",
+    "category": "spa_assets",
+    "size": 1129,
+    "status": 200,
+    "path": "js/spa_assets/useRecentCollectionsQuery-E0FiN3do.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/ArticleResultsProvider-K-NOQ3C0.js",
+    "filename": "ArticleResultsProvider-K-NOQ3C0.js",
+    "category": "spa_assets",
+    "size": 5701,
+    "status": 200,
+    "path": "js/spa_assets/ArticleResultsProvider-K-NOQ3C0.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/discoverKeys-Bx_VBcv4.js",
+    "filename": "discoverKeys-Bx_VBcv4.js",
+    "category": "spa_assets",
+    "size": 292,
+    "status": 200,
+    "path": "js/spa_assets/discoverKeys-Bx_VBcv4.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useCollectionMutations-DwoAxMkF.js",
+    "filename": "useCollectionMutations-DwoAxMkF.js",
+    "category": "spa_assets",
+    "size": 17948,
+    "status": 200,
+    "path": "js/spa_assets/useCollectionMutations-DwoAxMkF.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useMentionTypeaheadOptions-htkLqvV5.js",
+    "filename": "useMentionTypeaheadOptions-htkLqvV5.js",
+    "category": "spa_assets",
+    "size": 8440,
+    "status": 200,
+    "path": "js/spa_assets/useMentionTypeaheadOptions-htkLqvV5.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/enterpriseTiers-BXHg5cVI.js",
+    "filename": "enterpriseTiers-BXHg5cVI.js",
+    "category": "spa_assets",
+    "size": 494,
+    "status": 200,
+    "path": "js/spa_assets/enterpriseTiers-BXHg5cVI.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/sheerid-constants-Bv84p4h0.js",
+    "filename": "sheerid-constants-Bv84p4h0.js",
+    "category": "spa_assets",
+    "size": 242,
+    "status": 200,
+    "path": "js/spa_assets/sheerid-constants-Bv84p4h0.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useUrlModalHandler-DfpwvXvh.js",
+    "filename": "useUrlModalHandler-DfpwvXvh.js",
+    "category": "spa_assets",
+    "size": 3174,
+    "status": 200,
+    "path": "js/spa_assets/useUrlModalHandler-DfpwvXvh.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useAllowedFloatingUpsellPath-CGlpRmpp.js",
+    "filename": "useAllowedFloatingUpsellPath-CGlpRmpp.js",
+    "category": "spa_assets",
+    "size": 243,
+    "status": 200,
+    "path": "js/spa_assets/useAllowedFloatingUpsellPath-CGlpRmpp.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useShouldShowHomeProBadge-BNHiWa4z.js",
+    "filename": "useShouldShowHomeProBadge-BNHiWa4z.js",
+    "category": "spa_assets",
+    "size": 1283,
+    "status": 200,
+    "path": "js/spa_assets/useShouldShowHomeProBadge-BNHiWa4z.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/getCometDownloadURL-DlG-TDK8.js",
+    "filename": "getCometDownloadURL-DlG-TDK8.js",
+    "category": "spa_assets",
+    "size": 390,
+    "status": 200,
+    "path": "js/spa_assets/getCometDownloadURL-DlG-TDK8.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useAgentHandlerLink-DmauQ5fp.js",
+    "filename": "useAgentHandlerLink-DmauQ5fp.js",
+    "category": "spa_assets",
+    "size": 705,
+    "status": 200,
+    "path": "js/spa_assets/useAgentHandlerLink-DmauQ5fp.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useCreateNewSpace-B4tsUtK6.js",
+    "filename": "useCreateNewSpace-B4tsUtK6.js",
+    "category": "spa_assets",
+    "size": 1035,
+    "status": 200,
+    "path": "js/spa_assets/useCreateNewSpace-B4tsUtK6.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useDisconnectConnector-CoR_zv1A.js",
+    "filename": "useDisconnectConnector-CoR_zv1A.js",
+    "category": "spa_assets",
+    "size": 1504,
+    "status": 200,
+    "path": "js/spa_assets/useDisconnectConnector-CoR_zv1A.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/createCheckoutSession-CaqCXHDo.js",
+    "filename": "createCheckoutSession-CaqCXHDo.js",
+    "category": "spa_assets",
+    "size": 4989,
+    "status": 200,
+    "path": "js/spa_assets/createCheckoutSession-CaqCXHDo.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/academicKeys-BRSmgl-D.js",
+    "filename": "academicKeys-BRSmgl-D.js",
+    "category": "spa_assets",
+    "size": 379,
+    "status": 200,
+    "path": "js/spa_assets/academicKeys-BRSmgl-D.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/MultiStepProvider-BHu1ho7S.js",
+    "filename": "MultiStepProvider-BHu1ho7S.js",
+    "category": "spa_assets",
+    "size": 1906,
+    "status": 200,
+    "path": "js/spa_assets/MultiStepProvider-BHu1ho7S.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useStudentPaywall-Bkoh60s9.js",
+    "filename": "useStudentPaywall-Bkoh60s9.js",
+    "category": "spa_assets",
+    "size": 10948,
+    "status": 200,
+    "path": "js/spa_assets/useStudentPaywall-Bkoh60s9.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/markUpsellAsInteracted-Rhf1Gfmu.js",
+    "filename": "markUpsellAsInteracted-Rhf1Gfmu.js",
+    "category": "spa_assets",
+    "size": 832,
+    "status": 200,
+    "path": "js/spa_assets/markUpsellAsInteracted-Rhf1Gfmu.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useUpsellActions-3kyHwiJF.js",
+    "filename": "useUpsellActions-3kyHwiJF.js",
+    "category": "spa_assets",
+    "size": 16041,
+    "status": 200,
+    "path": "js/spa_assets/useUpsellActions-3kyHwiJF.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/LearnMoreButton-CHMStD__.js",
+    "filename": "LearnMoreButton-CHMStD__.js",
+    "category": "spa_assets",
+    "size": 938,
+    "status": 200,
+    "path": "js/spa_assets/LearnMoreButton-CHMStD__.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/nativeBridge-CiuCq_QK.js",
+    "filename": "nativeBridge-CiuCq_QK.js",
+    "category": "spa_assets",
+    "size": 1128,
+    "status": 200,
+    "path": "js/spa_assets/nativeBridge-CiuCq_QK.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/CanonicalProvider-DNnCT5wW.js",
+    "filename": "CanonicalProvider-DNnCT5wW.js",
+    "category": "spa_assets",
+    "size": 1181,
+    "status": 200,
+    "path": "js/spa_assets/CanonicalProvider-DNnCT5wW.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/MobileSidebarButton-CSUc58gJ.js",
+    "filename": "MobileSidebarButton-CSUc58gJ.js",
+    "category": "spa_assets",
+    "size": 536,
+    "status": 200,
+    "path": "js/spa_assets/MobileSidebarButton-CSUc58gJ.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/getRefreshOrgSubscriptionStatus-D8sXk4qJ.js",
+    "filename": "getRefreshOrgSubscriptionStatus-D8sXk4qJ.js",
+    "category": "spa_assets",
+    "size": 544,
+    "status": 200,
+    "path": "js/spa_assets/getRefreshOrgSubscriptionStatus-D8sXk4qJ.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/Shimmer-C03JuHpT.js",
+    "filename": "Shimmer-C03JuHpT.js",
+    "category": "spa_assets",
+    "size": 613,
+    "status": 200,
+    "path": "js/spa_assets/Shimmer-C03JuHpT.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useIsExistingCometUser-CP7UF_XX.js",
+    "filename": "useIsExistingCometUser-CP7UF_XX.js",
+    "category": "spa_assets",
+    "size": 1033,
+    "status": 200,
+    "path": "js/spa_assets/useIsExistingCometUser-CP7UF_XX.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/home-DE68HD14.js",
+    "filename": "home-DE68HD14.js",
+    "category": "spa_assets",
+    "size": 24205,
+    "status": 200,
+    "path": "js/spa_assets/home-DE68HD14.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/translations-ru-RU-Fm7stgDm.js",
+    "filename": "translations-ru-RU-Fm7stgDm.js",
+    "category": "spa_assets",
+    "size": 358477,
+    "status": 200,
+    "path": "js/spa_assets/translations-ru-RU-Fm7stgDm.js"
+  },
+  {
+    "url": "https://www.perplexity.ai/cdn-cgi/challenge-platform/h/b/scripts/jsd/d251aa49a8a3/main.js?",
+    "filename": "main.js",
+    "category": "other_js",
+    "size": 20655,
+    "status": 200,
+    "path": "js/other_js/main.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/index-DAWIHVf8.js",
+    "filename": "index-DAWIHVf8.js",
+    "category": "spa_assets",
+    "size": 99000,
+    "status": 200,
+    "path": "js/spa_assets/index-DAWIHVf8.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/VisRefresh2026FontsEffect-B7KZUJb9.js",
+    "filename": "VisRefresh2026FontsEffect-B7KZUJb9.js",
+    "category": "spa_assets",
+    "size": 1135,
+    "status": 200,
+    "path": "js/spa_assets/VisRefresh2026FontsEffect-B7KZUJb9.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/DebugStreamSideEffects-BkvVO7cW.js",
+    "filename": "DebugStreamSideEffects-BkvVO7cW.js",
+    "category": "spa_assets",
+    "size": 3289,
+    "status": 200,
+    "path": "js/spa_assets/DebugStreamSideEffects-BkvVO7cW.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/DebugDisplay-Dv8KeOsD.js",
+    "filename": "DebugDisplay-Dv8KeOsD.js",
+    "category": "spa_assets",
+    "size": 4355,
+    "status": 200,
+    "path": "js/spa_assets/DebugDisplay-Dv8KeOsD.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/DebugModeActivator-DS1opSJR.js",
+    "filename": "DebugModeActivator-DS1opSJR.js",
+    "category": "spa_assets",
+    "size": 1200,
+    "status": 200,
+    "path": "js/spa_assets/DebugModeActivator-DS1opSJR.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/SidebarMenu-DxhrOdLn.js",
+    "filename": "SidebarMenu-DxhrOdLn.js",
+    "category": "spa_assets",
+    "size": 3688,
+    "status": 200,
+    "path": "js/spa_assets/SidebarMenu-DxhrOdLn.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/SidebarNotifications-CURpdGBM.js",
+    "filename": "SidebarNotifications-CURpdGBM.js",
+    "category": "spa_assets",
+    "size": 17239,
+    "status": 200,
+    "path": "js/spa_assets/SidebarNotifications-CURpdGBM.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useAppNotificationsVariation--ydnQWm5.js",
+    "filename": "useAppNotificationsVariation--ydnQWm5.js",
+    "category": "spa_assets",
+    "size": 410,
+    "status": 200,
+    "path": "js/spa_assets/useAppNotificationsVariation--ydnQWm5.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/getUserTask-BzikuX4z.js",
+    "filename": "getUserTask-BzikuX4z.js",
+    "category": "spa_assets",
+    "size": 547,
+    "status": 200,
+    "path": "js/spa_assets/getUserTask-BzikuX4z.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useTasksSettingsUiRedesignVariation-DepG2nb5.js",
+    "filename": "useTasksSettingsUiRedesignVariation-DepG2nb5.js",
+    "category": "spa_assets",
+    "size": 426,
+    "status": 200,
+    "path": "js/spa_assets/useTasksSettingsUiRedesignVariation-DepG2nb5.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/updateUserTask-qc_feBMN.js",
+    "filename": "updateUserTask-qc_feBMN.js",
+    "category": "spa_assets",
+    "size": 445,
+    "status": 200,
+    "path": "js/spa_assets/updateUserTask-qc_feBMN.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useTasksPriceAlertsUiRedesignVariation-DJQaMjnQ.js",
+    "filename": "useTasksPriceAlertsUiRedesignVariation-DJQaMjnQ.js",
+    "category": "spa_assets",
+    "size": 438,
+    "status": 200,
+    "path": "js/spa_assets/useTasksPriceAlertsUiRedesignVariation-DJQaMjnQ.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/SidebarAccountMenu-Dgnb9twW.js",
+    "filename": "SidebarAccountMenu-Dgnb9twW.js",
+    "category": "spa_assets",
+    "size": 2819,
+    "status": 200,
+    "path": "js/spa_assets/SidebarAccountMenu-Dgnb9twW.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/SideBarBottomPopover-D81AvqY6.js",
+    "filename": "SideBarBottomPopover-D81AvqY6.js",
+    "category": "spa_assets",
+    "size": 7353,
+    "status": 200,
+    "path": "js/spa_assets/SideBarBottomPopover-D81AvqY6.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/Username-C61DXxo_.js",
+    "filename": "Username-C61DXxo_.js",
+    "category": "spa_assets",
+    "size": 2623,
+    "status": 200,
+    "path": "js/spa_assets/Username-C61DXxo_.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/PersonalSearchSettingsMain-CRpnFf6u.js",
+    "filename": "PersonalSearchSettingsMain-CRpnFf6u.js",
+    "category": "spa_assets",
+    "size": 9329,
+    "status": 200,
+    "path": "js/spa_assets/PersonalSearchSettingsMain-CRpnFf6u.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useNewMemoryV2OverviewPageVariation-BqU-sGJ3.js",
+    "filename": "useNewMemoryV2OverviewPageVariation-BqU-sGJ3.js",
+    "category": "spa_assets",
+    "size": 432,
+    "status": 200,
+    "path": "js/spa_assets/useNewMemoryV2OverviewPageVariation-BqU-sGJ3.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/billingKeys-BB3zBbql.js",
+    "filename": "billingKeys-BB3zBbql.js",
+    "category": "spa_assets",
+    "size": 596,
+    "status": 200,
+    "path": "js/spa_assets/billingKeys-BB3zBbql.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/SettingsGroup-hoPQLSH-.js",
+    "filename": "SettingsGroup-hoPQLSH-.js",
+    "category": "spa_assets",
+    "size": 1117,
+    "status": 200,
+    "path": "js/spa_assets/SettingsGroup-hoPQLSH-.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/SettingsRow-DeyeUNhQ.js",
+    "filename": "SettingsRow-DeyeUNhQ.js",
+    "category": "spa_assets",
+    "size": 587,
+    "status": 200,
+    "path": "js/spa_assets/SettingsRow-DeyeUNhQ.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/SidebarUpgradeButton-CItpX4vC.js",
+    "filename": "SidebarUpgradeButton-CItpX4vC.js",
+    "category": "spa_assets",
+    "size": 1471,
+    "status": 200,
+    "path": "js/spa_assets/SidebarUpgradeButton-CItpX4vC.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/SidebarDownloadButton-D3VnZiL1.js",
+    "filename": "SidebarDownloadButton-D3VnZiL1.js",
+    "category": "spa_assets",
+    "size": 1497,
+    "status": 200,
+    "path": "js/spa_assets/SidebarDownloadButton-D3VnZiL1.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/AppBanner-CIGqprdc.js",
+    "filename": "AppBanner-CIGqprdc.js",
+    "category": "spa_assets",
+    "size": 8115,
+    "status": 200,
+    "path": "js/spa_assets/AppBanner-CIGqprdc.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/icons-szOhj508.js",
+    "filename": "icons-szOhj508.js",
+    "category": "spa_assets",
+    "size": 488,
+    "status": 200,
+    "path": "js/spa_assets/icons-szOhj508.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/MentionsPlugin-DeFGogy8.js",
+    "filename": "MentionsPlugin-DeFGogy8.js",
+    "category": "spa_assets",
+    "size": 7058,
+    "status": 200,
+    "path": "js/spa_assets/MentionsPlugin-DeFGogy8.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/AutoLinkPlugin-D4mZ1KVC.js",
+    "filename": "AutoLinkPlugin-D4mZ1KVC.js",
+    "category": "spa_assets",
+    "size": 1402,
+    "status": 200,
+    "path": "js/spa_assets/AutoLinkPlugin-D4mZ1KVC.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/LinkPlugin-BUAa-OTK.js",
+    "filename": "LinkPlugin-BUAa-OTK.js",
+    "category": "spa_assets",
+    "size": 578,
+    "status": 200,
+    "path": "js/spa_assets/LinkPlugin-BUAa-OTK.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/HomepageWidgets-CV5kWKVh.js",
+    "filename": "HomepageWidgets-CV5kWKVh.js",
+    "category": "spa_assets",
+    "size": 8257,
+    "status": 200,
+    "path": "js/spa_assets/HomepageWidgets-CV5kWKVh.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/QueryPrimerHomepageWidget-DpquR2Bx.js",
+    "filename": "QueryPrimerHomepageWidget-DpquR2Bx.js",
+    "category": "spa_assets",
+    "size": 1668,
+    "status": 200,
+    "path": "js/spa_assets/QueryPrimerHomepageWidget-DpquR2Bx.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/AnimateHeight-CcD-oJ_k.js",
+    "filename": "AnimateHeight-CcD-oJ_k.js",
+    "category": "spa_assets",
+    "size": 892,
+    "status": 200,
+    "path": "js/spa_assets/AnimateHeight-CcD-oJ_k.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/constants-DmoOyKW2.js",
+    "filename": "constants-DmoOyKW2.js",
+    "category": "spa_assets",
+    "size": 283,
+    "status": 200,
+    "path": "js/spa_assets/constants-DmoOyKW2.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/utils-Cn_RTZLb.js",
+    "filename": "utils-Cn_RTZLb.js",
+    "category": "spa_assets",
+    "size": 285,
+    "status": 200,
+    "path": "js/spa_assets/utils-Cn_RTZLb.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/SplashScreen-C5RAy59u.js",
+    "filename": "SplashScreen-C5RAy59u.js",
+    "category": "spa_assets",
+    "size": 5838,
+    "status": 200,
+    "path": "js/spa_assets/SplashScreen-C5RAy59u.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/Reviews-zbQ9J9Kw.js",
+    "filename": "Reviews-zbQ9J9Kw.js",
+    "category": "spa_assets",
+    "size": 7009,
+    "status": 200,
+    "path": "js/spa_assets/Reviews-zbQ9J9Kw.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/LoginModalInner-6Ti5sWrO.js",
+    "filename": "LoginModalInner-6Ti5sWrO.js",
+    "category": "spa_assets",
+    "size": 12000,
+    "status": 200,
+    "path": "js/spa_assets/LoginModalInner-6Ti5sWrO.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/test-ids-VnDwzMft.js",
+    "filename": "test-ids-VnDwzMft.js",
+    "category": "spa_assets",
+    "size": 484,
+    "status": 200,
+    "path": "js/spa_assets/test-ids-VnDwzMft.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/AppDownloadQRSkeleton-oB-AM_v-.js",
+    "filename": "AppDownloadQRSkeleton-oB-AM_v-.js",
+    "category": "spa_assets",
+    "size": 355,
+    "status": 200,
+    "path": "js/spa_assets/AppDownloadQRSkeleton-oB-AM_v-.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/FloatingComponents-Be1_MuOT.js",
+    "filename": "FloatingComponents-Be1_MuOT.js",
+    "category": "spa_assets",
+    "size": 8142,
+    "status": 200,
+    "path": "js/spa_assets/FloatingComponents-Be1_MuOT.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useGdprConsent-BYDp874a.js",
+    "filename": "useGdprConsent-BYDp874a.js",
+    "category": "spa_assets",
+    "size": 1529,
+    "status": 200,
+    "path": "js/spa_assets/useGdprConsent-BYDp874a.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/UpsellButton-D1xjslEk.js",
+    "filename": "UpsellButton-D1xjslEk.js",
+    "category": "spa_assets",
+    "size": 2607,
+    "status": 200,
+    "path": "js/spa_assets/UpsellButton-D1xjslEk.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useGetUserIntercomHash-CUoAzTHx.js",
+    "filename": "useGetUserIntercomHash-CUoAzTHx.js",
+    "category": "spa_assets",
+    "size": 388,
+    "status": 200,
+    "path": "js/spa_assets/useGetUserIntercomHash-CUoAzTHx.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/title-BXnKZ3Tj.js",
+    "filename": "title-BXnKZ3Tj.js",
+    "category": "spa_assets",
+    "size": 28320,
+    "status": 200,
+    "path": "js/spa_assets/title-BXnKZ3Tj.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useSports-CdrHAFUx.js",
+    "filename": "useSports-CdrHAFUx.js",
+    "category": "spa_assets",
+    "size": 1912,
+    "status": 200,
+    "path": "js/spa_assets/useSports-CdrHAFUx.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/event-DYbwlSnw.js",
+    "filename": "event-DYbwlSnw.js",
+    "category": "spa_assets",
+    "size": 5153,
+    "status": 200,
+    "path": "js/spa_assets/event-DYbwlSnw.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useSportsEvent-D5xZO3U1.js",
+    "filename": "useSportsEvent-D5xZO3U1.js",
+    "category": "spa_assets",
+    "size": 3009,
+    "status": 200,
+    "path": "js/spa_assets/useSportsEvent-D5xZO3U1.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/consts-CQC6WeYS.js",
+    "filename": "consts-CQC6WeYS.js",
+    "category": "spa_assets",
+    "size": 203,
+    "status": 200,
+    "path": "js/spa_assets/consts-CQC6WeYS.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/event-BDdMFqIJ.js",
+    "filename": "event-BDdMFqIJ.js",
+    "category": "spa_assets",
+    "size": 1762,
+    "status": 200,
+    "path": "js/spa_assets/event-BDdMFqIJ.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/team-B4Rb98KO.js",
+    "filename": "team-B4Rb98KO.js",
+    "category": "spa_assets",
+    "size": 2694,
+    "status": 200,
+    "path": "js/spa_assets/team-B4Rb98KO.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/usePasteShortcutQuery-DaVxv-fd.js",
+    "filename": "usePasteShortcutQuery-DaVxv-fd.js",
+    "category": "spa_assets",
+    "size": 873,
+    "status": 200,
+    "path": "js/spa_assets/usePasteShortcutQuery-DaVxv-fd.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useHotelData-CKWvSTSK.js",
+    "filename": "useHotelData-CKWvSTSK.js",
+    "category": "spa_assets",
+    "size": 642,
+    "status": 200,
+    "path": "js/spa_assets/useHotelData-CKWvSTSK.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/getNewswireDocumentByDocumentId-CUvHjTXT.js",
+    "filename": "getNewswireDocumentByDocumentId-CUvHjTXT.js",
+    "category": "spa_assets",
+    "size": 1501,
+    "status": 200,
+    "path": "js/spa_assets/getNewswireDocumentByDocumentId-CUvHjTXT.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/constants-DPVg-UxZ.js",
+    "filename": "constants-DPVg-UxZ.js",
+    "category": "spa_assets",
+    "size": 172,
+    "status": 200,
+    "path": "js/spa_assets/constants-DPVg-UxZ.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/usePriceAlertQuery-CXzvma1f.js",
+    "filename": "usePriceAlertQuery-CXzvma1f.js",
+    "category": "spa_assets",
+    "size": 788,
+    "status": 200,
+    "path": "js/spa_assets/usePriceAlertQuery-CXzvma1f.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/getPredictionMarkets-BEe6LGqM.js",
+    "filename": "getPredictionMarkets-BEe6LGqM.js",
+    "category": "spa_assets",
+    "size": 2171,
+    "status": 200,
+    "path": "js/spa_assets/getPredictionMarkets-BEe6LGqM.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/ArticleUtils-CG6omRcz.js",
+    "filename": "ArticleUtils-CG6omRcz.js",
+    "category": "spa_assets",
+    "size": 559,
+    "status": 200,
+    "path": "js/spa_assets/ArticleUtils-CG6omRcz.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/tournament-B3S6Zm2W.js",
+    "filename": "tournament-B3S6Zm2W.js",
+    "category": "spa_assets",
+    "size": 1907,
+    "status": 200,
+    "path": "js/spa_assets/tournament-B3S6Zm2W.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/cleanPPLXActionLinks-C51qKX3V.js",
+    "filename": "cleanPPLXActionLinks-C51qKX3V.js",
+    "category": "spa_assets",
+    "size": 288,
+    "status": 200,
+    "path": "js/spa_assets/cleanPPLXActionLinks-C51qKX3V.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/SideContent-CFaAhVSu.js",
+    "filename": "SideContent-CFaAhVSu.js",
+    "category": "spa_assets",
+    "size": 4940,
+    "status": 200,
+    "path": "js/spa_assets/SideContent-CFaAhVSu.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/index-DBEYkvxW.js",
+    "filename": "index-DBEYkvxW.js",
+    "category": "spa_assets",
+    "size": 2420,
+    "status": 200,
+    "path": "js/spa_assets/index-DBEYkvxW.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/workbox-window.prod.es5-CwtvwXb3.js",
+    "filename": "workbox-window.prod.es5-CwtvwXb3.js",
+    "category": "spa_assets",
+    "size": 5878,
+    "status": 200,
+    "path": "js/spa_assets/workbox-window.prod.es5-CwtvwXb3.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/singular-sdk-C08EBV6K.js",
+    "filename": "singular-sdk-C08EBV6K.js",
+    "category": "spa_assets",
+    "size": 117476,
+    "status": 200,
+    "path": "js/spa_assets/singular-sdk-C08EBV6K.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/HomeSidebar-B3xL9RVe.js",
+    "filename": "HomeSidebar-B3xL9RVe.js",
+    "category": "spa_assets",
+    "size": 7489,
+    "status": 200,
+    "path": "js/spa_assets/HomeSidebar-B3xL9RVe.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useBookmarksQuery-db5J5i0O.js",
+    "filename": "useBookmarksQuery-db5J5i0O.js",
+    "category": "spa_assets",
+    "size": 1175,
+    "status": 200,
+    "path": "js/spa_assets/useBookmarksQuery-db5J5i0O.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useGetRecentItemsWithActiveStreams-DIZbjKeJ.js",
+    "filename": "useGetRecentItemsWithActiveStreams-DIZbjKeJ.js",
+    "category": "spa_assets",
+    "size": 639,
+    "status": 200,
+    "path": "js/spa_assets/useGetRecentItemsWithActiveStreams-DIZbjKeJ.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useRecentItemsQuery-CO8oKUds.js",
+    "filename": "useRecentItemsQuery-CO8oKUds.js",
+    "category": "spa_assets",
+    "size": 1490,
+    "status": 200,
+    "path": "js/spa_assets/useRecentItemsQuery-CO8oKUds.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/RecentItems-CIYBPlRU.js",
+    "filename": "RecentItems-CIYBPlRU.js",
+    "category": "spa_assets",
+    "size": 2087,
+    "status": 200,
+    "path": "js/spa_assets/RecentItems-CIYBPlRU.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/markdown-BL9g6T0h.js",
+    "filename": "markdown-BL9g6T0h.js",
+    "category": "spa_assets",
+    "size": 1763,
+    "status": 200,
+    "path": "js/spa_assets/markdown-BL9g6T0h.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/SidebarSubMenu-B3D5q6EX.js",
+    "filename": "SidebarSubMenu-B3D5q6EX.js",
+    "category": "spa_assets",
+    "size": 6307,
+    "status": 200,
+    "path": "js/spa_assets/SidebarSubMenu-B3D5q6EX.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useThreadMutations-DKVlmDr2.js",
+    "filename": "useThreadMutations-DKVlmDr2.js",
+    "category": "spa_assets",
+    "size": 4159,
+    "status": 200,
+    "path": "js/spa_assets/useThreadMutations-DKVlmDr2.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/threadMutations-BuClKo2q.js",
+    "filename": "threadMutations-BuClKo2q.js",
+    "category": "spa_assets",
+    "size": 2265,
+    "status": 200,
+    "path": "js/spa_assets/threadMutations-BuClKo2q.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/DebugModeActivator-DS1opSJR.js?r=1769053708615",
+    "filename": "DebugModeActivator-DS1opSJR.js",
+    "category": "spa_assets",
+    "size": 1200,
+    "status": 200,
+    "path": "js/spa_assets/DebugModeActivator-DS1opSJR.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/DebugStreamSideEffects-BkvVO7cW.js?r=1769053708617",
+    "filename": "DebugStreamSideEffects-BkvVO7cW.js",
+    "category": "spa_assets",
+    "size": 3289,
+    "status": 200,
+    "path": "js/spa_assets/DebugStreamSideEffects-BkvVO7cW.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/Helper-D1Ec4m6K.js",
+    "filename": "Helper-D1Ec4m6K.js",
+    "category": "spa_assets",
+    "size": 9440,
+    "status": 200,
+    "path": "js/spa_assets/Helper-D1Ec4m6K.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/InterfaceLanguageSelect-DIQhPPbH.js",
+    "filename": "InterfaceLanguageSelect-DIQhPPbH.js",
+    "category": "spa_assets",
+    "size": 1219,
+    "status": 200,
+    "path": "js/spa_assets/InterfaceLanguageSelect-DIQhPPbH.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useIntercom-CK33Ebqq.js",
+    "filename": "useIntercom-CK33Ebqq.js",
+    "category": "spa_assets",
+    "size": 2031,
+    "status": 200,
+    "path": "js/spa_assets/useIntercom-CK33Ebqq.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/DebugStreamSideEffects-BkvVO7cW.js?r=1769053710588",
+    "filename": "DebugStreamSideEffects-BkvVO7cW.js",
+    "category": "spa_assets",
+    "size": 3289,
+    "status": 200,
+    "path": "js/spa_assets/DebugStreamSideEffects-BkvVO7cW.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/DebugModeActivator-DS1opSJR.js?r=1769053710589",
+    "filename": "DebugModeActivator-DS1opSJR.js",
+    "category": "spa_assets",
+    "size": 1200,
+    "status": 200,
+    "path": "js/spa_assets/DebugModeActivator-DS1opSJR.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/VoiceToVoiceModal-W9zko6CU.js",
+    "filename": "VoiceToVoiceModal-W9zko6CU.js",
+    "category": "spa_assets",
+    "size": 85663,
+    "status": 200,
+    "path": "js/spa_assets/VoiceToVoiceModal-W9zko6CU.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useOaiRealtimeSettings-DzJRgqqT.js",
+    "filename": "useOaiRealtimeSettings-DzJRgqqT.js",
+    "category": "spa_assets",
+    "size": 2817,
+    "status": 200,
+    "path": "js/spa_assets/useOaiRealtimeSettings-DzJRgqqT.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/constants-BQIc7wIf.js",
+    "filename": "constants-BQIc7wIf.js",
+    "category": "spa_assets",
+    "size": 151263,
+    "status": 200,
+    "path": "js/spa_assets/constants-BQIc7wIf.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/three-Dn-P7XLu.js",
+    "filename": "three-Dn-P7XLu.js",
+    "category": "spa_assets",
+    "size": 690318,
+    "status": 200,
+    "path": "js/spa_assets/three-Dn-P7XLu.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/Shimmer-BBBh1FaT.js",
+    "filename": "Shimmer-BBBh1FaT.js",
+    "category": "spa_assets",
+    "size": 601,
+    "status": 200,
+    "path": "js/spa_assets/Shimmer-BBBh1FaT.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/search-component-DGvBA0A9.js",
+    "filename": "search-component-DGvBA0A9.js",
+    "category": "spa_assets",
+    "size": 17077,
+    "status": 200,
+    "path": "js/spa_assets/search-component-DGvBA0A9.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/AfterInteractivePixels-KEwpttbY.js",
+    "filename": "AfterInteractivePixels-KEwpttbY.js",
+    "category": "spa_assets",
+    "size": 776,
+    "status": 200,
+    "path": "js/spa_assets/AfterInteractivePixels-KEwpttbY.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/ScrollToEntityWrapper-B7Zpxe0-.js",
+    "filename": "ScrollToEntityWrapper-B7Zpxe0-.js",
+    "category": "spa_assets",
+    "size": 144185,
+    "status": 200,
+    "path": "js/spa_assets/ScrollToEntityWrapper-B7Zpxe0-.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/ThreadEntryContext-CIo0prTV.js",
+    "filename": "ThreadEntryContext-CIo0prTV.js",
+    "category": "spa_assets",
+    "size": 19198,
+    "status": 200,
+    "path": "js/spa_assets/ThreadEntryContext-CIo0prTV.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useEntryEvents-CxH668yE.js",
+    "filename": "useEntryEvents-CxH668yE.js",
+    "category": "spa_assets",
+    "size": 747,
+    "status": 200,
+    "path": "js/spa_assets/useEntryEvents-CxH668yE.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/widgetGrouping-DXlAOs13.js",
+    "filename": "widgetGrouping-DXlAOs13.js",
+    "category": "spa_assets",
+    "size": 1582,
+    "status": 200,
+    "path": "js/spa_assets/widgetGrouping-DXlAOs13.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useActiveThreadEntryIdxSafe-BLDon8_M.js",
+    "filename": "useActiveThreadEntryIdxSafe-BLDon8_M.js",
+    "category": "spa_assets",
+    "size": 3713,
+    "status": 200,
+    "path": "js/spa_assets/useActiveThreadEntryIdxSafe-BLDon8_M.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/Tabs-Bcf37iu5.js",
+    "filename": "Tabs-Bcf37iu5.js",
+    "category": "spa_assets",
+    "size": 4834,
+    "status": 200,
+    "path": "js/spa_assets/Tabs-Bcf37iu5.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useScrollToListItem-k6aQh9Ic.js",
+    "filename": "useScrollToListItem-k6aQh9Ic.js",
+    "category": "spa_assets",
+    "size": 2356,
+    "status": 200,
+    "path": "js/spa_assets/useScrollToListItem-k6aQh9Ic.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/scrollTo-BbpcqQyi.js",
+    "filename": "scrollTo-BbpcqQyi.js",
+    "category": "spa_assets",
+    "size": 580,
+    "status": 200,
+    "path": "js/spa_assets/scrollTo-BbpcqQyi.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/ThreadInput-ABOYY8Gt.js",
+    "filename": "ThreadInput-ABOYY8Gt.js",
+    "category": "spa_assets",
+    "size": 5193,
+    "status": 200,
+    "path": "js/spa_assets/ThreadInput-ABOYY8Gt.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/ThreadUpsell-JGWD44GZ.js",
+    "filename": "ThreadUpsell-JGWD44GZ.js",
+    "category": "spa_assets",
+    "size": 18098,
+    "status": 200,
+    "path": "js/spa_assets/ThreadUpsell-JGWD44GZ.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/Banner-C2RcR6Q3.js",
+    "filename": "Banner-C2RcR6Q3.js",
+    "category": "spa_assets",
+    "size": 4927,
+    "status": 200,
+    "path": "js/spa_assets/Banner-C2RcR6Q3.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/RadioCard-Du--iCjs.js",
+    "filename": "RadioCard-Du--iCjs.js",
+    "category": "spa_assets",
+    "size": 1162,
+    "status": 200,
+    "path": "js/spa_assets/RadioCard-Du--iCjs.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useScrollBarSize-Dw-OqRG9.js",
+    "filename": "useScrollBarSize-Dw-OqRG9.js",
+    "category": "spa_assets",
+    "size": 1027,
+    "status": 200,
+    "path": "js/spa_assets/useScrollBarSize-Dw-OqRG9.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useTruncation-Cz-k4TU4.js",
+    "filename": "useTruncation-Cz-k4TU4.js",
+    "category": "spa_assets",
+    "size": 613,
+    "status": 200,
+    "path": "js/spa_assets/useTruncation-Cz-k4TU4.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useDownloadFile-DOlSoUu5.js",
+    "filename": "useDownloadFile-DOlSoUu5.js",
+    "category": "spa_assets",
+    "size": 1322,
+    "status": 200,
+    "path": "js/spa_assets/useDownloadFile-DOlSoUu5.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/utils-D2w2Oq7g.js",
+    "filename": "utils-D2w2Oq7g.js",
+    "category": "spa_assets",
+    "size": 8910,
+    "status": 200,
+    "path": "js/spa_assets/utils-D2w2Oq7g.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useDownloadS3FileAsset-CnIjLu-B.js",
+    "filename": "useDownloadS3FileAsset-CnIjLu-B.js",
+    "category": "spa_assets",
+    "size": 2496,
+    "status": 200,
+    "path": "js/spa_assets/useDownloadS3FileAsset-CnIjLu-B.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useThreadAssets-D5iKcIXo.js",
+    "filename": "useThreadAssets-D5iKcIXo.js",
+    "category": "spa_assets",
+    "size": 42463,
+    "status": 200,
+    "path": "js/spa_assets/useThreadAssets-D5iKcIXo.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/SourcesListContext-CsLJgaIk.js",
+    "filename": "SourcesListContext-CsLJgaIk.js",
+    "category": "spa_assets",
+    "size": 1599,
+    "status": 200,
+    "path": "js/spa_assets/SourcesListContext-CsLJgaIk.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/LinkCard-BlITnkKD.js",
+    "filename": "LinkCard-BlITnkKD.js",
+    "category": "spa_assets",
+    "size": 6642,
+    "status": 200,
+    "path": "js/spa_assets/LinkCard-BlITnkKD.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/StepRenderer-Df_RLb7s.js",
+    "filename": "StepRenderer-Df_RLb7s.js",
+    "category": "spa_assets",
+    "size": 244138,
+    "status": 200,
+    "path": "js/spa_assets/StepRenderer-Df_RLb7s.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/CodeBlock-DzbfjuuU.js",
+    "filename": "CodeBlock-DzbfjuuU.js",
+    "category": "spa_assets",
+    "size": 113613,
+    "status": 200,
+    "path": "js/spa_assets/CodeBlock-DzbfjuuU.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useScheduledTaskMutations-ZTe8fQf9.js",
+    "filename": "useScheduledTaskMutations-ZTe8fQf9.js",
+    "category": "spa_assets",
+    "size": 23250,
+    "status": 200,
+    "path": "js/spa_assets/useScheduledTaskMutations-ZTe8fQf9.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/TimeInput-Pbrumhvh.js",
+    "filename": "TimeInput-Pbrumhvh.js",
+    "category": "spa_assets",
+    "size": 2678,
+    "status": 200,
+    "path": "js/spa_assets/TimeInput-Pbrumhvh.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/DateInput-BtmKpOx1.js",
+    "filename": "DateInput-BtmKpOx1.js",
+    "category": "spa_assets",
+    "size": 1727,
+    "status": 200,
+    "path": "js/spa_assets/DateInput-BtmKpOx1.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/Calendar-DAHRSGY_.js",
+    "filename": "Calendar-DAHRSGY_.js",
+    "category": "spa_assets",
+    "size": 54887,
+    "status": 200,
+    "path": "js/spa_assets/Calendar-DAHRSGY_.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/ResizableInput-z9Sd_ozS.js",
+    "filename": "ResizableInput-z9Sd_ozS.js",
+    "category": "spa_assets",
+    "size": 5119,
+    "status": 200,
+    "path": "js/spa_assets/ResizableInput-z9Sd_ozS.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/NumberFlow-client-48rw3j0J-CgVqhPfB.js",
+    "filename": "NumberFlow-client-48rw3j0J-CgVqhPfB.js",
+    "category": "spa_assets",
+    "size": 17071,
+    "status": 200,
+    "path": "js/spa_assets/NumberFlow-client-48rw3j0J-CgVqhPfB.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/CanonicalCard-BVJ7N3DB.js",
+    "filename": "CanonicalCard-BVJ7N3DB.js",
+    "category": "spa_assets",
+    "size": 728,
+    "status": 200,
+    "path": "js/spa_assets/CanonicalCard-BVJ7N3DB.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/assistant-DcaUAbI4.js",
+    "filename": "assistant-DcaUAbI4.js",
+    "category": "spa_assets",
+    "size": 3060,
+    "status": 200,
+    "path": "js/spa_assets/assistant-DcaUAbI4.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/emailUtils-_jxwJ1Ij.js",
+    "filename": "emailUtils-_jxwJ1Ij.js",
+    "category": "spa_assets",
+    "size": 186,
+    "status": 200,
+    "path": "js/spa_assets/emailUtils-_jxwJ1Ij.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/calendarRecurrenceUtils-DASnYw89.js",
+    "filename": "calendarRecurrenceUtils-DASnYw89.js",
+    "category": "spa_assets",
+    "size": 3356,
+    "status": 200,
+    "path": "js/spa_assets/calendarRecurrenceUtils-DASnYw89.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/Select-BGAp6VFs.js",
+    "filename": "Select-BGAp6VFs.js",
+    "category": "spa_assets",
+    "size": 1403,
+    "status": 200,
+    "path": "js/spa_assets/Select-BGAp6VFs.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/ComboBox-DiVC3fMZ.js",
+    "filename": "ComboBox-DiVC3fMZ.js",
+    "category": "spa_assets",
+    "size": 18155,
+    "status": 200,
+    "path": "js/spa_assets/ComboBox-DiVC3fMZ.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useClickOutside-BMNWUNQt.js",
+    "filename": "useClickOutside-BMNWUNQt.js",
+    "category": "spa_assets",
+    "size": 414,
+    "status": 200,
+    "path": "js/spa_assets/useClickOutside-BMNWUNQt.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/copyUtils-DT1Hotnl.js",
+    "filename": "copyUtils-DT1Hotnl.js",
+    "category": "spa_assets",
+    "size": 510,
+    "status": 200,
+    "path": "js/spa_assets/copyUtils-DT1Hotnl.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useEnterpriseAnalytics-Bglyh3fs.js",
+    "filename": "useEnterpriseAnalytics-Bglyh3fs.js",
+    "category": "spa_assets",
+    "size": 1808,
+    "status": 200,
+    "path": "js/spa_assets/useEnterpriseAnalytics-Bglyh3fs.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useCometSystemPermissionsForServer-cMeA-q5h.js",
+    "filename": "useCometSystemPermissionsForServer-cMeA-q5h.js",
+    "category": "spa_assets",
+    "size": 2336,
+    "status": 200,
+    "path": "js/spa_assets/useCometSystemPermissionsForServer-cMeA-q5h.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useCometFirstRequiredSystemPermission-D_q9lOri.js",
+    "filename": "useCometFirstRequiredSystemPermission-D_q9lOri.js",
+    "category": "spa_assets",
+    "size": 2718,
+    "status": 200,
+    "path": "js/spa_assets/useCometFirstRequiredSystemPermission-D_q9lOri.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useAutomationConfiguration-CBTnSCG-.js",
+    "filename": "useAutomationConfiguration-CBTnSCG-.js",
+    "category": "spa_assets",
+    "size": 30411,
+    "status": 200,
+    "path": "js/spa_assets/useAutomationConfiguration-CBTnSCG-.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/LogoIcon-Dft39Ebx.js",
+    "filename": "LogoIcon-Dft39Ebx.js",
+    "category": "spa_assets",
+    "size": 1015,
+    "status": 200,
+    "path": "js/spa_assets/LogoIcon-Dft39Ebx.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/SelectButton-YfM-WOEh.js",
+    "filename": "SelectButton-YfM-WOEh.js",
+    "category": "spa_assets",
+    "size": 1309,
+    "status": 200,
+    "path": "js/spa_assets/SelectButton-YfM-WOEh.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/format-Bb34REDw.js",
+    "filename": "format-Bb34REDw.js",
+    "category": "spa_assets",
+    "size": 1071,
+    "status": 200,
+    "path": "js/spa_assets/format-Bb34REDw.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/defaultLocale-Dt8Pf7TT.js",
+    "filename": "defaultLocale-Dt8Pf7TT.js",
+    "category": "spa_assets",
+    "size": 12118,
+    "status": 200,
+    "path": "js/spa_assets/defaultLocale-Dt8Pf7TT.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/getQuote-zuvU_B9f.js",
+    "filename": "getQuote-zuvU_B9f.js",
+    "category": "spa_assets",
+    "size": 1298,
+    "status": 200,
+    "path": "js/spa_assets/getQuote-zuvU_B9f.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useShouldCometOpenLinksInSidecar-5cOcituI.js",
+    "filename": "useShouldCometOpenLinksInSidecar-5cOcituI.js",
+    "category": "spa_assets",
+    "size": 1173,
+    "status": 200,
+    "path": "js/spa_assets/useShouldCometOpenLinksInSidecar-5cOcituI.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/MemorySearchHistoryModal-DYZPlMLH.js",
+    "filename": "MemorySearchHistoryModal-DYZPlMLH.js",
+    "category": "spa_assets",
+    "size": 4146,
+    "status": 200,
+    "path": "js/spa_assets/MemorySearchHistoryModal-DYZPlMLH.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/EntityGroupProvider-DVuwA9Rb.js",
+    "filename": "EntityGroupProvider-DVuwA9Rb.js",
+    "category": "spa_assets",
+    "size": 116538,
+    "status": 200,
+    "path": "js/spa_assets/EntityGroupProvider-DVuwA9Rb.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/EntityItemGuidance-DeVgt3jm.js",
+    "filename": "EntityItemGuidance-DeVgt3jm.js",
+    "category": "spa_assets",
+    "size": 14652,
+    "status": 200,
+    "path": "js/spa_assets/EntityItemGuidance-DeVgt3jm.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/ScrollToEntityProvider-BHE-Y30P.js",
+    "filename": "ScrollToEntityProvider-BHE-Y30P.js",
+    "category": "spa_assets",
+    "size": 1292,
+    "status": 200,
+    "path": "js/spa_assets/ScrollToEntityProvider-BHE-Y30P.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/DropDownModal-B6ZawkFR.js",
+    "filename": "DropDownModal-B6ZawkFR.js",
+    "category": "spa_assets",
+    "size": 1400,
+    "status": 200,
+    "path": "js/spa_assets/DropDownModal-B6ZawkFR.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/SportsEventsWidget-CDIjhlmH.js",
+    "filename": "SportsEventsWidget-CDIjhlmH.js",
+    "category": "spa_assets",
+    "size": 24829,
+    "status": 200,
+    "path": "js/spa_assets/SportsEventsWidget-CDIjhlmH.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/utils-DwE_Vyjr.js",
+    "filename": "utils-DwE_Vyjr.js",
+    "category": "spa_assets",
+    "size": 30346,
+    "status": 200,
+    "path": "js/spa_assets/utils-DwE_Vyjr.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/Chart-C7yKkERd.js",
+    "filename": "Chart-C7yKkERd.js",
+    "category": "spa_assets",
+    "size": 92520,
+    "status": 200,
+    "path": "js/spa_assets/Chart-C7yKkERd.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/Svg-Cl5ZsRYE.js",
+    "filename": "Svg-Cl5ZsRYE.js",
+    "category": "spa_assets",
+    "size": 49374,
+    "status": 200,
+    "path": "js/spa_assets/Svg-Cl5ZsRYE.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/stackOffset-Dh2XuWv1.js",
+    "filename": "stackOffset-Dh2XuWv1.js",
+    "category": "spa_assets",
+    "size": 31718,
+    "status": 200,
+    "path": "js/spa_assets/stackOffset-Dh2XuWv1.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/index-WEsglMQY.js",
+    "filename": "index-WEsglMQY.js",
+    "category": "spa_assets",
+    "size": 1034,
+    "status": 200,
+    "path": "js/spa_assets/index-WEsglMQY.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/AreaClosed-BwK2yopG.js",
+    "filename": "AreaClosed-BwK2yopG.js",
+    "category": "spa_assets",
+    "size": 12181,
+    "status": 200,
+    "path": "js/spa_assets/AreaClosed-BwK2yopG.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/DotGrid-BJO3onmR.js",
+    "filename": "DotGrid-BJO3onmR.js",
+    "category": "spa_assets",
+    "size": 1809,
+    "status": 200,
+    "path": "js/spa_assets/DotGrid-BJO3onmR.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/LiveIndicator-CxCkEHpB.js",
+    "filename": "LiveIndicator-CxCkEHpB.js",
+    "category": "spa_assets",
+    "size": 1451,
+    "status": 200,
+    "path": "js/spa_assets/LiveIndicator-CxCkEHpB.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/TeamLogo-BBfy6yOh.js",
+    "filename": "TeamLogo-BBfy6yOh.js",
+    "category": "spa_assets",
+    "size": 2954,
+    "status": 200,
+    "path": "js/spa_assets/TeamLogo-BBfy6yOh.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/CanonicalSection-LrTCNBau.js",
+    "filename": "CanonicalSection-LrTCNBau.js",
+    "category": "spa_assets",
+    "size": 2593,
+    "status": 200,
+    "path": "js/spa_assets/CanonicalSection-LrTCNBau.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/finance-C-I0rT57.js",
+    "filename": "finance-C-I0rT57.js",
+    "category": "spa_assets",
+    "size": 8648,
+    "status": 200,
+    "path": "js/spa_assets/finance-C-I0rT57.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/PredictionMarketChart-B4C4d5-G.js",
+    "filename": "PredictionMarketChart-B4C4d5-G.js",
+    "category": "spa_assets",
+    "size": 122514,
+    "status": 200,
+    "path": "js/spa_assets/PredictionMarketChart-B4C4d5-G.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/CanonicalLink-ByXcHvmr.js",
+    "filename": "CanonicalLink-ByXcHvmr.js",
+    "category": "spa_assets",
+    "size": 1428,
+    "status": 200,
+    "path": "js/spa_assets/CanonicalLink-ByXcHvmr.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/country-g3I6FK4p.js",
+    "filename": "country-g3I6FK4p.js",
+    "category": "spa_assets",
+    "size": 1154,
+    "status": 200,
+    "path": "js/spa_assets/country-g3I6FK4p.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/FinancePriceChange-VZOTq1e1.js",
+    "filename": "FinancePriceChange-VZOTq1e1.js",
+    "category": "spa_assets",
+    "size": 2263,
+    "status": 200,
+    "path": "js/spa_assets/FinancePriceChange-VZOTq1e1.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/FinanceMover-BAKyMj3p.js",
+    "filename": "FinanceMover-BAKyMj3p.js",
+    "category": "spa_assets",
+    "size": 5140,
+    "status": 200,
+    "path": "js/spa_assets/FinanceMover-BAKyMj3p.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/CanonicalSidebar-CNDcxNoQ.js",
+    "filename": "CanonicalSidebar-CNDcxNoQ.js",
+    "category": "spa_assets",
+    "size": 972,
+    "status": 200,
+    "path": "js/spa_assets/CanonicalSidebar-CNDcxNoQ.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/CountryFlag-D9wYVd4l.js",
+    "filename": "CountryFlag-D9wYVd4l.js",
+    "category": "spa_assets",
+    "size": 391,
+    "status": 200,
+    "path": "js/spa_assets/CountryFlag-D9wYVd4l.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/MarkdownResponse-C-UzeXJa.js",
+    "filename": "MarkdownResponse-C-UzeXJa.js",
+    "category": "spa_assets",
+    "size": 12926,
+    "status": 200,
+    "path": "js/spa_assets/MarkdownResponse-C-UzeXJa.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/MarkdownRenderer-BuFFO9yQ.js",
+    "filename": "MarkdownRenderer-BuFFO9yQ.js",
+    "category": "spa_assets",
+    "size": 82548,
+    "status": 200,
+    "path": "js/spa_assets/MarkdownRenderer-BuFFO9yQ.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/index-DkB9DCwf.js",
+    "filename": "index-DkB9DCwf.js",
+    "category": "spa_assets",
+    "size": 118159,
+    "status": 200,
+    "path": "js/spa_assets/index-DkB9DCwf.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/FinanceAddAlert-CvVErgl3.js",
+    "filename": "FinanceAddAlert-CvVErgl3.js",
+    "category": "spa_assets",
+    "size": 10145,
+    "status": 200,
+    "path": "js/spa_assets/FinanceAddAlert-CvVErgl3.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/AutomationModal-DCAixS3v.js",
+    "filename": "AutomationModal-DCAixS3v.js",
+    "category": "spa_assets",
+    "size": 5468,
+    "status": 200,
+    "path": "js/spa_assets/AutomationModal-DCAixS3v.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/FollowConfirmationToast-DwNNaHfg.js",
+    "filename": "FollowConfirmationToast-DwNNaHfg.js",
+    "category": "spa_assets",
+    "size": 3178,
+    "status": 200,
+    "path": "js/spa_assets/FollowConfirmationToast-DwNNaHfg.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/index-BRLF0d9P.js",
+    "filename": "index-BRLF0d9P.js",
+    "category": "spa_assets",
+    "size": 103,
+    "status": 200,
+    "path": "js/spa_assets/index-BRLF0d9P.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useFollowEntity-CTHskojp.js",
+    "filename": "useFollowEntity-CTHskojp.js",
+    "category": "spa_assets",
+    "size": 1454,
+    "status": 200,
+    "path": "js/spa_assets/useFollowEntity-CTHskojp.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useRemoveWatchlistSubscription-Cq_1ORGD.js",
+    "filename": "useRemoveWatchlistSubscription-Cq_1ORGD.js",
+    "category": "spa_assets",
+    "size": 2246,
+    "status": 200,
+    "path": "js/spa_assets/useRemoveWatchlistSubscription-Cq_1ORGD.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useWatchlistQuery-DXEZosVs.js",
+    "filename": "useWatchlistQuery-DXEZosVs.js",
+    "category": "spa_assets",
+    "size": 1123,
+    "status": 200,
+    "path": "js/spa_assets/useWatchlistQuery-DXEZosVs.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/fuse-DPyu62bB.js",
+    "filename": "fuse-DPyu62bB.js",
+    "category": "spa_assets",
+    "size": 15807,
+    "status": 200,
+    "path": "js/spa_assets/fuse-DPyu62bB.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useGenerateShoppingReviewSummary-CulxT2Sc.js",
+    "filename": "useGenerateShoppingReviewSummary-CulxT2Sc.js",
+    "category": "spa_assets",
+    "size": 2732,
+    "status": 200,
+    "path": "js/spa_assets/useGenerateShoppingReviewSummary-CulxT2Sc.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/SportsStandingsTable-C6jsHppA.js",
+    "filename": "SportsStandingsTable-C6jsHppA.js",
+    "category": "spa_assets",
+    "size": 8197,
+    "status": 200,
+    "path": "js/spa_assets/SportsStandingsTable-C6jsHppA.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/IndvCompetitorWithFlag-COv3OcSG.js",
+    "filename": "IndvCompetitorWithFlag-COv3OcSG.js",
+    "category": "spa_assets",
+    "size": 944,
+    "status": 200,
+    "path": "js/spa_assets/IndvCompetitorWithFlag-COv3OcSG.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/TennisLaverCupSchedule-D3MYqcwV.js",
+    "filename": "TennisLaverCupSchedule-D3MYqcwV.js",
+    "category": "spa_assets",
+    "size": 19270,
+    "status": 200,
+    "path": "js/spa_assets/TennisLaverCupSchedule-D3MYqcwV.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/TennisLineScores-baCh5Al9.js",
+    "filename": "TennisLineScores-baCh5Al9.js",
+    "category": "spa_assets",
+    "size": 5912,
+    "status": 200,
+    "path": "js/spa_assets/TennisLineScores-baCh5Al9.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/Triangle-ZM3iK-z_.js",
+    "filename": "Triangle-ZM3iK-z_.js",
+    "category": "spa_assets",
+    "size": 433,
+    "status": 200,
+    "path": "js/spa_assets/Triangle-ZM3iK-z_.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/WithMenu-BV44UaEl.js",
+    "filename": "WithMenu-BV44UaEl.js",
+    "category": "spa_assets",
+    "size": 8556,
+    "status": 200,
+    "path": "js/spa_assets/WithMenu-BV44UaEl.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/index-BFbvSUqe.js",
+    "filename": "index-BFbvSUqe.js",
+    "category": "spa_assets",
+    "size": 6561,
+    "status": 200,
+    "path": "js/spa_assets/index-BFbvSUqe.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/SportsWhatsHappening-Kn_6xNcX.js",
+    "filename": "SportsWhatsHappening-Kn_6xNcX.js",
+    "category": "spa_assets",
+    "size": 811,
+    "status": 200,
+    "path": "js/spa_assets/SportsWhatsHappening-Kn_6xNcX.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/WhatsHappening-BXizxK76.js",
+    "filename": "WhatsHappening-BXizxK76.js",
+    "category": "spa_assets",
+    "size": 11668,
+    "status": 200,
+    "path": "js/spa_assets/WhatsHappening-BXizxK76.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/CanonicalQuery-xEPJKqdj.js",
+    "filename": "CanonicalQuery-xEPJKqdj.js",
+    "category": "spa_assets",
+    "size": 586,
+    "status": 200,
+    "path": "js/spa_assets/CanonicalQuery-xEPJKqdj.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/CitationListModal-BQQRwH3L.js",
+    "filename": "CitationListModal-BQQRwH3L.js",
+    "category": "spa_assets",
+    "size": 2985,
+    "status": 200,
+    "path": "js/spa_assets/CitationListModal-BQQRwH3L.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/Checkbox-DX5EN44e.js",
+    "filename": "Checkbox-DX5EN44e.js",
+    "category": "spa_assets",
+    "size": 1202,
+    "status": 200,
+    "path": "js/spa_assets/Checkbox-DX5EN44e.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/CitationCard-RCGZS1od.js",
+    "filename": "CitationCard-RCGZS1od.js",
+    "category": "spa_assets",
+    "size": 28988,
+    "status": 200,
+    "path": "js/spa_assets/CitationCard-RCGZS1od.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/TextBlockThrobber-CY-3awGv.js",
+    "filename": "TextBlockThrobber-CY-3awGv.js",
+    "category": "spa_assets",
+    "size": 1482,
+    "status": 200,
+    "path": "js/spa_assets/TextBlockThrobber-CY-3awGv.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/WSCStoryById--U_-f5zC.js",
+    "filename": "WSCStoryById--U_-f5zC.js",
+    "category": "spa_assets",
+    "size": 1970,
+    "status": 200,
+    "path": "js/spa_assets/WSCStoryById--U_-f5zC.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/HeadshotImage-DUzfQEV3.js",
+    "filename": "HeadshotImage-DUzfQEV3.js",
+    "category": "spa_assets",
+    "size": 1451,
+    "status": 200,
+    "path": "js/spa_assets/HeadshotImage-DUzfQEV3.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/TournamentInfo-CsOUN6MQ.js",
+    "filename": "TournamentInfo-CsOUN6MQ.js",
+    "category": "spa_assets",
+    "size": 1476,
+    "status": 200,
+    "path": "js/spa_assets/TournamentInfo-CsOUN6MQ.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/AvatarList-eeUOgqkV.js",
+    "filename": "AvatarList-eeUOgqkV.js",
+    "category": "spa_assets",
+    "size": 1068,
+    "status": 200,
+    "path": "js/spa_assets/AvatarList-eeUOgqkV.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/TaskModal-BwcmdYEF.js",
+    "filename": "TaskModal-BwcmdYEF.js",
+    "category": "spa_assets",
+    "size": 6217,
+    "status": 200,
+    "path": "js/spa_assets/TaskModal-BwcmdYEF.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useGetPreferMetric-KatZ1Yxl.js",
+    "filename": "useGetPreferMetric-KatZ1Yxl.js",
+    "category": "spa_assets",
+    "size": 506,
+    "status": 200,
+    "path": "js/spa_assets/useGetPreferMetric-KatZ1Yxl.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/shared-DoaxliMx.js",
+    "filename": "shared-DoaxliMx.js",
+    "category": "spa_assets",
+    "size": 7481,
+    "status": 200,
+    "path": "js/spa_assets/shared-DoaxliMx.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/NewsArticleCard-BwuwdeoA.js",
+    "filename": "NewsArticleCard-BwuwdeoA.js",
+    "category": "spa_assets",
+    "size": 2837,
+    "status": 200,
+    "path": "js/spa_assets/NewsArticleCard-BwuwdeoA.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/EntityItemRating-DMiKUTxe.js",
+    "filename": "EntityItemRating-DMiKUTxe.js",
+    "category": "spa_assets",
+    "size": 2406,
+    "status": 200,
+    "path": "js/spa_assets/EntityItemRating-DMiKUTxe.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/PerplexityMap-EYKtyiNg.js",
+    "filename": "PerplexityMap-EYKtyiNg.js",
+    "category": "spa_assets",
+    "size": 31796,
+    "status": 200,
+    "path": "js/spa_assets/PerplexityMap-EYKtyiNg.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/DollarRange-lvloW635.js",
+    "filename": "DollarRange-lvloW635.js",
+    "category": "spa_assets",
+    "size": 19185,
+    "status": 200,
+    "path": "js/spa_assets/DollarRange-lvloW635.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/PulsingDot-C2WWGhwS.js",
+    "filename": "PulsingDot-C2WWGhwS.js",
+    "category": "spa_assets",
+    "size": 901,
+    "status": 200,
+    "path": "js/spa_assets/PulsingDot-C2WWGhwS.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/mapbox-gl-75SY3CCa.js",
+    "filename": "mapbox-gl-75SY3CCa.js",
+    "category": "spa_assets",
+    "size": 1534611,
+    "status": 200,
+    "path": "js/spa_assets/mapbox-gl-75SY3CCa.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/PlaceInlineCard-DsRVhSMd.js",
+    "filename": "PlaceInlineCard-DsRVhSMd.js",
+    "category": "spa_assets",
+    "size": 25453,
+    "status": 200,
+    "path": "js/spa_assets/PlaceInlineCard-DsRVhSMd.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/ImagePagedCarousel-b7etl_-y.js",
+    "filename": "ImagePagedCarousel-b7etl_-y.js",
+    "category": "spa_assets",
+    "size": 3869,
+    "status": 200,
+    "path": "js/spa_assets/ImagePagedCarousel-b7etl_-y.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/MapboxURLs-4yEd9e3N.js",
+    "filename": "MapboxURLs-4yEd9e3N.js",
+    "category": "spa_assets",
+    "size": 556,
+    "status": 200,
+    "path": "js/spa_assets/MapboxURLs-4yEd9e3N.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useHotelBookingEnabled-BOQ0Bvz9.js",
+    "filename": "useHotelBookingEnabled-BOQ0Bvz9.js",
+    "category": "spa_assets",
+    "size": 945,
+    "status": 200,
+    "path": "js/spa_assets/useHotelBookingEnabled-BOQ0Bvz9.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useSessionOrgUUID-BahvSObR.js",
+    "filename": "useSessionOrgUUID-BahvSObR.js",
+    "category": "spa_assets",
+    "size": 260,
+    "status": 200,
+    "path": "js/spa_assets/useSessionOrgUUID-BahvSObR.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useHotelLowestRates-BrktEQcx.js",
+    "filename": "useHotelLowestRates-BrktEQcx.js",
+    "category": "spa_assets",
+    "size": 3569,
+    "status": 200,
+    "path": "js/spa_assets/useHotelLowestRates-BrktEQcx.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/hotelUtils-CERjX_ug.js",
+    "filename": "hotelUtils-CERjX_ug.js",
+    "category": "spa_assets",
+    "size": 1827,
+    "status": 200,
+    "path": "js/spa_assets/hotelUtils-CERjX_ug.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useUpdateThreadAccess-BUo06EFv.js",
+    "filename": "useUpdateThreadAccess-BUo06EFv.js",
+    "category": "spa_assets",
+    "size": 1584,
+    "status": 200,
+    "path": "js/spa_assets/useUpdateThreadAccess-BUo06EFv.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useSetThreadAccess-6WbEBv40.js",
+    "filename": "useSetThreadAccess-6WbEBv40.js",
+    "category": "spa_assets",
+    "size": 4089,
+    "status": 200,
+    "path": "js/spa_assets/useSetThreadAccess-6WbEBv40.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/SocialShareLinks-CLj0gkgb.js",
+    "filename": "SocialShareLinks-CLj0gkgb.js",
+    "category": "spa_assets",
+    "size": 4172,
+    "status": 200,
+    "path": "js/spa_assets/SocialShareLinks-CLj0gkgb.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useAddToCollectionModal-BV_pLy6K.js",
+    "filename": "useAddToCollectionModal-BV_pLy6K.js",
+    "category": "spa_assets",
+    "size": 823,
+    "status": 200,
+    "path": "js/spa_assets/useAddToCollectionModal-BV_pLy6K.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useCollectionsQuery-mtN2gV3l.js",
+    "filename": "useCollectionsQuery-mtN2gV3l.js",
+    "category": "spa_assets",
+    "size": 1677,
+    "status": 200,
+    "path": "js/spa_assets/useCollectionsQuery-mtN2gV3l.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/ThreadOverflowDropdown-DrPLJJQq.js",
+    "filename": "ThreadOverflowDropdown-DrPLJJQq.js",
+    "category": "spa_assets",
+    "size": 50763,
+    "status": 200,
+    "path": "js/spa_assets/ThreadOverflowDropdown-DrPLJJQq.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useTimeAgoTranslations-CMq4fQgu.js",
+    "filename": "useTimeAgoTranslations-CMq4fQgu.js",
+    "category": "spa_assets",
+    "size": 947,
+    "status": 200,
+    "path": "js/spa_assets/useTimeAgoTranslations-CMq4fQgu.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/PerplexityEmoji-SWSvVeWT.js",
+    "filename": "PerplexityEmoji-SWSvVeWT.js",
+    "category": "spa_assets",
+    "size": 1040,
+    "status": 200,
+    "path": "js/spa_assets/PerplexityEmoji-SWSvVeWT.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useExport-BZ-9Wtdj.js",
+    "filename": "useExport-BZ-9Wtdj.js",
+    "category": "spa_assets",
+    "size": 979,
+    "status": 200,
+    "path": "js/spa_assets/useExport-BZ-9Wtdj.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/ConfirmationModal-BSjd98TS.js",
+    "filename": "ConfirmationModal-BSjd98TS.js",
+    "category": "spa_assets",
+    "size": 333,
+    "status": 200,
+    "path": "js/spa_assets/ConfirmationModal-BSjd98TS.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/LibraryItemList-DFTHjZnt.js",
+    "filename": "LibraryItemList-DFTHjZnt.js",
+    "category": "spa_assets",
+    "size": 1871,
+    "status": 200,
+    "path": "js/spa_assets/LibraryItemList-DFTHjZnt.js"
+  },
+  {
+    "url": "https://www.perplexity.ai/pixel/reddit.js",
+    "filename": "reddit.js",
+    "category": "other_js",
+    "size": 484,
+    "status": 200,
+    "path": "js/other_js/reddit.js"
+  },
+  {
+    "url": "https://www.perplexity.ai/pixel/meta.js",
+    "filename": "meta.js",
+    "category": "other_js",
+    "size": 543,
+    "status": 200,
+    "path": "js/other_js/meta.js"
+  },
+  {
+    "url": "https://www.perplexity.ai/pixel/podscribe.js",
+    "filename": "podscribe.js",
+    "category": "other_js",
+    "size": 897,
+    "status": 200,
+    "path": "js/other_js/podscribe.js"
+  },
+  {
+    "url": "https://www.perplexity.ai/pixel/amazon.js",
+    "filename": "amazon.js",
+    "category": "other_js",
+    "size": 516,
+    "status": 200,
+    "path": "js/other_js/amazon.js"
+  },
+  {
+    "url": "https://www.perplexity.ai/pixel/google-tag.js",
+    "filename": "google-tag.js",
+    "category": "other_js",
+    "size": 541,
+    "status": 200,
+    "path": "js/other_js/google-tag.js"
+  },
+  {
+    "url": "https://www.perplexity.ai/pixel/x.js",
+    "filename": "x.js",
+    "category": "other_js",
+    "size": 479,
+    "status": 200,
+    "path": "js/other_js/x.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/ThreadEntryDebugTiming-Br1g_QzR.js",
+    "filename": "ThreadEntryDebugTiming-Br1g_QzR.js",
+    "category": "spa_assets",
+    "size": 1779,
+    "status": 200,
+    "path": "js/spa_assets/ThreadEntryDebugTiming-Br1g_QzR.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/Related-C9wtYkP-.js",
+    "filename": "Related-C9wtYkP-.js",
+    "category": "spa_assets",
+    "size": 7111,
+    "status": 200,
+    "path": "js/spa_assets/Related-C9wtYkP-.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/RelatedPrompts-CttpIsvd.js",
+    "filename": "RelatedPrompts-CttpIsvd.js",
+    "category": "spa_assets",
+    "size": 1067,
+    "status": 200,
+    "path": "js/spa_assets/RelatedPrompts-CttpIsvd.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/RelatedQueryList-RdrTZn2q.js",
+    "filename": "RelatedQueryList-RdrTZn2q.js",
+    "category": "spa_assets",
+    "size": 2304,
+    "status": 200,
+    "path": "js/spa_assets/RelatedQueryList-RdrTZn2q.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useInViewEffect-bR8a1k3T.js",
+    "filename": "useInViewEffect-bR8a1k3T.js",
+    "category": "spa_assets",
+    "size": 393,
+    "status": 200,
+    "path": "js/spa_assets/useInViewEffect-bR8a1k3T.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/ThreadEntryDebugTiming-Br1g_QzR.js?r=1769053797366",
+    "filename": "ThreadEntryDebugTiming-Br1g_QzR.js",
+    "category": "spa_assets",
+    "size": 1779,
+    "status": 200,
+    "path": "js/spa_assets/ThreadEntryDebugTiming-Br1g_QzR.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/ThreadEntryDebugTiming-Br1g_QzR.js?r=1769053798564",
+    "filename": "ThreadEntryDebugTiming-Br1g_QzR.js",
+    "category": "spa_assets",
+    "size": 1779,
+    "status": 200,
+    "path": "js/spa_assets/ThreadEntryDebugTiming-Br1g_QzR.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/SidebarMobile-DT6EGUNF.js",
+    "filename": "SidebarMobile-DT6EGUNF.js",
+    "category": "spa_assets",
+    "size": 15557,
+    "status": 200,
+    "path": "js/spa_assets/SidebarMobile-DT6EGUNF.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useKeyboardShortcuts-rm2S9L5t.js",
+    "filename": "useKeyboardShortcuts-rm2S9L5t.js",
+    "category": "spa_assets",
+    "size": 629,
+    "status": 200,
+    "path": "js/spa_assets/useKeyboardShortcuts-rm2S9L5t.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/utils-Cn5u_53O.js",
+    "filename": "utils-Cn5u_53O.js",
+    "category": "spa_assets",
+    "size": 501,
+    "status": 200,
+    "path": "js/spa_assets/utils-Cn5u_53O.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/sessionStorageKeys-DVXjLDnd.js",
+    "filename": "sessionStorageKeys-DVXjLDnd.js",
+    "category": "spa_assets",
+    "size": 110,
+    "status": 200,
+    "path": "js/spa_assets/sessionStorageKeys-DVXjLDnd.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/SiteTabs-rJnZH3zL.js",
+    "filename": "SiteTabs-rJnZH3zL.js",
+    "category": "spa_assets",
+    "size": 478,
+    "status": 200,
+    "path": "js/spa_assets/SiteTabs-rJnZH3zL.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/TabBar-CHMqIL4c.js",
+    "filename": "TabBar-CHMqIL4c.js",
+    "category": "spa_assets",
+    "size": 3680,
+    "status": 200,
+    "path": "js/spa_assets/TabBar-CHMqIL4c.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/MobileSidebar-DIV_8fqj.js",
+    "filename": "MobileSidebar-DIV_8fqj.js",
+    "category": "spa_assets",
+    "size": 1142,
+    "status": 200,
+    "path": "js/spa_assets/MobileSidebar-DIV_8fqj.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/AnimatedWorkflowHeader-B9_EK3Lb.js",
+    "filename": "AnimatedWorkflowHeader-B9_EK3Lb.js",
+    "category": "spa_assets",
+    "size": 15632,
+    "status": 200,
+    "path": "js/spa_assets/AnimatedWorkflowHeader-B9_EK3Lb.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/WorkflowHeaderScreenshotBranding-Lh5oyFhk.js",
+    "filename": "WorkflowHeaderScreenshotBranding-Lh5oyFhk.js",
+    "category": "spa_assets",
+    "size": 681,
+    "status": 200,
+    "path": "js/spa_assets/WorkflowHeaderScreenshotBranding-Lh5oyFhk.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/ThreadEntryDebugTiming-Br1g_QzR.js?r=1769053959228",
+    "filename": "ThreadEntryDebugTiming-Br1g_QzR.js",
+    "category": "spa_assets",
+    "size": 1779,
+    "status": 200,
+    "path": "js/spa_assets/ThreadEntryDebugTiming-Br1g_QzR.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/index-CtZr0Kwe.js",
+    "filename": "index-CtZr0Kwe.js",
+    "category": "spa_assets",
+    "size": 9148,
+    "status": 200,
+    "path": "js/spa_assets/index-CtZr0Kwe.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/katex-C8dCldO_.js",
+    "filename": "katex-C8dCldO_.js",
+    "category": "spa_assets",
+    "size": 262427,
+    "status": 200,
+    "path": "js/spa_assets/katex-C8dCldO_.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/ThreadEntryDebugTiming-Br1g_QzR.js?r=1769053961395",
+    "filename": "ThreadEntryDebugTiming-Br1g_QzR.js",
+    "category": "spa_assets",
+    "size": 1779,
+    "status": 200,
+    "path": "js/spa_assets/ThreadEntryDebugTiming-Br1g_QzR.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/ProgressHeader-CUa4CZcl.js",
+    "filename": "ProgressHeader-CUa4CZcl.js",
+    "category": "spa_assets",
+    "size": 2673,
+    "status": 200,
+    "path": "js/spa_assets/ProgressHeader-CUa4CZcl.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/ThreadContentResponse-BKJVR3xf.js",
+    "filename": "ThreadContentResponse-BKJVR3xf.js",
+    "category": "spa_assets",
+    "size": 63894,
+    "status": 200,
+    "path": "js/spa_assets/ThreadContentResponse-BKJVR3xf.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useCreateSetupIntentAndCustomerSession-hDT-aPpV.js",
+    "filename": "useCreateSetupIntentAndCustomerSession-hDT-aPpV.js",
+    "category": "spa_assets",
+    "size": 3082,
+    "status": 200,
+    "path": "js/spa_assets/useCreateSetupIntentAndCustomerSession-hDT-aPpV.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/StructuredAnswerInlineBlock-BHBKxN3U.js",
+    "filename": "StructuredAnswerInlineBlock-BHBKxN3U.js",
+    "category": "spa_assets",
+    "size": 98934,
+    "status": 200,
+    "path": "js/spa_assets/StructuredAnswerInlineBlock-BHBKxN3U.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useVersioningChain-NWm_EFMU.js",
+    "filename": "useVersioningChain-NWm_EFMU.js",
+    "category": "spa_assets",
+    "size": 4963,
+    "status": 200,
+    "path": "js/spa_assets/useVersioningChain-NWm_EFMU.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/GeneratedMediaLoader-WvlL_acc.js",
+    "filename": "GeneratedMediaLoader-WvlL_acc.js",
+    "category": "spa_assets",
+    "size": 4322,
+    "status": 200,
+    "path": "js/spa_assets/GeneratedMediaLoader-WvlL_acc.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/VideoPlayer-DqtAzQKq.js",
+    "filename": "VideoPlayer-DqtAzQKq.js",
+    "category": "spa_assets",
+    "size": 5587,
+    "status": 200,
+    "path": "js/spa_assets/VideoPlayer-DqtAzQKq.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useTrackGeneratedAssetView-_saCBFTp.js",
+    "filename": "useTrackGeneratedAssetView-_saCBFTp.js",
+    "category": "spa_assets",
+    "size": 460,
+    "status": 200,
+    "path": "js/spa_assets/useTrackGeneratedAssetView-_saCBFTp.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/CardCarouselV2-BRC_aKEn.js",
+    "filename": "CardCarouselV2-BRC_aKEn.js",
+    "category": "spa_assets",
+    "size": 3391,
+    "status": 200,
+    "path": "js/spa_assets/CardCarouselV2-BRC_aKEn.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/embla-carousel-react.esm-BHqsU6tB.js",
+    "filename": "embla-carousel-react.esm-BHqsU6tB.js",
+    "category": "spa_assets",
+    "size": 19521,
+    "status": 200,
+    "path": "js/spa_assets/embla-carousel-react.esm-BHqsU6tB.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useShoppingWidget-CbHclS3G.js",
+    "filename": "useShoppingWidget-CbHclS3G.js",
+    "category": "spa_assets",
+    "size": 23861,
+    "status": 200,
+    "path": "js/spa_assets/useShoppingWidget-CbHclS3G.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/shared-BN31eWMz.js",
+    "filename": "shared-BN31eWMz.js",
+    "category": "spa_assets",
+    "size": 2441,
+    "status": 200,
+    "path": "js/spa_assets/shared-BN31eWMz.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/shoppingKeys-C4Q4asxG.js",
+    "filename": "shoppingKeys-C4Q4asxG.js",
+    "category": "spa_assets",
+    "size": 504,
+    "status": 200,
+    "path": "js/spa_assets/shoppingKeys-C4Q4asxG.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useFailedImagesStore-C2KgwBN3.js",
+    "filename": "useFailedImagesStore-C2KgwBN3.js",
+    "category": "spa_assets",
+    "size": 2297,
+    "status": 200,
+    "path": "js/spa_assets/useFailedImagesStore-C2KgwBN3.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/EntityItemMerchantInfo-iX1eQxX4.js",
+    "filename": "EntityItemMerchantInfo-iX1eQxX4.js",
+    "category": "spa_assets",
+    "size": 1269,
+    "status": 200,
+    "path": "js/spa_assets/EntityItemMerchantInfo-iX1eQxX4.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/CarouselPrimitives-DmK76RAe.js",
+    "filename": "CarouselPrimitives-DmK76RAe.js",
+    "category": "spa_assets",
+    "size": 2687,
+    "status": 200,
+    "path": "js/spa_assets/CarouselPrimitives-DmK76RAe.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/TimeAgoTooltip-D4GANcBS.js",
+    "filename": "TimeAgoTooltip-D4GANcBS.js",
+    "category": "spa_assets",
+    "size": 1216,
+    "status": 200,
+    "path": "js/spa_assets/TimeAgoTooltip-D4GANcBS.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/EntityChipWithData-2voDog74.js",
+    "filename": "EntityChipWithData-2voDog74.js",
+    "category": "spa_assets",
+    "size": 2720,
+    "status": 200,
+    "path": "js/spa_assets/EntityChipWithData-2voDog74.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/useStripePromise-BVmO-kxf.js",
+    "filename": "useStripePromise-BVmO-kxf.js",
+    "category": "spa_assets",
+    "size": 10981,
+    "status": 200,
+    "path": "js/spa_assets/useStripePromise-BVmO-kxf.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/core-Q31LJaVv.js",
+    "filename": "core-Q31LJaVv.js",
+    "category": "spa_assets",
+    "size": 27688,
+    "status": 200,
+    "path": "js/spa_assets/core-Q31LJaVv.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/markup-BONeskWm.js",
+    "filename": "markup-BONeskWm.js",
+    "category": "spa_assets",
+    "size": 2928,
+    "status": 200,
+    "path": "js/spa_assets/markup-BONeskWm.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/css-CF9HHZb0.js",
+    "filename": "css-CF9HHZb0.js",
+    "category": "spa_assets",
+    "size": 1367,
+    "status": 200,
+    "path": "js/spa_assets/css-CF9HHZb0.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/clike-B5tY_8Hg.js",
+    "filename": "clike-B5tY_8Hg.js",
+    "category": "spa_assets",
+    "size": 864,
+    "status": 200,
+    "path": "js/spa_assets/clike-B5tY_8Hg.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/javascript-D8vYUPHd.js",
+    "filename": "javascript-D8vYUPHd.js",
+    "category": "spa_assets",
+    "size": 4618,
+    "status": 200,
+    "path": "js/spa_assets/javascript-D8vYUPHd.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/typescript-B5cYMgTs.js",
+    "filename": "typescript-B5cYMgTs.js",
+    "category": "spa_assets",
+    "size": 606,
+    "status": 200,
+    "path": "js/spa_assets/typescript-B5cYMgTs.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/typescript-CVO-8GEc.js",
+    "filename": "typescript-CVO-8GEc.js",
+    "category": "spa_assets",
+    "size": 1465,
+    "status": 200,
+    "path": "js/spa_assets/typescript-CVO-8GEc.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/bash-C7C3WpJ9.js",
+    "filename": "bash-C7C3WpJ9.js",
+    "category": "spa_assets",
+    "size": 594,
+    "status": 200,
+    "path": "js/spa_assets/bash-C7C3WpJ9.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/bash-CefCgV5_.js",
+    "filename": "bash-CefCgV5_.js",
+    "category": "spa_assets",
+    "size": 6129,
+    "status": 200,
+    "path": "js/spa_assets/bash-CefCgV5_.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/ThreadEntryFooter-CHpo28zT.js",
+    "filename": "ThreadEntryFooter-CHpo28zT.js",
+    "category": "spa_assets",
+    "size": 38906,
+    "status": 200,
+    "path": "js/spa_assets/ThreadEntryFooter-CHpo28zT.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/ReportModal-BDku47aA.js",
+    "filename": "ReportModal-BDku47aA.js",
+    "category": "spa_assets",
+    "size": 3380,
+    "status": 200,
+    "path": "js/spa_assets/ReportModal-BDku47aA.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/miscMutations-qXP_iLm9.js",
+    "filename": "miscMutations-qXP_iLm9.js",
+    "category": "spa_assets",
+    "size": 685,
+    "status": 200,
+    "path": "js/spa_assets/miscMutations-qXP_iLm9.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/CopyOutputButton-DqlV9Y-2.js",
+    "filename": "CopyOutputButton-DqlV9Y-2.js",
+    "category": "spa_assets",
+    "size": 1603,
+    "status": 200,
+    "path": "js/spa_assets/CopyOutputButton-DqlV9Y-2.js"
+  },
+  {
+    "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/emoji-picker-react.esm-C0BQY1CL.js",
+    "filename": "emoji-picker-react.esm-C0BQY1CL.js",
+    "category": "spa_assets",
+    "size": 222038,
+    "status": 200,
+    "path": "js/spa_assets/emoji-picker-react.esm-C0BQY1CL.js"
+  }
+]
