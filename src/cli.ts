@@ -244,10 +244,7 @@ async function collectFiles(
       } else if (entry.isFile()) {
         // Simple pattern matching for *.ts, *.js, etc.
         const ext = extname(entry.name);
-        const matchesPattern = 
-          pattern === '*' || 
-          pattern.includes(ext) ||
-          (pattern.includes('*') && matchFilePattern(entry.name, pattern));
+        const matchesPattern = matchFilePattern(entry.name, pattern);
         
         if (matchesPattern) {
           files.push(fullPath);
@@ -263,18 +260,25 @@ async function collectFiles(
 
 /**
  * Simple glob pattern matcher
+ * Note: For production use, consider using a library like 'minimatch' for full glob support
  */
 function matchFilePattern(filename: string, pattern: string): boolean {
+  // Match all files
+  if (pattern === '*') {
+    return true;
+  }
+  
   // Handle patterns like *.{ts,js}
   if (pattern.includes('{') && pattern.includes('}')) {
     const basePattern = pattern.substring(0, pattern.indexOf('{'));
-    const extensions = pattern.substring(
+    const extensionsStr = pattern.substring(
       pattern.indexOf('{') + 1,
       pattern.indexOf('}')
-    ).split(',');
+    );
+    const extensions = extensionsStr.split(',');
     
     for (const ext of extensions) {
-      const fullPattern = basePattern + ext;
+      const fullPattern = basePattern + ext.trim();
       if (matchSimplePattern(filename, fullPattern)) {
         return true;
       }
@@ -286,12 +290,21 @@ function matchFilePattern(filename: string, pattern: string): boolean {
 }
 
 /**
- * Match simple wildcard patterns
+ * Match simple wildcard patterns (e.g., *.ts, test-*.js)
+ * Only supports * wildcard, not full glob syntax
  */
 function matchSimplePattern(filename: string, pattern: string): boolean {
+  // Validate pattern to prevent ReDoS
+  if (pattern.length > 100 || (pattern.match(/\*/g) || []).length > 5) {
+    console.warn(`Pattern too complex or too long: ${pattern}`);
+    return false;
+  }
+  
+  // Escape special regex characters except *
   const regexPattern = pattern
-    .replace(/\./g, '\\.')
+    .replace(/[.+?^${}()|[\]\\]/g, '\\$&')
     .replace(/\*/g, '.*');
+  
   const regex = new RegExp(`^${regexPattern}$`);
   return regex.test(filename);
 }

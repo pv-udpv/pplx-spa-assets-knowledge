@@ -187,8 +187,8 @@ npm run analyze -- \
 
 ## Limitations
 
-- Only detects fetch calls at the function level (not inside class methods currently shown in endpoints)
-- Pattern matching is simple (no full glob support like `**/*.ts`)
+- Only detects fetch calls at the function level (endpoints inside class methods are not currently detected)
+- Pattern matching is simple and supports basic wildcards (e.g., `*.ts`, `*.{ts,js}`) but not full glob syntax
 - Large files (>10MB) may take longer to parse
 - Requires valid TypeScript/JavaScript syntax
 
