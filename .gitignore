@@ -45,3 +45,9 @@ assets-cache/
 # Generated specs
 specs/generated/
 kb/generated/
+
+# Test files and analysis output
+test-files/
+test-analysis/
+test-recursive/
+analysis-output/

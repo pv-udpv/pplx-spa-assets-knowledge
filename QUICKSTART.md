@@ -17,6 +17,47 @@ npm run build
 
 ## Full Pipeline Example
 
+### Step 0: Analyze Local Files (New!)
+
+If you have local TypeScript/JavaScript files you want to analyze (e.g., uploaded files, custom code), use the `analyze` command:
+
+```bash
+# Analyze a single file
+npm run analyze -- --file ./my-code.ts --output ./analysis
+
+# Analyze all TypeScript files in a directory
+npm run analyze -- --dir ./src --output ./analysis
+
+# Analyze recursively with custom pattern
+npm run analyze -- \
+  --dir ./src \
+  --recursive \
+  --pattern "*.{ts,tsx}" \
+  --output ./analysis
+```
+
+**Output:**
+```
+./analysis/
+└── analysis-results.json
+    └── [
+          {
+            "file": "/path/to/file.ts",
+            "types": [...],      # Interfaces, types, classes, enums
+            "symbols": [...],    # Exported symbols with locations
+            "endpoints": [...]   # Detected API endpoints
+          }
+        ]
+```
+
+**What Gets Analyzed:**
+- TypeScript interfaces and types
+- Classes with properties and methods
+- Enums and their values
+- API endpoints (fetch calls with HTTP methods)
+- Symbols and their export status
+- JSDoc comments and descriptions
+
 ### Step 1: Fetch SPA Assets
 
 ```bash

@@ -46,6 +46,30 @@ npm install
 
 ## Usage
 
+### Analyze Local Files
+
+Analyze TypeScript/JavaScript files that you have locally (uploaded or created):
+
+```bash
+# Analyze a single file
+npm run analyze -- --file ./path/to/file.ts
+
+# Analyze all files in a directory
+npm run analyze -- --dir ./src
+
+# Analyze directory recursively with custom pattern
+npm run analyze -- --dir ./src --recursive --pattern "*.{ts,tsx}"
+
+# Specify output directory
+npm run analyze -- --dir ./src --output ./my-analysis
+```
+
+The analyze command will:
+- Extract TypeScript types, interfaces, classes, and enums
+- Identify symbols and their locations
+- Detect API endpoints (fetch calls with HTTP methods)
+- Generate a JSON report with the analysis results
+
 ### Parse Assets
 
 ```bash

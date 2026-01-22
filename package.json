@@ -10,6 +10,7 @@
   "scripts": {
     "build": "tsc",
     "dev": "tsc --watch",
+    "analyze": "node dist/cli.js analyze",
     "parse": "node dist/cli.js parse",
     "generate": "node dist/cli.js generate",
     "kb:build": "node dist/cli.js kb",
