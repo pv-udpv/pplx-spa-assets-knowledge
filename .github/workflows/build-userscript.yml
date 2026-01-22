@@ -47,7 +47,7 @@ jobs:
       
       - name: Check bundle size
         run: |
-          SIZE=$(stat -f%z dist/pplx-devtool.user.js 2>/dev/null || stat -c%s dist/pplx-devtool.user.js)
+          SIZE=$(stat -c%s dist/pplx-devtool.user.js)
           SIZE_KB=$((SIZE / 1024))
           echo "Bundle size: ${SIZE_KB} KB"
           if [ $SIZE_KB -gt 50 ]; then

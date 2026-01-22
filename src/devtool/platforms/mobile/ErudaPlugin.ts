@@ -16,7 +16,7 @@ export class PerplexityDevTool implements ErudaPlugin {
   private coverage: CoverageTracker;
   private builder: OpenAPIBuilder;
   private interceptors: Interceptors;
-  private schemaTab!: SchemaTab;
+  private schemaTab: SchemaTab | null = null;
 
   constructor() {
     // Initialize core modules
@@ -219,17 +219,32 @@ export class PerplexityDevTool implements ErudaPlugin {
       // Store in network log
       try {
         const log = JSON.parse(localStorage.getItem('pplx-network-log') || '[]');
-        log.push({
+        const newEntry = {
           timestamp: new Date().toISOString(),
           method,
           url,
           status,
           data,
           latency,
-        });
+        };
+        
+        log.push(newEntry);
+        
         // Keep last 100 entries
         if (log.length > 100) log.shift();
-        localStorage.setItem('pplx-network-log', JSON.stringify(log));
+        
+        const logStr = JSON.stringify(log);
+        
+        // Check size to prevent quota errors (keep under 5MB)
+        if (logStr.length > 5 * 1024 * 1024) {
+          // Remove oldest entries until under limit
+          while (log.length > 0 && JSON.stringify(log).length > 5 * 1024 * 1024) {
+            log.shift();
+          }
+          localStorage.setItem('pplx-network-log', JSON.stringify(log));
+        } else {
+          localStorage.setItem('pplx-network-log', logStr);
+        }
       } catch (e) {
         console.error('[Interceptor] Failed to log request:', e);
       }

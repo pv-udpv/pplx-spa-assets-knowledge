@@ -11,6 +11,7 @@ export class Interceptors {
   private originalFetch: typeof fetch;
   private originalXHROpen: typeof XMLHttpRequest.prototype.open;
   private originalXHRSend: typeof XMLHttpRequest.prototype.send;
+  private xhrMetadata = new WeakMap<XMLHttpRequest, { method: string; url: string; startTime: number }>();
 
   constructor() {
     this.originalFetch = window.fetch;
@@ -51,13 +52,18 @@ export class Interceptors {
         const latency = endTime - startTime;
 
         // Clone response to read body
-        const clonedResponse = response.clone();
         let data: any;
-
         try {
-          data = await clonedResponse.json();
+          const clonedResponse = response.clone();
+
+          try {
+            data = await clonedResponse.json();
+          } catch {
+            data = await clonedResponse.text();
+          }
         } catch {
-          data = await clonedResponse.text();
+          // If the response cannot be cloned or read, leave data undefined
+          data = undefined;
         }
 
         // Notify callbacks
@@ -88,9 +94,11 @@ export class Interceptors {
       url: string | URL,
       ...rest: any[]
     ) {
-      (this as any)._method = method;
-      (this as any)._url = url.toString();
-      (this as any)._startTime = performance.now();
+      self.xhrMetadata.set(this, {
+        method,
+        url: url.toString(),
+        startTime: performance.now(),
+      });
 
       return self.originalXHROpen.apply(this, [method, url, ...rest] as any);
     };
@@ -99,8 +107,11 @@ export class Interceptors {
       const xhr = this;
 
       xhr.addEventListener('loadend', function () {
+        const metadata = self.xhrMetadata.get(xhr);
+        if (!metadata) return;
+
         const endTime = performance.now();
-        const latency = endTime - ((xhr as any)._startTime || endTime);
+        const latency = endTime - metadata.startTime;
 
         let data: any;
         try {
@@ -112,13 +123,16 @@ export class Interceptors {
         // Notify callbacks
         for (const callback of self.callbacks) {
           callback(
-            (xhr as any)._method || 'GET',
-            (xhr as any)._url || '',
+            metadata.method,
+            metadata.url,
             xhr.status,
             data,
             latency
           );
         }
+
+        // Clean up
+        self.xhrMetadata.delete(xhr);
       });
 
       return self.originalXHRSend.apply(this, [body] as any);

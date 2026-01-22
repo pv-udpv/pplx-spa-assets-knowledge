@@ -10,9 +10,15 @@ export class StickyButton {
   private offsetY = 0;
   private storageKey = 'pplx-sticky-btn-position';
   private onClickCallback: () => void;
+  private boundOnDrag: (e: MouseEvent | TouchEvent) => void;
+  private boundOnDragEnd: () => void;
+  private boundOnResize: () => void;
 
   constructor(options: StickyButtonOptions = {}) {
     this.onClickCallback = options.onClick || (() => {});
+    this.boundOnDrag = this.onDrag.bind(this);
+    this.boundOnDragEnd = this.onDragEnd.bind(this);
+    this.boundOnResize = () => this.snapToEdge(false);
   }
 
   init() {
@@ -66,13 +72,13 @@ export class StickyButton {
 
     // Desktop drag
     this.button.addEventListener('mousedown', this.onDragStart.bind(this));
-    document.addEventListener('mousemove', this.onDrag.bind(this));
-    document.addEventListener('mouseup', this.onDragEnd.bind(this));
+    document.addEventListener('mousemove', this.boundOnDrag);
+    document.addEventListener('mouseup', this.boundOnDragEnd);
 
     // Mobile touch
     this.button.addEventListener('touchstart', this.onDragStart.bind(this), { passive: false });
-    document.addEventListener('touchmove', this.onDrag.bind(this), { passive: false });
-    document.addEventListener('touchend', this.onDragEnd.bind(this));
+    document.addEventListener('touchmove', this.boundOnDrag, { passive: false });
+    document.addEventListener('touchend', this.boundOnDragEnd);
 
     // Click handler
     this.button.addEventListener('click', () => {
@@ -83,9 +89,22 @@ export class StickyButton {
     });
 
     // Window resize
-    window.addEventListener('resize', () => {
-      this.snapToEdge(false);
-    });
+    window.addEventListener('resize', this.boundOnResize);
+  }
+
+  destroy() {
+    // Remove event listeners
+    document.removeEventListener('mousemove', this.boundOnDrag);
+    document.removeEventListener('mouseup', this.boundOnDragEnd);
+    document.removeEventListener('touchmove', this.boundOnDrag);
+    document.removeEventListener('touchend', this.boundOnDragEnd);
+    window.removeEventListener('resize', this.boundOnResize);
+
+    // Remove button from DOM
+    if (this.button && this.button.parentNode) {
+      this.button.parentNode.removeChild(this.button);
+      this.button = null;
+    }
   }
 
   private onDragStart(e: MouseEvent | TouchEvent) {

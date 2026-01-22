@@ -133,16 +133,26 @@ export class SchemaTab {
     $root.querySelector('#clear-btn')?.addEventListener('click', () => {
       if (confirm('Clear all captured schema data?')) {
         this.builder.clear();
-        this.renderTree(document.querySelector('#schema-tree-view')!);
-        this.renderPreview(document.querySelector('#schema-output')!);
+        const treeView = $root.querySelector('#schema-tree-view');
+        const output = $root.querySelector('#schema-output');
+        if (treeView instanceof HTMLElement) {
+          this.renderTree(treeView);
+        }
+        if (output instanceof HTMLElement) {
+          this.renderPreview(output);
+        }
       }
     });
   }
 
   private toggleCapture() {
     this.isCapturing = !this.isCapturing;
-    const btn = document.querySelector('#capture-btn')!;
-    const text = document.querySelector('#capture-text')!;
+    const btn = document.querySelector('#capture-btn');
+    const text = document.querySelector('#capture-text');
+
+    if (!btn || !text) {
+      return;
+    }
 
     if (this.isCapturing) {
       btn.classList.add('active');
@@ -230,7 +240,14 @@ export class SchemaTab {
 
   updateFromInterceptor() {
     // Called by main.ts when new requests are captured
-    this.renderTree(document.querySelector('#schema-tree-view')!);
-    this.renderPreview(document.querySelector('#schema-output')!);
+    const treeEl = document.querySelector('#schema-tree-view');
+    if (treeEl instanceof HTMLElement) {
+      this.renderTree(treeEl);
+    }
+
+    const outputEl = document.querySelector('#schema-output');
+    if (outputEl instanceof HTMLElement) {
+      this.renderPreview(outputEl);
+    }
   }
 }

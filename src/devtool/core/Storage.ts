@@ -1,5 +1,5 @@
 export class Storage {
-  private prefix = 'pplx-devtool-';
+  private readonly prefix = 'pplx-devtool-';
 
   get<T>(key: string, defaultValue?: T): T | undefined {
     try {

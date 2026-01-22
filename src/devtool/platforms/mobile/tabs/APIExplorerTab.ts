@@ -228,7 +228,10 @@ export class APIExplorerTab {
 
       // Update coverage
       this.coverage.markCalled(method, path, response.status, response.latency);
-      this.renderCoverage(document.querySelector('#coverage-stats')!);
+      const coverageEl = document.querySelector('#coverage-stats');
+      if (coverageEl instanceof HTMLElement) {
+        this.renderCoverage(coverageEl);
+      }
     } catch (error) {
       output.textContent = `❌ Error: ${(error as Error).message}`;
     }

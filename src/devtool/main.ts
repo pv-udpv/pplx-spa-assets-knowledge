@@ -1,4 +1,3 @@
-import type { Eruda } from './types/eruda';
 import { PerplexityDevTool } from './platforms/mobile/ErudaPlugin';
 import { StickyButton } from './core/StickyButton';
 
@@ -16,7 +15,7 @@ if (document.readyState === 'loading') {
 
 function init() {
   // Init Eruda
-  const eruda = (window as any).eruda as Eruda;
+  const eruda = window.eruda;
 
   if (typeof eruda === 'undefined') {
     console.error('[Perplexity DevTool] Eruda not loaded!');

@@ -10,6 +10,7 @@ export class NetworkTab {
     avgLatency: 0,
     errorRate: 0,
   };
+  private updateInterval: number | null = null;
 
   mount($el: HTMLElement) {
     $el.innerHTML = `
@@ -114,9 +115,17 @@ export class NetworkTab {
 
   private startMonitoring() {
     // Update stats every second
-    setInterval(() => {
+    this.updateInterval = window.setInterval(() => {
       this.updateStats();
     }, 1000);
+  }
+
+  destroy() {
+    // Clean up interval
+    if (this.updateInterval !== null) {
+      clearInterval(this.updateInterval);
+      this.updateInterval = null;
+    }
   }
 
   private updateStats() {
