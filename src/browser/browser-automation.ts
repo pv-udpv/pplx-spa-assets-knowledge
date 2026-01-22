@@ -45,7 +45,7 @@ export class BrowserAutomation {
 
       this.chromeProcess = spawn(executable, args, {
         stdio: 'ignore',
-      } as SpawnOptionsWithoutStdio);
+      } as unknown as SpawnOptionsWithoutStdio);
 
       this.chromeProcess.on('error', reject);
 

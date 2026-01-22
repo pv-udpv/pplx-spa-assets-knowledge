@@ -4,18 +4,18 @@
  */
 
 import { Command } from 'commander';
-import { readFile, writeFile, mkdir } from 'node:fs/promises';
-import { dirname, resolve } from 'node:path';
+import { readFile, writeFile, mkdir, readdir } from 'node:fs/promises';
+import { resolve, join, extname } from 'node:path';
 import { parse as parseYaml } from 'yaml';
 import { AssetFetcher } from './fetchers/asset-fetcher.js';
 import { TypeScriptASTParser } from './parsers/typescript-ast-parser.js';
 import { OpenAPIGenerator } from './generators/openapi-generator.js';
 import { AsyncAPIGenerator } from './generators/asyncapi-generator.js';
 import { JSONSchemaGenerator } from './generators/jsonschema-generator.js';
-import { AutoMCPGenerator, type MCPServerConfig } from './generators/automcp-generator.js';
+// import { AutoMCPGenerator, type MCPServerConfig } from './generators/automcp-generator.js';
 import { KnowledgeBaseBuilder } from './knowledge/kb-builder.js';
-import { runBrowserSession } from './browser/browser-automation.js';
-import { capturePresets } from './browser/capture-config.js';
+// import { runBrowserSession } from './browser/browser-automation.js';
+// import { capturePresets } from './browser/capture-config.js';
 import type { OpenAPIV3_1 } from 'openapi-types';
 
 const program = new Command();
@@ -27,7 +27,9 @@ program
 
 /**
  * BROWSER command: Automate browser capture with CDP
+ * NOTE: Temporarily disabled due to missing chrome-remote-interface dependency
  */
+/*
 program
   .command('browser')
   .description('Launch browser automation with Chrome DevTools Protocol')
@@ -71,6 +73,7 @@ program
       process.exit(1);
     }
   });
+*/
 
 /**
  * FETCH command: Download SPA assets from CDN
@@ -135,9 +138,163 @@ program
     }
   });
 
+/**
+ * ANALYZE command: Analyze local files using TypeScript AST parser
+ */
+program
+  .command('analyze')
+  .description('Analyze local TypeScript/JavaScript files')
+  .option('-f, --file <path>', 'Single file to analyze')
+  .option('-d, --dir <path>', 'Directory to analyze')
+  .option('-p, --pattern <pattern>', 'File pattern (e.g., "*.ts", "*.js")', '*.{ts,js}')
+  .option('-o, --output <dir>', 'Output directory for analysis results', './analysis-output')
+  .option('-r, --recursive', 'Recursively analyze directories', false)
+  .action(async (options) => {
+    console.log('🔍 Analyzing local files...');
+    console.log('═'.repeat(60));
+
+    try {
+      const parser = new TypeScriptASTParser();
+      const filesToAnalyze: string[] = [];
+
+      // Collect files to analyze
+      if (options.file) {
+        console.log(`📄 Single file mode: ${options.file}`);
+        const filePath = resolve(options.file);
+        filesToAnalyze.push(filePath);
+      } else if (options.dir) {
+        console.log(`📁 Directory mode: ${options.dir}`);
+        const dirPath = resolve(options.dir);
+        const files = await collectFiles(dirPath, options.pattern, options.recursive);
+        filesToAnalyze.push(...files);
+        console.log(`   Found ${files.length} file(s)`);
+      } else {
+        console.error('❌ Error: Please specify either --file or --dir');
+        process.exit(1);
+      }
+
+      if (filesToAnalyze.length === 0) {
+        console.log('⚠️  No files found to analyze');
+        return;
+      }
+
+      // Analyze each file
+      const results = [];
+      for (const filePath of filesToAnalyze) {
+        console.log(`\n📝 Analyzing: ${filePath}`);
+        try {
+          const content = await readFile(filePath, 'utf-8');
+          const analysis = parser.parseContent(content, filePath);
+          
+          results.push({
+            file: filePath,
+            types: analysis.types,
+            symbols: analysis.symbols,
+            endpoints: analysis.endpoints,
+          });
+
+          console.log(`   ✓ Types: ${analysis.types.length}`);
+          console.log(`   ✓ Symbols: ${analysis.symbols.length}`);
+          console.log(`   ✓ Endpoints: ${analysis.endpoints.length}`);
+        } catch (error) {
+          console.error(`   ✗ Failed to analyze: ${error instanceof Error ? error.message : String(error)}`);
+        }
+      }
+
+      // Save results
+      await mkdir(options.output, { recursive: true });
+      const outputPath = join(options.output, 'analysis-results.json');
+      await writeFile(outputPath, JSON.stringify(results, null, 2), 'utf-8');
+
+      console.log('\n✅ Analysis complete:');
+      console.log(`   Files analyzed: ${results.length}`);
+      console.log(`   Total types: ${results.reduce((sum, r) => sum + r.types.length, 0)}`);
+      console.log(`   Total symbols: ${results.reduce((sum, r) => sum + r.symbols.length, 0)}`);
+      console.log(`   Total endpoints: ${results.reduce((sum, r) => sum + r.endpoints.length, 0)}`);
+      console.log(`   Output: ${outputPath}`);
+    } catch (error) {
+      console.error('❌ Analysis failed:', error);
+      process.exit(1);
+    }
+  });
+
 // ... (rest of CLI commands from previous version)
 
 program.parse();
+
+/**
+ * Helper function to collect files from a directory
+ */
+async function collectFiles(
+  dirPath: string,
+  pattern: string,
+  recursive: boolean
+): Promise<string[]> {
+  const files: string[] = [];
+  
+  try {
+    const entries = await readdir(dirPath, { withFileTypes: true });
+    
+    for (const entry of entries) {
+      const fullPath = join(dirPath, entry.name);
+      
+      if (entry.isDirectory() && recursive) {
+        const subFiles = await collectFiles(fullPath, pattern, recursive);
+        files.push(...subFiles);
+      } else if (entry.isFile()) {
+        // Simple pattern matching for *.ts, *.js, etc.
+        const ext = extname(entry.name);
+        const matchesPattern = 
+          pattern === '*' || 
+          pattern.includes(ext) ||
+          (pattern.includes('*') && matchFilePattern(entry.name, pattern));
+        
+        if (matchesPattern) {
+          files.push(fullPath);
+        }
+      }
+    }
+  } catch (error) {
+    console.error(`Error reading directory ${dirPath}:`, error);
+  }
+  
+  return files;
+}
+
+/**
+ * Simple glob pattern matcher
+ */
+function matchFilePattern(filename: string, pattern: string): boolean {
+  // Handle patterns like *.{ts,js}
+  if (pattern.includes('{') && pattern.includes('}')) {
+    const basePattern = pattern.substring(0, pattern.indexOf('{'));
+    const extensions = pattern.substring(
+      pattern.indexOf('{') + 1,
+      pattern.indexOf('}')
+    ).split(',');
+    
+    for (const ext of extensions) {
+      const fullPattern = basePattern + ext;
+      if (matchSimplePattern(filename, fullPattern)) {
+        return true;
+      }
+    }
+    return false;
+  }
+  
+  return matchSimplePattern(filename, pattern);
+}
+
+/**
+ * Match simple wildcard patterns
+ */
+function matchSimplePattern(filename: string, pattern: string): boolean {
+  const regexPattern = pattern
+    .replace(/\./g, '\\.')
+    .replace(/\*/g, '.*');
+  const regex = new RegExp(`^${regexPattern}$`);
+  return regex.test(filename);
+}
 
 function generateAutomcpConfig(
   openApiSpec: OpenAPIV3_1.Document,
