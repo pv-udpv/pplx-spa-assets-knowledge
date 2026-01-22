@@ -76,8 +76,9 @@ export class CoverageTracker {
       this.coverage[category] = {};
     }
 
-    if (!this.coverage[category]?.[key]) {
-      this.coverage[category]![key] = {
+    const categoryEndpoints = this.coverage[category];
+    if (categoryEndpoints && !categoryEndpoints[key]) {
+      categoryEndpoints[key] = {
         called: false,
         callCount: 0,
         lastCalled: null,
@@ -86,7 +87,7 @@ export class CoverageTracker {
       };
     }
 
-    const entry = this.coverage[category]?.[key];
+    const entry = categoryEndpoints?.[key];
     if (entry) {
       entry.called = true;
       entry.callCount++;
