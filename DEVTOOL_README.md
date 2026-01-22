@@ -154,7 +154,7 @@ src/devtool/
 - **Language**: TypeScript 5.7 (strict mode)
 - **UI**: [Eruda](https://github.com/liriliri/eruda) plugin API
 - **Storage**: localStorage + IndexedDB
-- **Bundler**: Vite 6 + Terser
+- **Bundler**: Vite 6 + esbuild
 
 ## 🚀 Scripts
 
@@ -172,8 +172,8 @@ bun run preview      # Preview build output
 
 ## 📊 Bundle Size
 
-- **With CDN externals**: ~48KB (Eruda из CDN)
-- **Standalone**: ~250KB (с Eruda bundled)
+- **With CDN externals**: ~39KB (Eruda из CDN)
+- **Gzipped**: ~10KB
 - **Dev mode**: Unbundled (HMR chunks)
 
 ## 🔗 Links

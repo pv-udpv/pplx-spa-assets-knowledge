@@ -1,0 +1,73 @@
+name: Build Userscript
+
+on:
+  push:
+    branches:
+      - main
+      - feature/eruda-devtool
+    paths:
+      - 'src/devtool/**'
+      - 'vite.config.ts'
+      - 'tsconfig.json'
+      - 'package.json'
+  pull_request:
+    paths:
+      - 'src/devtool/**'
+      - 'vite.config.ts'
+      - 'tsconfig.json'
+      - 'package.json'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Type check
+        run: npx tsc --noEmit
+      
+      - name: Build userscript
+        run: npm run build
+      
+      - name: Check bundle size
+        run: |
+          SIZE=$(stat -f%z dist/pplx-devtool.user.js 2>/dev/null || stat -c%s dist/pplx-devtool.user.js)
+          SIZE_KB=$((SIZE / 1024))
+          echo "Bundle size: ${SIZE_KB} KB"
+          if [ $SIZE_KB -gt 50 ]; then
+            echo "::error::Bundle size exceeds 50KB limit (actual: ${SIZE_KB}KB)"
+            exit 1
+          fi
+          echo "::notice::Bundle size OK: ${SIZE_KB}KB / 50KB"
+      
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: pplx-devtool-userscript
+          path: dist/pplx-devtool.user.js
+          retention-days: 90
+      
+      - name: Commit built file (main branch only)
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -f dist/pplx-devtool.user.js
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: update built userscript [skip ci]"
+            git push
+          fi
