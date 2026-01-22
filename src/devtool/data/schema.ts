@@ -70,4 +70,4 @@ export const API_SCHEMA = {
       },
     ],
   },
-};
+} as const;

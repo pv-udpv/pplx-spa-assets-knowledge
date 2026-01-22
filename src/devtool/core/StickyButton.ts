@@ -10,9 +10,24 @@ export class StickyButton {
   private offsetY = 0;
   private storageKey = 'pplx-sticky-btn-position';
   private onClickCallback: () => void;
+  private boundOnDrag: (e: MouseEvent | TouchEvent) => void;
+  private boundOnDragEnd: () => void;
+  private boundOnResize: () => void;
+  private boundOnDragStart: (e: MouseEvent | TouchEvent) => void;
+  private boundOnClick: () => void;
 
   constructor(options: StickyButtonOptions = {}) {
     this.onClickCallback = options.onClick || (() => {});
+    this.boundOnDrag = this.onDrag.bind(this);
+    this.boundOnDragEnd = this.onDragEnd.bind(this);
+    this.boundOnResize = () => this.snapToEdge(false);
+    this.boundOnDragStart = this.onDragStart.bind(this);
+    this.boundOnClick = () => {
+      if (!this.wasDragging) {
+        this.onClickCallback();
+      }
+      this.wasDragging = false;
+    };
   }
 
   init() {
@@ -65,27 +80,42 @@ export class StickyButton {
     if (!this.button) return;
 
     // Desktop drag
-    this.button.addEventListener('mousedown', this.onDragStart.bind(this));
-    document.addEventListener('mousemove', this.onDrag.bind(this));
-    document.addEventListener('mouseup', this.onDragEnd.bind(this));
+    this.button.addEventListener('mousedown', this.boundOnDragStart);
+    document.addEventListener('mousemove', this.boundOnDrag);
+    document.addEventListener('mouseup', this.boundOnDragEnd);
 
     // Mobile touch
-    this.button.addEventListener('touchstart', this.onDragStart.bind(this), { passive: false });
-    document.addEventListener('touchmove', this.onDrag.bind(this), { passive: false });
-    document.addEventListener('touchend', this.onDragEnd.bind(this));
+    this.button.addEventListener('touchstart', this.boundOnDragStart, { passive: false });
+    document.addEventListener('touchmove', this.boundOnDrag, { passive: false });
+    document.addEventListener('touchend', this.boundOnDragEnd);
 
     // Click handler
-    this.button.addEventListener('click', () => {
-      if (!this.wasDragging) {
-        this.onClickCallback();
-      }
-      this.wasDragging = false;
-    });
+    this.button.addEventListener('click', this.boundOnClick);
 
     // Window resize
-    window.addEventListener('resize', () => {
-      this.snapToEdge(false);
-    });
+    window.addEventListener('resize', this.boundOnResize);
+  }
+
+  destroy() {
+    // Remove button-level event listeners
+    if (this.button) {
+      this.button.removeEventListener('mousedown', this.boundOnDragStart);
+      this.button.removeEventListener('touchstart', this.boundOnDragStart);
+      this.button.removeEventListener('click', this.boundOnClick);
+    }
+
+    // Remove document/window event listeners
+    document.removeEventListener('mousemove', this.boundOnDrag);
+    document.removeEventListener('mouseup', this.boundOnDragEnd);
+    document.removeEventListener('touchmove', this.boundOnDrag);
+    document.removeEventListener('touchend', this.boundOnDragEnd);
+    window.removeEventListener('resize', this.boundOnResize);
+
+    // Remove button from DOM
+    if (this.button && this.button.parentNode) {
+      this.button.parentNode.removeChild(this.button);
+      this.button = null;
+    }
   }
 
   private onDragStart(e: MouseEvent | TouchEvent) {

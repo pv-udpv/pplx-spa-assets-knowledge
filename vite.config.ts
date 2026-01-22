@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite';
-import monkey, { cdn } from 'vite-plugin-monkey';
+import monkey from 'vite-plugin-monkey';
 
 export default defineConfig({
   plugins: [

@@ -12,8 +12,11 @@ export class SettingsTab {
           <h4>🔐 GitHub Integration</h4>
           <label>
             <span>Personal Access Token</span>
-            <input type="password" id="github-pat" placeholder="ghp_xxxxx" value="${config.githubPAT || ''}">
+            <input type="password" id="github-pat" placeholder="ghp_xxxxx" value="${config.githubPAT || ''}" autocomplete="off">
           </label>
+          <p class="security-warning">
+            ⚠️ This token is stored in plain text in localStorage and may be accessible to other scripts or browser extensions. Use a low-scope token and only on trusted sites.
+          </p>
           <label>
             <span>Repository</span>
             <input type="text" id="github-repo" value="${config.githubRepo || 'pv-udpv/pplx-spa-assets-knowledge'}" readonly>
@@ -128,6 +131,16 @@ export class SettingsTab {
       }
       .info strong {
         color: #fff;
+      }
+      .security-warning {
+        margin: 6px 0 12px 0;
+        padding: 8px;
+        background: rgba(249, 62, 62, 0.1);
+        border-left: 3px solid #f93e3e;
+        border-radius: 4px;
+        font-size: 11px;
+        color: #ffa0a0;
+        line-height: 1.4;
       }
     `;
     $root.appendChild(style);

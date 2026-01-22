@@ -16,7 +16,8 @@ export class PerplexityDevTool implements ErudaPlugin {
   private coverage: CoverageTracker;
   private builder: OpenAPIBuilder;
   private interceptors: Interceptors;
-  private schemaTab!: SchemaTab;
+  private schemaTab: SchemaTab | null = null;
+  private networkTab: NetworkTab | null = null;
 
   constructor() {
     // Initialize core modules
@@ -152,19 +153,31 @@ export class PerplexityDevTool implements ErudaPlugin {
   private mountTabs($root: HTMLElement) {
     // API Explorer
     const apiTab = new APIExplorerTab(this.api, this.coverage);
-    apiTab.mount($root.querySelector('#tab-api')!);
+    const apiTabEl = $root.querySelector('#tab-api');
+    if (apiTabEl instanceof HTMLElement) {
+      apiTab.mount(apiTabEl);
+    }
 
     // Schema Inspector
-    this.schemaTab = new SchemaTab(this.builder);
-    this.schemaTab.mount($root.querySelector('#tab-schema')!);
+    const schemaTabEl = $root.querySelector('#tab-schema');
+    if (schemaTabEl instanceof HTMLElement) {
+      this.schemaTab = new SchemaTab(this.builder);
+      this.schemaTab.mount(schemaTabEl);
+    }
 
     // Network Monitor
-    const networkTab = new NetworkTab();
-    networkTab.mount($root.querySelector('#tab-network')!);
+    const networkTabEl = $root.querySelector('#tab-network');
+    if (networkTabEl instanceof HTMLElement) {
+      this.networkTab = new NetworkTab();
+      this.networkTab.mount(networkTabEl);
+    }
 
     // Settings
     const settingsTab = new SettingsTab();
-    settingsTab.mount($root.querySelector('#tab-settings')!);
+    const settingsTabEl = $root.querySelector('#tab-settings');
+    if (settingsTabEl instanceof HTMLElement) {
+      settingsTab.mount(settingsTabEl);
+    }
   }
 
   private loadSchema() {
@@ -219,17 +232,32 @@ export class PerplexityDevTool implements ErudaPlugin {
       // Store in network log
       try {
         const log = JSON.parse(localStorage.getItem('pplx-network-log') || '[]');
-        log.push({
+        const newEntry = {
           timestamp: new Date().toISOString(),
           method,
           url,
           status,
           data,
           latency,
-        });
+        };
+        
+        log.push(newEntry);
+        
         // Keep last 100 entries
         if (log.length > 100) log.shift();
-        localStorage.setItem('pplx-network-log', JSON.stringify(log));
+        
+        const logStr = JSON.stringify(log);
+        
+        // Check size to prevent quota errors (keep under 5MB)
+        if (logStr.length > 5 * 1024 * 1024) {
+          // Remove oldest entries until under limit
+          while (log.length > 0 && JSON.stringify(log).length > 5 * 1024 * 1024) {
+            log.shift();
+          }
+          localStorage.setItem('pplx-network-log', JSON.stringify(log));
+        } else {
+          localStorage.setItem('pplx-network-log', logStr);
+        }
       } catch (e) {
         console.error('[Interceptor] Failed to log request:', e);
       }
@@ -240,5 +268,10 @@ export class PerplexityDevTool implements ErudaPlugin {
 
   destroy() {
     this.interceptors.stop();
+    
+    // Clean up NetworkTab interval
+    if (this.networkTab) {
+      this.networkTab.destroy();
+    }
   }
 }
