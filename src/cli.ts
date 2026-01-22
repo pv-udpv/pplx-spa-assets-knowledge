@@ -4,13 +4,14 @@
  */
 
 import { Command } from 'commander';
-import { readFile } from 'node:fs/promises';
+import { readFile, writeFile, mkdir, readdir } from 'node:fs/promises';
+import { resolve, join } from 'node:path';
 import { AssetFetcher } from './fetchers/asset-fetcher.js';
+import { TypeScriptASTParser } from './parsers/typescript-ast-parser.js';
 import { runBrowserSession } from './browser/browser-automation.js';
 import { capturePresets } from './browser/capture-config.js';
 
 // The following imports are reserved for future CLI commands that are not yet fully implemented:
-// - TypeScriptASTParser for parse command
 // - OpenAPIGenerator, AsyncAPIGenerator, JSONSchemaGenerator for generate command
 // - AutoMCPGenerator for MCP generation
 // - KnowledgeBaseBuilder for knowledge base construction
@@ -177,6 +178,8 @@ program
 
       // Analyze each file
       const results = [];
+      let failedFiles = 0;
+      
       for (const filePath of filesToAnalyze) {
         console.log(`\n📝 Analyzing: ${filePath}`);
         try {
@@ -193,7 +196,19 @@ program
           console.log(`   ✓ Types: ${analysis.types.length}`);
           console.log(`   ✓ Symbols: ${analysis.symbols.length}`);
           console.log(`   ✓ Endpoints: ${analysis.endpoints.length}`);
+          
+          // Clean up the source file to prevent memory accumulation
+          try {
+            const project = (parser as any).project;
+            const sourceFile = project.getSourceFile(filePath);
+            if (sourceFile) {
+              project.removeSourceFile(sourceFile);
+            }
+          } catch (cleanupError) {
+            // Ignore cleanup errors
+          }
         } catch (error) {
+          failedFiles++;
           console.error(`   ✗ Failed to analyze: ${error instanceof Error ? error.message : String(error)}`);
         }
       }
@@ -204,7 +219,11 @@ program
       await writeFile(outputPath, JSON.stringify(results, null, 2), 'utf-8');
 
       console.log('\n✅ Analysis complete:');
+      console.log(`   Files attempted: ${filesToAnalyze.length}`);
       console.log(`   Files analyzed: ${results.length}`);
+      if (failedFiles > 0) {
+        console.log(`   Files failed: ${failedFiles}`);
+      }
       console.log(`   Total types: ${results.reduce((sum, r) => sum + r.types.length, 0)}`);
       console.log(`   Total symbols: ${results.reduce((sum, r) => sum + r.symbols.length, 0)}`);
       console.log(`   Total endpoints: ${results.reduce((sum, r) => sum + r.endpoints.length, 0)}`);
@@ -218,6 +237,106 @@ program
 // ... (rest of CLI commands from previous version)
 
 program.parse();
+
+/**
+ * Helper function to collect files from a directory
+ */
+async function collectFiles(
+  dirPath: string,
+  pattern: string,
+  recursive: boolean
+): Promise<string[]> {
+  const files: string[] = [];
+  
+  try {
+    const entries = await readdir(dirPath, { withFileTypes: true });
+    
+    for (const entry of entries) {
+      const fullPath = join(dirPath, entry.name);
+      
+      if (entry.isDirectory() && recursive) {
+        const subFiles = await collectFiles(fullPath, pattern, recursive);
+        files.push(...subFiles);
+      } else if (entry.isFile()) {
+        // Simple pattern matching for *.ts, *.js, etc.
+        const matchesPattern = matchFilePattern(entry.name, pattern);
+        
+        if (matchesPattern) {
+          files.push(fullPath);
+        }
+      }
+    }
+  } catch (error) {
+    console.error(`Error reading directory ${dirPath}:`, error);
+  }
+  
+  return files;
+}
+
+/**
+ * Simple glob pattern matcher
+ * Note: For production use, consider using a library like 'minimatch' for full glob support
+ */
+function matchFilePattern(filename: string, pattern: string): boolean {
+  // Match all files
+  if (pattern === '*') {
+    return true;
+  }
+  
+  // Handle patterns like *.{ts,js}
+  if (pattern.includes('{') && pattern.includes('}')) {
+    const openBraceIndex = pattern.indexOf('{');
+    const closeBraceIndex = pattern.indexOf('}');
+    
+    // Validate brace structure
+    if (closeBraceIndex <= openBraceIndex + 1) {
+      console.warn(`Invalid pattern: ${pattern}. Braces must contain content.`);
+      return false;
+    }
+    
+    const basePattern = pattern.substring(0, openBraceIndex);
+    const extensionsStr = pattern.substring(openBraceIndex + 1, closeBraceIndex);
+    
+    // Check for empty extensions
+    if (!extensionsStr.trim()) {
+      console.warn(`Invalid pattern: ${pattern}. Empty extensions in braces.`);
+      return false;
+    }
+    
+    const extensions = extensionsStr.split(',');
+    
+    for (const ext of extensions) {
+      const fullPattern = basePattern + ext.trim();
+      if (matchSimplePattern(filename, fullPattern)) {
+        return true;
+      }
+    }
+    return false;
+  }
+  
+  return matchSimplePattern(filename, pattern);
+}
+
+/**
+ * Match simple wildcard patterns (e.g., *.ts, test-*.js)
+ * Only supports * wildcard, not full glob syntax
+ */
+function matchSimplePattern(filename: string, pattern: string): boolean {
+  // Validate pattern to prevent ReDoS
+  if (pattern.length > 100 || (pattern.match(/\*/g) || []).length > 5) {
+    console.warn(`Pattern too complex or too long: ${pattern}`);
+    return false;
+  }
+  
+  // Escape special regex characters except *
+  // Including hyphen to prevent issues in character classes
+  const regexPattern = pattern
+    .replace(/[.+?^${}()|[\]\\\-]/g, '\\$&')
+    .replace(/\*/g, '.*');
+  
+  const regex = new RegExp(`^${regexPattern}$`);
+  return regex.test(filename);
+}
 
 // Reserved for future automcp command
 /*

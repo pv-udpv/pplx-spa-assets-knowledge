@@ -156,20 +156,23 @@ Generated output (`analysis-output/analysis-results.json`):
 4. **Migration Analysis**: Understand the structure of legacy code before migration
 5. **Security Audit**: Identify external API calls and data structures
 
-## Integration with Other Commands
+## Future Integration Possibilities
 
-The output from `analyze` can be used as input to other commands:
+The analyze command currently outputs a standalone JSON format. Future enhancements could enable direct integration with other commands:
 
 ```bash
+# Future possibility (not currently supported):
 # 1. Analyze local files
 npm run analyze -- --dir ./src --output ./analysis
 
-# 2. Generate OpenAPI spec from analyzed code
-npm run generate -- --input ./analysis --type openapi
+# 2. Generate OpenAPI spec from analyzed code (requires format adapter)
+# npm run generate -- --input ./analysis --type openapi
 
-# 3. Build knowledge base
-npm run kb:build -- --input ./analysis --output ./kb
+# 3. Build knowledge base (requires format adapter)
+# npm run kb:build -- --input ./analysis --output ./kb
 ```
+
+Note: The analyze output format differs from the expected input format for generate and kb:build commands. These integrations would require format conversion utilities.
 
 ## Advanced Options
 
