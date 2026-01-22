@@ -435,7 +435,7 @@
     "phase_2": {
       "status": "in_progress",
       "title": "GraphRAG Integration and Semantic Search",
-      "target": "Q2 2024",
+      "target": "Q2 2025",
       "features": [
         "Vector embeddings for knowledge entries",
         "Graph database integration (Neo4j, TypeDB)",
@@ -449,7 +449,7 @@
     "phase_3": {
       "status": "planned",
       "title": "CI/CD Automation and Change Detection",
-      "target": "Q3 2024",
+      "target": "Q3 2025",
       "features": [
         "GitHub Actions workflow for automated monitoring",
         "Scheduled spec regeneration",
@@ -464,7 +464,7 @@
     "phase_4": {
       "status": "future",
       "title": "Advanced Features",
-      "target": "Q4 2024+",
+      "target": "Q4 2025+",
       "features": [
         "Visual API explorer web interface",
         "Interactive documentation portal",

@@ -640,7 +640,7 @@ generate_client_library(
 
 ### Phase 2: GraphRAG Integration and Semantic Search (In Progress)
 
-**Target:** Q2 2024
+**Target:** Q2 2025
 
 - [ ] Vector embeddings for knowledge entries
 - [ ] Graph database integration (Neo4j, TypeDB)
@@ -652,7 +652,7 @@ generate_client_library(
 
 ### Phase 3: CI/CD Automation and Change Detection (Planned)
 
-**Target:** Q3 2024
+**Target:** Q3 2025
 
 - [ ] GitHub Actions workflow for automated asset monitoring
 - [ ] Scheduled spec regeneration (daily/weekly)
@@ -665,7 +665,7 @@ generate_client_library(
 
 ### Phase 4: Advanced Features (Future)
 
-**Target:** Q4 2024 and beyond
+**Target:** Q4 2025 and beyond
 
 - [ ] Visual API explorer web interface
 - [ ] Interactive documentation portal
