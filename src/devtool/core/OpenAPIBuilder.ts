@@ -133,7 +133,7 @@ export class OpenAPIBuilder {
   build(): OpenAPISchema {
     const paths: Record<string, any> = {};
 
-    for (const [key, endpoint] of this.endpoints) {
+    for (const [, endpoint] of this.endpoints) {
       if (!paths[endpoint.path]) {
         paths[endpoint.path] = {};
       }

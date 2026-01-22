@@ -45,7 +45,7 @@ export default defineConfig({
       build: {
         // External globals (CDN dependencies)
         externalGlobals: {
-          eruda: cdn.jsdelivr('eruda', 'eruda.min.js')
+          // Eruda is loaded via @require, not bundled
         },
         
         // Minify
@@ -75,11 +75,6 @@ export default defineConfig({
   
   build: {
     target: 'esnext',
-    minify: 'terser',
-    terserOptions: {
-      compress: {
-        drop_console: process.env.NODE_ENV === 'production',
-      },
-    },
+    minify: 'esbuild',
   },
 });

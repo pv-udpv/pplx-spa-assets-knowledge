@@ -1,4 +1,4 @@
-import type { PerplexityAPI, EndpointSpec } from '../../../core/PerplexityAPI';
+import type { PerplexityAPI } from '../../../core/PerplexityAPI';
 import type { CoverageTracker } from '../../../core/CoverageTracker';
 
 export class APIExplorerTab {
@@ -203,18 +203,17 @@ export class APIExplorerTab {
         const target = e.currentTarget as HTMLElement;
         const method = target.dataset.method!;
         const path = target.dataset.path!;
-        const category = target.dataset.category!;
-        await this.testEndpoint(method, path, category);
+        await this.testEndpoint(method, path);
       });
     });
   }
 
-  private async testEndpoint(method: string, path: string, category: string) {
+  private async testEndpoint(method: string, path: string) {
     const output = document.querySelector('#response-output') as HTMLElement;
     output.textContent = `⏳ Testing ${method} ${path}...`;
 
     try {
-      const response = await this.api.fetch(path, { method }, category);
+      const response = await this.api.fetch(path, { method });
 
       output.textContent = JSON.stringify(
         {

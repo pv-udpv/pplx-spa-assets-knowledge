@@ -6,6 +6,7 @@ package-lock.json
 
 # Build outputs
 dist/
+!dist/pplx-devtool.user.js
 build/
 *.tsbuildinfo
 

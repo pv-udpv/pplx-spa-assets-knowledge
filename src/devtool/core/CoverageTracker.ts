@@ -65,7 +65,7 @@ export class CoverageTracker {
     let category = 'other';
     for (const cat in this.coverage) {
       const key = `${method} ${path}`;
-      if (this.coverage[cat][key]) {
+      if (this.coverage[cat]?.[key]) {
         category = cat;
         break;
       }
@@ -76,8 +76,9 @@ export class CoverageTracker {
       this.coverage[category] = {};
     }
 
-    if (!this.coverage[category][key]) {
-      this.coverage[category][key] = {
+    const categoryEndpoints = this.coverage[category];
+    if (categoryEndpoints && !categoryEndpoints[key]) {
+      categoryEndpoints[key] = {
         called: false,
         callCount: 0,
         lastCalled: null,
@@ -86,16 +87,18 @@ export class CoverageTracker {
       };
     }
 
-    const entry = this.coverage[category][key];
-    entry.called = true;
-    entry.callCount++;
-    entry.lastCalled = new Date().toISOString();
-    entry.lastStatus = status;
+    const entry = categoryEndpoints?.[key];
+    if (entry) {
+      entry.called = true;
+      entry.callCount++;
+      entry.lastCalled = new Date().toISOString();
+      entry.lastStatus = status;
 
-    if (latency !== undefined) {
-      // Running average
-      entry.avgLatency =
-        (entry.avgLatency * (entry.callCount - 1) + latency) / entry.callCount;
+      if (latency !== undefined) {
+        // Running average
+        entry.avgLatency =
+          (entry.avgLatency * (entry.callCount - 1) + latency) / entry.callCount;
+      }
     }
 
     this.save();
