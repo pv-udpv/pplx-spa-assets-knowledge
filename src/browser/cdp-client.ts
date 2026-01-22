@@ -3,12 +3,13 @@
  */
 
 import CDP from 'chrome-remote-interface';
+import type { Client } from 'chrome-remote-interface';
 import { promises as fs } from 'node:fs';
 import { join } from 'node:path';
 import type { CaptureConfig, CaptureData } from '../types/index.js';
 
 export class CDPClient {
-  private client: any = null;
+  private client: Client | null = null;
   private config: CaptureConfig;
   private captureData: CaptureData;
   private wsMessages: Array<{ type: string; data: unknown; timestamp: number }> = [];

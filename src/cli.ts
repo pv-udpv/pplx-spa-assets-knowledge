@@ -5,20 +5,15 @@
 
 import { Command } from 'commander';
 import { readFile } from 'node:fs/promises';
-// Unused imports - reserved for future CLI commands
-// import { writeFile, mkdir } from 'node:fs/promises';
-// import { dirname, resolve } from 'node:path';
-// import { parse as parseYaml } from 'yaml';
 import { AssetFetcher } from './fetchers/asset-fetcher.js';
-// import { TypeScriptASTParser } from './parsers/typescript-ast-parser.js';
-// import { OpenAPIGenerator } from './generators/openapi-generator.js';
-// import { AsyncAPIGenerator } from './generators/asyncapi-generator.js';
-// import { JSONSchemaGenerator } from './generators/jsonschema-generator.js';
-// import { AutoMCPGenerator, type MCPServerConfig } from './generators/automcp-generator.js';
-// import { KnowledgeBaseBuilder } from './knowledge/kb-builder.js';
 import { runBrowserSession } from './browser/browser-automation.js';
 import { capturePresets } from './browser/capture-config.js';
-// import type { OpenAPIV3_1 } from 'openapi-types';
+
+// The following imports are reserved for future CLI commands that are not yet fully implemented:
+// - TypeScriptASTParser for parse command
+// - OpenAPIGenerator, AsyncAPIGenerator, JSONSchemaGenerator for generate command
+// - AutoMCPGenerator for MCP generation
+// - KnowledgeBaseBuilder for knowledge base construction
 
 const program = new Command();
 
