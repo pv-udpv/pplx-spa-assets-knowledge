@@ -110,21 +110,21 @@ export class SessionStateManager {
     // Note: This is a simplified version. Full implementation would need
     // proper CDP Runtime.evaluate calls to set storage values
 
-    // Restore localStorage
-    const localStorageScript = `
-      localStorage.clear();
-      ${Object.entries(snapshot.localStorage)
-        .map(([key, value]) => `localStorage.setItem('${key}', '${value}');`)
-        .join('\n')}
-    `;
+    // Restore localStorage would use script like:
+    // const localStorageScript = `
+    //   localStorage.clear();
+    //   ${Object.entries(snapshot.localStorage)
+    //     .map(([key, value]) => `localStorage.setItem('${key}', '${value}');`)
+    //     .join('\n')}
+    // `;
 
-    // Restore sessionStorage
-    const sessionStorageScript = `
-      sessionStorage.clear();
-      ${Object.entries(snapshot.sessionStorage)
-        .map(([key, value]) => `sessionStorage.setItem('${key}', '${value}');`)
-        .join('\n')}
-    `;
+    // Restore sessionStorage would use script like:
+    // const sessionStorageScript = `
+    //   sessionStorage.clear();
+    //   ${Object.entries(snapshot.sessionStorage)
+    //     .map(([key, value]) => `sessionStorage.setItem('${key}', '${value}');`)
+    //     .join('\n')}
+    // `;
 
     // Execute restore scripts
     console.log(`   Restoring localStorage (${Object.keys(snapshot.localStorage).length} items)`);
@@ -261,14 +261,20 @@ export class SessionStateManager {
       if (!(key in storage1)) {
         added[key] = value;
       } else if (storage1[key] !== value) {
-        modified[key] = { old: storage1[key], new: value };
+        const oldValue = storage1[key];
+        if (oldValue !== undefined) {
+          modified[key] = { old: oldValue, new: value };
+        }
       }
     }
 
     // Find removed
     for (const key of Object.keys(storage1)) {
       if (!(key in storage2)) {
-        removed[key] = storage1[key];
+        const oldValue = storage1[key];
+        if (oldValue !== undefined) {
+          removed[key] = oldValue;
+        }
       }
     }
 

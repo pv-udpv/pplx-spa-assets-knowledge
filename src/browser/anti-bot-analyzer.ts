@@ -34,7 +34,12 @@ export interface AntiBotAnalysisResult {
 }
 
 export class AntiBotAnalyzer {
-  constructor(private cdp: CDPClient) {}
+  // CDP client reserved for future use when Runtime.evaluate is integrated
+  // private _cdp: CDPClient;
+
+  constructor(_cdp: CDPClient) {
+    // this._cdp = _cdp;
+  }
 
   /**
    * Analyze website for anti-bot protection mechanisms
@@ -373,7 +378,7 @@ export class AntiBotAnalyzer {
   /**
    * Helper: Evaluate script and return result
    */
-  private async evaluateScript<T = any>(script: string): Promise<T> {
+  private async evaluateScript<T = any>(_script: string): Promise<T> {
     // This would use CDP Runtime.evaluate
     // For now, return placeholder values
     console.log(`   Evaluating detection script...`);

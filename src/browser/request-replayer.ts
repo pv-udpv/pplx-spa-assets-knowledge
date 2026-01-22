@@ -37,11 +37,15 @@ export interface ReplayResult {
 export class RequestReplayer {
   private har: any;
   private results: ReplayResult[] = [];
+  // CDP client reserved for future use when Runtime.evaluate is integrated
+  // private _cdp: CDPClient;
 
   constructor(
-    private cdp: CDPClient,
+    _cdp: CDPClient,
     private harFile: string
-  ) {}
+  ) {
+    // this._cdp = _cdp;
+  }
 
   /**
    * Load HAR file
@@ -187,7 +191,7 @@ export class RequestReplayer {
     url: string,
     headers: Record<string, string>,
     body?: any,
-    timeout: number = 30000
+    _timeout: number = 30000
   ): Promise<ReplayResult> {
     const start = Date.now();
     const result: ReplayResult = {
@@ -207,36 +211,37 @@ export class RequestReplayer {
 
     try {
       // Use fetch API via CDP Runtime.evaluate
-      const fetchScript = `
-        (async () => {
-          const response = await fetch('${url}', {
-            method: '${method}',
-            headers: ${JSON.stringify(headers)},
-            ${body ? `body: ${typeof body === 'string' ? `'${body}'` : JSON.stringify(body)},` : ''}
-          });
-
-          const responseHeaders = {};
-          response.headers.forEach((value, key) => {
-            responseHeaders[key] = value;
-          });
-
-          let responseBody;
-          const contentType = response.headers.get('content-type') || '';
-          
-          if (contentType.includes('application/json')) {
-            responseBody = await response.json();
-          } else {
-            responseBody = await response.text();
-          }
-
-          return JSON.stringify({
-            status: response.status,
-            statusText: response.statusText,
-            headers: responseHeaders,
-            body: responseBody,
-          });
-        })()
-      `;
+      // This would be the script to execute:
+      // const fetchScript = `
+      //   (async () => {
+      //     const response = await fetch('${url}', {
+      //       method: '${method}',
+      //       headers: ${JSON.stringify(headers)},
+      //       ${body ? `body: ${typeof body === 'string' ? `'${body}'` : JSON.stringify(body)},` : ''}
+      //     });
+      //
+      //     const responseHeaders = {};
+      //     response.headers.forEach((value, key) => {
+      //       responseHeaders[key] = value;
+      //     });
+      //
+      //     let responseBody;
+      //     const contentType = response.headers.get('content-type') || '';
+      //     
+      //     if (contentType.includes('application/json')) {
+      //       responseBody = await response.json();
+      //     } else {
+      //       responseBody = await response.text();
+      //     }
+      //
+      //     return JSON.stringify({
+      //       status: response.status,
+      //       statusText: response.statusText,
+      //       headers: responseHeaders,
+      //       body: responseBody,
+      //     });
+      //   })()
+      // `;
 
       // Execute via CDP (would need access to CDP client's Runtime)
       // For now, this is a placeholder that would integrate with CDPClient

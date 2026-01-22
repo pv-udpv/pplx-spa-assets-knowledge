@@ -8,13 +8,15 @@ import { readFile, writeFile, mkdir, readdir } from 'node:fs/promises';
 import { resolve, join } from 'node:path';
 import { AssetFetcher } from './fetchers/asset-fetcher.js';
 import { TypeScriptASTParser } from './parsers/typescript-ast-parser.js';
-import { runBrowserSession } from './browser/browser-automation.js';
-import { capturePresets } from './browser/capture-config.js';
+// Disabled due to build errors - will be re-enabled when browser commands are needed
+// import { runBrowserSession } from './browser/browser-automation.js';
+// import { capturePresets } from './browser/capture-config.js';
 
 // The following imports are reserved for future CLI commands that are not yet fully implemented:
 // - OpenAPIGenerator, AsyncAPIGenerator, JSONSchemaGenerator for generate command
 // - AutoMCPGenerator for MCP generation
 // - KnowledgeBaseBuilder for knowledge base construction
+// - RequestReplayer, SessionStateManager, AntiBotAnalyzer for browser automation commands
 
 const program = new Command();
 
@@ -234,9 +236,134 @@ program
     }
   });
 
+/**
+ * REPLAY command: Replay requests from HAR file
+ */
+program
+  .command('replay')
+  .description('Replay HTTP requests from HAR file')
+  .requiredOption('--har <file>', 'HAR file to replay')
+  .option('-f, --filter <pattern>', 'URL pattern to filter (e.g., "api.example.com")')
+  .option('-d, --delay <ms>', 'Delay between requests in milliseconds', '0')
+  .option('-o, --output <file>', 'Output file for results', './replay-results.json')
+  .action(async (options) => {
+    console.log('🔄 Request Replay');
+    console.log('═'.repeat(60));
+    console.log(`   HAR file: ${options.har}`);
+    console.log(`   Filter: ${options.filter || 'none'}`);
+    console.log(`   Delay: ${options.delay}ms`);
+
+    console.log('\n⚠️  Note: Request replay requires browser automation to be enabled');
+    console.log('   This feature will be available when the browser command is active');
+    console.log('   For now, use Python script: python3 scripts/har_to_openapi.py');
+  });
+
+/**
+ * DIFF command: Diff browser state snapshots
+ */
+program
+  .command('diff')
+  .description('Compare two browser state snapshots')
+  .requiredOption('--before <file>', 'Before snapshot file')
+  .requiredOption('--after <file>', 'After snapshot file')
+  .option('-o, --output <file>', 'Output file for diff results', './snapshot-diff.json')
+  .action(async (options) => {
+    console.log('🔍 Snapshot Diff');
+    console.log('═'.repeat(60));
+    console.log(`   Before: ${options.before}`);
+    console.log(`   After: ${options.after}`);
+
+    try {
+      // Load snapshots
+      const before = JSON.parse(await readFile(options.before, 'utf-8'));
+      const after = JSON.parse(await readFile(options.after, 'utf-8'));
+
+      // Simple diff
+      const diff = {
+        timestamp: new Date().toISOString(),
+        before: options.before,
+        after: options.after,
+        changes: {
+          localStorage: compareSets(before.localStorage || {}, after.localStorage || {}),
+          sessionStorage: compareSets(before.sessionStorage || {}, after.sessionStorage || {}),
+          cookies: compareSets(before.cookies || [], after.cookies || []),
+          url: {
+            changed: before.url !== after.url,
+            before: before.url,
+            after: after.url,
+          },
+        },
+      };
+
+      // Save diff
+      await writeFile(options.output, JSON.stringify(diff, null, 2), 'utf-8');
+
+      console.log('\n✅ Diff completed');
+      console.log(`   Output: ${options.output}`);
+    } catch (error) {
+      console.error('❌ Diff failed:', error);
+      process.exit(1);
+    }
+  });
+
+/**
+ * ANTIBOT command: Analyze anti-bot protection
+ */
+program
+  .command('antibot')
+  .description('Analyze website for anti-bot protection mechanisms')
+  .option('-u, --url <url>', 'URL to analyze (requires browser automation)')
+  .option('-o, --output <file>', 'Output file for analysis results', './antibot-analysis.json')
+  .action(async (_options) => {
+    console.log('🔍 Anti-Bot Protection Analysis');
+    console.log('═'.repeat(60));
+
+    console.log('\n⚠️  Note: Anti-bot analysis requires browser automation to be enabled');
+    console.log('   This feature will be available when the browser command is active');
+    console.log('   For now, manually check for:');
+    console.log('   - Cloudflare protection');
+    console.log('   - reCAPTCHA / hCAPTCHA');
+    console.log('   - Canvas fingerprinting');
+    console.log('   - WebRTC fingerprinting');
+    console.log('   - WebDriver detection');
+  });
+
 // ... (rest of CLI commands from previous version)
 
 program.parse();
+
+/**
+ * Helper to compare two objects/arrays and find differences
+ */
+function compareSets(before: any, after: any): { added: any[]; removed: any[]; modified: any[] } {
+  const result: { added: any[]; removed: any[]; modified: any[] } = { added: [], removed: [], modified: [] };
+  
+  if (Array.isArray(before) && Array.isArray(after)) {
+    // Simple array comparison
+    result.added = after.filter((item: any) => !before.includes(item));
+    result.removed = before.filter((item: any) => !after.includes(item));
+  } else if (typeof before === 'object' && typeof after === 'object') {
+    // Object comparison
+    const beforeKeys = new Set(Object.keys(before));
+    const afterKeys = new Set(Object.keys(after));
+    
+    for (const key of afterKeys) {
+      if (!beforeKeys.has(key)) {
+        result.added.push({ key, value: after[key] });
+      } else if (before[key] !== after[key]) {
+        result.modified.push({ key, before: before[key], after: after[key] });
+      }
+    }
+    
+    for (const key of beforeKeys) {
+      if (!afterKeys.has(key)) {
+        result.removed.push({ key, value: before[key] });
+      }
+    }
+  }
+  
+  return result;
+}
 
 /**
  * Helper function to collect files from a directory
