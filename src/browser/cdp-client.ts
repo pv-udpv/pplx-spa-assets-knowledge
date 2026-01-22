@@ -3,18 +3,20 @@
  */
 
 import CDP from 'chrome-remote-interface';
+import type { Client } from 'chrome-remote-interface';
 import { promises as fs } from 'node:fs';
 import { join } from 'node:path';
-import type { CaptureConfig, CaptureSession, CaptureData } from '../types/index.js';
+import type { CaptureConfig, CaptureData } from '../types/index.js';
 
 export class CDPClient {
-  private client: typeof CDP.Client | null = null;
+  private client: Client | null = null;
   private config: CaptureConfig;
   private captureData: CaptureData;
   private wsMessages: Array<{ type: string; data: unknown; timestamp: number }> = [];
   private harEntries: Array<Record<string, unknown>> = [];
-  private storageData: Record<string, Record<string, string>> = {};
-  private callstack: Array<{ function: string; url: string; lineNumber: number; columnNumber: number }> = [];
+  // Reserved for future use
+  // private storageData: Record<string, Record<string, string>> = {};
+  // private callstack: Array<{ function: string; url: string; lineNumber: number; columnNumber: number }> = [];
 
   constructor(config: CaptureConfig) {
     this.config = config;
@@ -38,7 +40,7 @@ export class CDPClient {
    */
   async connect(port = 9222): Promise<void> {
     try {
-      this.client = await CDP({ port, timeout: this.config.timeout });
+      this.client = await CDP({ port });
       console.log(`✅ Connected to Chrome DevTools Protocol on port ${port}`);
 
       const { Network, Page, Runtime, Storage, Log } = this.client as any;
@@ -256,7 +258,7 @@ export class CDPClient {
   }
 
   private setupNetworkCapture(Network: any): void {
-    Network.requestWillBeSent(({ requestId, request, timestamp }: any) => {
+    Network.requestWillBeSent(({ request, timestamp }: any) => {
       this.harEntries.push({
         startedDateTime: new Date(timestamp * 1000).toISOString(),
         time: 0,
@@ -276,7 +278,7 @@ export class CDPClient {
       });
     });
 
-    Network.responseReceived(({ requestId, response, timestamp }: any) => {
+    Network.responseReceived(({ response }: any) => {
       const entry = this.harEntries.find((e: any) => e.request?.url === response.url);
       if (entry) {
         entry.response = {
