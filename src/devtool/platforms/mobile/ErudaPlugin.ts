@@ -1,4 +1,4 @@
-import type { Eruda, ErudaPlugin } from '../../types/eruda';
+import type { ErudaPlugin } from '../../types/eruda';
 import { PerplexityAPI, type EndpointSpec } from '../../core/PerplexityAPI';
 import { CoverageTracker } from '../../core/CoverageTracker';
 import { OpenAPIBuilder } from '../../core/OpenAPIBuilder';
@@ -29,7 +29,7 @@ export class PerplexityDevTool implements ErudaPlugin {
     this.loadSchema();
   }
 
-  init($el: HTMLElement, eruda: Eruda) {
+  init($el: HTMLElement) {
     $el.innerHTML = `
       <div class="pplx-devtool">
         <div class="pplx-tabs">
@@ -134,7 +134,9 @@ export class PerplexityDevTool implements ErudaPlugin {
     $root.querySelectorAll('.pplx-tab').forEach((tab) => {
       tab.addEventListener('click', (e) => {
         const target = (e.target as HTMLElement).dataset.tab;
-        this.switchTab($root, target!);
+        if (target) {
+          this.switchTab($root, target);
+        }
       });
     });
   }

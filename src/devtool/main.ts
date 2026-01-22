@@ -16,7 +16,7 @@ if (document.readyState === 'loading') {
 
 function init() {
   // Init Eruda
-  declare const eruda: Eruda;
+  const eruda = (window as any).eruda as Eruda;
 
   if (typeof eruda === 'undefined') {
     console.error('[Perplexity DevTool] Eruda not loaded!');

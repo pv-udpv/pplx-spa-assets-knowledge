@@ -26,11 +26,9 @@ export class PerplexityAPI {
 
   async fetch<T = any>(
     endpoint: string,
-    options: RequestInit = {},
-    category = 'other'
+    options: RequestInit = {}
   ): Promise<APIResponse<T>> {
     const url = endpoint.startsWith('http') ? endpoint : `${this.baseURL}${endpoint}`;
-    const method = options.method || 'GET';
 
     const defaultHeaders: Record<string, string> = {
       'Content-Type': 'application/json',

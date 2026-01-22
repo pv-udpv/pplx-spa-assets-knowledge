@@ -6,12 +6,9 @@ export class StickyButton {
   private button: HTMLButtonElement | null = null;
   private isDragging = false;
   private wasDragging = false;
-  private startX = 0;
-  private startY = 0;
   private offsetX = 0;
   private offsetY = 0;
   private storageKey = 'pplx-sticky-btn-position';
-  private snapThreshold = 50;
   private onClickCallback: () => void;
 
   constructor(options: StickyButtonOptions = {}) {
@@ -103,10 +100,8 @@ export class StickyButton {
     const touch = 'touches' in e ? e.touches[0] : e;
     const rect = this.button.getBoundingClientRect();
 
-    this.startX = touch.clientX;
-    this.startY = touch.clientY;
-    this.offsetX = touch.clientX - rect.left;
-    this.offsetY = touch.clientY - rect.top;
+    this.offsetX = touch!.clientX - rect.left;
+    this.offsetY = touch!.clientY - rect.top;
   }
 
   private onDrag(e: MouseEvent | TouchEvent) {
@@ -116,8 +111,8 @@ export class StickyButton {
     this.wasDragging = true;
 
     const touch = 'touches' in e ? e.touches[0] : e;
-    const x = touch.clientX - this.offsetX;
-    const y = touch.clientY - this.offsetY;
+    const x = touch!.clientX - this.offsetX;
+    const y = touch!.clientY - this.offsetY;
 
     const maxX = window.innerWidth - this.button.offsetWidth;
     const maxY = window.innerHeight - this.button.offsetHeight;
