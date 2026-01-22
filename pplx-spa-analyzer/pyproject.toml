@@ -1,0 +1,35 @@
+[project]
+name = "pplx-spa-analyzer"
+version = "1.0.0"
+description = "Perplexity SPA analyzer with SQLModel + DuckDB"
+requires-python = ">=3.12"
+dependencies = [
+    "sqlmodel>=0.0.22",
+    "duckdb>=1.2.0",
+    "pydantic>=2.10.0",
+    "click>=8.1.0",
+    "rich>=13.0.0",
+    "pandas>=2.0.0"
+]
+
+[project.scripts]
+pplx = "pplx_analyzer.cli.main:cli"
+
+[build-system]
+requires = ["setuptools>=70"]
+build-backend = "setuptools.build_meta"
+
+[tool.uv]
+dev-dependencies = [
+    "pytest>=8.0.0",
+    "mypy>=1.13.0",
+    "ruff>=0.8.0"
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
