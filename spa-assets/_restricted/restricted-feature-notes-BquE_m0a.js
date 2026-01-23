@@ -1,0 +1,1 @@
+import{j as t}from"./vendors-Czx2bdUR.js";import{a as o}from"./restricted-Bl9eY-Ss.js";function i({children:e}){return t.jsx(o,{feature:"notes",children:e})}export{i as R};
