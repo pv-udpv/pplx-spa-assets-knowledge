@@ -480,18 +480,422 @@ npm run browser -- --preset apiReversing --output ./session-1
 # 2. Extract HAR
 HAR_FILE=$(ls ./session-1/*.har.json | head -1)
 
-# 3. Parse HAR to identify endpoints (TODO: har-to-openapi tool)
-# This would extract endpoints from HAR and generate OpenAPI spec
+# 3. Convert HAR to OpenAPI specification
+python3 scripts/har_to_openapi.py $HAR_FILE -o ./specs/api.yaml
 
 # 4. Generate MCP server
-npm run generate -- --input ./parsed --output ./specs
-npm run mcp:generate -- --spec ./specs/openapi/api-v1.yaml
+npm run mcp:generate -- --spec ./specs/api.yaml
+```
+
+### WebSocket Schema Extraction
+
+```bash
+#!/bin/bash
+
+# 1. Capture browser session with WebSocket messages
+npm run browser -- --preset apiReversing --output ./session-ws
+
+# 2. Extract WebSocket log
+WS_FILE=$(ls ./session-ws/*.ws.jsonl | head -1)
+
+# 3. Generate AsyncAPI specification
+python3 scripts/ws_schema_extractor.py $WS_FILE -o ./specs/websocket-api.yaml
+
+# 4. Review the AsyncAPI spec
+cat ./specs/websocket-api.yaml
+```
+
+### GraphQL Query Extraction
+
+```bash
+#!/bin/bash
+
+# 1. Capture browser session
+npm run browser -- --preset apiReversing --output ./session-graphql
+
+# 2. Extract HAR
+HAR_FILE=$(ls ./session-graphql/*.har.json | head -1)
+
+# 3. Extract GraphQL queries
+python3 scripts/graphql_extractor.py $HAR_FILE -o ./graphql-queries/ --group --pretty
+
+# 4. Review extracted queries
+ls -la ./graphql-queries/
+```
+
+## Advanced Analysis Tools
+
+### 1. HAR-to-OpenAPI Converter
+
+Extract REST API endpoints from HAR files and generate OpenAPI 3.0 specifications.
+
+**Features:**
+- Automatic path parameter detection (IDs, UUIDs, hashes)
+- Request/response schema inference
+- Query parameter extraction
+- Multiple server support
+
+**Usage:**
+```bash
+# Convert HAR to OpenAPI YAML
+npm run analyze:har -- input.har.json -o output.yaml
+
+# Convert to JSON with pretty printing
+npm run analyze:har -- input.har.json -o output.json --format json --pretty
+
+# Direct Python usage
+python3 scripts/har_to_openapi.py input.har.json -o output.yaml
+```
+
+**Example Output:**
+```yaml
+openapi: 3.0.0
+info:
+  title: API extracted from HAR
+  version: 1.0.0
+servers:
+  - url: https://api.example.com
+paths:
+  /api/user/{id}:
+    get:
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id: { type: integer }
+                  name: { type: string }
+```
+
+### 2. WebSocket Schema Extractor
+
+Extract JSON schemas from WebSocket message logs and generate AsyncAPI specifications.
+
+**Features:**
+- Schema inference using genson library
+- Message type detection (send/receive)
+- Multiple WebSocket URL support
+- AsyncAPI 2.6.0 format
+
+**Usage:**
+```bash
+# Extract schemas to YAML
+npm run analyze:ws -- input.ws.jsonl -o asyncapi.yaml
+
+# Extract to JSON
+npm run analyze:ws -- input.ws.jsonl -o asyncapi.json --format json --pretty
+
+# Direct Python usage
+python3 scripts/ws_schema_extractor.py input.ws.jsonl -o asyncapi.yaml
+```
+
+**Input Format (.ws.jsonl):**
+```jsonl
+{"tabId": 1, "url": "wss://api.example.com/ws", "direction": "send", "data": {"type": "subscribe", "channel": "updates"}, "timestamp": 1705614600000}
+{"tabId": 1, "url": "wss://api.example.com/ws", "direction": "receive", "data": {"type": "message", "content": "Hello"}, "timestamp": 1705614600145}
+```
+
+### 3. GraphQL Query Extractor
+
+Extract and organize GraphQL queries, mutations, and subscriptions from HAR files.
+
+**Features:**
+- Automatic GraphQL request detection
+- Query/mutation/subscription parsing
+- Variable extraction
+- Operation name grouping
+- Multiple output formats
+
+**Usage:**
+```bash
+# Extract to directory (one file per operation)
+npm run analyze:graphql -- input.har.json -o ./queries/
+
+# Extract to single JSON file with grouping
+npm run analyze:graphql -- input.har.json -o queries.json --format json --group --pretty
+
+# Direct Python usage
+python3 scripts/graphql_extractor.py input.har.json -o ./queries/ --group
+```
+
+**Output Structure:**
+```json
+{
+  "operation_name": "GetUser",
+  "operation_type": "query",
+  "query": "query GetUser($id: ID!) { user(id: $id) { id name email } }",
+  "variables": { "id": "123" },
+  "url": "https://api.example.com/graphql",
+  "response": { "data": { "user": { "id": "123", "name": "John" } } }
+}
+```
+
+### 4. Request Replayer
+
+Replay HTTP requests from HAR files with modifications and fuzzing support.
+
+**Features:**
+- Filter requests by URL pattern
+- Modify headers and body before replay
+- Add delay between requests
+- Fuzzing mode with payload variations
+- Result recording and statistics
+
+**Usage (via TypeScript):**
+```typescript
+import { RequestReplayer } from './src/browser/request-replayer.js';
+import { CDPClient } from './src/browser/cdp-client.js';
+
+const cdp = new CDPClient(config);
+await cdp.connect();
+
+const replayer = new RequestReplayer(cdp, './capture.har.json');
+
+// Replay filtered requests
+await replayer.replay(
+  (entry) => entry.request.url.includes('/api/'),
+  {
+    delay: 1000,
+    modifyHeaders: (headers) => {
+      headers['Authorization'] = 'Bearer new-token';
+      return headers;
+    }
+  }
+);
+
+// Fuzzing mode
+await replayer.fuzzing('/api/user', [
+  { id: 1 },
+  { id: -1 },
+  { id: 'invalid' },
+  { id: null }
+]);
+
+// Get statistics
+const stats = replayer.getStatistics();
+console.log(stats);
+```
+
+**CLI Usage:**
+```bash
+# Replay requests (placeholder - requires browser automation)
+npm run replay -- --har capture.har.json --filter "/api/" --delay 1000
+```
+
+### 5. Session State Manager
+
+Capture, restore, and diff browser session states including storage, cookies, and DOM.
+
+**Features:**
+- Full state snapshots (localStorage, sessionStorage, cookies, URL, DOM)
+- State restoration
+- Diff comparison between snapshots
+- Export/import snapshots to files
+- Snapshot management (list, delete)
+
+**Usage (via TypeScript):**
+```typescript
+import { SessionStateManager } from './src/browser/state-manager.js';
+import { CDPClient } from './src/browser/cdp-client.js';
+
+const cdp = new CDPClient(config);
+await cdp.connect();
+
+const stateManager = new SessionStateManager(cdp);
+
+// Capture snapshots
+await stateManager.captureSnapshot('before-login');
+// ... perform actions ...
+await stateManager.captureSnapshot('after-login');
+
+// Compare snapshots
+const diff = await stateManager.diffSnapshots('before-login', 'after-login');
+console.log('Changes:', diff);
+
+// Export snapshot
+await stateManager.exportSnapshot('after-login', './snapshots/after-login.json');
+
+// Restore snapshot
+await stateManager.restoreSnapshot('before-login');
+
+// List snapshots
+const snapshots = stateManager.listSnapshots();
+console.log(snapshots);
+```
+
+**CLI Usage:**
+```bash
+# Diff two snapshot files
+npm run diff -- --before before.json --after after.json -o diff.json
+```
+
+### 6. Anti-Bot Detection Analyzer
+
+Analyze website protection mechanisms and fingerprinting techniques.
+
+**Features:**
+- Bot protection detection (Cloudflare, reCAPTCHA, hCAPTCHA)
+- Fingerprinting technique analysis
+- WebDriver detection
+- Canvas/WebRTC fingerprinting detection
+- Suspicious script identification
+- Security header analysis
+
+**Usage (via TypeScript):**
+```typescript
+import { AntiBotAnalyzer } from './src/browser/anti-bot-analyzer.js';
+import { CDPClient } from './src/browser/cdp-client.js';
+
+const cdp = new CDPClient(config);
+await cdp.connect();
+
+const analyzer = new AntiBotAnalyzer(cdp);
+const result = await analyzer.analyzeProtection();
+
+console.log('Cloudflare:', result.cloudflare);
+console.log('reCAPTCHA:', result.recaptcha);
+console.log('Canvas Fingerprinting:', result.canvas);
+console.log('WebDriver Exposed:', result.webdriver);
+console.log('Fingerprinting Techniques:', result.fingerprinting);
+```
+
+**CLI Usage:**
+```bash
+# Analyze website (placeholder - requires browser automation)
+npm run antibot -- --url "https://example.com" -o analysis.json
+```
+
+## Troubleshooting
+
+### Python Scripts
+
+#### Missing Dependencies
+
+```bash
+# Install Python dependencies
+pip install -r requirements.txt
+
+# Or install individually
+pip install pyyaml jsonschema genson
+```
+
+#### Import Errors
+
+```bash
+# Check Python version (requires 3.12+)
+python3 --version
+
+# Verify installations
+python3 -c "import yaml; import jsonschema; from genson import SchemaBuilder"
+```
+
+#### Invalid HAR Format
+
+If you get JSON decode errors:
+```bash
+# Validate HAR file
+cat input.har.json | python3 -m json.tool > /dev/null
+
+# Check file encoding
+file input.har.json
+```
+
+### TypeScript Modules
+
+#### Build Errors
+
+```bash
+# Clean and rebuild
+rm -rf dist/
+npm run build
+```
+
+#### Runtime Errors
+
+The TypeScript modules (RequestReplayer, SessionStateManager, AntiBotAnalyzer) require:
+1. CDPClient instance connected to Chrome
+2. Browser automation session active
+3. Proper CDP domain enablement
+
+Refer to existing browser automation examples for integration.
+
+## Workflow Examples
+
+### Complete API Reverse Engineering
+
+```bash
+#!/bin/bash
+
+echo "🔍 Complete API Reverse Engineering Workflow"
+
+# 1. Capture browser session
+npm run browser -- --preset apiReversing --url "https://api.example.com" --output ./capture
+
+# 2. Find captured files
+HAR_FILE=$(ls ./capture/*.har.json | head -1)
+WS_FILE=$(ls ./capture/*.ws.jsonl | head -1)
+
+# 3. Extract REST API endpoints
+python3 scripts/har_to_openapi.py $HAR_FILE -o ./specs/rest-api.yaml
+
+# 4. Extract WebSocket API
+if [ -f "$WS_FILE" ]; then
+  python3 scripts/ws_schema_extractor.py $WS_FILE -o ./specs/websocket-api.yaml
+fi
+
+# 5. Extract GraphQL queries
+python3 scripts/graphql_extractor.py $HAR_FILE -o ./graphql-queries/ --group --pretty
+
+echo "✅ Analysis complete!"
+echo "   REST API: ./specs/rest-api.yaml"
+echo "   WebSocket API: ./specs/websocket-api.yaml"
+echo "   GraphQL Queries: ./graphql-queries/"
+```
+
+### State Change Analysis
+
+```bash
+#!/bin/bash
+
+echo "📊 State Change Analysis Workflow"
+
+# 1. Capture before state
+npm run browser -- --preset full --output ./state-before
+# ... perform manual actions in browser ...
+
+# 2. Capture after state
+npm run browser -- --preset full --output ./state-after
+
+# 3. Extract storage files
+BEFORE=$(ls ./state-before/*.storage.json | head -1)
+AFTER=$(ls ./state-after/*.storage.json | head -1)
+
+# 4. Diff states
+npm run diff -- --before $BEFORE --after $AFTER -o state-diff.json
+
+# 5. Review changes
+cat state-diff.json | jq '.changes'
 ```
 
 ## Next Steps
 
-1. Implement HAR parsing to extract API endpoints automatically
-2. Add support for GraphQL query capture
-3. Implement WebSocket message schema extraction
-4. Add performance profiling integration
-5. Create automated diff detection for API changes
+The following enhancements are planned:
+1. ✅ HAR-to-OpenAPI converter - **COMPLETED**
+2. ✅ WebSocket schema extraction - **COMPLETED**
+3. ✅ GraphQL query extraction - **COMPLETED**
+4. ✅ Request replay and fuzzing - **COMPLETED**
+5. ✅ Session state management - **COMPLETED**
+6. ✅ Anti-bot detection analysis - **COMPLETED**
+7. Integration of replay/state/antibot with live browser sessions
+8. Performance profiling integration
+9. Automated API change detection
+10. Machine learning-based endpoint clustering
