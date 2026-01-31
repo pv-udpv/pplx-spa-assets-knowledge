@@ -353,9 +353,13 @@ function compareSets(before: any, after: any): { added: any[]; removed: any[]; m
   const result: { added: any[]; removed: any[]; modified: any[] } = { added: [], removed: [], modified: [] };
   
   if (Array.isArray(before) && Array.isArray(after)) {
-    // Simple array comparison
-    result.added = after.filter((item: any) => !before.includes(item));
-    result.removed = before.filter((item: any) => !after.includes(item));
+    // Array comparison with value-based equality using JSON.stringify
+    result.added = after.filter((item: any) =>
+      !before.some((other: any) => JSON.stringify(other) === JSON.stringify(item))
+    );
+    result.removed = before.filter((item: any) =>
+      !after.some((other: any) => JSON.stringify(other) === JSON.stringify(item))
+    );
   } else if (typeof before === 'object' && typeof after === 'object') {
     // Object comparison
     const beforeKeys = new Set(Object.keys(before));
