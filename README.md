@@ -6,6 +6,14 @@
 
 This project systematically analyzes and documents Perplexity AI SPA assets from `pplx-next-static-public.perplexity.ai`, extracting structured knowledge and generating comprehensive API specifications.
 
+## 📚 Documentation
+
+- **[Knowledge Base](KNOWLEDGE_BASE.md)** - Complete catalog of all project artifacts, usage examples, and quick reference
+- **[Architecture](ARCHITECTURE.md)** - System design, data flow, and technical details
+- **[Development Instructions](.copilot-instructions.md)** - Setup and development workflow
+- **[Browser Automation](BROWSER_AUTOMATION.md)** - Chrome DevTools Protocol integration
+- **[Quick Start](QUICKSTART.md)** - Get started quickly
+
 ## Features
 
 - **Asset Parser**: TypeScript-based chunking and analysis of SPA static assets
