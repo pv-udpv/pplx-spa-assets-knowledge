@@ -382,16 +382,24 @@ export class AntiBotAnalyzer {
   }
 
   /**
-   * Helper: Evaluate script and return result
+   * Helper: Evaluate script and return result.
+   *
+   * NOTE: This method is intentionally left unimplemented. In a real browser
+   * environment, it should delegate to the CDP Runtime.evaluate command using
+   * the provided JavaScript source code.
    */
-  private async evaluateScript<T = any>(_script: string): Promise<T> {
-    // This would use CDP Runtime.evaluate
-    // For now, throw not-implemented error as this is a placeholder
-    throw new Error('evaluateScript not implemented - requires CDP Runtime.evaluate integration');
-    
-    // In production, this would be:
-    // const result = await Runtime.evaluate({ expression: _script });
-    // return result.value as T;
+  private async evaluateScript<T = any>(script: string): Promise<T> {
+    // This is a placeholder for CDP Runtime.evaluate integration.
+    // Example of a future implementation:
+    //
+    // const result = await Runtime.evaluate({ expression: script });
+    // return result.result.value as T;
+    //
+    // Until CDP integration is wired up, we fail fast to make any accidental
+    // usage of this stub explicit.
+    throw new Error(
+      'evaluateScript is not implemented - attempted to evaluate script: ' + script
+    );
   }
 
   /**
