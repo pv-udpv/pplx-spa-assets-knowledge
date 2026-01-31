@@ -15,7 +15,6 @@ import json
 import os
 import re
 from typing import Any, Dict, List, Optional
-from urllib.parse import urlparse
 
 
 class GraphQLExtractor:
