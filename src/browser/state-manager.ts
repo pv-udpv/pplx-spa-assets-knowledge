@@ -12,14 +12,14 @@ export interface SessionSnapshot {
   url: string;
   localStorage: Record<string, string>;
   sessionStorage: Record<string, string>;
-  cookies: Array<{
+  cookies: Array<{ 
     name: string;
     value: string;
     domain: string;
     path: string;
     secure: boolean;
     httpOnly: boolean;
-  }>;
+  }>; 
   dom?: string;
   viewport?: {
     width: number;
@@ -35,17 +35,17 @@ export interface SnapshotDiff {
     localStorage: {
       added: Record<string, string>;
       removed: Record<string, string>;
-      modified: Record<string, { old: string; new: string }>;
+      modified: Record<string, { old: string; new: string }>; 
     };
     sessionStorage: {
       added: Record<string, string>;
       removed: Record<string, string>;
-      modified: Record<string, { old: string; new: string }>;
+      modified: Record<string, { old: string; new: string }>; 
     };
     cookies: {
       added: Array<any>;
       removed: Array<any>;
-      modified: Array<{ name: string; old: any; new: any }>;
+      modified: Array<{ name: string; old: any; new: any }>; 
     };
     url: {
       changed: boolean;
@@ -250,7 +250,7 @@ export class SessionStateManager {
   ): {
     added: Record<string, string>;
     removed: Record<string, string>;
-    modified: Record<string, { old: string; new: string }>;
+    modified: Record<string, { old: string; new: string }>; 
   } {
     const added: Record<string, string> = {};
     const removed: Record<string, string> = {};
@@ -264,7 +264,7 @@ export class SessionStateManager {
         const oldValue = storage1[key];
         // Treat any change in value (including to/from undefined) as a modification
         if (oldValue !== value) {
-          modified[key] = { old: oldValue, new: value };
+          modified[key] = { old: oldValue ?? '', new: value ?? '' };
         }
       }
     }
@@ -291,7 +291,7 @@ export class SessionStateManager {
   ): {
     added: Array<any>;
     removed: Array<any>;
-    modified: Array<{ name: string; old: any; new: any }>;
+    modified: Array<{ name: string; old: any; new: any }>; 
   } {
     const added: Array<any> = [];
     const removed: Array<any> = [];
