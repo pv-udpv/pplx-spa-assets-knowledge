@@ -193,6 +193,7 @@ export class RequestReplayer {
     body?: any,
     _timeout: number = 30000
   ): Promise<ReplayResult> {
+    // TODO: Implement timeout handling using the `_timeout` parameter.
     const start = Date.now();
     const result: ReplayResult = {
       request: { method, url, headers, body },
