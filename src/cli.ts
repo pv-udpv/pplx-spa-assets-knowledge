@@ -255,7 +255,8 @@ program
 
     console.log('\n⚠️  Note: Request replay requires browser automation to be enabled');
     console.log('   This feature will be available when the browser command is active');
-    console.log('   For now, use Python script: python3 scripts/har_to_openapi.py');
+    console.log('   For now, use the Python helper script, for example:');
+    console.log('     python3 scripts/har_to_openapi.py --har path/to/requests.har --output path/to/openapi.json');
   });
 
 /**
