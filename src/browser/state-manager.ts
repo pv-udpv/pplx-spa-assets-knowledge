@@ -262,8 +262,8 @@ export class SessionStateManager {
         added[key] = value;
       } else {
         const oldValue = storage1[key];
-        // Check if values are different and both are defined
-        if (oldValue !== undefined && oldValue !== value) {
+        // Treat any change in value (including to/from undefined) as a modification
+        if (oldValue !== value) {
           modified[key] = { old: oldValue, new: value };
         }
       }
