@@ -1,0 +1,29 @@
+# HAR файлы
+*.har
+*.har.json
+
+# Извлеченные assets
+js_assets/
+
+# Архивы
+*.zip
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+*.egg-info/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db

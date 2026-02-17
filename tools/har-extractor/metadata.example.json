@@ -1,0 +1,25 @@
+{
+  "extraction_date": "20260217_150951",
+  "source_har": "www.perplexity.ai.har.json",
+  "statistics": {
+    "total_entries": 1247,
+    "js_files": 43,
+    "extracted": 42,
+    "failed": 1,
+    "total_size": 2456789
+  },
+  "assets": [
+    {
+      "filename": "index.html-CbmY3HPE.js",
+      "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/index.html-CbmY3HPE.js",
+      "size": 123456,
+      "mime_type": "application/javascript"
+    },
+    {
+      "filename": "vendors-DrzD9yJ5.js",
+      "url": "https://pplx-next-static-public.perplexity.ai/_spa/assets/vendors-DrzD9yJ5.js",
+      "size": 567890,
+      "mime_type": "application/javascript"
+    }
+  ]
+}
