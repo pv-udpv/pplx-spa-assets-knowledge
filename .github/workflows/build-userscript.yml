@@ -57,7 +57,7 @@ jobs:
           echo "::notice::Bundle size OK: ${SIZE_KB}KB / 50KB"
       
       - name: Upload artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: pplx-devtool-userscript
           path: dist/pplx-devtool.user.js
